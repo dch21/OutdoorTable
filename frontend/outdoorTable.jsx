@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { postUser, postSession, deleteSession } from "./util/session_api";
-import configureStore from "./store/store"
+import configureStore from "./store/store";
+import Root from "./components/root";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,6 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.deleteSession = deleteSession;
 
 
-    ReactDOM.render(<h1>Testing is working, hello daniel</h1>, root);
+    ReactDOM.render(<Root store={store}/>, root);
 });
 

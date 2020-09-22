@@ -24,10 +24,10 @@ export const receiveSessionErrors = (errors = []) => {
     };
 };
 
-export const signup = (formUser) => dispatch => postUser(formUser)
+export const signUp = (formUser) => dispatch => postUser(formUser)
     .then(user => dispatch(receiveCurrentUser(user)));
 
-export const login = (formUser) => dispatch => postSession(formUser)
+export const signIn = (formUser) => dispatch => postSession(formUser)
     .then(user => dispatch(receiveCurrentUser(user)));
 
 export const logout = () => dispatch => deleteSession()
