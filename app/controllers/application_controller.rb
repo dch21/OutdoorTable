@@ -1,7 +1,4 @@
 class ApplicationController < ActionController::Base
-    # protect_from_forgery with: :null_session
-    #getting CSFR error
-    #protect_from_forgery with: :exception
 
     helper_method :current_user, :ensure_logged_in, :logged_in?
 

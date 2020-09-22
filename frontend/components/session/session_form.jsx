@@ -34,6 +34,12 @@ class SessionForm extends React.Component{
         )
     }
 
+    // closeModalUponLogin (){
+    //     if (this.props.user) {
+    //         this.props.closeModal();
+    //     }
+    // }
+
     render() {
 
         return (
