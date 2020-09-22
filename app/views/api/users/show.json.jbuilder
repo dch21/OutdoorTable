@@ -1,4 +1,3 @@
-json.set! @user.id do 
-    json.extract! @user, :email, :session_token
-end     
+json.extract! @user, :id, :email
+
            

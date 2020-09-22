@@ -16,11 +16,6 @@
 
 class Api::UsersController < ApplicationController
 
-    # def new
-    #     @user = User.new
-    #     render :new
-    # end
-
     #need update and destroy
 
     def create

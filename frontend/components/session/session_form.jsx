@@ -1,13 +1,11 @@
 import React from "react";
 
-//make errors
-
 class SessionForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            firstName: "",
-            lastName: "",
+            first_name: "",
+            last_name: "",
             email: "",
             password: "",
             location: ""
@@ -24,13 +22,25 @@ class SessionForm extends React.Component{
         return e => this.setState({ [field]: e.currentTarget.value });
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map( (error, idx) => (
+                    <li key={idx}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
+
     render() {
 
         return (
             
             <div>
                 {this.props.formType === "Sign Up" ? "Welcome to OutsideTable!" : "Please sign in"}
-                
+                {this.renderErrors()}
                 <form onSubmit={this.handleSubmit}>
                     <br/>
                     {this.props.formType === "Sign Up" &&
@@ -38,7 +48,7 @@ class SessionForm extends React.Component{
                         <label>First Name
                             <input type="text"
                                 value={this.state.firstName}
-                                onChange={this.update("firstName")}
+                                onChange={this.update("first_name")}
                             />
                         </label>
                         <br/>
@@ -50,7 +60,7 @@ class SessionForm extends React.Component{
                         <label>Last Name
                             <input type="text"
                                 value={this.state.lastName}
-                                onChange={this.update("lastName")}
+                                onChange={this.update("last_name")}
                             />
                         </label>
                         <br/>

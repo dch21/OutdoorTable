@@ -17,18 +17,41 @@ const logoutCurrentUser = () => {
     };
 };
 
-export const receiveSessionErrors = (errors = []) => {
+export const receiveSessionErrors = (errors) => {
     return {
         type: RECEIVE_SESSION_ERRORS,
         errors
     };
 };
 
-export const signUp = (formUser) => dispatch => postUser(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)));
+export const signUp = (formUser) => dispatch => (
+    postUser(formUser)
+        .then(user => dispatch(receiveCurrentUser(user))),
+            errors => (dispatch(receiveSessionErrors(errors)))
+);
 
-export const signIn = (formUser) => dispatch => postSession(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)));
+export const signIn = (formUser) => dispatch => (
+    postSession(formUser)
+        .then(user => dispatch(receiveCurrentUser(user))),
+            errors => (dispatch(receiveSessionErrors(errors.responseJSON)))
+);
 
-export const logout = () => dispatch => deleteSession()
-    .then(() => dispatch(logoutCurrentUser()));
+
+export const logout = () => dispatch => (
+    deleteSession()
+        .then(() => dispatch(logoutCurrentUser()))
+);
+
+// export const signIn = (formUser) => {
+//     return dispatch => {
+//         return postSession(formUser).then( (user) => {
+//             return dispatch(receiveCurrentUser(user));
+//         },
+    
+//         (errorObj) => {
+//             console.log(errorObj.responseJSON);
+//         });
+//     };   
+// };
+
+
