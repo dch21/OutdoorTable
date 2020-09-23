@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import SessionFrom from "./session_form";
-import { signIn } from "../../actions/session_actions";
+import { signIn, clearErrors } from "../../actions/session_actions";
 import {openModal, closeModal} from "../../actions/modal_actions";
 
 const mSTP = (state) => {
@@ -18,7 +18,8 @@ const mDTP = (dispatch) => {
         //     <button onClick={() => dispatch(openModal("signIn")) }>Sign In</button>
         // ),
         openModal: modal => dispatch(openModal(modal)),
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        clearErrors: () => dispatch(clearErrors())
     };
 };
 

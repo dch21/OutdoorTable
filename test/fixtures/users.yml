@@ -7,7 +7,7 @@
 #  first_name      :string           not null
 #  last_name       :string           not null
 #  location        :string           not null
-#  phone_num       :string           not null
+#  phone_num       :string
 #  password_digest :string           not null
 #  session_token   :string           not null
 #  created_at      :datetime         not null

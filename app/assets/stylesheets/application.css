@@ -156,6 +156,11 @@ nav {
     border-radius: 5px;
 }
 
+.errors-list li {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
 .splash-banner {
     width: 100%
 }

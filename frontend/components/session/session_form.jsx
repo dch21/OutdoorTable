@@ -12,30 +12,29 @@ class SessionForm extends React.Component{
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoLogin = this.demoLogin.bind(this);
-        // this.clear = this.clear.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state).then(this.props.closeModal());
+        this.props.action(this.state).then( this.props.closeModal );
     }
 
     demoLogin(e) {
         e.preventDefault();
-        this.props.action({ email: "a", password: "qqqqqq" }).then(this.props.closeModal());
+        this.props.action({ email: "a", password: "qqqqqq" }).then(this.props.closeModal);
     }
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
 
-    // clear(field) {
-    //     this.setState({ [field]: "" });
-    // }
+    componentWillUnmount() {
+        this.props.clearErrors();
+    } 
 
     renderErrors() {
         return (
-            <ul>
+            <ul className="errors-list">
                 {this.props.errors.map( (error, idx) => (
                     <li key={idx}>
                         {error}
@@ -58,7 +57,6 @@ class SessionForm extends React.Component{
                     <div>
                         <input type="text"
                             value={this.state.first_name}
-                            // onClick= {() => this.clear("first name")}
                             onChange={this.update("first_name")}
                         />
                     </div>
