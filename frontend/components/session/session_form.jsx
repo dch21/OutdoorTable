@@ -105,7 +105,8 @@ class SessionForm extends React.Component{
                     <div>
                         <button className="form-button" onClick={this.demoLogin}>Demo User</button>
                         <br/>
-                        <button className="form-button" onClick={() => this.props.openModal("signUp")}>New to OutDoorTable? Create an account.</button>
+                        <br/>
+                        <button className="account-button" onClick={() => this.props.openModal("signUp")}>New to OutDoorTable? Create an account.</button>
                         
                     </div>
                 }

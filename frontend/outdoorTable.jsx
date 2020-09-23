@@ -23,16 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         store = configureStore(preloadedState);
         delete window.currentUser;
-        } else {
+        } 
+        
+        else {
             store = configureStore();
         }
 
     window.getState = store.getState;
-    window.dispatch = store.dispatch;
+    // window.dispatch = store.dispatch;
 
-    window.postSession = postSession;
-    window.postUser = postUser;
-    window.deleteSession = deleteSession;
+    // window.postSession = postSession;
+    // window.postUser = postUser;
+    // window.deleteSession = deleteSession;
 
 
     ReactDOM.render(<Root store={store}/>, root);

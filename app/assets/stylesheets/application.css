@@ -66,19 +66,34 @@ nav {
 
 .right-nav {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
     height: 35px;
 }
 
+.account-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: none;
+  margin: auto;
+  outline: none;
+}
+
+.account-button:hover{
+    text-decoration:underline;
+}
 
 .signup-button { 
     background-color: teal;
     border: 1px solid black;
     color: white;
     border-radius: 3px;
-    height: 35px;
+    /* height: 35px; */
     font-family: 'Josefin Sans', sans-serif;    
     padding: 9px 9px 11px 9px;
     margin: 5px;
@@ -90,15 +105,15 @@ nav {
     border: 1px solid grey;
     color: grey;
     border-radius: 3px;
-    height: 35px;
+    /* height: 35px; */
     font-family: 'Josefin Sans', sans-serif;    
     padding: 9px 9px 11px 9px;
     margin: 5px;
     width: 70px;
 }
 
-
-.fa-map-marker-alt:before {
+/* mag glass */
+/* .fa-map-marker-alt:before {
     display: inline-block;
     font-size: 20px;
     width: 50px;
@@ -106,7 +121,7 @@ nav {
     text-align: center;
     vertical-align: bottom;
     padding: 9px 9px 11px 9px;
-}
+} */
     
 }
 
