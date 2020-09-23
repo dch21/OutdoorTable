@@ -5,7 +5,7 @@ class Api::SessionsController < ApplicationController
             params[:user][:email],
             params[:user][:password]
         )
-        # debugger
+        
         if @user
             login!(@user)
             render "api/users/show"
@@ -16,7 +16,6 @@ class Api::SessionsController < ApplicationController
     end
 
     def destroy
-        # debugger
         @user = current_user
         if @user
             logout

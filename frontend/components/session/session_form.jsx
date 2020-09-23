@@ -28,6 +28,10 @@ class SessionForm extends React.Component{
         return e => this.setState({ [field]: e.currentTarget.value });
     }
 
+    clear(field) {
+        return e => this.setState({ [field]: "" });
+    }
+
     componentWillUnmount() {
         this.props.clearErrors();
     } 
@@ -57,6 +61,7 @@ class SessionForm extends React.Component{
                     <div>
                         <input type="text"
                             value={this.state.first_name}
+                            onClick={this.clear("first_name")}
                             onChange={this.update("first_name")}
                         />
                     </div>
@@ -66,6 +71,7 @@ class SessionForm extends React.Component{
                     <div>
                         <input type="text"
                             value={this.state.last_name}
+                            onClick={this.clear("last_name")}
                             onChange={this.update("last_name")}
                         />
                     </div>
@@ -74,6 +80,7 @@ class SessionForm extends React.Component{
                     <div>
                         <input type="text"
                             value={this.state.email}
+                            onClick={this.clear("email")}
                             onChange={this.update("email")}
                         />
                     </div>
@@ -82,6 +89,7 @@ class SessionForm extends React.Component{
                     <div>
                         <input type="password"
                             value={this.state.password}
+                            onClick={this.clear("password")}
                             onChange={this.update("password")}
                         />
                     </div>
@@ -90,6 +98,7 @@ class SessionForm extends React.Component{
                     <div>
                         <input type="text"
                             value={this.state.location}
+                            onClick={this.clear("location")}
                             onChange={this.update("location")}
                         />
                     </div>
