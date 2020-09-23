@@ -18,7 +18,75 @@
 nav {
     display: flex;
     justify-content: space-between;
-    border: 1px solid grey
+    /* border: 1px solid grey; */
+    height: 45px
+}
+
+.left-nav {
+    display: flex;
+    font-family: 'Josefin Sans', sans-serif;    
+    padding: 9px 9px 11px 9px;
+    font-size: larger;
+}
+
+.left-nav > span {
+    padding: 9px 9px 11px 9px;
+}
+
+.right-nav {
+    display: flex;
+}
+
+.logo {
+    height: 35px;
+
+}
+
+.signup-button { 
+    background-color: teal;
+    border: 1px solid black;
+    color: white;
+    border-radius: 3px;
+    height: 35px;
+    font-family: 'Josefin Sans', sans-serif;    
+    padding: 9px 9px 11px 9px;
+    margin: 5px;
+    width: 70px;
+}
+
+.signin-button{
+    background-color: white;
+    border: 1px solid grey;
+    color: grey;
+    border-radius: 3px;
+    height: 35px;
+    font-family: 'Josefin Sans', sans-serif;    
+    padding: 9px 9px 11px 9px;
+    margin: 5px;
+    width: 70px;
+}
+
+
+.fa-map-marker-alt:before {
+    display: inline-block;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: bottom;
+    padding: 9px 9px 11px 9px;
+}
+    
+}
+
+.fa-search:before {
+    display: inline-block;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: bottom;
+    padding: 9px 9px 11px 9px;
 }
 
 .modal-screen {
@@ -33,9 +101,23 @@ nav {
 
 .modal-form {
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 50%;
+    margin-left: -230px;
     background: white;
-    width: 400px;
-    border-radius: 3px;
+    width: 450px;
+    height: 600px;
+    border-radius: 5px;
+}
+
+.splash-banner {
+    width: 100%
+}
+
+.splash-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-height: 400px;
 }

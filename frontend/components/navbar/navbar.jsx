@@ -14,8 +14,8 @@ class Navbar extends React.Component {
         const signButtons = () => {
             return (
                 <div>
-                  <button onClick={ () => openModal("signUp")}>Sign Up</button>
-                  <button onClick={ () => openModal("signIn")}>Sign In</button>
+                    <button className= "signup-button" onClick={ () => openModal("signUp")}>Sign up</button>
+                    <button className="signin-button" onClick={ () => openModal("signIn")}>Sign in</button>
                 </div>
             )
         };
@@ -32,11 +32,15 @@ class Navbar extends React.Component {
 
             <div>
                 <nav>
-                    <div>Logo 
-                        <i className="fas fa-map-marker-alt"></i>  
+                    <div className="left-nav">
+                        <img className="logo" src={window.logo} alt="logo" />
+                        <span>OutdoorTable</span>
+                        {/* <i className="fas fa-map-marker-alt"></i>   */}
                     </div>
-                    {currentUser > 0 ? signedinNav() : signButtons() }
-                    <i className="fas fa-search"></i>
+                    <div className="right-nav">
+                        {currentUser > 0 ? signedinNav() : signButtons() }
+                        <i className="fas fa-search"></i>
+                    </div>
                 </nav>
             </div>
         )

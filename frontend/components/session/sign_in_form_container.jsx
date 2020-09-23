@@ -8,7 +8,6 @@ const mSTP = (state) => {
     return {
         formType: "Please Sign In",
         errors: state.errors.session,
-        user: state.session.id
     };
 }
 

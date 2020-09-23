@@ -15,7 +15,7 @@ class SessionForm extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state);
+        this.props.action(this.state).then(this.props.closeModal());
     }
 
     update(field) {
@@ -33,12 +33,6 @@ class SessionForm extends React.Component{
             </ul>
         )
     }
-
-    // closeModalUponLogin (){
-    //     if (this.props.user) {
-    //         this.props.closeModal();
-    //     }
-    // }
 
     render() {
 
