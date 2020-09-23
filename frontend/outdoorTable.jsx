@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { postUser, postSession, deleteSession } from "./util/session_api";
 import configureStore from "./store/store";
 import Root from "./components/root";
+
+import { postUser, postSession, deleteSession } from "./util/session_api";
+import { fetchRestaurant } from "./util/restaurants_api";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -29,9 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
             store = configureStore();
         }
 
-    window.getState = store.getState;
+    // Testing
+    // window.getState = store.getState;
     // window.dispatch = store.dispatch;
 
+    // window.fetchRestaurant = fetchRestaurant;
     // window.postSession = postSession;
     // window.postUser = postUser;
     // window.deleteSession = deleteSession;

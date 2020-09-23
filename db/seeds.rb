@@ -24,6 +24,18 @@ Restaurant.destroy_all
     t.string "parking_details"
 
 r1 = Restaurant.create!(
-    name: 
-
+    name: "Union Square Market",
+    description: "Green Market",
+    address: "Union Square W &, E 17th St, New York, NY 10003, USA",
+    capacity: 300,
+    gmaps_place_id: "ChIJ9wsQc59ZwokRou28v68fSR4",
+    neighborhood: "Union Square",
+    phone_num: "555",
+    cuisine: "Halal Cart",
+    price_range: "Under $10",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "NQR, 456, L",
+    parking_details: "Street"
 )

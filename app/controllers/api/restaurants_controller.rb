@@ -1,51 +1,28 @@
 class Api::RestaurantsController < ApplicationController
 
     def index
-        @poems = Poem.all
-        render :index
+        @restaurants = Restaurant.all
     end
 
-    def new
-        @poem = Poem.new
-        render :new
+    def show
+        @restaurant = Restaurant.find(params[:id])
+        render "api/restaurants/show"
     end
 
     def create
-        @poem = Poem.new(poem_params)
-        @poem.author_id = current_user.id
-
-        if @poem.save
-            redirect_to poems_url
+        @restaurant = Restaurant.new(restaurant_params)
+        if @restaurant.save
+            render "api/restaurants/show"
         else
-            flash.now[:errors] = @poem.errors.full_messages
-            render :new
+            render json: @user.errors.full_messages, status: 422
         end
     end
 
-    def edit
-        @poem = Poem.find(params[:id])
-        render :edit
-    end
-
-    def update
-        @poem = Poem.find(params[:id])
-        if current_user.id != @poem.author_id
-            flash.now[:errors] = ['Something went wrong!']
-            return
-        end
-
-        if @poem.update(poem_params)
-            redirect_to poems_url
-        else
-            flash.now[:errors] = ['Something went wrong!']
-            render :edit
-        end
-    end
-
-    def poem_params
+    def restaurant_params
         params
-        .require(:poem)
-        .permit(:title, :stanzas, :complete)
+        .require(:restaurant)
+        .permit(:name, :description, :address, :capacity, :gmaps_place_id, :neighborhood, :phone_num, :cuisine, :price_range, :payment, :dining_style, :dress_code, :public_transit, :parking_details)
     end
 
 end
+

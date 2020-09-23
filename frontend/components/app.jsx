@@ -6,11 +6,13 @@ import NavBarContainer from "./navbar/navbar_container";
 import { AuthRoute } from "../util/route";
 import Modal from "./modal/modal";
 import SearchForm from "./search_form/search_form";
+import RestaurantShowContainer from "./restaurant/restaurant_show_container";
 
 const App = () => (
     <div>
         <Modal />
         <Route path="/" component={NavBarContainer} />
+        <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
         <SearchForm />
     </div>
 )
