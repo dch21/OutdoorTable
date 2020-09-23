@@ -4,13 +4,15 @@ class SessionForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            first_name: "",
-            last_name: "",
-            email: "",
-            password: "",
-            location: ""
+            first_name: "First Name",
+            last_name: "Last Name",
+            email: "Email",
+            password: "Password",
+            location: "Primary Dining Location"
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
+        // this.clear = this.clear.bind(this);
     }
 
     handleSubmit(e) {
@@ -18,9 +20,18 @@ class SessionForm extends React.Component{
         this.props.action(this.state).then(this.props.closeModal());
     }
 
+    demoLogin(e) {
+        e.preventDefault();
+        this.props.action({ email: "a", password: "qqqqqq" }).then(this.props.closeModal());
+    }
+
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
+
+    // clear(field) {
+    //     this.setState({ [field]: "" });
+    // }
 
     renderErrors() {
         return (
@@ -39,64 +50,66 @@ class SessionForm extends React.Component{
         return (
             
             <div>
-                {this.props.formType === "Sign Up" ? "Welcome to OutsideTable!" : "Please sign in"}
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit}>
+                    <h3>{this.props.formType === "Sign Up" ? "Welcome to OutsideTable!" : "Please sign in"}</h3>
                     <br/>
                     {this.props.formType === "Sign Up" &&
                     <div>
-                        <label>First Name
-                            <input type="text"
-                                value={this.state.firstName}
-                                onChange={this.update("first_name")}
-                            />
-                        </label>
-                        <br/>
+                        <input type="text"
+                            value={this.state.first_name}
+                            // onClick= {() => this.clear("first name")}
+                            onChange={this.update("first_name")}
+                        />
                     </div>
                     }
                     
                     {this.props.formType === "Sign Up" &&
                     <div>
-                        <label>Last Name
-                            <input type="text"
-                                value={this.state.lastName}
-                                onChange={this.update("last_name")}
-                            />
-                        </label>
-                        <br/>
+                        <input type="text"
+                            value={this.state.last_name}
+                            onChange={this.update("last_name")}
+                        />
                     </div>
                     }
                     
-                    <label>Email
+                    <div>
                         <input type="text"
                             value={this.state.email}
                             onChange={this.update("email")}
                         />
-                    </label>
-                    <br/>
+                    </div>
+                    
 
-                    <label>Password
+                    <div>
                         <input type="password"
                             value={this.state.password}
                             onChange={this.update("password")}
                         />
-                    </label>
-                    <br/>
+                    </div>
 
                     {this.props.formType === "Sign Up" &&
                     <div>
-                        <label>Location
-                            <input type="text"
-                                value={this.state.location}
-                                onChange={this.update("location")}
-                            />
-                        </label>
-                        <br/>
+                        <input type="text"
+                            value={this.state.location}
+                            onChange={this.update("location")}
+                        />
                     </div>
                     }       
                     <br/>
-                    <button type="submit">{this.props.formType === "Sign Up" ? "Create Account" : "Sign In"}</button>
+                    <button className="form-button" type="submit">{this.props.formType === "Sign Up" ? "Create Account" : "Sign In"}</button>
+                    <br />
                 </form>
+
+                {this.props.formType === "Please Sign In" &&
+                    <div>
+                        <button className="form-button" onClick={this.demoLogin}>Demo User</button>
+                        <br/>
+                        <button className="form-button" onClick={() => this.props.openModal("signUp")}>New to OutDoorTable? Create an account.</button>
+                        
+                    </div>
+                }
+                
             </div>
         )
 

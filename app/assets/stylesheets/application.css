@@ -14,11 +14,42 @@
  *= require_self
  */
 
+* {
+ font-family: 'Josefin Sans', sans-serif;
+}
+
+input {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 10px 10px 10px 10px;
+    width: 300px;
+    margin: 8px;
+    border: 1px #cec4c4 solid;
+}
+
+form * {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-button {
+    background-color: #ff0000;
+    border: 1px solid black;
+    color: white;
+    border-radius: 3px;
+    height: 35px;
+    margin: auto;
+    width: 325px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 nav {
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid grey; */
     height: 45px
 }
 
@@ -39,8 +70,8 @@ nav {
 
 .logo {
     height: 35px;
-
 }
+
 
 .signup-button { 
     background-color: teal;

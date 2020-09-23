@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -52,6 +51,7 @@ class Navbar extends React.Component {
 export default Navbar;
 
 // PreModal
+// import { Link } from "react-router-dom";
 // render() {
 
 //     const { currentUser, logout } = this.props;

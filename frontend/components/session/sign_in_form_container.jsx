@@ -14,9 +14,10 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
     return {
         action: (formUser) => dispatch(signIn(formUser)),
-        otherForm: (
-            <button onClick={() => dispatch(openModal("signIn")) }>Sign In</button>
-        ),
+        // otherForm: (
+        //     <button onClick={() => dispatch(openModal("signIn")) }>Sign In</button>
+        // ),
+        openModal: modal => dispatch(openModal(modal)),
         closeModal: () => dispatch(closeModal())
     };
 };
