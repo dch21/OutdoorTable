@@ -23,6 +23,16 @@ class User < ApplicationRecord
 
     attr_reader :password
 
+
+    has_many :reservations,
+    foreign_key: :user_id,
+    class_name: :Reservation
+
+    has_many :reserved_restaurants,
+    through: :reservations,
+    source: :restaurant
+
+
     def password=(password)
         @password = password
         self.password_digest = BCrypt::Password.create(password)
