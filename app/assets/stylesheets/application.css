@@ -18,6 +18,7 @@
  font-family: 'Josefin Sans', sans-serif;
 }
 
+
 input {
     font-family: 'Josefin Sans', sans-serif;
     padding: 10px 10px 10px 10px;
@@ -170,4 +171,30 @@ nav {
   margin-right: auto;
   width: 80%;
   max-height: 400px;
+}
+
+/* ///////////////////////////////////// */
+
+.restaurant-detail-sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+    /* font-size: larger; */
+
+}
+
+.restaurant-detail-sidebar span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.restaurant-detail-sidebar li {
+    font-size: 12px;
+}
+
+#map {
+    height: 350px;
+    width: 350px;
+
 }

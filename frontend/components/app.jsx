@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import SignUpFormContainer from "./session/sign_up_form_container";
 import SignInFormContainer from "./session/sign_in_form_container";
 import NavBarContainer from "./navbar/navbar_container";
@@ -12,8 +12,11 @@ const App = () => (
     <div>
         <Modal />
         <Route path="/" component={NavBarContainer} />
-        <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
-        <SearchForm />
+        <Switch>
+            <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
+            <SearchForm />
+        </Switch>
+        <Link to="/restaurants/1">Sample Show Page in Progress</Link>
     </div>
 )
 
