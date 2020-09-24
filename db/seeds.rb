@@ -8,11 +8,6 @@
 
 Restaurant.destroy_all
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> rest_show
 r1 = Restaurant.create!(
     name: "Union Square Market",
     description: "Green Market",
