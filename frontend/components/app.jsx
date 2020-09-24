@@ -7,6 +7,7 @@ import { AuthRoute } from "../util/route";
 import Modal from "./modal/modal";
 import SearchFormContainer from "./search_form/search_form_container";
 import RestaurantShowContainer from "./restaurant/restaurant_show_container";
+import SearchResults from "./search_results/search_results_container";
 
 const App = () => (
     <div>
@@ -16,6 +17,7 @@ const App = () => (
             <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
             <SearchFormContainer />
         </Switch>
+        <SearchResults/>
         <Link to="/restaurants/1">Sample Show Page in Progress</Link>
     </div>
 )

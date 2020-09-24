@@ -10,7 +10,6 @@ const mSTP = (state) => {
 };
 
 const mDTP = (dispatch) => {
-    debugger
     return {
         searchRestaurant: (searchTerms) => dispatch(searchRestaurant(searchTerms)),
     };
