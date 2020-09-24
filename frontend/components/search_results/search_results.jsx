@@ -4,9 +4,6 @@ import SearchResultsItem from "./search_results_item";
 class SearchResults extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     searchTerm: "Location, Restaurant, or Cuisine"
-        // };
     }
 
 
@@ -16,6 +13,12 @@ class SearchResults extends React.Component {
 
         if (!Array.isArray(results)) {
             return null;
+        }
+
+        if (results.length === 0) {
+            return (
+                <p>No results found. Try again.</p>
+            )
         }
 
         return (

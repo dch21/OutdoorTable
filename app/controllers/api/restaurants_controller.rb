@@ -20,7 +20,6 @@ class Api::RestaurantsController < ApplicationController
 
     #move to index and change routes?
     def search
-        # debugger
         searchTerms = params[:searchTerms]
 
         @restaurants = Restaurant.all
@@ -31,11 +30,8 @@ class Api::RestaurantsController < ApplicationController
 
         @restaurants = Restaurant.where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ?', "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%" )
 
-        if @restaurants.empty? 
-            render json: ["No results."]
-        else 
-            render json: @restaurants
-        end
+        render json: @restaurants
+        
     end
 
     def restaurant_params
