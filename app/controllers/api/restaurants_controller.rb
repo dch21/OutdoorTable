@@ -18,6 +18,22 @@ class Api::RestaurantsController < ApplicationController
         end
     end
 
+    #move to index and change routes?
+    def search
+        searchTerms = params[:searchTerms]
+
+        @restaurants = Restaurant.all
+        if params["searchTerms"] == ""
+            render json: @restaurants
+            return
+        end
+
+        @restaurants = Restaurant.where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ?', "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%" )
+
+        render json: @restaurants
+        
+    end
+
     def restaurant_params
         params
         .require(:restaurant)

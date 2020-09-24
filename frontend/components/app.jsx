@@ -5,8 +5,9 @@ import SignInFormContainer from "./session/sign_in_form_container";
 import NavBarContainer from "./navbar/navbar_container";
 import { AuthRoute } from "../util/route";
 import Modal from "./modal/modal";
-import SearchForm from "./search_form/search_form";
+import SearchFormContainer from "./search_form/search_form_container";
 import RestaurantShowContainer from "./restaurant/restaurant_show_container";
+import SearchResults from "./search_results/search_results_container";
 
 const App = () => (
     <div>
@@ -14,8 +15,9 @@ const App = () => (
         <Route path="/" component={NavBarContainer} />
         <Switch>
             <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
-            <SearchForm />
+            <SearchFormContainer />
         </Switch>
+        <SearchResults/>
         <Link to="/restaurants/1">Sample Show Page in Progress</Link>
     </div>
 )

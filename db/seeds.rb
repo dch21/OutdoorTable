@@ -23,3 +23,37 @@ r1 = Restaurant.create!(
     public_transit: "NQR, 456, L",
     parking_details: "Street"
 )
+
+r2 = Restaurant.create!(
+    name: "Super Taste",
+    description: "No frills shop selling one of the best and cheapest hand pulled noodles in the city. Also available are dumplings (fried or boiled) as well as succulent pork buns.",
+    address: "26 Eldridge St, New York, NY 10002, USA",
+    capacity: 10,
+    gmaps_place_id: "ChIJoR3RZyhawokRwR91d6hJvvY",
+    neighborhood: "Manhattan Chinatown",
+    phone_num: "555-555-5558",
+    cuisine: "Chinese",
+    price_range: "Under $10",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "DFM",
+    parking_details: "Street"
+)
+
+r3 = Restaurant.create!(
+    name: "Tasty Dumpling",
+    description: "Cheap dumplings (fried or boiled) that get the job done.",
+    address: "42 Mulberry St, New York, NY 10013, USA",
+    capacity: 15,
+    gmaps_place_id: "ChIJg6Oj3yZawokRwDiCW7Aa6WU",
+    neighborhood: "Manhattan Chinatown",
+    phone_num: "555-555-5559",
+    cuisine: "Chinese",
+    price_range: "Under $10",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "NR",
+    parking_details: "Street"
+)

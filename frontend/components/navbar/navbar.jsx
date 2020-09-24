@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -33,7 +34,7 @@ class Navbar extends React.Component {
                 <nav>
                     <div className="left-nav">
                         <img className="logo" src={window.logo} alt="logo" />
-                        <span>OutdoorTable</span>
+                        <Link className="home-page" to="/">OutdoorTable</Link>
                         {/* <i className="fas fa-map-marker-alt"></i>   */}
                     </div>
                     <div className="right-nav">

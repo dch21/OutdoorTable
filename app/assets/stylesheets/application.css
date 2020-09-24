@@ -61,14 +61,16 @@ nav {
     font-size: larger;
 }
 
-.left-nav > span {
-    padding: 9px 9px 11px 9px;
-}
-
 .right-nav {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.home-page {
+    color: black;
+    padding: 9px 9px 11px 9px;
+    text-decoration: none;
 }
 
 .logo {
@@ -162,7 +164,7 @@ nav {
 }
 
 .splash-banner {
-    width: 100%
+    width: 100%;
 }
 
 .splash-image {
