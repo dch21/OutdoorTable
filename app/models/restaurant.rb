@@ -23,7 +23,7 @@
 class Restaurant < ApplicationRecord
 
     validates :name, uniqueness: true
-    validates :name, :description, :address, :capacity, :gmaps_place_id, :phone_num, presence: true
+    validates :name, :description, :address, :capacity, :lat, :lng, :phone_num, presence: true
     
     has_many :reservations,
     foreign_key: :user_id,

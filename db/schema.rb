@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_25_045013) do
+ActiveRecord::Schema.define(version: 2020_09_25_145457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2020_09_25_045013) do
     t.text "description", null: false
     t.text "address", null: false
     t.integer "capacity", null: false
-    t.string "gmaps_place_id", null: false
     t.string "neighborhood"
     t.string "phone_num", null: false
     t.string "cuisine"
@@ -45,6 +44,8 @@ ActiveRecord::Schema.define(version: 2020_09_25_045013) do
     t.string "parking_details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "lat", null: false
+    t.float "lng", null: false
     t.index ["name"], name: "index_restaurants_on_name", unique: true
     t.index ["phone_num"], name: "index_restaurants_on_phone_num"
   end

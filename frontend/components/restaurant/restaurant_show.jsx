@@ -1,6 +1,7 @@
 import React from "react";
 import RestaurantDetailSidebar from "./restaurant_detail_sidebar";
 import CreateReservationContainer from "../reservations/create_reservation_container";
+import RestaurantShowMap from "./restaurant_show_map";
 
 
 class RestaurantShow extends React.Component {
@@ -44,6 +45,8 @@ class RestaurantShow extends React.Component {
                 {safety}
                 <RestaurantDetailSidebar restaurant={this.props.restaurant}/>
                 <CreateReservationContainer />
+                <RestaurantShowMap restaurant={this.props.restaurant}/>
+
             </div>
         )
     }

@@ -37,7 +37,7 @@ class Api::RestaurantsController < ApplicationController
     def restaurant_params
         params
         .require(:restaurant)
-        .permit(:name, :description, :address, :capacity, :gmaps_place_id, :neighborhood, :phone_num, :cuisine, :price_range, :payment, :dining_style, :dress_code, :public_transit, :parking_details)
+        .permit(:name, :description, :lat, :lng, :address, :capacity, :neighborhood, :phone_num, :cuisine, :price_range, :payment, :dining_style, :dress_code, :public_transit, :parking_details)
     end
 
 end

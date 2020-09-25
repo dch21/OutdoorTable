@@ -32,7 +32,7 @@ class ReservationForm extends React.Component {
             
             <div>
                 
-                {/* <h1>{this.props.formType}</h1> */}
+                <h1>{this.props.formType}</h1>
                 <form onSubmit={this.handleSubmit}>
 
                     <input type="date" value={this.state.date} 

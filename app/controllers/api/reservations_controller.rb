@@ -10,13 +10,11 @@ class Api::ReservationsController < ApplicationController
     end
 
     def create
-        debugger
         @reservation = Reservation.new(reservation_params)
         if @reservation.save!
             debugger
             render "api/reservations/show"
         else
-            debugger
             render json: @reservation.errors.full_messages, status: 422
         end
     end
