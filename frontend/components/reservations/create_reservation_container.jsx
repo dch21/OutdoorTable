@@ -7,11 +7,12 @@ const mSTP = (state) => {
     return {
         formType: "Make a reservation",
         reservation: {
-            datetime: new Date(),
+            date: new Date().toISOString().slice(0, 10), 
+            time: "7:00PM",
             notes: "Make a note or accommodations request here.",
             party_size: 2,
             restaurant_id: parseInt(Object.keys(state.entities.restaurants)[0]),
-            user_id: parseInt(Object.keys(state.entities.restaurants)[4])
+            user_id: parseInt(Object.keys(state.entities.users)[0])
         }
     };
 };
