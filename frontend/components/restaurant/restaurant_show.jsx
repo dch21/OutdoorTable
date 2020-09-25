@@ -35,17 +35,30 @@ class RestaurantShow extends React.Component {
 
 
         return (
-            <div >
-                <img className="splash-image" src={window.union_square} alt="park" />
-                <h1>{this.props.restaurant.name}</h1>
-                <hr className="solid"></hr>
-                <i className="fas fa-comment-alt">Reviews</i>
-                <i className="fas fa-money-bill-wave"></i>{this.props.restaurant.price_range}<i className="fas fa-cookie-bite">{this.props.restaurant.cuisine}</i>
-                <h3>{this.props.restaurant.description}</h3>
-                {safety}
-                <RestaurantDetailSidebar restaurant={this.props.restaurant}/>
-                <CreateReservationContainer />
-                <RestaurantShowMap restaurant={this.props.restaurant}/>
+            <div>
+                <div className="form-header">
+                    <img className="splash-image" src={window.union_square} alt="park" />
+                    <h1>{this.props.restaurant.name}</h1>
+                    <hr className="solid"></hr>
+                </div>
+
+                <div className="parent-form"> 
+
+                    <div className="show-page">
+                        <i className="fas fa-comment-alt">Reviews</i>
+                        <i className="fas fa-money-bill-wave"></i>{this.props.restaurant.price_range}<i className="fas fa-cookie-bite">{this.props.restaurant.cuisine}</i>
+                        <h3>{this.props.restaurant.description}</h3>
+                        {safety}
+                    </div>
+
+                    <div>
+                        <CreateReservationContainer />
+                        {/* <RestaurantShowMap restaurant={this.props.restaurant}/> */}
+                        <RestaurantDetailSidebar restaurant={this.props.restaurant}/>
+                    </div>
+
+
+                </div>
 
             </div>
         )

@@ -5,15 +5,20 @@ class RestaurantDetailSidebar extends React.Component {
         super(props);
     }
 
+    
+
 
     render() {
 
-        const { neighborhood, phone_num, dining_style, cuisine, dress_code, parking_details, public_transit, payment } = this.props.restaurant;
+        const { neighborhood, phone_num, dining_style, cuisine, dress_code, parking_details, public_transit, payment, lat, lng, address } = this.props.restaurant;
 
         return (
 
             <div>
                 <ul className="restaurant-detail-sidebar">
+                    <i class="fas fa-map-marker-alt"><a target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`}>{address}</a></i>
+                    <br/>
+                   
                     <li><i className="far fa-building"><span> Neigborhood</span></i>
                         <p>{neighborhood}</p>
                     </li>

@@ -30,28 +30,32 @@ class ReservationForm extends React.Component {
         
         return (
             
-            <div>
+            <div> 
                 
-                <h1>{this.props.formType}</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form className="res-form" onSubmit={this.handleSubmit} >
+                <h2>{this.props.formType}</h2>
 
-                    <input type="date" value={this.state.date} 
-                    min={new Date().toISOString().slice(0, 10)}
-                    max="2020-12-31"
-                    onChange={this.updateDate}
+                    <label> Party Size
+                        <select className="party-size" value={this.state.party_size} onChange={this.updateParty}>
+                            <option value="1">1 Person</option>
+                        {
+                            [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map(number => (
+                                <option value={number}>{number} People</option>
+                                ))
+                            }
+                            <option value="21">Large Party</option>
+                        </select>
+                    </label>
+
+                    <label>Date
+                    <input className="date" type="date" value={this.state.date} 
+                        min={new Date().toISOString().slice(0, 10)}
+                        max="2020-12-31"
+                        onChange={this.updateDate}
                     />
+                    </label>
 
-                    <select value={this.state.party_size} onChange={this.updateParty}>
-                        <option value="1">1 Person</option>
-                    {
-                        [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map(number => (
-                            <option value={number}>{number} People</option>
-                        ))
-                    }
-                        <option value="21">Large Party</option>
-                    </select>
-
-
+                    <label>Time
                     <select value={this.state.time} onChange={this.updateTime}>
                         {
                             [9, 10, 11].map(number => (
@@ -70,8 +74,11 @@ class ReservationForm extends React.Component {
                             ))
                         }
                     </select>
+                    </label>
 
-                    <button type="submit">{this.props.formType}</button>
+                    <button className="form-button" type="submit">{this.props.formType}</button>
+                    <br/>
+                    <i class="fas fa-chart-line">Booked PLACEHOLDER times today</i>
                 </form>
             </div>
         )

@@ -17,9 +17,10 @@ class RestaurantShowMap extends React.Component {
 
     render() {
         return (
-            <div id="map" ref="map"> 
-
-            </div>
+                <div id="map" ref="map"> 
+                Map
+                {/* <a href="">{this.restaurant.address}</a> */}
+                </div>
         )
     }
 }

@@ -18,6 +18,13 @@
  font-family: 'Josefin Sans', sans-serif;
 }
 
+label {
+    font-size: 13px;
+}
+
+.fa, .far, .fas {
+    font-family: 'Josefin Sans', sans-serif"
+}
 
 input {
     font-family: 'Josefin Sans', sans-serif;
@@ -36,7 +43,7 @@ form * {
 }
 
 .form-button {
-    background-color: #ff0000;
+    background-color: #db3434;
     border: 1px solid black;
     color: white;
     border-radius: 3px;
@@ -172,7 +179,7 @@ nav {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  max-height: 400px;
+  max-height: 350px;
 }
 
 /* ///////////////////////////////////// */
@@ -198,5 +205,51 @@ nav {
 #map {
     height: 350px;
     width: 350px;
+}
+
+.show-page{
+    padding-left: 130px;
+}
+
+.res-form {
+    /* position: fixed; */
+    /* z-index: 6; */
+    height: 300px;
+    width: 350px;
+    border-style: solid;
+    border-color: rgb(205, 199, 199);
+    border-width: 1px;
+    padding-bottom: 10px;
+    font-size: small;
+    font-size: medium;
+}
+
+.res-form * {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 8px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;}
+
+.res-form select {
+    padding: 9px 9px 11px 9px;
+}
+
+.party-size {
+    width: 260px;
+}
+
+.date {
+    width: 130px;
+}
+
+.parent-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-header {
+    padding-left: 130px;
 
 }
