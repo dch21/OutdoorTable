@@ -5,6 +5,7 @@ import Root from "./components/root";
 
 import { postUser, postSession, deleteSession } from "./util/session_api";
 import { fetchRestaurant, searchRestaurants} from "./util/restaurants_api";
+import { fetchReviews } from "./util/reviews_api";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -32,10 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     // Testing
-    // window.getState = store.getState;
-    // window.dispatch = store.dispatch;
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
 
-    window.searchRestaurants = searchRestaurants;
+    window.fetchReviews = fetchReviews;
+    // window.searchRestaurants = searchRestaurants;
     // window.fetchRestaurant = fetchRestaurant;
     // window.postSession = postSession;
     // window.postUser = postUser;

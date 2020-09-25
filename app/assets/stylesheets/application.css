@@ -211,6 +211,16 @@ nav {
     padding-left: 130px;
 }
 
+.show-page i, h3 {
+    padding: 5px;
+}
+
+.reservation-form-container {
+ position: fixed;
+    right: 20px;
+    z-index: 55;
+}
+
 .res-form {
     /* position: fixed; */
     /* z-index: 6; */

@@ -7,7 +7,6 @@
 #  description     :text             not null
 #  address         :text             not null
 #  capacity        :integer          not null
-#  gmaps_place_id  :string           not null
 #  neighborhood    :string
 #  phone_num       :string           not null
 #  cuisine         :string
@@ -19,6 +18,8 @@
 #  parking_details :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  lat             :float            not null
+#  lng             :float            not null
 #
 
 one:

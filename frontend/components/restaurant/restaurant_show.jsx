@@ -45,14 +45,17 @@ class RestaurantShow extends React.Component {
                 <div className="parent-form"> 
 
                     <div className="show-page">
-                        <i className="fas fa-comment-alt">Reviews</i>
-                        <i className="fas fa-money-bill-wave"></i>{this.props.restaurant.price_range}<i className="fas fa-cookie-bite">{this.props.restaurant.cuisine}</i>
+                        <i class="far fa-comments"><span> Reviews</span></i>
+                        <i className="fas fa-money-bill-wave"></i><span>{this.props.restaurant.price_range}</span><i className="fas fa-cookie-bite"></i><span>{this.props.restaurant.cuisine}</span>
                         <h3>{this.props.restaurant.description}</h3>
                         {safety}
                     </div>
 
-                    <div>
+                    <div className="reservation-form-container">
                         <CreateReservationContainer />
+                    </div>
+
+                    <div>
                         {/* <RestaurantShowMap restaurant={this.props.restaurant}/> */}
                         <RestaurantDetailSidebar restaurant={this.props.restaurant}/>
                     </div>

@@ -28,10 +28,15 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Reservation
 
+    has_many :reviews,
+    foreign_key: :reviewer_id,
+    class_name: :Review
+
     has_many :reserved_restaurants,
     through: :reservations,
     source: :restaurant
 
+    
 
     def password=(password)
         @password = password

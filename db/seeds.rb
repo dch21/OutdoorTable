@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Restaurant.destroy_all#
+Review.destroy_all
 
 r1 = Restaurant.create!(
     name: "Union Square Market",
@@ -60,3 +61,77 @@ r3 = Restaurant.create!(
     public_transit: "NR",
     parking_details: "Street"
 )
+
+
+rv1 = Review.create!(
+    review_body: "Good Food.",
+    private_note: "Good food",
+    overall_rating: 5,
+    food_rating: 5,
+    service_rating: 3,
+    ambience_rating: 2, 
+    noise_level: 2,
+    restaurant_id: 5,
+    reviewer_id: 1
+)
+
+rv2 = Review.create!(
+    review_body: "Good Dumplings.",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 3,
+    service_rating: 4,
+    ambience_rating: 3, 
+    noise_level: 2,
+    restaurant_id: 5,
+    reviewer_id: 2
+)
+
+rv3 = Review.create!(
+    review_body: "Great value. Pork buns are fatty and juicy.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 5,
+    service_rating: 2,
+    ambience_rating: 2, 
+    noise_level: 2,
+    restaurant_id: 5,
+    reviewer_id: 3
+)
+
+r4 = Review.create!(
+    review_body: "Nothing fancy here, but gets the job done",
+    private_note: "",
+    overall_rating: 3,
+    food_rating: 4,
+    service_rating: 3,
+    ambience_rating: 1, 
+    noise_level: 2,
+    restaurant_id: 5,
+    reviewer_id: 4
+)
+
+r5 = Review.create!(
+    review_body: "Food too spicy, but I don't like spicy food. Wrong match for me.",
+    private_note: "",
+    overall_rating: 3,
+    food_rating: 2,
+    service_rating: 4,
+    ambience_rating: 3, 
+    noise_level: 1,
+    restaurant_id: 5,
+    reviewer_id: 5
+)
+
+r6 = Review.create!(
+    review_body: "Lives up to its name.",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 5,
+    service_rating: 2,
+    ambience_rating: 4, 
+    noise_level: 1,
+    restaurant_id: 5,
+    reviewer_id: 6
+)
+
