@@ -1,4 +1,4 @@
-import * as ReservationAPIUtil from "../util/reservations_api";
+import * as ReservationAPIUtil from "../util/reservations";
 
 export const RECEIVE_RESERVATIONS = "RECEIVE_RESERVATIONS";
 export const RECEIVE_RESERVATION = "RECEIVE_RESERVATION";
@@ -33,7 +33,7 @@ export const requestReservation = (reservationId) => dispatch => (
         .then(reservation => dispatch(receiveReservation(reservation)))
 );
 export const createReservation = (reservation) => dispatch => (
-    ReservationAPIUtil.createReserreservation(reservation)
+    ReservationAPIUtil.createReservation(reservation)
         .then(reservation => dispatch(receiveReservation(reservation)))
 );
 export const updateReservation = (reservation) => dispatch => (

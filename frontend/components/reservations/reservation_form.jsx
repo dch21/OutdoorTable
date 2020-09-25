@@ -3,43 +3,52 @@ import React from "react";
 class ReservationForm extends React.Component {
     constructor(props) {
         super(props);
+        this.state = this.props.reservation;
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.update = this.update.bind(this);
     }
 
-    componentDidMount() {
-        this.props.getRestaurant(this.props.restaurantId);
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.action(this.state);
+    }
+
+    update(e) {
+        debugger
+        this.setState({ "party_size" : parseInt(e.currentTarget.value) });
     }
 
     render() {
-
-        if (!this.props.restaurant) {
-            return null;
-        }
-
-        const safety = 
-        (<ul>COVID-19 Precautions
-            <li>Deep cleaning daily between and after shifts</li>
-            <li>Sanitizer and wipes provided</li>
-            <li>Socially Distance Tables</li>
-            <li>Facemasks required unless eating</li>
-        </ul>)
-
-
+        
         return (
-            <div >
-                <img className="splash-image" src={window.union_square} alt="park" />
-                <h1>{this.props.restaurant.name}</h1>
-                <hr className="solid"></hr>
-                <i className="fas fa-comment-alt">Reviews</i>
-                <i className="fas fa-money-bill-wave"></i>{this.props.restaurant.price_range}<i className="fas fa-cookie-bite">{this.props.restaurant.cuisine}</i>
-                <h3>{this.props.restaurant.description}</h3>
-                {safety}
-                <RestaurantDetailSidebar restaurant={this.props.restaurant}/>
+            
+            <div>
+                
+                {/* <h1>{this.props.formType}</h1> */}
+                <form onSubmit={this.handleSubmit}>
+
+                   <input type="date"/>
+
+                    <select value={this.state.party_size} onChange={this.update}>
+                        <option value="1">1 Person</option>
+                    {
+                        [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map(number => (
+                            <option value={number}>{number} People</option>
+                        ))
+
+                    }
+                        <option value="21">Large Party</option>
+                    </select>
+
+
+
+                    {/* <button type="submit">{this.props.formType}</button> */}
+                </form>
             </div>
         )
     }
 
 }
-
 export default ReservationForm;
 
 

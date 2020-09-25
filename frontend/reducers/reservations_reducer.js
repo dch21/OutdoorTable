@@ -1,8 +1,4 @@
-import {
-    RECEIVE_RESERVATIONS,
-    RECEIVE_RESERVATION,
-    REMOVE_RESERVATION,
-} from '../actions/reservations_actions';
+import { RECEIVE_RESERVATIONS, RECEIVE_RESERVATION, REMOVE_RESERVATION} from '../actions/reservations_actions';
 
 const reservationsReducer = (oldState = {}, action) => {
 
