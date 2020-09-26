@@ -2,6 +2,8 @@ import React from "react";
 import RestaurantDetailSidebar from "./restaurant_detail_sidebar";
 import CreateReservationContainer from "../reservations/create_reservation_container";
 import RestaurantShowMap from "./restaurant_show_map";
+import ReviewsListContainer from "../reviews_list/reviews_list_container";
+
 
 
 class RestaurantShow extends React.Component {
@@ -49,6 +51,7 @@ class RestaurantShow extends React.Component {
                         <i className="fas fa-money-bill-wave"></i><span>{this.props.restaurant.price_range}</span><i className="fas fa-cookie-bite"></i><span>{this.props.restaurant.cuisine}</span>
                         <h3>{this.props.restaurant.description}</h3>
                         {safety}
+                        <ReviewsListContainer/>
                     </div>
 
                     <div className="reservation-form-container">
