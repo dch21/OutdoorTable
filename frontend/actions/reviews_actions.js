@@ -1,14 +1,17 @@
 import * as ReviewsAPIUtil from "../util/reviews_api";
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 
-const receiveReviews = reviews => {
+const receiveReviews = payload => {
+    const { reviews, reviewers } = payload;
+
     return {
         type: RECEIVE_REVIEWS,
-        reviews
+        reviews,
+        reviewers
     };
 };
 
 export const getReviews = (restaurantId) => dispatch => (
     ReviewsAPIUtil.fetchReviews(restaurantId)
-        .then(reviews => dispatch(receiveReviews(reviews)))
+        .then(payload => dispatch(receiveReviews(payload)))
 );

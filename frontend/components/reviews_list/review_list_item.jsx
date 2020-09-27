@@ -14,11 +14,19 @@ const ReviewListItem = props => {
         return <span className="fa fa-star clear"></span>
     });
 
+    const reviewer = props.reviewers[props.review.reviewer_id]
+    
+    let reviewerFirstName = reviewer.first_name[0].toUpperCase() + reviewer.first_name.slice(1)
 
     return (<div>
 
     
         <ul>
+            <div className="reviewer-name">
+                {reviewerFirstName + reviewer.last_name[0].toUpperCase()}
+                <br/>
+                {reviewer.location}
+            </div>
             {stars}{noStars}
             Overall {props.review.overall_rating}
             <li key="food"> Food: {props.review.food_rating} </li>

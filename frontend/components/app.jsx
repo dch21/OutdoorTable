@@ -20,7 +20,7 @@ const App = () => (
             <SearchFormContainer />
         </Switch>
         <SearchResults/>
-        <Link to="/restaurants/1">Sample Show Page in Progress</Link>
+        <Link to="/restaurants/5">Sample Show Page in Progress</Link>
     </div>
 )
 

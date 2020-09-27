@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.fetchReviews = fetchReviews;
     // window.searchRestaurants = searchRestaurants;
     // window.fetchRestaurant = fetchRestaurant;
-    // window.postSession = postSession;
+    window.postSession = postSession;
     // window.postUser = postUser;
     // window.deleteSession = deleteSession;
 
@@ -47,3 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<Root store={store}/>, root);
 });
 
+// test session
+// const user = {
+//     email: "test1@test.com",
+//     password: "testing",
+// }

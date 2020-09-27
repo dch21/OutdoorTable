@@ -15,10 +15,11 @@ class ReviewsList extends React.Component {
 
         return (
             <div>
-                
+                    
                     {
                         reviews.map(review => (
                             <ReviewListItem review={review}
+                            reviewers={this.props.reviewers}
                                 // key={reviews.id}
                             />
                         ))

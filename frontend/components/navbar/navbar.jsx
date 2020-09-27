@@ -33,6 +33,7 @@ class Navbar extends React.Component {
             <div>
                 <nav>
                     <div className="left-nav">
+                        {/* <Link className="home-page" to="/"><img className="logo" src={window.logo} alt="logo" /></Link> */}
                         <img className="logo" src={window.logo} alt="logo" />
                         <Link className="home-page" to="/">OutdoorTable</Link>
                         {/* <i className="fas fa-map-marker-alt"></i>   */}

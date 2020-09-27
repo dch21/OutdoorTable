@@ -4,16 +4,19 @@ class Api::ReviewsController < ApplicationController
 
         rest_id = params[:restaurant_id].to_i
         
-        @reviews = Review.where('restaurant_id = ?', "#{rest_id}")
+        # @reviews = Review.where('restaurant_id = ?', "#{rest_id}")
+        @reviews = Review.includes(:reviewer).where('restaurant_id = ?', "#{rest_id}")
+
                    
-        render json: @reviews
+        # render json: @reviews
+       render "api/reviews/show"
 
     end
 
     def create
         @review = Review.new(reservation_params)
         if @review.save!
-            render "api/reservations/show"
+            render "api/reviews/show"
         else
             render json: @review.errors.full_messages, status: 422
         end
