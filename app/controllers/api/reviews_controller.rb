@@ -7,7 +7,6 @@ class Api::ReviewsController < ApplicationController
         # @reviews = Review.where('restaurant_id = ?', "#{rest_id}")
         @reviews = Review.includes(:reviewer).where('restaurant_id = ?', "#{rest_id}")
 
-                   
         # render json: @reviews
        render "api/reviews/show"
 

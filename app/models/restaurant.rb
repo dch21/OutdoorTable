@@ -39,3 +39,14 @@ class Restaurant < ApplicationRecord
     source: :user
 
 end
+
+   def review_aggregates(rest_id)
+        aggregates = []
+        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").count.round(1)
+        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").average(:overall_rating).round(1)
+        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").average(:food_rating).round(1)
+        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").average(:service_rating).round(1)
+        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").average(:ambience_rating).round(1)
+        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").average(:noise_level).round(1)
+        aggregates
+    end

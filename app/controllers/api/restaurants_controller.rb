@@ -34,6 +34,11 @@ class Api::RestaurantsController < ApplicationController
         
     end
 
+    def aggregates
+        @aggregates = review_aggregates(params[:id])
+        render json: @aggregates
+    end
+
     def restaurant_params
         params
         .require(:restaurant)

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :restaurants, only: [:index, :show] do 
       get :search, on: :collection
+      get :aggregates, on: :member
       resources :reviews, only: [:index]
     end
     resources :reservations, only: [:index, :show, :create, :destroy, :update]
