@@ -15,15 +15,15 @@ class ReviewsList extends React.Component {
 
         return (
             <div>
-                <ul>
+                
                     {
                         reviews.map(review => (
                             <ReviewListItem review={review}
-                                key={reviews.id}
+                                // key={reviews.id}
                             />
                         ))
                     }
-                </ul>
+                
             </div>
         )
 

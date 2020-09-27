@@ -5,11 +5,8 @@ class Api::ReviewsController < ApplicationController
         rest_id = params[:restaurant_id].to_i
         
         @reviews = Review.where('restaurant_id = ?', "#{rest_id}")
-        
-        # @reviews = Review.find_by(restaurant_id: params[:restaurant_id])
-           
+                   
         render json: @reviews
-        # @restaurants = Restaurant.where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ?', "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%" )
 
     end
 

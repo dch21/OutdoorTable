@@ -16,7 +16,7 @@ class RestaurantDetailSidebar extends React.Component {
 
             <div>
                 <ul className="restaurant-detail-sidebar">
-                    <i class="fas fa-map-marker-alt"><a target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`}>{address}</a></i>
+                    <i className="fas fa-map-marker-alt"><a target="_blank" href={`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`}>{address}</a></i>
                     <br/>
                    
                     <li><i className="far fa-building"><span> Neigborhood</span></i>

@@ -263,3 +263,11 @@ nav {
     padding-left: 130px;
 
 }
+
+.checked {
+  color: red;
+}
+
+.clear {
+  color:rgb(217, 213, 213);
+}
