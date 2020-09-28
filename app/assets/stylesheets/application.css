@@ -300,3 +300,20 @@ nav {
     background-color: red;
     height: 14.9px
 }
+
+.circles {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: rgb(203, 133, 12);
+}
+
+.circles p {
+    text-align: center;
+    line-height: 60px;
+}
+
+.food-pic {
+    width: 250x;
+    height: 250px;
+}

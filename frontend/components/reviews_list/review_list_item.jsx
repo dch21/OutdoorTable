@@ -20,6 +20,9 @@ const ReviewListItem = props => {
 
     return (<div>
 
+        <div className="circles">
+            <p>{reviewer.first_name[0].toUpperCase() + reviewer.last_name[0].toUpperCase()}</p>
+        </div>
     
         <ul>
             <div className="reviewer-name">

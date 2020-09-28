@@ -4,6 +4,7 @@ import CreateReservationContainer from "../reservations/create_reservation_conta
 import RestaurantShowMap from "./restaurant_show_map";
 import ReviewsListContainer from "../reviews_list/reviews_list_container";
 import AggregatesContainer from "../ratings_aggregates/aggregates_container";
+import RestaurantPhotos from "./restaurant_photos";
 
 
 
@@ -36,11 +37,13 @@ class RestaurantShow extends React.Component {
             <li>Facemasks required unless eating</li>
         </ul>)
 
+        const logoPic = this.props.restaurant.name.substring(0, 4) + "4";
+
 
         return (
             <div>
                 <div className="form-header">
-                    <img className="splash-image" src={window.union_square} alt="park" />
+                    <img className="food-pic" src={window[`${logoPic}`]} alt="food" />
                     <h1>{this.props.restaurant.name}</h1>
                     <hr className="solid"></hr>
                 </div>
@@ -54,6 +57,9 @@ class RestaurantShow extends React.Component {
                         <i className="fas fa-money-bill-wave"></i><span>{this.props.restaurant.price_range}</span><i className="fas fa-cookie-bite"></i><span>{this.props.restaurant.cuisine}</span>
                         <h3>{this.props.restaurant.description}</h3>
                         {safety}
+                        <div>
+                            <RestaurantPhotos name={this.props.restaurant.name} />
+                        </div>
                         <div>
                             <AggregatesContainer />
                         </div>
