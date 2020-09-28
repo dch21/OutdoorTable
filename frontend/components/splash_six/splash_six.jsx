@@ -10,7 +10,7 @@ class SplashSix extends React.Component {
 
 
         return (
-            <div>
+            <div className="splash-six"> 
                 <h2>Featured Areas</h2>
                 <hr/>
 

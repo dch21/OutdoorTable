@@ -8,8 +8,8 @@
 
 # change rest_id for reviews when dropped db
 
+Review.destroy_all  #destroy in oppoiste order that you create
 Restaurant.destroy_all#
-Review.destroy_all
 
 r1 = Restaurant.create!(
     name: "Union Square Market",

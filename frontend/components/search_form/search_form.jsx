@@ -1,10 +1,13 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
+import { withRouter } from 'react-router';
+
 
 class SearchForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            searchTerm: "Location, Restaurant, or Cuisine"
+            searchTerm: "Location, Restaurant, or Cuisine",
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -12,6 +15,8 @@ class SearchForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.searchRestaurant(this.state.searchTerm);
+        
+        this.props.history.push('/search');
     }
 
     update(field) {
@@ -25,12 +30,11 @@ class SearchForm extends React.Component {
     render() {
 
         return (
-            <div className="splash-banner"> 
+            <div> 
                 <form onSubmit={this.handleSubmit}>
                     <br />
                         <div>
-                            <h3>Find your table for outdoor dining</h3>
-                            <img className="splash-image" src={window.splashImageURL} alt="people eating"/>
+                           
                             <input type="text"
                                 value={this.state.searchTerm}
                                 onClick={this.clear("searchTerm")}
@@ -41,11 +45,10 @@ class SearchForm extends React.Component {
                     
                     <br />
                 </form>
-
             </div>
         )
     }
 
 }
 
-export default SearchForm;
+export default withRouter(SearchForm);
