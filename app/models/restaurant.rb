@@ -42,11 +42,17 @@ end
 
    def review_aggregates(rest_id)
         aggregates = []
-        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").count.round(1)
-        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").average(:overall_rating).round(1)
-        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").average(:food_rating).round(1)
-        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").average(:service_rating).round(1)
-        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").average(:ambience_rating).round(1)
-        aggregates << Review.where('restaurant_id = ?', "#{rest_id}").average(:noise_level).round(1)
-        aggregates
+        query = Review.where('restaurant_id = ?', "#{rest_id}")
+        aggregates << query.count.round(1)
+        aggregates << query.average(:overall_rating).round(1)
+        aggregates << query.average(:food_rating).round(1)
+        aggregates << query.average(:service_rating).round(1)
+        aggregates << query.average(:ambience_rating).round(1)
+        aggregates << query.average(:noise_level).round(1)
+        aggregates << Review.where('overall_rating = 5 AND restaurant_id = ?', "#{rest_id}").count
+        aggregates << Review.where('overall_rating = 4 AND restaurant_id = ?', "#{rest_id}").count
+        aggregates << Review.where('overall_rating = 3 AND restaurant_id = ?', "#{rest_id}").count
+        aggregates << Review.where('overall_rating = 2 AND restaurant_id = ?', "#{rest_id}").count
+        aggregates << Review.where('overall_rating = 1 AND restaurant_id = ?', "#{rest_id}").count
     end
+

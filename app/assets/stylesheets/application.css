@@ -271,3 +271,32 @@ nav {
 .clear {
   color:rgb(217, 213, 213);
 }
+
+#rating-columns {
+    display: inline-block,
+}
+
+.rating-columns > p{
+    border-left: 1px solid grey;
+}
+
+.individual-column {
+    display: flex;
+    height: 40px;
+    width: 40px;
+}
+
+.bar-chart {
+    width: 100%
+}
+
+.bar-outside {
+    border: 1px solid #b3aeae;
+    height: 15px;
+    width: 50%;
+}
+
+.bar-inside {
+    background-color: red;
+    height: 14.9px
+}
