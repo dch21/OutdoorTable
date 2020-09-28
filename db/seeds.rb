@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# change rest_id for reviews when dropped db
+
 Restaurant.destroy_all#
 Review.destroy_all
 
@@ -16,6 +19,7 @@ r1 = Restaurant.create!(
     lat: 40.736731,
     lng: -73.989955,
     neighborhood: "Union Square",
+    boro: "Manhattan",
     phone_num: "555",
     cuisine: "Halal Cart",
     price_range: "Under $10",
@@ -34,6 +38,7 @@ r2 = Restaurant.create!(
     lat: 40.715085,
     lng: -73.993378,   
     neighborhood: "Manhattan Chinatown",
+    boro: "Manhattan",
     phone_num: "555-555-5558",
     cuisine: "Chinese",
     price_range: "Under $10",
@@ -52,6 +57,7 @@ r3 = Restaurant.create!(
     lat: 40.714928,
     lng: -73.999561,
     neighborhood: "Manhattan Chinatown",
+    boro: "Manhattan",
     phone_num: "555-555-5559",
     cuisine: "Chinese",
     price_range: "Under $10",
@@ -71,7 +77,7 @@ rv1 = Review.create!(
     service_rating: 3,
     ambience_rating: 2, 
     noise_level: 2,
-    restaurant_id: 5,
+    restaurant_id: 14,
     reviewer_id: 1
 )
 
@@ -83,7 +89,7 @@ rv2 = Review.create!(
     service_rating: 4,
     ambience_rating: 3, 
     noise_level: 2,
-    restaurant_id: 5,
+    restaurant_id: 14,
     reviewer_id: 2
 )
 
@@ -95,7 +101,7 @@ rv3 = Review.create!(
     service_rating: 2,
     ambience_rating: 2, 
     noise_level: 2,
-    restaurant_id: 5,
+    restaurant_id: 14,
     reviewer_id: 3
 )
 
@@ -107,7 +113,7 @@ r4 = Review.create!(
     service_rating: 3,
     ambience_rating: 1, 
     noise_level: 2,
-    restaurant_id: 5,
+    restaurant_id: 14,
     reviewer_id: 4
 )
 
@@ -119,7 +125,7 @@ r5 = Review.create!(
     service_rating: 4,
     ambience_rating: 3, 
     noise_level: 1,
-    restaurant_id: 5,
+    restaurant_id: 14,
     reviewer_id: 5
 )
 
@@ -131,7 +137,7 @@ r6 = Review.create!(
     service_rating: 2,
     ambience_rating: 4, 
     noise_level: 1,
-    restaurant_id: 5,
+    restaurant_id: 14,
     reviewer_id: 6
 )
 

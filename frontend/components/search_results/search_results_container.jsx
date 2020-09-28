@@ -2,17 +2,19 @@ import React from "react";
 import { connect } from "react-redux";
 // import { getRestaurant, searchRestaurant } from "../../actions/restaurant_actions";
 import SearchResults from "./search_results";
+import { getReviews } from "../../actions/reviews_actions";
 
 const mSTP = (state) => {
     return {
+        reviews: Object.values(state.entities.reviews),
         results: state.entities.restaurants
     };
 };
 
-// const mDTP = (dispatch) => {
-//     return {
-//         searchRestaurant: (searchTerms) => dispatch(searchRestaurant(searchTerms)),
-//     };
-// };
+const mDTP = (dispatch) => {
+    return {
+        getReviews: (restaurantId) => dispatch(getReviews(restaurantId)),
+    };
+};
 
-export default connect(mSTP, null)(SearchResults);
+export default connect(mSTP, mDTP)(SearchResults);

@@ -8,6 +8,7 @@ import Modal from "./modal/modal";
 import SearchFormContainer from "./search_form/search_form_container";
 import RestaurantShowContainer from "./restaurant/restaurant_show_container";
 import SearchResults from "./search_results/search_results_container";
+import SplashSix from "./splash_page/splash_page";
 // import CreateReservationContainer from "./reservations/create_reservation_container";
 
 
@@ -21,6 +22,7 @@ const App = () => (
         </Switch>
         <SearchResults/>
         <Link to="/restaurants/5">Sample Show Page in Progress</Link>
+        <SplashSix/>
     </div>
 )
 

@@ -7,7 +7,8 @@ const mSTP = (state, ownProps) => {
     const restaurantId = ownProps.match.params.restaurantId;
     return {
         restaurant: state.entities.restaurants[restaurantId],
-        restaurantId: restaurantId
+        restaurantId: restaurantId,
+        aggregates: state.entities.aggregates
     };
 };
 

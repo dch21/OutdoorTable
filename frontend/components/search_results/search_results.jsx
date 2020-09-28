@@ -9,6 +9,7 @@ class SearchResults extends React.Component {
 
     render() {
 
+
         const { results } = this.props;
 
         if (!Array.isArray(results)) {
@@ -23,15 +24,17 @@ class SearchResults extends React.Component {
 
         return (
             <div>
-                <ul>
+                
                     {
                         results.map(result => (
                             <SearchResultsItem result={result}
                                 key={result.id}
+                                review={this.props.reviews[0]}
+                                getReviews={this.props.getReviews}
                             />
                         ))
                     }
-                </ul>
+                    <hr/>
             </div>
         )
 

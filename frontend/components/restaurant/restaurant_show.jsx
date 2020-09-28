@@ -53,7 +53,7 @@ class RestaurantShow extends React.Component {
                     
 
                     <div className="show-page">
-                        <i className="far fa-comments"><span> Reviews</span></i>
+                        <i className="far fa-comments"><span> {this.props.aggregates[0]} Reviews</span></i>
                         <i className="fas fa-money-bill-wave"></i><span>{this.props.restaurant.price_range}</span><i className="fas fa-cookie-bite"></i><span>{this.props.restaurant.cuisine}</span>
                         <h3>{this.props.restaurant.description}</h3>
                         {safety}

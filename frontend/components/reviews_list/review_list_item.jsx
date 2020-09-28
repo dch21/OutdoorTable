@@ -37,6 +37,7 @@ const ReviewListItem = props => {
             <li key="ambience"> Ambience {props.review.ambience_rating} </li>
         </ul>
         {props.review.review_body}
+        <hr/>
     </div>
     )
 }

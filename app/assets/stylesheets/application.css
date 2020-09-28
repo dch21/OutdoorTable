@@ -317,3 +317,34 @@ nav {
     width: 250x;
     height: 250px;
 }
+
+.search-results {
+    display: flex;
+}
+
+.splash-row {
+    display: flex;
+}
+
+.splash-pic {
+    height: 180px;
+    width: 400px;
+    opacity: .85;
+    padding: 8px
+}
+
+.splash-panel-container {
+  position: relative;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.splash-panel-container > p {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: larger;
+  font-weight: bolder;
+  z-index: 3;
+}
