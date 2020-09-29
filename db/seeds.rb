@@ -105,7 +105,7 @@ rv3 = Review.create!(
     reviewer_id: 3
 )
 
-r4 = Review.create!(
+rv4 = Review.create!(
     review_body: "Nothing fancy here, but gets the job done",
     private_note: "",
     overall_rating: 3,
@@ -117,7 +117,7 @@ r4 = Review.create!(
     reviewer_id: 4
 )
 
-r5 = Review.create!(
+rv5 = Review.create!(
     review_body: "Food too spicy, but I don't like spicy food. Wrong match for me.",
     private_note: "",
     overall_rating: 3,
@@ -129,7 +129,7 @@ r5 = Review.create!(
     reviewer_id: 5
 )
 
-r6 = Review.create!(
+rv6 = Review.create!(
     review_body: "Lives up to its name.",
     private_note: "",
     overall_rating: 5,
@@ -141,3 +141,11 @@ r6 = Review.create!(
     reviewer_id: 6
 )
 
+res1 = Reservation.create!(
+    date: "2020-09-29",
+    time: "6:30PM",
+    notes: "None",
+    party_size: 10, 
+    restaurant_id: 14,
+    user_id: 4
+)

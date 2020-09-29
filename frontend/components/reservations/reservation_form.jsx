@@ -20,8 +20,9 @@ class ReservationForm extends React.Component {
     }
 
     updateTime(e) {
-        this.setState({ "time" : parseInt(e.currentTarget.value) });
+        this.setState({ "time" : e.currentTarget.value });
     }
+    
     updateDate(e) {
         this.setState({ "date" : e.currentTarget.value });
     }
@@ -60,8 +61,8 @@ class ReservationForm extends React.Component {
                         {
                             [9, 10, 11].map(number => (
                                 <>
-                                <option value={`${number}:00AM`} key={number}>{`${number}:00`} AM</option>
-                                <option value={`${number}:30AM`} key={`${number}.5`}>{`${number}:30`} AM</option>
+                                <option value={`${number}:00AM`} >{`${number}:00`} AM</option>
+                                <option value={`${number}:30AM`} >{`${number}:30`} AM</option>
                                 </>
                             ))
                         }

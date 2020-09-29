@@ -10,6 +10,14 @@ class Api::ReservationsController < ApplicationController
     end
 
     def create
+    
+        # time = params[:reservation][:time]
+        # date = params[:reservation][:date]
+        # restaurant_id = params[:reservation][:restaurant_id]
+
+        # Reservation.check_availability(time, date, restaurant_id)
+        # debugger
+
         @reservation = Reservation.new(reservation_params)
         if @reservation.save!
             render "api/reservations/show"
