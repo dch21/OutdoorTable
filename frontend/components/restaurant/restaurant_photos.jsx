@@ -18,8 +18,6 @@ class RestaurantPhotos extends React.Component {
                 <img className="food-pic" src={window[`${name1}`]} alt="food" />
                 <img className="food-pic" src={window[`${name2}`]} alt="food" />
                 <img className="food-pic" src={window[`${name3}`]} alt="food" />
-             
-            <hr/>
         </div>
         )
     }

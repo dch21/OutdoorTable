@@ -173,6 +173,7 @@ nav {
 /* ///////////////////////////////////// */
 
 .restaurant-detail-sidebar {
+    width: 250px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -195,16 +196,9 @@ nav {
     width: 350px;
 }
 
-.show-page{
-    padding-left: 130px;
-}
-
-.show-page i, h3 {
-    padding: 5px;
-}
 
 .reservation-form-container {
- position: fixed;
+    position: fixed;
     right: 20px;
     z-index: 55;
 }
@@ -228,162 +222,207 @@ nav {
     /* display: flex; */
     align-items: center;
     justify-content: center;}
+    
+    .res-form select {
+        padding: 9px 9px 11px 9px;
+    }
+    
+    .party-size {
+        width: 260px;
+    }
+    
+    .date {
+        width: 130px;
+    }
+    
+    .fa-star-half-full{
+        color: red
+    }
 
-.res-form select {
-    padding: 9px 9px 11px 9px;
-}
+    .checked {
+        color: red;
+    }
+    
+    .clear {
+        color:rgb(217, 213, 213);
+    }
+    
+    
+    .bar-chart-container{
+        width: 100%;
+    }
 
-.party-size {
-    width: 260px;
-}
+    .bar-chart {
+        width: 100%;
+        margin-left: 8px;
+    }
+    
+    .bar-outside {
+        border: 1px solid #b3aeae;
+        height: 15px;
+    }
+    
+    .bar-inside {
+        background-color: red;
+        height: 14.9px
+    }
 
-.date {
-    width: 130px;
-}
+    .rating-columns{
+        display: inline-flex;
+        /* flex-direction: row;
+        justify-content: space-around; */
+        font-size: 14px;
+    }
 
-.parent-form {
+    .individual-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 9px;
+    }
+    
+  
+
+    .circles {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background-color: rgb(203, 133, 12);
+    }
+    
+    .circles p {
+        text-align: center;
+        line-height: 60px;
+    }
+    
+    .food-pic {
+        width: 250x;
+        height: 250px;
+    }
+    
+    .search-results {
+        display: flex;
+    }
+    
+    .splash-six {
+        /* position: absolute; */
+        display: inline-table;
+    }
+    
+    .splash-row {
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        margin: auto;
+    }
+    
+    .splash-pic {
+        height: 170px;
+        width: 350px;
+        opacity: .85;
+        padding: 8px;
+        display: table-cell;
+    }
+    
+    .splash-panel-container {
+        position: relative;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    
+    .splash-panel-container > p {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: larger;
+        font-weight: bolder;
+        z-index: 3;
+    }
+    
+    .splash-banner {
+        /* display: flex; */
+        margin: auto;
+    }
+    
+    .splash-banner-container {
+        position: relative;
+        text-align: center;
+        
+    }
+    
+    .splash-banner-container > h2 {
+        position: absolute;
+        color: aliceblue;
+        width: 85%;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 37px;
+        z-index: 1;
+        font-weight: 1200;
+    }
+    
+    .splash-banner {
+        width: 100%;
+    }
+    
+    .splash-image {
+        display: block;
+        width: 100%;
+        opacity: .90;
+    }
+    
+    .search-form{
+        display: flex;
+        position: absolute;
+        width: 85%;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .show-container {
+        width: auto;
+    }
+    
+    .logo-banner {
+        width: 100%
+    }   
+
+    .parent-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .restaurant-info{
+       margin-left: 180px;
+    }
+        
+    .restaurant-info i, p {
+        padding: 5px;
+    }
+
+  .restaurant-sidebar {
+      margin-right: 180px;
+  }
+
+  .aggregates-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+  }
 
-.form-header {
-    padding-left: 130px;
-
-}
-
-.checked {
-  color: red;
-}
-
-.clear {
-  color:rgb(217, 213, 213);
-}
-
-#rating-columns {
-    display: inline-block,
-}
-
-.rating-columns > p{
-    border-left: 1px solid grey;
-}
-
-.individual-column {
-    display: flex;
-    height: 40px;
-    width: 40px;
-}
-
-.bar-chart {
-    width: 100%
-}
-
-.bar-outside {
-    border: 1px solid #b3aeae;
-    height: 15px;
-    width: 50%;
-}
-
-.bar-inside {
-    background-color: red;
-    height: 14.9px
-}
-
-.circles {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background-color: rgb(203, 133, 12);
-}
-
-.circles p {
-    text-align: center;
-    line-height: 60px;
-}
-
-.food-pic {
-    width: 250x;
-    height: 250px;
-}
-
-.search-results {
-    display: flex;
-}
-
-.splash-six {
-   /* position: absolute; */
-	display: inline-table;
-}
-
-.splash-row {
-    display: flex;
-    width: 80%;
-    flex-direction: row;
-    margin: auto;
-}
-
-.splash-pic {
-    height: 170px;
-    width: 350px;
-    opacity: .85;
-    padding: 8px;
-    display: table-cell;
-}
-
-.splash-panel-container {
-  position: relative;
-  text-align: center;
-  color: rgb(255, 255, 255);
-}
-
-.splash-panel-container > p {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: larger;
-  font-weight: bolder;
-  z-index: 3;
-}
-
-.splash-banner {
-    /* display: flex; */
-    margin: auto;
-}
-
-.splash-banner-container {
-  position: relative;
-  text-align: center;
+  .reviews span{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 4px;
+  }
   
-}
+  .reviews p > span{
+      padding: 0;
+  }
 
-.splash-banner-container > h2 {
-    position: absolute;
-    color: aliceblue;
-    width: 85%;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 37px;
-    z-index: 1;
-    font-weight: 1200;
-}
-
-.splash-banner {
-    width: 100%;
-}
-
-.splash-image {
-    display: block;
-    width: 100%;
-    opacity: .90;
-}
-
-.search-form{
-    display: flex;
-    position: absolute;
-    width: 85%;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+  
+  

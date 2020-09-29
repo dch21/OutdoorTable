@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getRestaurant } from "../../actions/restaurant_actions";
+import { getAggregates } from "../../actions/aggregates_actions";
 import RestaurantShow from "./restaurant_show";
 
 const mSTP = (state, ownProps) => {
@@ -15,6 +16,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
     return {
         getRestaurant: (restaurantId) => dispatch(getRestaurant(restaurantId)),
+        getAggregates: (restaurantId) => dispatch(getAggregates(restaurantId)),
     };
 };
 
