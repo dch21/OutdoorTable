@@ -311,19 +311,23 @@ nav {
 }
 
 .splash-six {
-    width: 99%;
-    margin: auto;
+   /* position: absolute; */
+	display: inline-table;
 }
 
 .splash-row {
     display: flex;
+    width: 80%;
+    flex-direction: row;
+    margin: auto;
 }
 
 .splash-pic {
     height: 170px;
-    width: 370px;
+    width: 350px;
     opacity: .85;
-    padding: 8px
+    padding: 8px;
+    display: table-cell;
 }
 
 .splash-panel-container {
@@ -353,15 +357,16 @@ nav {
   
 }
 
-.splash-banner-container > h3 {
+.splash-banner-container > h2 {
     position: absolute;
-    color: white;
+    color: aliceblue;
     width: 85%;
-    top: 17.5%;
-    left: 17%;
+    top: 25%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    font-size: larger;
-    z-index: 3;
+    font-size: 37px;
+    z-index: 1;
+    font-weight: 1200;
 }
 
 .splash-banner {
@@ -369,12 +374,16 @@ nav {
 }
 
 .splash-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* width: 80%; */
-  height: 250px;
-  opacity: .90;
+    display: block;
+    width: 100%;
+    opacity: .90;
+}
 
-  /* max-height: 450px; */
+.search-form{
+    display: flex;
+    position: absolute;
+    width: 85%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

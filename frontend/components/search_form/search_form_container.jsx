@@ -5,7 +5,12 @@ import SearchForm from "./search_form";
 
 const mSTP = (state) => {
     return {
-        // restaurants: state.entities.restaurants[restaurantId],
+        searchBar: {
+            date: new Date().toISOString().slice(0, 10),
+            time: "7:00PM",
+            party_size: 2,
+            searchTerm: "Location, Restaurant, or Cuisine",
+        }
     };
 };
 
@@ -15,4 +20,4 @@ const mDTP = (dispatch) => {
     };
 };
 
-export default connect(null, mDTP)(SearchForm);
+export default connect(mSTP, mDTP)(SearchForm);

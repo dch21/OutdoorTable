@@ -12,7 +12,7 @@ class SplashSearch extends React.Component {
         return (
             <div className="splash-banner"> 
                 <div className="splash-banner-container">
-                            <h3>Find your table for outdoor dining</h3>
+                            <h2>Find your Table for Outdoor Dining</h2>
                             <img className="splash-image" src={window.splashImageURL} alt="people eating"/>
                             <div>
                                 <SearchFormContainer/>
