@@ -114,11 +114,12 @@ class RestaurantShow extends React.Component {
                         
                     </div>
 
-                    <div className="reservation-form-container">
-                        <CreateReservationContainer />
-                    </div>
+                 
 
                     <div className="restaurant-sidebar">
+                        <div className="reservation-form-container">
+                            <CreateReservationContainer />
+                        </div>
                         {/* <RestaurantShowMap restaurant={this.props.restaurant}/> */}
                         <RestaurantDetailSidebar restaurant={this.props.restaurant}/>
                     </div>

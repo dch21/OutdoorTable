@@ -198,22 +198,28 @@ nav {
 
 
 .reservation-form-container {
-    position: fixed;
-    right: 20px;
-    z-index: 55;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /* right: 20px;
+    z-index: 55; */
+    margin-left: 40px;
 }
 
 .res-form {
-    /* position: fixed; */
-    z-index: 6;
+     position: -webkit-sticky;
+    /* position: sticky; */
+    /* top: 0; */
+    /* z-index: 6; */
     height: 300px;
-    width: 350px;
-    border-style: solid;
-    border-color: rgb(205, 199, 199);
+    /* width: 350px; */
+    border-style: groove;
+    /* border-color: rgb(205, 199, 199); */
     border-width: 1px;
     padding-bottom: 10px;
-    font-size: small;
-    font-size: medium;
+    /* font-size: small; */
+    /* font-size: medium; */
+    background-color: white;
 }
 
 .res-form * {
