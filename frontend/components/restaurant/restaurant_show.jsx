@@ -104,9 +104,14 @@ class RestaurantShow extends React.Component {
                         <div>
                             <AggregatesContainer />
                         </div>
+                        <br/>
 
-
-                        <ReviewsListContainer/>
+                        <div>
+                            <h2>Reviews</h2>
+                            <hr />
+                            <ReviewsListContainer/>
+                        </div>
+                        
                     </div>
 
                     <div className="reservation-form-container">
