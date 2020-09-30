@@ -6,11 +6,12 @@ class RestaurantShowMap extends React.Component {
     }
 
     componentDidMount() {
-        const mapCenter = { lat: 40.723138, lng: -73.977839 };
+
+        const mapCenter = { lat: this.props.restaurant.lat, lng: this.props.restaurant.lng };
         const restaurantLocation = { lat: this.props.restaurant.lat, lng: this.props.restaurant.lng };
         
         const map = new google.maps.Map(
-            document.getElementById('map'), { zoom: 13, center: mapCenter });
+            document.getElementById('map'), { zoom: 15, center: mapCenter });
         
         const marker = new google.maps.Marker({ position: restaurantLocation, map: map });
     }
