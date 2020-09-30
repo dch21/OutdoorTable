@@ -9,7 +9,7 @@
 # change rest_id for reviews when dropped db
 
 Review.destroy_all  #destroy in opposite order that you create
-Restaurant.destroy_all#
+Restaurant.destroy_all #
 
 u1 = User.create!(
   email: "demo@test.com",
@@ -33,7 +33,7 @@ u3 = User.create!(
   email: "jc@test.com",
   password: "testingjc",
   first_name: "Jose",
-  last_name: "Correa",
+  last_name: "Morales",
   location: "Bronx",
   phone_num: "555-555-3456"
 )
@@ -86,8 +86,8 @@ u8 = User.create!(
 u9 = User.create!(
   email: "bc@test.com",
   password: "testingbc",
-  first_name: "Britney",
-  last_name: "Chang",
+  first_name: "Xiao",
+  last_name: "Mao",
   location: "Staten Island",
   phone_num: "555-555-9012"
 )
@@ -146,37 +146,46 @@ u15 = User.create!(
   phone_num: "555-555-1516"
 )
 
+u16 = User.create!(
+  email: "bb@test.com",
+  password: "testingbb",
+  first_name: "Buckie",
+  last_name: "Beeves",
+  location: "Manhattan",
+  phone_num: "555-555-1617"
+)
+
 ################################################################################
 
 r1 = Restaurant.create!(
-    name: "Union Square Market",
-    description: "Green Market",
-    address: "Union Square W &, E 17th St, New York, NY 10003, USA",
-    capacity: 300,
-    lat: 40.736731,
-    lng: -73.989955,
-    neighborhood: "Union Square",
-    boro: "Manhattan",
-    phone_num: "555",
-    cuisine: "Halal Cart",
-    price_range: "Under $10",
+    name: "Hometown Bar-B-Que",
+    description: "Texas style smokehouse serving BBQ brisket, ribs, sausages, pulled pork and other meats in a rusting dining hall.",
+    address: "454 Van Brunt St, Brooklyn, NY 11231",
+    capacity: 35,
+    lat: 40.675070,
+    lng: -74.016116,
+    neighborhood: "Red Hook",
+    boro: "Brooklyn",
+    phone_num: "347-294-4644",
+    cuisine: "BBQ",
+    price_range: "$25-$50",
     payment: "Cash, AMEX, VISA, MASTERCARD",
     dining_style: "Casual",
     dress_code: "Casual",
-    public_transit: "NQR, 456, L",
+    public_transit: "B61",
     parking_details: "Street"
 )
 
 r2 = Restaurant.create!(
     name: "Super Taste",
-    description: "No frills shop selling one of the best and cheapest hand pulled noodles in the city. Also available are dumplings (fried or boiled) as well as succulent pork buns.",
+    description: "No frills shop selling one of the best and cheapest hand pulled noodles in the city in a variety of soups. Also available are dumplings (fried or boiled) as well as succulent pork buns.",
     address: "26 Eldridge St, New York, NY 10002, USA",
     capacity: 10,
     lat: 40.715085,
     lng: -73.993378,   
     neighborhood: "Manhattan Chinatown",
     boro: "Manhattan",
-    phone_num: "555-555-5558",
+    phone_num: "646-283-0999",
     cuisine: "Chinese",
     price_range: "Under $10",
     payment: "Cash, AMEX, VISA, MASTERCARD",
@@ -188,22 +197,81 @@ r2 = Restaurant.create!(
 
 r3 = Restaurant.create!(
     name: "Tasty Dumpling",
-    description: "Cheap dumplings (fried or boiled) that get the job done.",
+    description: "Cheap dumplings (fried or boiled) with different meat and vegetable fillings in a counter service, quick eats setting.",
     address: "42 Mulberry St, New York, NY 10013, USA",
-    capacity: 15,
+    capacity: 6,
     lat: 40.714928,
     lng: -73.999561,
     neighborhood: "Manhattan Chinatown",
     boro: "Manhattan",
-    phone_num: "555-555-5559",
+    phone_num: "212-349-0070",
     cuisine: "Chinese",
     price_range: "Under $10",
-    payment: "Cash, AMEX, VISA, MASTERCARD",
+    payment: "Cash, VISA, MASTERCARD",
     dining_style: "Casual",
     dress_code: "Casual",
     public_transit: "NR",
     parking_details: "Street"
 )
+
+r4 = Restaurant.create!(
+    name: "Ugly Baby",
+    description: "Spicy Thai food focusing on regional specialities, flavors, and dishes outside of the typical Thai place.",
+    address: "407 Smith St, Brooklyn, NY 11231",
+    capacity: 12,
+    lat: 40.677950,
+    lng: -73.996078,
+    neighborhood: "Carroll Gardens",
+    boro: "Brooklyn",
+    phone_num: "347-689-3075",
+    cuisine: "Thai",
+    price_range: "$25-$50",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "FG, R",
+    parking_details: "Street"
+)
+
+r5 = Restaurant.create!(
+    name: "La Morada",
+    description: "Restaurant specializing in Oaxacan cuisine serving one of the widest selection of mole in the city.",
+    address: "308 Willis Ave, The Bronx, NY 10454",
+    capacity: 8,
+    lat: 40.48379,
+    lng: -73.55169,
+    neighborhood: "Mott Haven",
+    boro: "Bronx",
+    phone_num: "718-292-0235",
+    cuisine: "Mexican",
+    price_range: "$10-$25",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "456",
+    parking_details: "Street"
+)
+
+r6 = Restaurant.create!(
+    name: "Rincon Criollo",
+    description: "Family run restaurant serving classic Cuban fare in a homely and cozy setting.",
+    address: "40-09 Junction Blvd, Corona, NY 11368",
+    capacity: 10,
+    lat: 40.748874,
+    lng: -73.868988,
+    neighborhood: "Corona",
+    boro: "Queens",
+    phone_num: "718-639-8158",
+    cuisine: "Cuban",
+    price_range: "$10-$25",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "7",
+    parking_details: "Street"
+)
+
+################################################################################
 
 
 rv1 = Review.create!(

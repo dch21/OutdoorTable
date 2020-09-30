@@ -7,9 +7,9 @@ class RestaurantPhotos extends React.Component {
 
   
     render() {
-        const name1 = this.props.name.substring(0, 4) + "1";
-        const name2 = this.props.name.substring(0, 4) + "2";
-        const name3 = this.props.name.substring(0, 4) + "3";
+        const name1 = this.props.name.substring(0, 2) + "1";
+        const name2 = this.props.name.substring(0, 2) + "2";
+        const name3 = this.props.name.substring(0, 2) + "3";
 
         return (
         
