@@ -10,6 +10,7 @@
 
 Review.destroy_all  #destroy in opposite order that you create
 Restaurant.destroy_all #
+User.destroy_all
 
 u1 = User.create!(
   email: "demo@test.com",
@@ -275,82 +276,131 @@ r6 = Restaurant.create!(
 
 
 rv1 = Review.create!(
-    review_body: "Good Food.",
+    review_body: "Felt and smelled like I was back in Texas when I walked in. Beef rib is top notch and the dish to get here. Brisket could be a bit more moist, but overall, made me nostalgic for home.",
     private_note: "Good food",
     overall_rating: 5,
-    food_rating: 5,
+    food_rating: 4,
     service_rating: 3,
-    ambience_rating: 2, 
-    noise_level: 2,
-    restaurant_id: 14,
-    reviewer_id: 1
+    ambience_rating: 5, 
+    noise_level: 3,
+    restaurant_id: r1.id,
+    reviewer_id: u5.id
 )
 
 rv2 = Review.create!(
-    review_body: "Good Dumplings.",
+    review_body: "I was on road trip through the state and everyone has been saying this is must-stop. Did not disappoint with a wide selection of meats though I wish they more game meat like beaver. Great bathrooms too! ",
     private_note: "",
-    overall_rating: 5,
-    food_rating: 3,
+    overall_rating: 4,
+    food_rating: 5,
     service_rating: 4,
     ambience_rating: 3, 
     noise_level: 2,
-    restaurant_id: 14,
-    reviewer_id: 2
+    restaurant_id: r1.id,
+    reviewer_id: u16.id
 )
 
 rv3 = Review.create!(
-    review_body: "Great value. Pork buns are fatty and juicy.",
+    review_body: "No Arby's doesn't have the meats. Hometown BBQ has the meats! You know it's good when you don't need the sauce. Perfect for a post-workout meal to jump start my gains.",
     private_note: "",
     overall_rating: 4,
     food_rating: 5,
     service_rating: 2,
     ambience_rating: 2, 
     noise_level: 2,
-    restaurant_id: 14,
-    reviewer_id: 3
+    restaurant_id: r1.id,
+    reviewer_id: u2.id
 )
 
 rv4 = Review.create!(
-    review_body: "Nothing fancy here, but gets the job done",
+    review_body: "As a graduate student and aspiring writer, this is awesome value for a meal. A bowl of Mount Qi noodles is a perfect balance of spicy and sour for under $10.",
     private_note: "",
     overall_rating: 3,
     food_rating: 4,
     service_rating: 3,
     ambience_rating: 1, 
     noise_level: 2,
-    restaurant_id: 14,
-    reviewer_id: 4
+    restaurant_id: r2.id,
+    reviewer_id: u6.id
 )
 
 rv5 = Review.create!(
-    review_body: "Food too spicy, but I don't like spicy food. Wrong match for me.",
+    review_body: "I know people rave about the noodles, but honestly the most underrated items here are the pork buns. Fatty, thick slices of pork in a soft mantou bun with peanuts and cilantro. It melts in your mouth.",
     private_note: "",
     overall_rating: 3,
     food_rating: 2,
     service_rating: 4,
     ambience_rating: 3, 
     noise_level: 1,
-    restaurant_id: 14,
-    reviewer_id: 5
+    restaurant_id: r2.id,
+    reviewer_id: u9.id
 )
 
 rv6 = Review.create!(
-    review_body: "Lives up to its name.",
+    review_body: "Woah! Bang! A lot spicier that I though it would be! No Pad Thai here...just dishes with flavors you won't find anywhere else.",
     private_note: "",
     overall_rating: 5,
     food_rating: 5,
-    service_rating: 2,
-    ambience_rating: 4, 
-    noise_level: 1,
-    restaurant_id: 14,
-    reviewer_id: 6
+    service_rating: 4,
+    ambience_rating: 2, 
+    noise_level: 4,
+    restaurant_id: r4.id
+    reviewer_id: u3.id
 )
 
-res1 = Reservation.create!(
-    date: "2020-09-29",
-    time: "6:30PM",
-    notes: "None",
-    party_size: 10, 
-    restaurant_id: 14,
-    user_id: 4
+
+rv6 = Review.create!(
+    review_body: "With Uncle Boons(RIP) gone, Ugly Baby hits the spot for funky, creative Thai food. They got their mainstay dishes, but make sure to try the weekly specials to spice things up.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 5,
+    ambience_rating: 4, 
+    noise_level: 1,
+    restaurant_id: r4.id,
+    reviewer_id: u5.id
 )
+
+rv7 = Review.create!(
+    review_body: "Simple, counter service that gets the job done. Great for walking through and having a snack.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 2,
+    ambience_rating: 2, 
+    noise_level: 1,
+    restaurant_id: r3.id,
+    reviewer_id: u1.id
+)
+
+rv8 = Review.create!(
+    review_body: "I was walking my dog Frank around and stumbled onto this cozy restaurant. They even got a poetry library in the back! One of the few places you can get Oaxacan food in NYC. I get the mole every time.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 5,
+    ambience_rating: 3, 
+    noise_level: 1,
+    restaurant_id: r5.id,
+    reviewer_id: u4.id
+)
+
+rv9 = Review.create!(
+    review_body: "They kept up their festive atmopshere even though it's outside. Generous portions, home-cooked style...no wonder they have been around for over 30 years."
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 2,
+    ambience_rating: 2, 
+    noise_level: 1,
+    restaurant_id: r6.id,
+    reviewer_id: u10.id
+)
+
+# res1 = Reservation.create!(
+#     date: "2020-09-29",
+#     time: "6:30PM",
+#     notes: "None",
+#     party_size: 10, 
+#     restaurant_id: 14,
+#     user_id: 4
+# )
