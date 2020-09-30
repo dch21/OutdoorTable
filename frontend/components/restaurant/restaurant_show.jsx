@@ -2,7 +2,8 @@ import React from "react";
 import RestaurantDetailSidebar from "./restaurant_detail_sidebar";
 import CreateReservationContainer from "../reservations/create_reservation_container";
 import RestaurantShowMap from "./restaurant_show_map";
-import ReviewsListContainer from "../reviews_list/reviews_list_container";
+// import ReviewsListContainer from "../reviews_list/reviews_list_container";
+import ReviewsList from "../reviews_list/reviews_list";
 import AggregatesContainer from "../ratings_aggregates/aggregates_container";
 import RestaurantPhotos from "./restaurant_photos";
 
@@ -102,14 +103,18 @@ class RestaurantShow extends React.Component {
                         <br/>
 
                         <div>
-                            <AggregatesContainer />
+                            <AggregatesContainer restaurantId={this.props.restaurantId} />
                         </div>
                         <br/>
 
                         <div>
                             <h2>Reviews</h2>
                             <hr />
-                            <ReviewsListContainer/>
+                            <ReviewsList getReviews={this.props.getReviews} 
+                            restaurantId={this.props.restaurantId}
+                            clearReviews={this.props.clearReviews} 
+                            reviews={this.props.reviews}
+                            reviewers={this.props.reviewers}/>
                         </div>
                         
                     </div>

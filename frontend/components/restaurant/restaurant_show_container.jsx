@@ -14,7 +14,9 @@ const mSTP = (state, ownProps) => {
     return {
         restaurant: state.entities.restaurants[restaurantId],
         restaurantId: restaurantId,
-        aggregates: state.entities.aggregates
+        aggregates: state.entities.aggregates,
+        reviews: Object.values(state.entities.reviews),
+        reviewers: state.entities.users,
     };
     
 };
