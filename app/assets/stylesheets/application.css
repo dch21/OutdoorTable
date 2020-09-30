@@ -163,6 +163,25 @@ nav {
     font-weight: 200;
 }
 
+.user-dropdown-menu {
+    background-color: white;
+    z-index: 50;
+    right: 25px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    width: 174px;
+    height: 140px;
+    color: gray; 
+    padding-top: 25px;
+    z-index: 120;
+}
+
+.user-dropdown-menu > span:hover {
+    transform: scale(1.05);
+}
+
 /* mag glass */
 /* .fa-map-marker-alt:before {
     display: inline-block;

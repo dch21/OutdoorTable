@@ -16,11 +16,11 @@ class UserDropdown extends React.Component {
     }
 
     handleBlur(e) {
-        this.setState({ show: false })
+        this.setState({ show: false });
     }
 
     handleClick() {
-        this.setState({ show: !this.state.show })
+        this.setState({ show: !this.state.show });
     }
 
     handleLinkUser() {
@@ -37,15 +37,19 @@ class UserDropdown extends React.Component {
                 >
                     Hi, {this.props.firstName} &#x2193;
             {this.state.show ? (
-                        <ul 
+                        <div className="user-dropdown-menu"
                             onClick={e => e.stopPropagation()}
                             style={{ position: 'absolute', top: '100%'}}
                         >
                             <span onClick={this.handleLinkUser}>My Profile</span> 
+                            <br/>
                             <span>My Dining History</span>
+                            <br/>
                             <span>My Saved Restaurants</span>
-                            <li onClick={this.props.logout}>Sign Out</li>
-                        </ul>
+                            <br/>
+                            <span onClick={this.props.logout}>Sign Out</span>
+                            <br/>
+                        </div>
                     ) : null}
                 </button>
             </div>
