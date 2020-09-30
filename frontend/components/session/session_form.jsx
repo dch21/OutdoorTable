@@ -55,11 +55,11 @@ class SessionForm extends React.Component{
             <div>
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit}>
-                    <h3>{this.props.formType === "Sign Up" ? "Welcome to OutsideTable!" : "Please sign in"}</h3>
+                    <h3 className="modal-header">{this.props.formType === "Sign Up" ? "Welcome to OutsideTable!" : "Please sign in"}</h3>
                     <br/>
                     {this.props.formType === "Sign Up" &&
                     <div>
-                        <input type="text"
+                        <input type="text" className="sign-inup"
                             value={this.state.first_name}
                             onClick={this.clear("first_name")}
                             onChange={this.update("first_name")}
@@ -69,7 +69,7 @@ class SessionForm extends React.Component{
                     
                     {this.props.formType === "Sign Up" &&
                     <div>
-                        <input type="text"
+                        <input type="text" className="sign-inup"
                             value={this.state.last_name}
                             onClick={this.clear("last_name")}
                             onChange={this.update("last_name")}
@@ -78,7 +78,7 @@ class SessionForm extends React.Component{
                     }
                     
                     <div>
-                        <input type="text"
+                        <input type="text" className="sign-inup"
                             value={this.state.email}
                             onClick={this.clear("email")}
                             onChange={this.update("email")}
@@ -87,7 +87,7 @@ class SessionForm extends React.Component{
                     
 
                     <div>
-                        <input type="password"
+                        <input type="password" className="sign-inup"
                             value={this.state.password}
                             onClick={this.clear("password")}
                             onChange={this.update("password")}
@@ -96,7 +96,7 @@ class SessionForm extends React.Component{
 
                     {this.props.formType === "Sign Up" &&
                     <div>
-                        <input type="text"
+                        <input type="text" className="sign-inup"
                             value={this.state.location}
                             onClick={this.clear("location")}
                             onChange={this.update("location")}
@@ -113,7 +113,7 @@ class SessionForm extends React.Component{
                         <button className="form-button" onClick={this.demoLogin}>Demo User</button>
                         <br/>
                         <br/>
-                        <button className="account-button" onClick={() => this.props.openModal("signUp")}>New to OutDoorTable? Create an account.</button>
+                        <button className="account-button" onClick={() => this.props.openModal("signUp")}>New to OutDoorTable?<p> Create an account.</p></button>
                         
                     </div>
                 }

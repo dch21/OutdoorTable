@@ -55,6 +55,16 @@ input {
     width: 300px;
     margin: 8px;
     border: 1px #cec4c4 solid;
+    height: 24px;
+}
+
+.modal-header {
+    margin-top: 30px;
+    right: 50px
+}
+
+.sign-inup {
+    height: 35px;
 }
 
 form * {
@@ -70,7 +80,7 @@ form * {
     border: 1px solid black;
     color: white;
     border-radius: 3px;
-    height: 35px;
+    height: 45px;
     margin: auto;
     width: 325px;
     display: flex;
@@ -124,6 +134,11 @@ nav {
   border: none;
   margin: auto;
   outline: none;
+  margin-left: 57px;
+}
+
+.account-button p {
+    color: rgb(203, 50, 50);
 }
 
 .account-button:hover{
