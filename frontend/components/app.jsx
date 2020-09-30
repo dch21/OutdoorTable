@@ -10,6 +10,7 @@ import RestaurantShowContainer from "./restaurant/restaurant_show_container";
 import SearchResults from "./search_results/search_results_container";
 import SplashSix from "./splash_six/splash_six";
 import SplashSearch from "./splash_search/splash_search";
+import Footer from "./footer/footer"
 // import CreateReservationContainer from "./reservations/create_reservation_container";
 
 
@@ -26,6 +27,7 @@ const App = () => (
         {/* <SearchResults/> */}
         <Route exact path="/" component={SplashSix}/>
         <Link to="/restaurants/14">Sample Show Page in Progress</Link>
+        <Footer/> 
     </div>
 )
 

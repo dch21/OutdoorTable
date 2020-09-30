@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import UserDropdown from "./user_dropdown";
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -23,7 +24,8 @@ class Navbar extends React.Component {
         const signedinNav = () => {
             return (
                 <div>
-                    <button onClick={logout}>Log Out</button>
+                    <UserDropdown firstName={this.props.firstName} logout={logout}/>
+                    {/* <button onClick={logout}>Hi, {this.props.firstName}</button> */}
                 </div>
             )
         }
@@ -33,9 +35,14 @@ class Navbar extends React.Component {
             <div>
                 <nav>
                     <div className="left-nav">
-                        {/* <Link className="home-page" to="/"><img className="logo" src={window.logo} alt="logo" /></Link> */}
-                        <img className="logo" src={window.logo} alt="logo" />
-                        <Link className="home-page" to="/">OutdoorTable</Link>
+                        <div >
+                            <Link className="home-page" to="/"><img className="logo" src={window.logo} alt="logo" /></Link>
+
+                        </div>
+                        {/* <img className="logo" src={window.logo} alt="logo" /> */}
+                        <div className="logo-name">
+                            <Link className="home-page" to="/"><span >OutdoorTable</span></Link>
+                        </div>
                         {/* <i className="fas fa-map-marker-alt"></i>   */}
                     </div>
                     <div className="right-nav">
