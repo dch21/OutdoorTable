@@ -7,7 +7,7 @@ class ReviewsList extends React.Component {
     }
 
     componentDidMount(){
-        // this.props.clearReviews();
+        this.props.clearReviews();
         // debugger
         this.props.getReviews(this.props.restaurantId);
     }
