@@ -8,8 +8,145 @@
 
 # change rest_id for reviews when dropped db
 
-Review.destroy_all  #destroy in oppoiste order that you create
+Review.destroy_all  #destroy in opposite order that you create
 Restaurant.destroy_all#
+
+u1 = User.create!(
+  email: "demo@test.com",
+  password: "testing",
+  first_name: "Demo First Name",
+  last_name: "Demo Last Name",
+  location: "Manhattan",
+  phone_num: "555-555-1234"
+)
+
+u2 = User.create!(
+  email: "mc@test.com",
+  password: "testingmc",
+  first_name: "Mitch",
+  last_name: "Ferrell",
+  location: "Brooklyn",
+  phone_num: "555-555-2345"
+)
+
+u3 = User.create!(
+  email: "jc@test.com",
+  password: "testingjc",
+  first_name: "Jose",
+  last_name: "Correa",
+  location: "Bronx",
+  phone_num: "555-555-3456"
+)
+
+u4 = User.create!(
+  email: "eb@test.com",
+  password: "testingeb",
+  first_name: "Erica",
+  last_name: "Brown",
+  location: "Staten Island",
+  phone_num: "555-555-4567"
+)
+
+u5 = User.create!(
+  email: "mh@test.com",
+  password: "testingmh",
+  first_name: "Mildred",
+  last_name: "Hubbel",
+  location: "Queens",
+  phone_num: "555-555-5678"
+)
+
+u6 = User.create!(
+  email: "dw@test.com",
+  password: "testingdw",
+  first_name: "Danielle",
+  last_name: "Wallace",
+  location: "Manhattan",
+  phone_num: "555-555-6789"
+)
+
+u7 = User.create!(
+  email: "mw@test.com",
+  password: "testingmw",
+  first_name: "Marie",
+  last_name: "Wazerk",
+  location: "Brooklyn",
+  phone_num: "555-555-7890"
+)
+
+u8 = User.create!(
+  email: "pg@test.com",
+  password: "testingpg",
+  first_name: "Paul",
+  last_name: "Grits",
+  location: "Bronx",
+  phone_num: "555-555-8901"
+)
+
+u9 = User.create!(
+  email: "bc@test.com",
+  password: "testingbc",
+  first_name: "Britney",
+  last_name: "Chang",
+  location: "Staten Island",
+  phone_num: "555-555-9012"
+)
+
+u10 = User.create!(
+  email: "sa@test.com",
+  password: "testingsa",
+  first_name: "Stan",
+  last_name: "Ahmed",
+  location: "Queens",
+  phone_num: "555-555-1011"
+)
+
+u11 = User.create!(
+  email: "nw@test.com",
+  password: "testingnw",
+  first_name: "Neddie",
+  last_name: "Win",
+  location: "Manhattan",
+  phone_num: "555-555-1112"
+)
+
+u12 = User.create!(
+  email: "as@test.com",
+  password: "testingas",
+  first_name: "Amira",
+  last_name: "Shah",
+  location: "Bronx",
+  phone_num: "555-555-1213"
+)
+
+u13 = User.create!(
+  email: "mn@test.com",
+  password: "testingmn",
+  first_name: "Mai",
+  last_name: "Nguyen",
+  location: "Queens",
+  phone_num: "555-555-1314"
+)
+
+u14 = User.create!(
+  email: "cj@test.com",
+  password: "testingcj",
+  first_name: "Chris",
+  last_name: "Jones",
+  location: "Staten Island",
+  phone_num: "555-555-1415"
+)
+
+u15 = User.create!(
+  email: "js@test.com",
+  password: "testingjs",
+  first_name: "Juliet",
+  last_name: "Santos",
+  location: "Brooklyn",
+  phone_num: "555-555-1516"
+)
+
+
 
 r1 = Restaurant.create!(
     name: "Union Square Market",

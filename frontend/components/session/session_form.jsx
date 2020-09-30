@@ -21,7 +21,7 @@ class SessionForm extends React.Component{
 
     demoLogin(e) {
         e.preventDefault();
-        this.props.action({ email: "a", password: "qqqqqq" }).then(this.props.closeModal);
+        this.props.action({ email: "demo@test.com", password: "testing" }).then(this.props.closeModal);
     }
 
     update(field) {
