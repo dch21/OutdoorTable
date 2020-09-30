@@ -64,7 +64,7 @@ input {
 }
 
 .sign-inup {
-    height: 35px;
+    height: 29px;
 }
 
 form * {
@@ -232,18 +232,21 @@ nav {
 
 .modal-form {
     position: absolute;
-    top: 80px;
+    top: 50px;
     left: 50%;
     margin-left: -230px;
     background: white;
     width: 450px;
-    height: 600px;
+    /* height: 500px; */
+    padding-bottom: 10px;
     border-radius: 5px;
 }
 
 .errors-list li {
     list-style-position: inside;
     padding-left: 0;
+    color: rgb(232, 64, 64);
+    font-size: 15px;
 }
 
 /* ///////////////////////////////////// */

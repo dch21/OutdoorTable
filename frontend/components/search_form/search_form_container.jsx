@@ -9,7 +9,7 @@ const mSTP = (state) => {
             date: new Date().toISOString().slice(0, 10),
             time: "7:00PM",
             party_size: 2,
-            searchTerm: "Location, Restaurant, or Cuisine",
+            searchTerm: "",
         }
     };
 };

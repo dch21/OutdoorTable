@@ -4,11 +4,11 @@ class SessionForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            first_name: "First Name",
-            last_name: "Last Name",
-            email: "Email",
-            password: "Password",
-            location: "Primary Dining Location"
+            first_name: "",
+            last_name: "",
+            email: "",
+            password: "",
+            location: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoLogin = this.demoLogin.bind(this);
@@ -52,7 +52,7 @@ class SessionForm extends React.Component{
 
         return (
             
-            <div>
+            <div className="login-container">
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit}>
                     <h3 className="modal-header">{this.props.formType === "Sign Up" ? "Welcome to OutsideTable!" : "Please sign in"}</h3>
@@ -63,6 +63,7 @@ class SessionForm extends React.Component{
                             value={this.state.first_name}
                             onClick={this.clear("first_name")}
                             onChange={this.update("first_name")}
+                            placeholder="First Name"
                         />
                     </div>
                     }
@@ -73,6 +74,7 @@ class SessionForm extends React.Component{
                             value={this.state.last_name}
                             onClick={this.clear("last_name")}
                             onChange={this.update("last_name")}
+                            placeholder="Last Name"
                         />
                     </div>
                     }
@@ -82,6 +84,7 @@ class SessionForm extends React.Component{
                             value={this.state.email}
                             onClick={this.clear("email")}
                             onChange={this.update("email")}
+                            placeholder="Email"
                         />
                     </div>
                     
@@ -91,6 +94,7 @@ class SessionForm extends React.Component{
                             value={this.state.password}
                             onClick={this.clear("password")}
                             onChange={this.update("password")}
+                            placeholder="Password"
                         />
                     </div>
 
@@ -100,6 +104,7 @@ class SessionForm extends React.Component{
                             value={this.state.location}
                             onClick={this.clear("location")}
                             onChange={this.update("location")}
+                            placeholder="Primary Dining Location"
                         />
                     </div>
                     }       

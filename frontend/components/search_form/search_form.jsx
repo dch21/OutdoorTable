@@ -85,6 +85,7 @@ class SearchForm extends React.Component {
                                 value={this.state.searchTerm}
                                 onClick={this.clear("searchTerm")}
                                 onChange={this.update("searchTerm")}
+                                placeholder="Location, Restaurant, or Cuisine"
                             />
                             <button className="form-button" type="submit">Let's go</button>
                         
