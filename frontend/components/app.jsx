@@ -26,7 +26,7 @@ const App = () => (
         <Route path="/search" component={SearchResults} />
         {/* <SearchResults/> */}
         <Route exact path="/" component={SplashSix}/>
-        <Link to="/restaurants/14">Sample Show Page in Progress</Link>
+        <Link to="/restaurants/1">Sample Show Page in Progress</Link>
         <Footer/> 
     </div>
 )

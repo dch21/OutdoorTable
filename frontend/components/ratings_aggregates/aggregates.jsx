@@ -33,9 +33,9 @@ class Aggregates extends React.Component {
         });
 
         const unfilledStars = Array(5 - (Math.floor(ratingAsFloat)) - 1).fill("no star");
-        const noStars = unfilledStars.map(star => {
-            return <span className="fa fa-star clear"></span>
-        });
+        // const noStars = unfilledStars.map(star => {
+        //     return <span className="fa fa-star clear"></span>
+        // });
 
         
         return ( 
@@ -47,7 +47,7 @@ class Aggregates extends React.Component {
                     <div className="reviews">
                         <span>Overall Ratings and Reviews</span>
                         <p>Reviews can only be written by those who have eaten at this restaurant using an OutdoorTable Booking.</p>
-                        <p>{stars}{halfStars}{noStars}{overallRating} based on recent ratings</p>
+                        <p>{stars}{halfStars}{overallRating} based on recent ratings</p>
 
                         <div className="rating-columns">
                             <div className="individual-column">

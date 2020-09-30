@@ -8,6 +8,7 @@
 
 # change rest_id for reviews when dropped db
 
+#use ber db:reset to reset everything
 Review.destroy_all  #destroy in opposite order that you create
 Restaurant.destroy_all #
 User.destroy_all
@@ -15,8 +16,8 @@ User.destroy_all
 u1 = User.create!(
   email: "demo@test.com",
   password: "testing",
-  first_name: "Demo First Name",
-  last_name: "Demo Last Name",
+  first_name: "Demo",
+  last_name: "User",
   location: "Manhattan",
   phone_num: "555-555-1234"
 )
@@ -25,7 +26,7 @@ u2 = User.create!(
   email: "mc@test.com",
   password: "testingmc",
   first_name: "Mitch",
-  last_name: "Ferrell",
+  last_name: "Cummings",
   location: "Brooklyn",
   phone_num: "555-555-2345"
 )
@@ -343,7 +344,7 @@ rv6 = Review.create!(
     service_rating: 4,
     ambience_rating: 2, 
     noise_level: 4,
-    restaurant_id: r4.id
+    restaurant_id: r4.id,
     reviewer_id: u3.id
 )
 
@@ -385,7 +386,7 @@ rv8 = Review.create!(
 )
 
 rv9 = Review.create!(
-    review_body: "They kept up their festive atmopshere even though it's outside. Generous portions, home-cooked style...no wonder they have been around for over 30 years."
+    review_body: "They kept up their festive atmopshere even though it's outside. Generous portions, home-cooked style...no wonder they have been around for over 30 years.",
     private_note: "",
     overall_rating: 4,
     food_rating: 4,

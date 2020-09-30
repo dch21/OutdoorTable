@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getReviews } from "../../actions/reviews_actions";
+import { getReviews, clearReviews } from "../../actions/reviews_actions";
 import ReviewsList from "./reviews_list";
 
 const mSTP = (state) => {
@@ -14,6 +14,7 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
     return {
         getReviews: (restaurantId) => dispatch(getReviews(restaurantId)),
+        clearReviews: () => dispatch(clearReviews())
     };
 };
 

@@ -5,13 +5,13 @@ const ReviewListItem = props => {
     const filledStars = Array(props.review.overall_rating).fill("star");
 
     const stars = filledStars.map(star => {
-        return <span className="fa fa-star checked"></span>
+        return <i className="fa fa-star checked"></i>
     });
 
     const unfilledStars = Array(5 - props.review.overall_rating).fill("no star");
 
     const noStars = unfilledStars.map(star => {
-        return <span className="fa fa-star clear"></span>
+        return <i className="fa fa-star clear"></i>
     });
 
     const reviewer = props.reviewers[props.review.reviewer_id]
