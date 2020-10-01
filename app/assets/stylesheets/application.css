@@ -557,8 +557,35 @@ nav {
         justify-content: space-between;
     }
     
+    .restaurant-nav {
+        display: inline-flex;
+        justify-content: space-between;    
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 100 ;
+        background-color: white;
+        width: 100%;
+        border-bottom: 1px grey solid;
+        padding-bottom: 3px;
+    }
+
+    .restaurant-nav > p {
+        font-size: 16px;
+        margin-right: 20px;
+        height: 5px;
+    }
+
+    .restaurant-nav > p:first-child {
+        color: rgb(231, 49, 49);
+    }
+
     .restaurant-info{
        margin-left: 180px;
+    }
+    .restaurant-info > h1{
+       font-size: 45px;
+       font-weight: bold;
     }
         
     .restaurant-info i, p {

@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # change rest_id for reviews when dropped db
+# remove hours table
 
 #use ber db:reset to reset everything
 Review.destroy_all  #destroy in opposite order that you create
@@ -176,7 +177,8 @@ r1 = Restaurant.create!(
     dress_code: "Casual",
     public_transit: "B61",
     parking_details: "Street",
-    website: "https://hometownbbq.com/"
+    website: "https://hometownbbq.com/",
+    hours: "Mon: Closed, Tue: 12:00 pm - 8:00 pm, Wed: 12:00 pm - 8:00 pm, Thu: 12:00 pm - 8:00 pm, Fri: 12:00 pm - 8:00 pm, Sat: 12:00 pm - 8:00 pm, Sun: 12:00 pm - 8:00 pm"
 )
 
 r2 = Restaurant.create!(
@@ -196,7 +198,9 @@ r2 = Restaurant.create!(
     dress_code: "Casual",
     public_transit: "DFM",
     parking_details: "Street",
-    website: "http://www.supertasteny.com/"
+    website: "http://www.supertasteny.com/",
+    hours: "Mon: 10:00pm - 11:00 pm, Tue: 10:00pm - 11:00 pm, Wed: 10:00pm - 11:00 pm, Thu: 10:00pm - 11:00 pm, Fri: 10:00pm - 11:00 pm, Sat: 10:00pm - 11:00 pm, Sun: 10:00pm - 11:00 pm"
+
 )
 
 r3 = Restaurant.create!(
@@ -216,7 +220,8 @@ r3 = Restaurant.create!(
     dress_code: "Casual",
     public_transit: "NR",
     parking_details: "Street",
-    website: "https://www.yelp.com/biz/tasty-dumpling-new-york"
+    website: "https://www.yelp.com/biz/tasty-dumpling-new-york",
+    hours: "Mon: 9:00 am - 8:30 pm, Tue: 9:00 am - 8:30 pm, Wed: 9:00 am - 8:30 pm, Thu: 9:00 am - 8:30 pm, Fri: 9:00 am - 8:30 pm, Sat: 9:00 am - 8:30 pm, Sun: 9:00 am - 8:30 pm"
 )
 
 r4 = Restaurant.create!(
@@ -236,7 +241,8 @@ r4 = Restaurant.create!(
     dress_code: "Casual",
     public_transit: "FG, R",
     parking_details: "Street",
-    website: "https://www.instagram.com/uglybabynyc/"
+    website: "https://www.instagram.com/uglybabynyc/",
+    hours: "Mon: Closed, Tue: Closed, Wed: Closed, Thu: 5:00 pm - 10:30 pm, Fri: 5:00 pm - 10:30 pm, Sat: 12:00 pm - 3:00 pm, 5:00 pm - 10:30 pm, Sun: 12:00 pm - 3:00 pm, 5:00 pm - 10:30 pm"
 )
 
 r5 = Restaurant.create!(
@@ -256,7 +262,8 @@ r5 = Restaurant.create!(
     dress_code: "Casual",
     public_transit: "456",
     parking_details: "Street",
-    website: "https://lamoradanyc.com/"
+    website: "https://lamoradanyc.com/",
+    hours: "Mon: Closed, Tue: Closed, Wed: Closed, Thu: 11:00 am - 6:30 pm, Fri: 11:00 am - 6:30 pm, Sat: 11:00 am - 6:30 pm, Sun: Closed"
 )
 
 r6 = Restaurant.create!(
@@ -276,7 +283,8 @@ r6 = Restaurant.create!(
     dress_code: "Casual",
     public_transit: "7",
     parking_details: "Street",
-    website: "https://rincon-criollo.com/"
+    website: "https://rincon-criollo.com/",
+    hours: "Mon: 12:00 pm - 10:00 pm, Tue: 12:00 pm - 10:00 pm, Wed: 12:00 pm - 10:00 pm, Thu: 12:00 pm - 10:00 pm, Fri: 12:00 pm - 10:00 pm, Sat: 12:00 pm - 10:00 pm, Sun: 12:00 pm - 10:00 pm"
 )
    
 r7 = Restaurant.create!(
@@ -296,7 +304,8 @@ r7 = Restaurant.create!(
     dress_code: "Casual",
     public_transit: "S93, Staten Island Ferry",
     parking_details: "Street",
-    website: "https://www.joeandpatsny.com/"
+    website: "https://www.joeandpatsny.com/",
+    hours: "Mon: 11:00 am - 10:00 pm, Tue: 11:00 am - 10:00 pm, Wed: 11:00 am - 10:00 pm, Thu: 11:00 am - 10:00 pm, Fri: 11:00 am - 11:00 pm, Sat: 11:00 am - 11:00 pm, Sun: 11:00 am - 10:00 pm"
 )
 
 ################################################################################

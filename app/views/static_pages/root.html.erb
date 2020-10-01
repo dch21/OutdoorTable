@@ -2,7 +2,8 @@
     <script type="text/javascript">
         window.currentUser = {
             "id": <%= current_user.id %>,
-            // "firstName": "<%= current_user.first_name %>"
+            "first_name": "<%= current_user.first_name %>"
+            // added this and to navbar container to fix name showing up
             // "email": "<%= current_user.email %>"
             // has to match users reducer 
         };

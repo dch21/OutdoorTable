@@ -33,17 +33,16 @@ class RestaurantShow extends React.Component {
             return null;
         }
 
-        // fix stars here
-        // const ratingAsFloat = parseFloat(this.props.aggregates[1]);
+        const ratingAsFloat = parseFloat(this.props.aggregates[1]);
 
-        // const filledStars = Array(Math.floor(ratingAsFloat)).fill("star");
-        // const stars = filledStars.map(star => {
-        //     return <span className="fa fa-star checked"></span>
-        // });
+        const filledStars = ratingAsFloat ?  Array(Math.floor(ratingAsFloat)).fill("star") : [];
+        const stars = filledStars.map(star => {
+            return <span className="fa fa-star checked"></span>
+        });
 
-        // const halfStars = ["half"].map(star => {
-        //     return <span className="fa fa-star-half-full"></span>
-        // });
+        const halfStars = ["half"].map(star => {
+            return <span className="fa fa-star-half-full"></span>
+        });
 
         // const unfilledStars = Array(5 - (Math.floor(ratingAsFloat)) - 1).fill("no star");
         // const noStars = unfilledStars.map(star => {
@@ -63,8 +62,6 @@ class RestaurantShow extends React.Component {
                 </ul>
 
             </div>)
-
-        // const logoPic = this.props.restaurant.name.substring(0, 4) + "4";
                 
 
         return (
@@ -79,8 +76,20 @@ class RestaurantShow extends React.Component {
                     
 
                     <div className="restaurant-info">
+
+                        <div className="restaurant-nav">
+                            <p>Overview</p>
+                            <p>Photos</p>
+                            <p>Menu</p>
+                            <p>Reviews</p>
+                        </div>
+                
+                    
+
                         <h1>{this.props.restaurant.name}</h1>
                         <hr className="solid"></hr>
+                        {stars}{halfStars}
+                        {this.props.aggregates[1]}
                         <i className="far fa-comments"><span> {this.props.aggregates[0]} Reviews</span></i>
                         <i className="fas fa-money-bill-wave"></i><span>{this.props.restaurant.price_range}</span><i className="fas fa-cookie-bite"></i><span>{this.props.restaurant.cuisine}</span>
                         <p>{this.props.restaurant.description}</p>
@@ -107,7 +116,7 @@ class RestaurantShow extends React.Component {
                         </div>
                         <br/>
 
-                        <div>
+                        <div id="review-link">
                             <h2>Reviews</h2>
                             <hr />
                             <ReviewsList getReviews={this.props.getReviews} 

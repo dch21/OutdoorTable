@@ -20,13 +20,14 @@ const ReviewListItem = props => {
 
     const colors = ['rgb(203, 139, 80)', 'rgb(111, 111, 217)', 'rgb(199, 109, 219)', 'rgb(110, 208, 172)'];
     const random_color = colors[Math.floor(Math.random() * colors.length)];
+    const dateDined = Math.ceil( (new Date() - new Date(props.review.created_at)) / (1000 * 60 * 60 * 24) )
 
     return (<div className="reviews-container">
 
                 <div className="review-container">
 
                     <div className="circle-container">
-                    <div class="circles" style={{ background: random_color }}>
+                    <div className="circles" style={{ background: random_color }}>
                             <p>{reviewer.first_name[0].toUpperCase() + reviewer.last_name[0].toUpperCase()}</p>
                     </div>
 
@@ -37,7 +38,7 @@ const ReviewListItem = props => {
                     </div>
 
                     <div className="review-body"> 
-                         {stars}{noStars}
+                        {stars}{noStars} &middot; Dined {dateDined} {dateDined === 1 ? "day" : "days"} ago.
                         <ul>
                             <li>Overall <span>{props.review.overall_rating}</span></li>
                             <li key="food"> &middot; Food <span>{props.review.food_rating}</span> </li>

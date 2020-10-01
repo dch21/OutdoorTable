@@ -10,7 +10,7 @@ class RestaurantDetailSidebar extends React.Component {
 
     render() {
 
-        const { neighborhood, phone_num, dining_style, cuisine, dress_code, parking_details, public_transit, payment, lat, lng, address } = this.props.restaurant;
+        const { neighborhood, phone_num, dining_style, cuisine, dress_code, parking_details, public_transit, payment, lat, lng, address, hours } = this.props.restaurant;
 
         return (
 
@@ -24,7 +24,7 @@ class RestaurantDetailSidebar extends React.Component {
                     </li>
 
                     <li><i className="far fa-clock"><span> Hours</span></i>
-                        <p>Placeholder Hours</p>                    
+                        <p>{hours}</p>                   
                     </li>
 
                     <li><i className="fas fa-phone"><span> Phone Number</span></i>
