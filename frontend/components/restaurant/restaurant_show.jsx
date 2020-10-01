@@ -132,7 +132,7 @@ class RestaurantShow extends React.Component {
 
                     <div className="restaurant-sidebar">
                         <div className="reservation-form-container">
-                            <CreateReservationContainer />
+                            <CreateReservationContainer totalbookings={this.props.aggregates[11]}/>
                         </div>
 
                         <div>

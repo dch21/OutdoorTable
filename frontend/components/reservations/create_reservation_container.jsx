@@ -12,7 +12,8 @@ const mSTP = (state) => {
             notes: "Make a note or accommodations request here.",
             party_size: 2,
             restaurant_id: parseInt(Object.keys(state.entities.restaurants)[0]),
-            user_id: parseInt(Object.keys(state.entities.users)[0])
+            user_id: state.entities.session ? parseInt(Object.keys(state.entities.session)[0]) : ""
+            //if you are logged out if will be null
         }
     };
 };

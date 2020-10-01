@@ -7,6 +7,9 @@ import { postUser, postSession, deleteSession } from "./util/session_api";
 import { fetchRestaurant, searchRestaurants} from "./util/restaurants_api";
 import { fetchReviews } from "./util/reviews_api";
 import { fetchAggregates } from "./util/aggregates_api";
+// import { fetchNumberReservations } from "./util/reservations";
+
+
 
 
 
@@ -42,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.fetchAggregates = fetchAggregates;
     window.searchRestaurants = searchRestaurants;
     // window.fetchRestaurant = fetchRestaurant;
+    // window.fetchNumberReservations = fetchNumberReservations;
     window.postSession = postSession;
     // window.postUser = postUser;
     // window.deleteSession = deleteSession;

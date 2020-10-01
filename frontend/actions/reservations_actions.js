@@ -4,6 +4,7 @@ export const RECEIVE_RESERVATIONS = "RECEIVE_RESERVATIONS";
 export const RECEIVE_RESERVATION = "RECEIVE_RESERVATION";
 export const REMOVE_RESERVATION = "REMOVE_RESERVATION";
 
+
 const receiveReservations = reservations => {
     return {
         type: RECEIVE_RESERVATIONS,
@@ -22,6 +23,7 @@ const removeReservation = reservationId => {
         reservationId
     };
 };
+
 
 
 export const requestReservations = (userId) => dispatch => (
@@ -44,3 +46,8 @@ export const deleteReservation = (reservationId) => dispatch => (
     ReservationAPIUtil.deleteReservation(reservationId)
         .then(() => dispatch(removeReservation(reservationId)))
 );
+
+// export const receiveNumberBookings = (restaurantId) => dispatch => (
+//     ReservationAPIUtil.fetchNumberReservations(restaurantId)
+//         .then(numberBookings => dispatch(receiveTotalBookings(numberBookings)))
+// );

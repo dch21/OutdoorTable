@@ -27,7 +27,7 @@ class Restaurant < ApplicationRecord
     validates :name, :description, :address, :capacity, :lat, :lng, :phone_num, :boro, presence: true
     
     has_many :reservations,
-    foreign_key: :user_id,
+    foreign_key: :restaurant_id,
     class_name: :Reservation
 
     has_many :reviews,
@@ -54,5 +54,11 @@ end
         aggregates << Review.where('overall_rating = 3 AND restaurant_id = ?', "#{rest_id}").count
         aggregates << Review.where('overall_rating = 2 AND restaurant_id = ?', "#{rest_id}").count
         aggregates << Review.where('overall_rating = 1 AND restaurant_id = ?', "#{rest_id}").count
+
+        today = Date.today.to_s
+        @total_bookings_for_day = Restaurant.find(rest_id).reservations.where('date = ?',"#{today}").count
+
+        aggregates << @total_bookings_for_day
+        aggregates
     end
 

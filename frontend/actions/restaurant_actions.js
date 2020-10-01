@@ -18,6 +18,7 @@ const receiveSearch = restaurants => {
 
 
 
+
 export const getRestaurant = (restaurantId) => dispatch => (
     RestaurantAPIUtil.fetchRestaurant(restaurantId)
         .then(restaurant => dispatch(receiveRestaurant(restaurant)))
@@ -27,4 +28,6 @@ export const searchRestaurant = (searchTerms) => dispatch => (
     RestaurantAPIUtil.searchRestaurants(searchTerms)
         .then(restaurants => dispatch(receiveSearch(restaurants)))
 );
+
+
 

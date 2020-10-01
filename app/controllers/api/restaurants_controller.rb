@@ -39,6 +39,15 @@ class Api::RestaurantsController < ApplicationController
         render json: @aggregates
     end
 
+    # i put this in the aggregates
+    # def bookings
+    #     today = Date.today.to_s
+    #     @total_bookings_for_day = Restaurant.find(params[:id]).reservations.where('date = ?',"#{today}").count
+    #     render json: @total_bookings_for_day
+    #     # test
+    #     # Restaurant.find(1).reservations.where('date = ?',"#{Date.today.to_s}").count
+    # end
+
     def restaurant_params
         params
         .require(:restaurant)

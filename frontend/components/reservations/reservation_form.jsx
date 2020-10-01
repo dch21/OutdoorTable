@@ -79,7 +79,7 @@ class ReservationForm extends React.Component {
 
                     <button className="form-button" type="submit">{this.props.formType}</button>
                     <br/>
-                    <i className="fas fa-chart-line">Booked PLACEHOLDER times today</i>
+                    <span className="fas fa-chart-line"></span>Booked {this.props.totalbookings} times today
                 </form>
             </div>
         )

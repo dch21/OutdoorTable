@@ -259,7 +259,17 @@ nav {
   flex-wrap: wrap;
   list-style-type: none;
     /* font-size: larger; */
+}
 
+.restaurant-detail-sidebar a {
+    color: rgb(217, 57, 57);
+    font-size: 13.5px;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.restaurant-detail-sidebar p {
+   font-size: 14.5px;
 }
 
 .restaurant-detail-sidebar span {

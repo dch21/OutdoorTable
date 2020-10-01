@@ -493,10 +493,10 @@ rv15 = Review.create!(
 )
 
 # res1 = Reservation.create!(
-#     date: "2020-09-29",
+#     date: "2020-10-01",
 #     time: "6:30PM",
 #     notes: "None",
 #     party_size: 10, 
-#     restaurant_id: 14,
+#     restaurant_id: 1,
 #     user_id: 4
 # )

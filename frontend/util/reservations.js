@@ -1,3 +1,5 @@
+
+
 export const fetchReservations = (userId) => {
     return $.ajax({
         method: "GET",
