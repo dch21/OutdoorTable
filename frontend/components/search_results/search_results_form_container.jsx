@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getRestaurant, searchRestaurant } from "../../actions/restaurant_actions";
-import SearchForm from "./search_form";
+import SearchForm from "../search_form/search_form";
 
 const mSTP = (state) => {
     return {
@@ -11,7 +11,7 @@ const mSTP = (state) => {
             party_size: 2,
             searchTerm: "",
         },
-        type: "homepage"
+        type: "searchpage"
     };
 };
 
@@ -22,3 +22,5 @@ const mDTP = (dispatch) => {
 };
 
 export default connect(mSTP, mDTP)(SearchForm);
+
+//used this to connect searchForm of front page to search form of search page

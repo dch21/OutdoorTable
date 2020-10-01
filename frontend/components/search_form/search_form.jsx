@@ -43,8 +43,8 @@ class SearchForm extends React.Component {
     render() {
 
         return (
-            <div> 
-                <form className="search-form" onSubmit={this.handleSubmit }>
+            <div className={this.props.type === "homepage" ? "" : "search-results-div"}> 
+                <form className={this.props.type === "homepage" ? "search-form" : "search-page-form"} onSubmit={this.handleSubmit }>
 
                             <select value={this.state.time} onChange={this.updateTime}>
                                 {

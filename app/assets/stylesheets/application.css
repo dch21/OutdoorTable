@@ -422,13 +422,32 @@ nav {
     }
     
     .food-pic {
-        width: 250x;
-        height: 250px;
+        max-width: 50%;
+        height: 200px;
+        border-radius: 5px;
     }
     
-    .search-results {
-        display: flex;
+    /* .search-results-container {
+        display: block;
+    } */
+
+    .search-results-div{
+        /* display: flex; */
+        width: 100%;
     }
+
+    .search-results-form, form {
+        display: flex;
+        width: 60%;
+    }
+
+    /* .search-results-form.party-size {
+        width: 120px;
+    } */
+
+    /* .search-result-item {
+        display: flex;
+    } */
     
     .splash-six {
         /* position: absolute; */
