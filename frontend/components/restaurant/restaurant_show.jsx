@@ -64,8 +64,8 @@ class RestaurantShow extends React.Component {
 
             </div>)
 
-        const logoPic = this.props.restaurant.name.substring(0, 4) + "4";
-
+        // const logoPic = this.props.restaurant.name.substring(0, 4) + "4";
+                
 
         return (
             <div className="show-container">
@@ -97,7 +97,7 @@ class RestaurantShow extends React.Component {
                         <div>
                             <h2>Menu</h2>
                             <hr/>
-                            <a href="">Restaurant Menu</a>
+                            <a href={`${this.props.restaurant.website}`}>Restaurant Menu</a>
                         </div>
                         <br/>
                         <br/>

@@ -20,8 +20,8 @@ class SearchResultsItem extends React.Component {
         }
 
         const logoPic = this.props.result.name.substring(0,2) + "4";
-
-        const dollar_sign = this.props.result.price_range === "Under $10" ? "$" : (this.props.result.price_range === "$10-$25" ? "$$" : "$$$")
+        
+        const dollar_sign = this.props.result.price_range === "Under $10" ? "$" : (this.props.result.price_range === "$10-$25" ? "$$" : "$$$");
 
         // const filteredReviews = Object.values(this.props.reviews).filter(object => object.restaurant_id === this.props.result.id);
         // debugger

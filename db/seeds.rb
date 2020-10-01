@@ -460,7 +460,7 @@ rv12 = Review.create!(
 )
 
 rv14 = Review.create!(
-    review_body: "Best pizza spot in NYC? The correct answer to that question is the one you went to while growing up as a kid in the city. Luckily for me, Joe & Pat’s has always been around the corner from me!",
+    review_body: "What is the best pizza spot in NYC? The correct answer to that question is the one you went to while growing up as a kid in the city. Luckily for me, Joe & Pat’s has always been around the corner!",
     private_note: "",
     overall_rating: 5,
     food_rating: 5,
@@ -472,7 +472,7 @@ rv14 = Review.create!(
 )
 
 rv15 = Review.create!(
-    review_body: "Nothing beats a cruise on the ferry on the way to one of the best thin slices in the city. Yeah, I'm a bit latoses intolerant, but the pizza is so good it's worth the consequences. They've expanded outdoor seating options.",
+    review_body: "Nothing beats a cruise on the ferry on the way to one of the best thin slices in the city. Yeah, I'm a bit lactose intolerant, but the pizza is so good it's worth the consequences. They've expanded outdoor seating options.",
     private_note: "",
     overall_rating: 4,
     food_rating: 4,

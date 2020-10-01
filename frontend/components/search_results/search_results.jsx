@@ -20,7 +20,7 @@ class SearchResults extends React.Component {
                 <p>No results found. Try again.</p>
             )
         }
-        debugger
+        
         return (
             <div>
 
