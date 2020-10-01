@@ -24,7 +24,7 @@ class UserDropdown extends React.Component {
     }
 
     handleLinkUser() {
-        this.props.history.push('/');
+        this.props.history.push('/restaurants/1');
     }
 
     render() {

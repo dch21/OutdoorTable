@@ -8,7 +8,8 @@ import Modal from "./modal/modal";
 import SearchFormContainer from "./search_form/search_form_container";
 import RestaurantShowContainer from "./restaurant/restaurant_show_container";
 import SearchResults from "./search_results/search_results_container";
-import SplashSix from "./splash_six/splash_six";
+// import SplashSix from "./splash_six/splash_six";
+import SplashSixContainer from "./splash_six/splash_six_container";
 import SplashSearch from "./splash_search/splash_search";
 import Footer from "./footer/footer"
 // import CreateReservationContainer from "./reservations/create_reservation_container";
@@ -25,7 +26,7 @@ const App = () => (
         </Switch>
         <Route path="/search" component={SearchResults} />
         {/* <SearchResults/> */}
-        <Route exact path="/" component={SplashSix}/>
+        <Route exact path="/" component={SplashSixContainer}/>
         <Link to="/restaurants/1">Sample Show Page in Progress</Link>
         <Footer/> 
     </div>

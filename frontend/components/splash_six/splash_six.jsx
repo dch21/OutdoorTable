@@ -1,13 +1,28 @@
 import React from "react";
+import { withRouter } from 'react-router';
+
 
 class SplashSix extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {searchTerm: "Brooklyn"};
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.changeSearch = this.changeSearch.bind(this);
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.searchRestaurant(this.state.searchTerm);
+
+        this.props.history.push('/search');
+    }
+    
+    //must be passed in as function below so it doesn't infinitely propagate
+    changeSearch(place) {
+        this.setState({ searchTerm: place});
+    }
 
     render() {
-
 
         return (
             <div className="splash-six"> 
@@ -16,18 +31,18 @@ class SplashSix extends React.Component {
 
                 <div className="splash-row"> 
 
-                    <div className="splash-panel-container">
-                        <p>All Five Boroughs</p>
+                    <div className="splash-panel-container" onMouseEnter={()=>this.changeSearch("")}>
+                        <button onClick={this.handleSubmit}>All Five Boroughs</button>
                         <img className="splash-pic" src={window.nyc} alt="nyc" />
                     </div>
                     
-                    <div className="splash-panel-container">
-                        <p>Brooklyn</p>
+                    <div className="splash-panel-container" onMouseEnter={() => this.changeSearch("Brooklyn")}>
+                        <button onClick={this.handleSubmit}>Brooklyn</button>
                         <img className="splash-pic" src={window.brooklyn} alt="brooklyn" />
                     </div>
 
-                    <div className="splash-panel-container">
-                        <p>Manhattan</p>
+                    <div className="splash-panel-container" onMouseEnter={() => this.changeSearch("Manhattan")}>
+                        <button onClick={this.handleSubmit}>Manhattan</button>
                         <img className="splash-pic" src={window.manhattan} alt="manhattan" />
                     </div>
 
@@ -35,18 +50,18 @@ class SplashSix extends React.Component {
 
                 <div className="splash-row">
 
-                    <div className="splash-panel-container">
-                        <p>Queens</p>
+                    <div className="splash-panel-container" onMouseEnter={() => this.changeSearch("Queens")}>
+                        <button onClick={this.handleSubmit}>Queens</button>
                         <img className="splash-pic" src={window.queens} alt="queens" />
                     </div>
 
-                    <div className="splash-panel-container">
-                        <p>Bronx</p>
+                    <div className="splash-panel-container" onMouseEnter={() => this.changeSearch("Bronx")}>
+                        <button onClick={this.handleSubmit}>Bronx</button>
                         <img className="splash-pic" src={window.bronx} alt="bronx" />
                     </div>
 
-                    <div className="splash-panel-container">
-                        <p>Staten Island</p>
+                    <div className="splash-panel-container" onMouseEnter={() => this.changeSearch("Staten")}>
+                        <button onClick={this.handleSubmit}>Staten Island</button>
                         <img className="splash-pic" src={window.statenisland} alt="statenisland" />
                     </div>
 
@@ -60,4 +75,4 @@ class SplashSix extends React.Component {
 
 }
 
-export default SplashSix;
+export default withRouter(SplashSix);
