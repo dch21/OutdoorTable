@@ -6,15 +6,15 @@ import { getReviews } from "../../actions/reviews_actions";
 
 const mSTP = (state) => {
     return {
-        reviews: Object.values(state.entities.reviews),
-        results: state.entities.restaurants
+        // reviews: Object.values(state.entities.reviews),
+        results: Object.values(state.entities.searchResults)
     };
 };
 
-const mDTP = (dispatch) => {
-    return {
-        getReviews: (restaurantId) => dispatch(getReviews(restaurantId)),
-    };
-};
+// const mDTP = (dispatch) => {
+//     return {
+//         getReviews: (restaurantId) => dispatch(getReviews(restaurantId)),
+//     };
+// };
 
-export default connect(mSTP, mDTP)(SearchResults);
+export default connect(mSTP, null)(SearchResults);

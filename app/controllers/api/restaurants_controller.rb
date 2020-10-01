@@ -23,13 +23,14 @@ class Api::RestaurantsController < ApplicationController
 
         @restaurants = Restaurant.all
         if params["searchTerms"] == ""
-            render json: @restaurants
+            render "api/restaurants/search"
             return
         end
 
         @restaurants = Restaurant.where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ? OR boro ILIKE?', "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%" )
 
-        render json: @restaurants
+        # render json: @restaurants
+        render "api/restaurants/search"
         
     end
 

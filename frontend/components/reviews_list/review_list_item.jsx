@@ -40,7 +40,7 @@ const ReviewListItem = props => {
                          {stars}{noStars}
                         <ul>
                             <li>Overall <span>{props.review.overall_rating}</span></li>
-                            <li key="food"> &dot; Food <span>{props.review.food_rating}</span> </li>
+                            <li key="food"> &middot; Food <span>{props.review.food_rating}</span> </li>
                             <li key="service">&middot; Service <span>{props.review.service_rating}</span> </li>
                             <li key="ambience">&middot; Ambience <span>{props.review.ambience_rating}</span> </li>
                         </ul>

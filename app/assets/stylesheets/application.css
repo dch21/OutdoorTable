@@ -431,15 +431,15 @@ nav {
         display: block;
     } */
 
-    .search-results-div{
+    /* .search-results-div{ */
         /* display: flex; */
-        width: 100%;
+        /* width: 100%; */
     }
-
+/* 
     .search-results-form, form {
         display: flex;
         width: 60%;
-    }
+    } */
 
     /* .search-results-form.party-size {
         width: 120px;

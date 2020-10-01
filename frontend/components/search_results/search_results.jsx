@@ -20,7 +20,7 @@ class SearchResults extends React.Component {
                 <p>No results found. Try again.</p>
             )
         }
-        
+        debugger
         return (
             <div>
 
@@ -34,8 +34,8 @@ class SearchResults extends React.Component {
                             results.map(result => (
                                 <SearchResultsItem result={result}
                                     key={result.id}
-                                    review={this.props.reviews[0]}
-                                    getReviews={this.props.getReviews}
+                                    // review={this.props.reviews[0]}
+                                    // getReviews={this.props.getReviews}
                                 />
                             ))
                         }

@@ -24,3 +24,4 @@ const mDTP = (dispatch) => {
 export default connect(mSTP, mDTP)(SearchForm);
 
 //used this to connect searchForm of front page to search form of search page
+//delete or make new search form

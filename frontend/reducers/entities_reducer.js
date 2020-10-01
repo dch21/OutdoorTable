@@ -4,6 +4,7 @@ import restaurantsReducer from "./restaurants_reducer";
 import reservationsReducer from "./reservations_reducer";
 import reviewsReducer from "./reviews_reducer";
 import aggregatesReducer from "./aggregates_reducer";
+import searchReducer from "./search_reducer";
 
 
 
@@ -12,7 +13,9 @@ const entitiesReducer = combineReducers({
     restaurants: restaurantsReducer,
     reservations: reservationsReducer,
     reviews: reviewsReducer,
-    aggregates: aggregatesReducer
+    aggregates: aggregatesReducer,
+    searchResults: searchReducer
+
 });
 
 export default entitiesReducer; 

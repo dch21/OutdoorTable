@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.fetchReviews = fetchReviews;
     window.fetchAggregates = fetchAggregates;
-    // window.searchRestaurants = searchRestaurants;
+    window.searchRestaurants = searchRestaurants;
     // window.fetchRestaurant = fetchRestaurant;
     window.postSession = postSession;
     // window.postUser = postUser;
