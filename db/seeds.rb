@@ -175,7 +175,8 @@ r1 = Restaurant.create!(
     dining_style: "Casual",
     dress_code: "Casual",
     public_transit: "B61",
-    parking_details: "Street"
+    parking_details: "Street",
+    website: "https://hometownbbq.com/"
 )
 
 r2 = Restaurant.create!(
@@ -194,7 +195,8 @@ r2 = Restaurant.create!(
     dining_style: "Casual",
     dress_code: "Casual",
     public_transit: "DFM",
-    parking_details: "Street"
+    parking_details: "Street",
+    website: "http://www.supertasteny.com/"
 )
 
 r3 = Restaurant.create!(
@@ -213,7 +215,8 @@ r3 = Restaurant.create!(
     dining_style: "Casual",
     dress_code: "Casual",
     public_transit: "NR",
-    parking_details: "Street"
+    parking_details: "Street",
+    website: "https://www.yelp.com/biz/tasty-dumpling-new-york"
 )
 
 r4 = Restaurant.create!(
@@ -232,7 +235,8 @@ r4 = Restaurant.create!(
     dining_style: "Casual",
     dress_code: "Casual",
     public_transit: "FG, R",
-    parking_details: "Street"
+    parking_details: "Street",
+    website: "https://www.instagram.com/uglybabynyc/"
 )
 
 r5 = Restaurant.create!(
@@ -251,7 +255,8 @@ r5 = Restaurant.create!(
     dining_style: "Casual",
     dress_code: "Casual",
     public_transit: "456",
-    parking_details: "Street"
+    parking_details: "Street",
+    website: "https://lamoradanyc.com/"
 )
 
 r6 = Restaurant.create!(
@@ -270,14 +275,35 @@ r6 = Restaurant.create!(
     dining_style: "Casual",
     dress_code: "Casual",
     public_transit: "7",
-    parking_details: "Street"
+    parking_details: "Street",
+    website: "https://rincon-criollo.com/"
+)
+   
+r7 = Restaurant.create!(
+    name: "Joe and Pats",
+    description: "Local institution serving its famous thin crust pizzas.",
+    address: "1758 Victory Blvd, Staten Island, NY 10314",
+    capacity: 10,
+    lat: 40.612940,
+    lng: -74.122108,
+    neighborhood: "Meiers Corners",
+    boro: "Staten Island",
+    phone_num: "718-981-0887",
+    cuisine: "Italian",
+    price_range: "$10-$25",
+    payment: "Cash",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "S93, Staten Island Ferry",
+    parking_details: "Street",
+    website: "https://www.joeandpatsny.com/"
 )
 
 ################################################################################
 
 
 rv1 = Review.create!(
-    review_body: "Felt and smelled like I was back in Texas when I walked in. Beef rib is top notch and the dish to get here. Brisket could be a bit more moist, but overall, made me nostalgic for home.",
+    review_body: "The street smells like Texas. I peeked inside and wow, it made me nostalgic for home. Beef rib is top notch and the dish to get here. Brisket could be a bit more moist, but that's always an issue up here.",
     private_note: "Good food",
     overall_rating: 5,
     food_rating: 4,
@@ -374,7 +400,7 @@ rv7 = Review.create!(
 )
 
 rv8 = Review.create!(
-    review_body: "I was walking my dog Frank around and stumbled onto this cozy restaurant. They even got a poetry library in the back! One of the few places you can get Oaxacan food in NYC. I get the mole every time.",
+    review_body: "I was walking my dog Frank around and stumbled onto this cozy restaurant. They even got a poetry library in the back! I'm glad they expanded outdoors. One of the few places you can get Oaxacan food in NYC. I get the mole every time.",
     private_note: "",
     overall_rating: 4,
     food_rating: 4,
@@ -395,6 +421,66 @@ rv9 = Review.create!(
     noise_level: 1,
     restaurant_id: r6.id,
     reviewer_id: u10.id
+)
+
+rv10 = Review.create!(
+    review_body: "Name lives up to its food! I doubt you need a reservation here because it's a quick and satisfying bite , but I'm glad they're offering outdoor seating to get people to dine in. The park across the street is great too if the seats are full. Support your local businesses!",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 2,
+    ambience_rating: 1, 
+    noise_level: 1,
+    restaurant_id: r3.id,
+    reviewer_id: u12.id
+)
+
+rv11 = Review.create!(
+    review_body: "I've been coming here the last few years ever since I've moved to Queens. Love the plantains with the rice and beans. Their pork dishes are great. My friend let it slip that it was my birthday and the staff came out and sang to me on the sidewalk!",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 5,
+    ambience_rating: 5, 
+    noise_level: 1,
+    restaurant_id: r6.id,
+    reviewer_id: u13.id
+)
+
+rv12 = Review.create!(
+    review_body: "Got the tlayuda and the horchata and was not disappointed! The staff is welcoming and very active in bettering their community. There are also vegan options for those who are interested!",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 5,
+    service_rating: 5,
+    ambience_rating: 3, 
+    noise_level: 2,
+    restaurant_id: r5.id,
+    reviewer_id: u14.id
+)
+
+rv14 = Review.create!(
+    review_body: "Best pizza spot in NYC? The correct answer to that question is the one you went to while growing up as a kid in the city. Luckily for me, Joe & Pat’s has always been around the corner from me!",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 5,
+    service_rating: 4,
+    ambience_rating: 2, 
+    noise_level: 2,
+    restaurant_id: r7.id,
+    reviewer_id: u9.id
+)
+
+rv15 = Review.create!(
+    review_body: "Nothing beats a cruise on the ferry on the way to one of the best thin slices in the city. Yeah, I'm a bit latoses intolerant, but the pizza is so good it's worth the consequences. They've expanded outdoor seating options.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 3,
+    ambience_rating: 3, 
+    noise_level: 3,
+    restaurant_id: r7.id,
+    reviewer_id: u1.id
 )
 
 # res1 = Reservation.create!(
