@@ -433,15 +433,39 @@ nav {
         line-height: 60px;
     }
     
+    .search-results {
+    margin: 60px;
+ }
+
+    .results-item {
+        display: flex;
+    }
+
+    .pic-container {
+        height: 220px;
+        width: 220px;
+        margin: 20px;
+    }
+
     .food-pic {
-        max-width: 50%;
-        height: 200px;
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
         border-radius: 5px;
     }
-    
-    /* .search-results-container {
-        display: block;
-    } */
+
+    .info {
+        height: 220px;
+        width: 320px;
+        margin-top: 13px;
+    }
+
+    .info  p:first-child {
+        padding: 5px;
+        text-decoration: none;
+        color: teal;
+        font-size: 20px;
+    }
 
     /* .search-results-div{ */
         /* display: flex; */
@@ -457,8 +481,10 @@ nav {
         width: 120px;
     } */
 
-    /* .search-result-item {
-        display: flex;
+    /* #item {
+          display: flex;
+    flex-direction: column;
+    margin: 60px;   
     } */
     
     .splash-six {

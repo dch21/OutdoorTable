@@ -25,11 +25,20 @@ class SearchResults extends React.Component {
             <div>
 
                 <div className="search-results-container">
-                    <div className="search-results-form">
+                    {/* <div className="search-results-form">
                         <SearchResultsFormContainer />
+                    </div> */}
+
+                    <div className="form-header">
+                        <img className="logo-banner" src={window.border} alt="food" />
+
                     </div>
+
                     
                     <div className="search-results">
+    
+
+                        
                         {
                             results.map(result => (
                                 <SearchResultsItem result={result}
@@ -39,6 +48,7 @@ class SearchResults extends React.Component {
                                 />
                             ))
                         }
+                    
                     </div>
                 </div>
                    

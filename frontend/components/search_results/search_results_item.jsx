@@ -28,15 +28,21 @@ class SearchResultsItem extends React.Component {
         // // const firstReview = filteredReviews[0].review_body;
      
         return (
-            <div className="search-result-item">
-                <img className="food-pic" src={window[`${logoPic}`]} alt="food" />
-                <div>
-                    <Link to={`/restaurants/${this.props.result.id}`}>{this.props.result.name}</Link>
-                    <br/>
-                    <span>{dollar_sign}</span> &middot; <span>{this.props.result.cuisine}</span>
-                    {this.props.result.recent_review.review_body}
-                </div>
-            </div>
+                    <div className="results-item">
+                    
+                        <div className="pic-container">
+                          <Link to={`/restaurants/${this.props.result.id}`}><img className="food-pic" src={window[`${logoPic}`]} alt="food" /></Link>
+
+                        </div>
+
+                        <div className="info">
+                            <Link to={`/restaurants/${this.props.result.id}`}><p>{this.props.result.name}</p></Link>
+                            <p>
+                                <span>{dollar_sign}</span> &middot; <span>{this.props.result.cuisine}</span> &middot; <span>{this.props.result.neighborhood}</span> 
+                            </p>
+                            <p>{this.props.result.recent_review.review_body}</p>
+                        </div>
+                    </div>
         )
     }
 

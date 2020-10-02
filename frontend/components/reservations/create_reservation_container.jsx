@@ -4,7 +4,6 @@ import { createReservation } from "../../actions/reservations_actions";
 import ReservationForm from "./reservation_form";
 
 const mSTP = (state) => {
-    debugger
     return {
         formType: "Make a reservation",
         reservation: {
