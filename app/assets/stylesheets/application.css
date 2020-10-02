@@ -470,7 +470,7 @@ nav {
     /* .search-results-div{ */
         /* display: flex; */
         /* width: 100%; */
-    }
+    
 /* 
     .search-results-form, form {
         display: flex;
@@ -490,7 +490,7 @@ nav {
     .splash-six {
         /* position: absolute; */
         /* display: inline-table; */
-        width: 100%
+        width: 100%;
     }
     
     .splash-row {
@@ -589,7 +589,7 @@ nav {
     }
     
     .logo-banner {
-        width: 100%
+        width: 100%;
     }   
 
     .parent-form {
