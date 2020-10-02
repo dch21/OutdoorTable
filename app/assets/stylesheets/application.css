@@ -14,6 +14,8 @@
  *= require_self
  */
 
+
+
 * {
  font-family: 'Josefin Sans', sans-serif;
 }
@@ -462,19 +464,21 @@ nav {
     .splash-six {
         /* position: absolute; */
         /* display: inline-table; */
-        width: 80%
+        width: 100%
     }
     
     .splash-row {
         display: flex;
-        width: 80%;
+        flex-wrap: wrap;
+        /* width: 80%; */
         flex-direction: row;
-        margin: auto;
+        /* margin: auto; */
+        justify-content: center;
     }
     
     .splash-pic {
         height: 170px;
-        width: 350px;
+        width: 380px;
         opacity: .85;
         padding: 8px;
         display: table-cell;

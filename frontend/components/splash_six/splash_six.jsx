@@ -28,9 +28,10 @@ class SplashSix extends React.Component {
             <div>
             <div className="splash-six"> 
                 <h2>Featured Areas</h2>
-                <hr/>
+                    <hr />
 
                 <div className="splash-row"> 
+                    
 
                     <div className="splash-panel-container" onMouseEnter={()=>this.changeSearch("")}>
                         <button onClick={this.handleSubmit}>All Five Boroughs</button>
@@ -47,9 +48,6 @@ class SplashSix extends React.Component {
                         <img className="splash-pic" src={window.manhattan} alt="manhattan" />
                     </div>
 
-                </div>
-
-                <div className="splash-row">
 
                     <div className="splash-panel-container" onMouseEnter={() => this.changeSearch("Queens")}>
                         <button onClick={this.handleSubmit}>Queens</button>
