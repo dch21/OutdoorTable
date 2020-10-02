@@ -461,7 +461,8 @@ nav {
     
     .splash-six {
         /* position: absolute; */
-        display: inline-table;
+        /* display: inline-table; */
+        width: 80%
     }
     
     .splash-row {
@@ -586,9 +587,9 @@ nav {
         height: 5px;
     }
 
-    .restaurant-nav > p:first-child {
+    /* .restaurant-nav > p:first-child {
         color: rgb(231, 49, 49);
-    }
+    } */
 
     .restaurant-info{
        margin-left: 180px;

@@ -6,6 +6,7 @@ import RestaurantShowMap from "./restaurant_show_map";
 import ReviewsList from "../reviews_list/reviews_list";
 import AggregatesContainer from "../ratings_aggregates/aggregates_container";
 import RestaurantPhotos from "./restaurant_photos";
+import {  Link } from "react-router-dom";
 
 
 
@@ -78,7 +79,7 @@ class RestaurantShow extends React.Component {
                     <div className="restaurant-info">
 
                         <div className="restaurant-nav">
-                            <p>Overview</p>
+                            <p>Overview</p> 
                             <p>Photos</p>
                             <p>Menu</p>
                             <p>Reviews</p>
@@ -116,7 +117,7 @@ class RestaurantShow extends React.Component {
                         </div>
                         <br/>
 
-                        <div id="review-link">
+                        <div>
                             <h2>Reviews</h2>
                             <hr />
                             <ReviewsList getReviews={this.props.getReviews} 

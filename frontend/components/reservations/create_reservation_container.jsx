@@ -4,6 +4,7 @@ import { createReservation } from "../../actions/reservations_actions";
 import ReservationForm from "./reservation_form";
 
 const mSTP = (state) => {
+    debugger
     return {
         formType: "Make a reservation",
         reservation: {
@@ -12,7 +13,8 @@ const mSTP = (state) => {
             notes: "Make a note or accommodations request here.",
             party_size: 2,
             restaurant_id: parseInt(Object.keys(state.entities.restaurants)[0]),
-            user_id: state.entities.session ? parseInt(Object.keys(state.entities.session)[0]) : ""
+            user_id: state.session.id
+            // user_id: state.session ? parseInt(Object.keys(state.entities.session)[0]) : ""
             //if you are logged out if will be null
         }
     };

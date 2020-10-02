@@ -25,6 +25,7 @@ class SplashSix extends React.Component {
     render() {
 
         return (
+            <div>
             <div className="splash-six"> 
                 <h2>Featured Areas</h2>
                 <hr/>
@@ -68,6 +69,7 @@ class SplashSix extends React.Component {
                 </div>
 
                  
+            </div>
             </div>
         )
 
