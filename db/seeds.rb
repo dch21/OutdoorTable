@@ -500,3 +500,49 @@ rv15 = Review.create!(
 #     restaurant_id: 1,
 #     user_id: 4
 # )
+
+hUB1 = Hour.create!(
+    day: "Thursday",
+    opening: DateTime.new(2020, 10, 8,  17,  0,  0).seconds_since_midnight,
+    closing: DateTime.new(2020, 10, 8,  22,  30, 0).seconds_since_midnight, 
+    restaurant_id: 4
+)
+
+hUB2 = Hour.create!(
+    day: "Friday",
+    opening: DateTime.new(2020, 10, 8,  17,  0,  0).seconds_since_midnight,
+    closing: DateTime.new(2020, 10, 8,  22,  30, 0).seconds_since_midnight, 
+    restaurant_id: 4
+)
+
+hUB3 = Hour.create!(
+    day: "Saturday",
+    opening: DateTime.new(2020, 10, 10,  12,  0,  0).seconds_since_midnight,
+    closing: DateTime.new(2020, 10, 10,  15,  00, 0).seconds_since_midnight, 
+    restaurant_id: 4
+)
+
+hUB4 = Hour.create!(
+    day: "Saturday",
+    opening: DateTime.new(2020, 10, 10,  17,  0,  0).seconds_since_midnight,
+    closing: DateTime.new(2020, 10, 10,  22,  30, 0).seconds_since_midnight, 
+    restaurant_id: 4
+)
+
+hUB5 = Hour.create!(
+    day: "Sunday",
+    opening: DateTime.new(2020, 10, 11,  12,  0,  0).seconds_since_midnight,
+    closing: DateTime.new(2020, 10, 11,  15,  00, 0).seconds_since_midnight, 
+    restaurant_id: 4
+)
+
+hUB6 = Hour.create!(
+    day: "Sunday",
+    opening: DateTime.new(2020, 10, 11,  17,  0,  0).seconds_since_midnight,
+    closing: DateTime.new(2020, 10, 11,  22,  30, 0).seconds_since_midnight, 
+    restaurant_id: 4
+)
+
+
+
+

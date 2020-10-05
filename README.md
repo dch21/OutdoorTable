@@ -2,6 +2,8 @@
 
 ![Logo](/readme_files/logo.png)
 
+[Live Site!](https://outdoortable.herokuapp.com/#/)
+
 Outdoor Table is a web application built with a Ruby on Rails backend and React/Redux frontend that allows users to look up restaurants in their area, make reservations, and leave reviews based on their dining experience. 
 
 ## Features
@@ -17,20 +19,3 @@ Outdoor Table is a web application built with a Ruby on Rails backend and React/
 
 * Ability to make reservations will be added in future versions. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

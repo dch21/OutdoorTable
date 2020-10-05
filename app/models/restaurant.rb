@@ -20,6 +20,9 @@
 #  updated_at      :datetime         not null
 #  lat             :float            not null
 #  lng             :float            not null
+#  boro            :string           not null
+#  website         :string
+#  hours           :string           not null
 #
 class Restaurant < ApplicationRecord
 
@@ -33,6 +36,10 @@ class Restaurant < ApplicationRecord
     has_many :reviews,
     foreign_key: :restaurant_id,
     class_name: :Review
+
+    has_many :hours,
+    foreign_key: :restaurant_id,
+    class_name: :Hour
 
     has_many :guests,
     through: :reservations,
