@@ -13,9 +13,12 @@ Rails.application.routes.draw do
       # get :bookings, on: :member
       resources :reviews, only: [:index]
     end
+
     resources :reservations, only: [:index, :show, :create, :destroy, :update]
+
     resources :reviews, only: [:create, :destroy, :update]
 
+    resources :hours, only: [:index, :create]
 
   end
 
