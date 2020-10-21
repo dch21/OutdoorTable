@@ -10,7 +10,7 @@ class SearchResultsItem extends React.Component {
     
     // componentDidMount () {
     //     debugger
-    //   this.props.getReviews(this.props.result.id);
+    //   console.log("1")
     // }
     
     render () {

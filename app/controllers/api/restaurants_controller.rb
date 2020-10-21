@@ -19,7 +19,10 @@ class Api::RestaurantsController < ApplicationController
     end
 
     def search
-        searchTerms = params[:searchTerms]
+        searchTerms = params[:searchTerms]["searchTerm"]
+        @time = params[:searchTerms]["time"]
+        @date = params[:searchTerms]["date"]
+        @party_size = params[:searchTerms]["party_size"]
 
         @restaurants = Restaurant.all
         if params["searchTerms"] == ""
