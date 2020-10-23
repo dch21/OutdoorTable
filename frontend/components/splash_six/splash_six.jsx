@@ -5,14 +5,19 @@ import { withRouter } from 'react-router';
 class SplashSix extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {searchTerm: "Brooklyn"};
+        this.state = {
+            date: new Date().toISOString().slice(0, 10),
+            time: "7:00PM",
+            party_size: 2,
+            searchTerm: "Brooklyn",
+        },
         this.handleSubmit = this.handleSubmit.bind(this);
         this.changeSearch = this.changeSearch.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.searchRestaurant(this.state.searchTerm);
+        this.props.searchRestaurant(this.state);
 
         this.props.history.push('/search');
     }

@@ -5,6 +5,7 @@ import reservationsReducer from "./reservations_reducer";
 import reviewsReducer from "./reviews_reducer";
 import aggregatesReducer from "./aggregates_reducer";
 import searchReducer from "./search_reducer";
+import hoursReducer from "./hours_reducer";
 
 
 
@@ -15,6 +16,7 @@ const entitiesReducer = combineReducers({
     reviews: reviewsReducer,
     aggregates: aggregatesReducer,
     searchResults: searchReducer
+    // hours: hoursReducer
 
 });
 

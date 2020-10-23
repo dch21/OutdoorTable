@@ -43,6 +43,8 @@ class SearchResults extends React.Component {
                             results.map(result => (
                                 <SearchResultsItem result={result}
                                     key={result.id}
+                                    getHours={this.props.getHours}
+                                    // hours={this.props.hours}
                                     // review={this.props.reviews[0]}
                                     // getReviews={this.props.getReviews}
                                 />

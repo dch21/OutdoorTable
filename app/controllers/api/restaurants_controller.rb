@@ -32,6 +32,13 @@ class Api::RestaurantsController < ApplicationController
 
         @restaurants = Restaurant.where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ? OR boro ILIKE?', "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%" )
 
+
+        @restaurants.each do |rest|
+            # debugger
+            @open = rest.hours.where('day = ? AND opening <= ? AND closing > ? AND restaurant_id = ?', "#{@date}", "#{@time}", "#{@time}", "#{rest.id}")
+            # debugger
+        end
+
         # render json: @restaurants
         render "api/restaurants/search"
         

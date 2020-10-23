@@ -17,7 +17,7 @@ const mSTP = (state) => {
 
 const mDTP = (dispatch) => {
     return {
-        searchRestaurant: (searchTerms) => dispatch(searchRestaurant(searchTerms)),
+        searchRestaurant: (searchTerms) => dispatch(searchRestaurant(searchTerms))
     };
 };
 
