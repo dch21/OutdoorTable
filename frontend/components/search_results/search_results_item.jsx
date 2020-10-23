@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
+import { withRouter } from 'react-router';
+
 
 
 class SearchResultsItem extends React.Component {
@@ -27,8 +29,7 @@ class SearchResultsItem extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // this.props.searchRestaurant(this.state);
-
+        this.props.pendingReservation(this.state);
         this.props.history.push('/confirmation');
     }
     
@@ -93,7 +94,7 @@ class SearchResultsItem extends React.Component {
 
 // {/* <h3>{Object.values(this.props.reviews)[0].review_body}</h3> */ }
 // {/* <h3>{firstReview}</h3> */ }
-export default SearchResultsItem;
+export default withRouter(SearchResultsItem);
 
 
 // import { getReviews } from "../../actions/reviews_actions";

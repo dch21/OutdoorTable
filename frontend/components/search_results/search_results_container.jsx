@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 // import { getRestaurant, searchRestaurant } from "../../actions/restaurant_actions";
 import SearchResults from "./search_results";
 import { getReviews } from "../../actions/reviews_actions";
-import { getHours } from "../../actions/hours_actions";
+// import { getHours } from "../../actions/hours_actions";
+import { pendingReservation } from "../../actions/reservations_actions";
 
 
 const mSTP = (state) => {
@@ -16,7 +17,8 @@ const mSTP = (state) => {
 
 const mDTP = (dispatch) => {
     return {
-        getHours: (query) => dispatch(getHours(query))
+        // getHours: (query) => dispatch(getHours(query))
+        pendingReservation: (info) => dispatch(pendingReservation(info))
     };
 };
 

@@ -1,4 +1,4 @@
-import { RECEIVE_RESERVATIONS, RECEIVE_RESERVATION, REMOVE_RESERVATION} from '../actions/reservations_actions';
+import { RECEIVE_RESERVATIONS, RECEIVE_RESERVATION, REMOVE_RESERVATION, PENDING_RESERVATION} from '../actions/reservations_actions';
 
 const reservationsReducer = (oldState = {}, action) => {
 
@@ -13,6 +13,9 @@ const reservationsReducer = (oldState = {}, action) => {
             let nextState = Object.assign({}, oldState);
             delete next[action.reservationId];
             return nextState;
+
+        case PENDING_RESERVATION:
+            return action.info;
 
         default:
             return oldState;
