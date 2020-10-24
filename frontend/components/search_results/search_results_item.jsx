@@ -12,7 +12,8 @@ class SearchResultsItem extends React.Component {
             restaurant_id: this.props.result.id,
             time: "",
             date: this.props.result.reservation_date,
-            party_size: this.props.result.party_size
+            party_size: this.props.result.party_size,
+            name: this.props.result.name,
         };
         this.changeTime = this.changeTime.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,7 +31,7 @@ class SearchResultsItem extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.pendingReservation(this.state);
-        this.props.history.push('/confirmation');
+        this.props.history.push('/confirmation/');
     }
     
     changeTime(res_time) {
@@ -57,7 +58,49 @@ class SearchResultsItem extends React.Component {
         const hours = parseInt(res_time.split(":")[0]);
         const amPM = res_time[res_time.length - 2] + res_time[res_time.length - 1];
         const times = [hours - 1, hours - 0.5, hours, hours + 0.5, hours + 1, hours + 1.5];
-     
+
+        const elevenAM = ["10:00AM", "10:30AM", "11:00AM", "11:30AM", "12:00PM", "12:30PM"].map( (time) => {
+                return (
+               <div className="reservation-times" onMouseEnter={()=>this.changeTime(time)}>
+                    <button onClick={this.handleSubmit}>{time}</button>
+                </div>
+                )
+        })
+        const noon = ["11:00AM", "11:30AM", "12:00PM", "12:30PM", "1:00PM", "1:30PM"].map( (time) => {
+                return (
+               <div className="reservation-times" onMouseEnter={()=>this.changeTime(time)}>
+                    <button onClick={this.handleSubmit}>{time}</button>
+                </div>
+                )
+        })
+        const onePM = ["12:00PM", "12:30PM", "1:00PM", "1:30PM", "2:00PM", "2:30PM"].map( (time) => {
+                return (
+               <div className="reservation-times" onMouseEnter={()=>this.changeTime(time)}>
+                    <button onClick={this.handleSubmit}>{time}</button>
+                </div>
+                )
+        })
+
+
+        
+        const normalbutton = times.map( (hour, i) => {
+            if (i % 2 === 0) 
+                return (
+                <div className="reservation-times" onMouseEnter={()=>this.changeTime(hour + ":00" + amPM)}>
+                    <button onClick={this.handleSubmit}>{hour + ":00" + amPM}</button>
+                </div>
+                ) 
+            else
+                return (
+                <div className="reservation-times" onMouseEnter={()=>this.changeTime(hour.toString()[0] + ":30" + amPM)}>
+                    <button onClick={this.handleSubmit}>{hour.toString()[0] + ":30" + amPM}</button>
+                </div>
+                ) 
+        })
+
+
+
+        
         return (
                     <div className="results-item">
                     
@@ -65,8 +108,6 @@ class SearchResultsItem extends React.Component {
                           <Link to={`/restaurants/${this.props.result.id}`}><img className="food-pic" src={window[`${logoPic}`]} alt="food" /></Link>
 
                         </div>
-
-                        
 
                         <div className="info">
                             <Link to={`/restaurants/${this.props.result.id}`}><p>{this.props.result.name}</p></Link>
@@ -76,13 +117,11 @@ class SearchResultsItem extends React.Component {
                             <p>{this.props.result.recent_review.review_body}</p>
                         </div>
 
-                        <div>
+                        <div className="">
                             {
-                            times.map(hour => (
-                                <div className="reservation-times" onMouseEnter={()=>this.changeTime(hour)}>
-                                     <button onClick={this.handleSubmit}>{hour}</button>
-                                </div>
-                            ))
+                                (hours === 11 && amPM == "AM") ? elevenAM : (((hours === 12 && amPM == "PM") ? noon : ((hours === 1 && amPM == "PM") ? onePM : normalbutton)))
+                     
+        
                             }
                         </div>
 

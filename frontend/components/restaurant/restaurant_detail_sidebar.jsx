@@ -24,7 +24,7 @@ class RestaurantDetailSidebar extends React.Component {
                     </li>
 
                     <li><i className="far fa-clock"><span> Hours</span></i>
-                        <p>{hours}</p>                   
+                        {/* <p>{hours}</p>                    */}
                     </li>
 
                     <li><i className="fas fa-phone"><span> Phone Number</span></i>

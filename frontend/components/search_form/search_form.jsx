@@ -57,7 +57,7 @@ class SearchForm extends React.Component {
                                     ))
                                 }
                                 {
-                                    [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(number => (
+                                    [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(number => (
                                         <>
                                             <option value={`${number}:00PM`}>{`${number}:00`} PM</option>
                                             <option value={`${number}:30PM`}>{`${number}:30`} PM</option>
