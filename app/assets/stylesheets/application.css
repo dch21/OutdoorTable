@@ -709,3 +709,14 @@ nav {
     width:250px;
     height: 340px
 }
+
+.user-page-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+}
+
+.user-page-reservations-container {
+    margin-left: 80px;
+
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { withRouter } from 'react-router';
 
 
@@ -24,7 +25,7 @@ class UserDropdown extends React.Component {
     }
 
     handleLinkUser() {
-        this.props.history.push('/restaurants/1');
+        this.props.history.push(`users/${this.props.userId}`);
     }
 
     render() {

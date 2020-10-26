@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import UserDropdown from "./user_dropdown";
+import UserDropdown from "./user_dropdown_container";
 
 class Navbar extends React.Component {
     constructor(props) {
