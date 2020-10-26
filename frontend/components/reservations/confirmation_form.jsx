@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import { createReservation } from "../../actions/reservations_actions";
+import { withRouter } from 'react-router';
 
 
 class ComfirmationForm extends React.Component {
@@ -24,6 +25,7 @@ class ComfirmationForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createReservation(this.state);
+        this.props.history.push(`/users/${this.props.user_id}`);
     }
 
     update(field) {

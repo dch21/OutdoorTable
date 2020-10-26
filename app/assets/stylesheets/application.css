@@ -694,7 +694,7 @@ nav {
 }
 
 .confirm-input-box {
-    width: 300px;
+    width: 345px;
 }
 
 .confirm-form form div {
@@ -702,9 +702,10 @@ nav {
 }
 
 .confirm-form form button {
-    width: 610px
+    width: 750px
 }
 
 .confirm-disclaimers {
-    width:250px
+    width:250px;
+    height: 340px
 }
