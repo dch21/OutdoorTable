@@ -14,7 +14,7 @@
 #
 class Reservation < ApplicationRecord
 
-    validates :time, :date, :party_size, :restaurant_id, :user_id, presence: true
+    validates :time, :date, :party_size, :restaurant_id, :user_id, :phone_number, :email, presence: true
 
     belongs_to :user,
     foreign_key: :user_id,

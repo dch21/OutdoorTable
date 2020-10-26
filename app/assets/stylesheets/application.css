@@ -633,25 +633,78 @@ nav {
         padding: 5px;
     }
 
-  .restaurant-sidebar {
+.restaurant-sidebar {
       margin-right: 180px;
-  }
+}
 
-  .aggregates-container {
+.aggregates-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
+}
 
-  .reviews span{
+.reviews span{
     font-size: 15px;
     font-weight: bold;
     padding: 4px;
-  }
+}
   
-  .reviews p > span{
-      padding: 0;
-  }
+.reviews p > span{
+    padding: 0;
+}
 
+.confirm-form-main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.confirm-form p{
+    font-weight: 700;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.confirm-form-top-container {
+    display: flex;
+    justify-content: center;
+}
+
+.confirm-rest-info-container {
+    display: flex;
+}
+
+.confirm-food-pic {
+    height: 85px;
+    width: 105px;
+    border-radius: 5px;
+}
   
-  
+.confirm-rest-info {
+    width: 600px;
+    margin-left: 40px;
+}
+
+.confirm-rest-info-line {
+    display: flex;
+}
+
+.confirm-rest-info-line div {
+    margin-right: 80px;
+}
+
+.confirm-input-box {
+    width: 300px;
+}
+
+.confirm-form form div {
+    display: flex;
+}
+
+.confirm-form form button {
+    width: 610px
+}
+
+.confirm-disclaimers {
+    width:250px
+}
