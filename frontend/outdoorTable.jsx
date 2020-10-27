@@ -8,6 +8,7 @@ import { fetchRestaurant, searchRestaurants} from "./util/restaurants_api";
 import { fetchReviews } from "./util/reviews_api";
 import { fetchAggregates } from "./util/aggregates_api";
 import { searchHours } from "./util/hours_api";
+import { fetchReservations } from "./util/reservations";
 // import { fetchNumberReservations } from "./util/reservations";
 
 
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.postSession = postSession;
     // window.postUser = postUser;
     window.searchHours = searchHours;
+    window.fetchReservations = fetchReservations;
     // window.deleteSession = deleteSession;
 
 

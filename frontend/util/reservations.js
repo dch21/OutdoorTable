@@ -7,12 +7,12 @@ export const fetchReservations = (userId) => {
     });
 };
 
-export const fetchReservation = (reservationId) => {
-    return $.ajax({
-        method: "GET",
-        url: `/api/reservations/${reservationId}`
-    });
-};
+// export const fetchReservation = (reservationId) => {
+//     return $.ajax({
+//         method: "GET",
+//         url: `/api/reservations/${reservationId}`
+//     });
+// };
 
 export const createReservation = (reservation) => {
     return $.ajax({
@@ -22,17 +22,17 @@ export const createReservation = (reservation) => {
     });
 };
 
-export const updateReservation = (reservation) => {
-    return $.ajax({
-        method: "PATCH",
-        url: `/api/reservations/${reservation.id}`,
-        data: { reservation: reservation }
-    });
-};
+// export const updateReservation = (reservation) => {
+//     return $.ajax({
+//         method: "PATCH",
+//         url: `/api/reservations/${reservation.id}`,
+//         data: { reservation: reservation }
+//     });
+// };
 
-export const deleteReservation = (reservationId) => {
-    return $.ajax({
-        method: "DELETE",
-        url: `/api/reservations/${reservationId}`,
-    });
-};
+// export const deleteReservation = (reservationId) => {
+//     return $.ajax({
+//         method: "DELETE",
+//         url: `/api/reservations/${reservationId}`,
+//     });
+// };

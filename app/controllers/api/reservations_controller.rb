@@ -1,13 +1,15 @@
 class Api::ReservationsController < ApplicationController
 
     def index
-        @reservations = Reservation.all
+        @id = params[:user_id].to_i
+        @reservations = Reservation.where('user_id = ?', "#{@id}")
+        render "api/reservations/index"
     end
 
-    def show
-        @reservation = Reservation.find(params[:id])
-        render "api/reservations/show"
-    end
+    # def show
+    #     @reservation = Reservation.find(params[:id])
+    #     render "api/reservations/show"
+    # end
 
     def create
     
