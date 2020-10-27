@@ -13,10 +13,10 @@ class ReviewsConfirmationForm extends React.Component {
 
 
     render() {
-
         return (
             <div>
-               <h1>Hellos</h1>
+               <h3>{this.props.userFirstName}, how was your experience at {this.props.reviewInfo.name} - {this.props.reviewInfo.boro}?</h3>
+               <p>Reservation made on {this.props.reviewInfo.date}.</p>
             </div>
             
         )

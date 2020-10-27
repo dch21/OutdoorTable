@@ -7,7 +7,7 @@ const mSTP = (state) => {
     return {
         userId: state.session.id,
         userFirstName: state.entities.users[state.session.id].first_name,
-        reservations: Object.values(state.entities.userReservations) || {}
+        reviewInfo: state.entities.reviews || {}
     };
 };
  

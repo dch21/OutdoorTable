@@ -6,12 +6,18 @@ import { withRouter } from 'react-router';
 class PastReservationItem extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            name: this.props.pastRes.name,
+            date: this.props.pastRes.date,
+            boro: this.props.pastRes.boro,
+            restaurantId: this.props.pastRes.restaurantId
+        };
     }
     
     componentDidMount(){
         this.props.getThirtyDays({
             restaurant_id: this.props.pastRes.restaurantId,
-            reivewer_id: this.props.userId
+            reviewer_id: this.props.userId
         });
     }
 
@@ -20,7 +26,7 @@ class PastReservationItem extends React.Component {
         const logoPic = name.substring(0,2) + "4";
 
         const reviewButton = (this.props.pastThirty !== 1) ? 
-            (<Link to={"/reviews/create"}><p>Leave Review</p></Link>) : null
+            (<Link to={"/reviews/create"} onClick={() => this.props.pendingReview(this.state)}><p>Leave Review</p></Link>) : null
         
         
 

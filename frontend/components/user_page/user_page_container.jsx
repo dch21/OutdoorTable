@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import UserPage from "./user_page";
 import { requestReservations } from "../../actions/reservations_actions";
-import { getThirtyDays } from "../../actions/reviews_actions";
+import { getThirtyDays, pendingReview } from "../../actions/reviews_actions";
 
 
 const mSTP = (state) => {
@@ -16,7 +16,8 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
     return {
         requestReservations: (userId) => dispatch(requestReservations(userId)),
-        getThirtyDays: (info) => dispatch(getThirtyDays(info))
+        getThirtyDays: (info) => dispatch(getThirtyDays(info)),
+        pendingReview: (info) => dispatch(pendingReview(info))
     };
 };
 

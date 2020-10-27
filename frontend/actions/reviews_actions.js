@@ -49,3 +49,15 @@ export const getThirtyDays = (info) => dispatch => (
     ReviewsAPIUtil.checkReview(info)
         .then(count => dispatch(receiveThirtyCount(count)))
 );
+
+
+export const PENDING_REVIEW = "PENDING_REVIEW";
+
+const pendReview = info => {
+    return {
+        type: PENDING_REVIEW,
+        info
+    };
+};
+
+export const pendingReview = (info) => dispatch(pendReview(info));

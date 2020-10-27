@@ -86,6 +86,7 @@ class UserPage extends React.Component {
                                 <PastReservationItem pastRes={pastRes}
                                 key={pastRes.id}
                                 getThirtyDays={this.props.getThirtyDays}
+                                pendingReview={this.props.pendingReview}
                                 userId={this.props.userId}
                                 />
                                 ))
