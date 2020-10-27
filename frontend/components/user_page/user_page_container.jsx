@@ -1,17 +1,20 @@
 import React from "react";
 import { connect } from "react-redux";
 import UserPage from "./user_page";
+import { requestReservations } from "../../actions/reservations_actions";
 
 const mSTP = (state) => {
+    debugger
     return {
         userId: state.session.id,
-        userFirstName: state.entities.users[state.session.id].first_name
+        userFirstName: state.entities.users[state.session.id].first_name,
+        reservations: Object.values(state.entities.userReservations) || {}
     };
 };
  
 const mDTP = (dispatch) => {
     return {
-        // action: (reservation) => dispatch(createReservation(reservation)),
+        requestReservations: (userId) => dispatch(requestReservations(userId)),
     };
 };
 
