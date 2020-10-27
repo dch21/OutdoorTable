@@ -5,7 +5,7 @@ import Root from "./components/root";
 
 import { postUser, postSession, deleteSession } from "./util/session_api";
 import { fetchRestaurant, searchRestaurants} from "./util/restaurants_api";
-import { fetchReviews } from "./util/reviews_api";
+import { fetchReviews, checkReview } from "./util/reviews_api";
 import { fetchAggregates } from "./util/aggregates_api";
 import { searchHours } from "./util/hours_api";
 import { fetchReservations } from "./util/reservations";
@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // window.postUser = postUser;
     window.searchHours = searchHours;
     window.fetchReservations = fetchReservations;
+    window.checkReview = checkReview;
     // window.deleteSession = deleteSession;
 
 

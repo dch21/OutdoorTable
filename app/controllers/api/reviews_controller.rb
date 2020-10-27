@@ -1,7 +1,6 @@
 class Api::ReviewsController < ApplicationController
 
     def index
-
         rest_id = params[:restaurant_id].to_i
         
         # @reviews = Review.where('restaurant_id = ?', "#{rest_id}")
@@ -21,10 +20,13 @@ class Api::ReviewsController < ApplicationController
         end
     end
 
-    def update
-    end
-
-    def destroy
+    def leftreview
+        rest_num = params[:info]["restaurant_id"].to_i
+        reviewer_id = params[:info]["reviewer_id"].to_i
+        @reviews = Review.where('restaurant_id = ? AND reviewer_id = ?', "#{rest_num}", "#{reviewer_id}")
+        @review = @reviews.where('created_at > ?', 30.days.ago).count
+        
+        render json: @review
     end
 
     def review_params

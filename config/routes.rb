@@ -16,7 +16,9 @@ Rails.application.routes.draw do
 
     resources :reservations, only: [:index, :show, :create, :destroy, :update]
 
-    resources :reviews, only: [:create, :destroy, :update]
+    resources :reviews, only: [:create, :destroy, :update] do
+      get :leftreview, on: :collection
+    end
 
     resources :hours, only: [:index, :create]
 

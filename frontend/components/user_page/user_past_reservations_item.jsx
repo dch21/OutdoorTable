@@ -12,6 +12,8 @@ class PastReservationItem extends React.Component {
         const { boro, name, date, party_size, time, restaurantId} = this.props.pastRes;
         const logoPic = name.substring(0,2) + "4";
 
+        const reviewButton = (<button>Leave Review</button>)
+
         return (
                 <div className="user-item-container">
 
@@ -23,6 +25,8 @@ class PastReservationItem extends React.Component {
                         <p>{name} - {boro}</p>
                         <p>{date} at {time}</p>
                         <p>Party Size: {party_size}</p>
+                        {reviewButton}
+
                     </div>
 
                 </div>
