@@ -20,8 +20,10 @@ class PastReservationItem extends React.Component {
         const logoPic = name.substring(0,2) + "4";
 
         const reviewButton = (this.props.pastThirty !== 1) ? 
-            (<button>Leave Review</button>) : null
+            (<Link to={"/reviews/create"}><p>Leave Review</p></Link>) : null
         
+        
+
         return (
                 <div className="user-item-container">
 

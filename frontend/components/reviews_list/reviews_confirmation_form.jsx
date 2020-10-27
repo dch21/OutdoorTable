@@ -1,20 +1,27 @@
 import React from "react";
-import { connect } from "react-redux";
-import ReviewsConfirmationForm from "./user_page";
-import { createReview } from "../../actions/reviews_actions";
+import { Link } from 'react-router-dom';
 
-const mSTP = (state) => {
-    return {
-        userId: state.session.id,
-        userFirstName: state.entities.users[state.session.id].first_name,
-        reservations: Object.values(state.entities.userReservations) || {}
-    };
-};
- 
-const mDTP = (dispatch) => {
-    return {
-        createReview: (review) => dispatch(createReview(review))
-    };
-};
+class ReviewsConfirmationForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        };
+    }
 
-export default connect(mSTP, mDTP)(ReviewsConfirmationForm);
+    // componentDidMount() {
+    // }
+
+
+    render() {
+
+        return (
+            <div>
+               <h1>Hellos</h1>
+            </div>
+            
+        )
+    }
+
+}
+
+export default ReviewsConfirmationForm;

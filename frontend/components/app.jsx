@@ -14,6 +14,8 @@ import SplashSixContainer from "./splash_six/splash_six_container";
 import SplashSearch from "./splash_search/splash_search";
 import Footer from "./footer/footer";
 import UserPageContainer from "./user_page/user_page_container";
+import ReviewsConfirmationFormContainer from "./reviews_list/reviews_confirmation_form_container";
+
 // import CreateReservationContainer from "./reservations/create_reservation_container";
 
 
@@ -29,6 +31,7 @@ const App = () => (
         <Route path="/search" component={SearchResults} />
         <Route path="/confirmation" component={ConfirmationForm} />
         <Route path="/users/:userId" component={UserPageContainer} />
+        <Route path="/reviews/create" component={ReviewsConfirmationFormContainer} />
         {/* <SearchResults/> */}
         <Route exact path="/" component={SplashSixContainer}/>
         {/* <Link to="/restaurants/1">Sample Show Page in Progress</Link> */}
