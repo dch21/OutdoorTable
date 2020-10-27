@@ -2,7 +2,7 @@ class Api::ReservationsController < ApplicationController
 
     def index
         @id = params[:user_id].to_i
-        @reservations = Reservation.where('user_id = ?', "#{@id}")
+        @reservations = Reservation.includes(:restaurant).where('user_id = ?', "#{@id}")
         render "api/reservations/index"
     end
 

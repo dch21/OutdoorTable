@@ -4,7 +4,6 @@ import UserPage from "./user_page";
 import { requestReservations } from "../../actions/reservations_actions";
 
 const mSTP = (state) => {
-    debugger
     return {
         userId: state.session.id,
         userFirstName: state.entities.users[state.session.id].first_name,

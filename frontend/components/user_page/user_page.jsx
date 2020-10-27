@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { PastReservationItem } from "./user_past_reservations_item";
 
 class UserPage extends React.Component {
     constructor(props) {
@@ -41,15 +42,11 @@ class UserPage extends React.Component {
 
             
             if (date <= currentDate) {
-                // debugger
                 past.push(reservation);
             } else {
                 upcoming.push(reservation);
             }
         });
-
-
-        debugger
         
         return (
             <div>
@@ -66,10 +63,31 @@ class UserPage extends React.Component {
                     <div className="user-page-reservations-container">
                         <div className= "user-page-upcoming">
                             <h2>Upcoming Reservations</h2>
+                            <hr/>
+                            <div className="user-page-upcoming-items">
+                               {/* {
+                               upcoming.map(upRes => (
+                                <PastReservationItem result={result}
+                                    key={upRes.id}
+                                />
+                                ))
+                               } */}
+                            </div>
+
                         </div>
 
                         <div className= "user-page-past">
                             <h2>Past Reservations</h2>
+                            <hr/>
+                             <div className="user-page-past-items">
+                               {
+                            //    past.map(upRes => (
+                            //     <PastReservationItem upRes={upRes}
+                            //         key={upRes.id}
+                            //     />
+                            //     ))
+                               }
+                            </div>
                         </div>
                     </div>
 
