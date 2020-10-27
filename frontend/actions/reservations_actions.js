@@ -11,12 +11,12 @@ const receiveReservations = reservations => {
         reservations
     };
 };
-// const receiveReservation = reservation => {
-//     return {
-//         type: RECEIVE_RESERVATION,
-//         reservation
-//     };
-// };
+const receiveReservation = reservation => {
+    return {
+        type: RECEIVE_RESERVATION,
+        reservation
+    };
+};
 const removeReservation = reservationId => {
     return {
         type: REMOVE_RESERVATION,

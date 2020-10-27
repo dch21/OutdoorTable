@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import { PastReservationItem } from "./user_past_reservations_item";
+import PastReservationItem from "./user_past_reservations_item";
 
 class UserPage extends React.Component {
     constructor(props) {
@@ -48,6 +48,7 @@ class UserPage extends React.Component {
             }
         });
         
+
         return (
             <div>
                 <h1>{this.props.userFirstName}</h1>
@@ -79,14 +80,14 @@ class UserPage extends React.Component {
                         <div className= "user-page-past">
                             <h2>Past Reservations</h2>
                             <hr/>
-                             <div className="user-page-past-items">
-                               {
-                            //    past.map(upRes => (
-                            //     <PastReservationItem upRes={upRes}
-                            //         key={upRes.id}
-                            //     />
-                            //     ))
-                               }
+                            <div className="user-page-past-items">
+                            {
+                                past.map(pastRes => (
+                                <PastReservationItem pastRes={pastRes}
+                                key={pastRes.id}
+                                />
+                                ))
+                            }
                             </div>
                         </div>
                     </div>
