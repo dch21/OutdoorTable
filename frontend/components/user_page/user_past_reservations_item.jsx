@@ -15,11 +15,11 @@ class PastReservationItem extends React.Component {
         return (
                 <div className="user-item-container">
 
-                    <div className="pic-container">
-                        <Link to={`/restaurants/${restaurantId}`}><img className="food-pic" src={window[`${logoPic}`]} alt="food" /></Link>
+                    <div className="">
+                        <Link to={`/restaurants/${restaurantId}`}><img className="user-food-pic" src={window[`${logoPic}`]} alt="food" /></Link>
                     </div>
 
-                    <div>
+                    <div className="user-rest-info">
                         <p>{name} - {boro}</p>
                         <p>{date} at {time}</p>
                         <p>Party Size: {party_size}</p>

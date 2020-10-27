@@ -718,5 +718,19 @@ nav {
 
 .user-page-reservations-container {
     margin-left: 80px;
+}
 
+.user-food-pic {
+    height: 100px;
+    width: 100px;
+}
+
+.user-item-container {
+    display: flex;
+}
+
+.user-rest-info > p {
+    padding: 0;
+    color: rgb(84, 81, 81);
+    margin-left: 20px;
 }
