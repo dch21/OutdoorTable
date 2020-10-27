@@ -85,6 +85,8 @@ class UserPage extends React.Component {
                                 past.map(pastRes => (
                                 <PastReservationItem pastRes={pastRes}
                                 key={pastRes.id}
+                                getThirtyDays={this.props.getThirtyDays}
+                                userId={this.props.userId}
                                 />
                                 ))
                             }

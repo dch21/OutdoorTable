@@ -8,12 +8,20 @@ class PastReservationItem extends React.Component {
         super(props);
     }
     
+    componentDidMount(){
+        this.props.getThirtyDays({
+            restaurant_id: this.props.pastRes.restaurantId,
+            reivewer_id: this.props.userId
+        });
+    }
+
     render() {
         const { boro, name, date, party_size, time, restaurantId} = this.props.pastRes;
         const logoPic = name.substring(0,2) + "4";
 
-        const reviewButton = (<button>Leave Review</button>)
-
+        const reviewButton = (this.props.pastThirty !== 1) ? 
+            (<button>Leave Review</button>) : null
+        
         return (
                 <div className="user-item-container">
 
@@ -26,7 +34,6 @@ class PastReservationItem extends React.Component {
                         <p>{date} at {time}</p>
                         <p>Party Size: {party_size}</p>
                         {reviewButton}
-
                     </div>
 
                 </div>
@@ -36,4 +43,20 @@ class PastReservationItem extends React.Component {
 }
 
 
-export default PastReservationItem;
+// export default PastReservationItem;
+
+const mSTP = (state) => {
+    return {
+        pastThirty: parseInt(state.entities.reviews[0])
+        // reviews: Object.values(state.entities.reviews),
+        // results: state.entities.restaurants
+    };
+};
+
+// const mDTP = (dispatch) => {
+//     return {
+//         getReviews: (restaurantId) => dispatch(getReviews(restaurantId)),
+//     };
+// };
+
+export default connect(mSTP, null)(PastReservationItem);
