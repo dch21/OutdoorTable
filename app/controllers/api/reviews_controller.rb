@@ -12,10 +12,13 @@ class Api::ReviewsController < ApplicationController
     end
 
     def create
-        @review = Review.new(reservation_params)
+        debugger
+        @review = Review.new(review_params)
         if @review.save!
+            debugger
             render "api/reviews/show"
         else
+            debugger
             render json: @review.errors.full_messages, status: 422
         end
     end

@@ -23,12 +23,12 @@ class ReviewsConfirmationForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createReview(this.state);
-        this.props.history.push(`/users/${this.props.userId}`);
+        this.props.createReview(this.state)
+        .then(
+            this.props.history.push(`/restaurants/${this.props.reviewInfo.restaurantId}`));
     }
 
     handleChange(e) {
-        debugger
         const { name, value } = e.target;
 
         this.setState({

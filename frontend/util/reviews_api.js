@@ -5,11 +5,11 @@ export const fetchReviews = (restaurantId) => {
     });
 };
 
-export const createReview = (reivew) => {
+export const createReview = (review) => {
     return $.ajax({
         method: "POST",
-        url: "/api/reivews",
-        data: { reivew: reivew }
+        url: "/api/reviews",
+        data: { review: review }
     });
 };
 

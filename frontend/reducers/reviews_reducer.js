@@ -1,4 +1,4 @@
-import { RECEIVE_REVIEWS, RECEIVE_THIRTY_DAYS_COUNT, PENDING_REVIEW } from "../actions/reviews_actions";
+import { RECEIVE_REVIEWS, RECEIVE_THIRTY_DAYS_COUNT, PENDING_REVIEW, CLEAR_REVIEWS } from "../actions/reviews_actions";
 
 const reviewsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -7,8 +7,8 @@ const reviewsReducer = (state = {}, action) => {
     
         case RECEIVE_REVIEWS:
             return Object.assign({}, state, action.reviews);
-        // case CLEAR_REVIEWS:
-        //     return {};
+        case CLEAR_REVIEWS:
+            return {};
 
         case PENDING_REVIEW:
             

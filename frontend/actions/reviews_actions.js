@@ -2,7 +2,7 @@ import * as ReviewsAPIUtil from "../util/reviews_api";
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const RECEIVE_THIRTY_DAYS_COUNT = "RECEIVE_THIRTY_DAYS_COUNT";
-// export const CLEAR_REVIEWS = 'CLEAR_REVIEWS';
+export const CLEAR_REVIEWS = 'CLEAR_REVIEWS';
 
 
 const receiveReviews = payload => {
@@ -29,11 +29,11 @@ const receiveThirtyCount = count => {
     };
 };
 
-// export const clearReviews = () => {
-//     return {
-//         type: CLEAR_REVIEWS,
-//     };
-// };
+export const clearReviews = () => {
+    return {
+        type: CLEAR_REVIEWS,
+    };
+};
 
 export const getReviews = (restaurantId) => dispatch => (
     ReviewsAPIUtil.fetchReviews(restaurantId)
