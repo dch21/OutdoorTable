@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: "json" } do 
     resources :users, only: [:new, :create, :destroy, :update] do
       resources :reservations, only: [:index]
+      resources :favorites, only: [:index] 
     end
     resource :session, only: [:create, :destroy]
     resources :restaurants, only: [:index, :show] do 
@@ -20,7 +21,7 @@ Rails.application.routes.draw do
       get :leftreview, on: :collection
     end
 
-    resources :favorites, only: [:create, :destroy, :index] 
+    resources :favorites, only: [:create, :destroy] 
 
     resources :hours, only: [:index, :create]
 

@@ -5,8 +5,9 @@ import reservationsReducer from "./reservations_reducer";
 import reviewsReducer from "./reviews_reducer";
 import aggregatesReducer from "./aggregates_reducer";
 import searchReducer from "./search_reducer";
-import hoursReducer from "./hours_reducer";
+// import hoursReducer from "./hours_reducer";
 import userReservations from "./user_reservations_reducer";
+import favoritesReducer from "./favorites_reducer";
 
 
 
@@ -17,7 +18,8 @@ const entitiesReducer = combineReducers({
     reviews: reviewsReducer,
     aggregates: aggregatesReducer,
     searchResults: searchReducer,
-    userReservations: userReservations
+    userReservations: userReservations,
+    favorites: favoritesReducer
     // hours: hoursReducer
 
 });

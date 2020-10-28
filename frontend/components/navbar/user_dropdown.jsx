@@ -15,7 +15,7 @@ class UserDropdown extends React.Component {
         this.handleBlur = this.handleBlur.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleLinkUser = this.handleLinkUser.bind(this);
-
+        this.handleLinkFavorite = this.handleLinkFavorite.bind(this);
     }
 
     handleBlur(e) {
@@ -28,6 +28,9 @@ class UserDropdown extends React.Component {
 
     handleLinkUser() {
         this.props.history.push(`users/${this.props.userId}`);
+    }
+    handleLinkFavorite() {
+        this.props.history.push(`favorites/${this.props.userId}`);
     }
 
     render() {
@@ -46,7 +49,7 @@ class UserDropdown extends React.Component {
                         >
                             <span onClick={this.handleLinkUser}>My Dining History</span> 
                             <br/>
-                            <span>My Saved Restaurants</span>
+                            <span onClick={this.handleLinkFavorite}>My Saved Restaurants</span> 
                             <br/>
                             <span onClick={this.props.logout}>Sign Out</span>
                             <br/>

@@ -4,7 +4,7 @@ class Api::FavoritesController < ApplicationController
         user_id = params[:user_id].to_i
         
         @favorites = User.find(user_id).favorited_restaurants
-
+        
         render "api/favorites/index"
 
     end

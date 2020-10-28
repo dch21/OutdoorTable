@@ -9,6 +9,7 @@ import { fetchReviews, checkReview } from "./util/reviews_api";
 import { fetchAggregates } from "./util/aggregates_api";
 import { searchHours } from "./util/hours_api";
 import { fetchReservations } from "./util/reservations";
+import { fetchFavorites } from "./util/favorites_api";
 // import { fetchNumberReservations } from "./util/reservations";
 
 
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.searchHours = searchHours;
     window.fetchReservations = fetchReservations;
     window.checkReview = checkReview;
+    window.fetchFavorites = fetchFavorites;
     // window.deleteSession = deleteSession;
 
 
