@@ -19,3 +19,4 @@ export const createFavorite = (favorite) => {
         data: { favorite: favorite }
     });
 };
+

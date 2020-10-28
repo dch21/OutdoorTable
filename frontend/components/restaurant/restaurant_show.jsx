@@ -68,9 +68,10 @@ class RestaurantShow extends React.Component {
 
             </div>)
                 
-        const favoriteButton = (
-            <button onClick={()=>this.props.createFavorite(this.state)}><p>Save this Restaurant</p></button>
-        )
+        const favoriteButton = this.props.favorite ? (
+            <button onClick={()=>this.props.deleteFavorite(this.props.favorite)}><p>Remove from Saved Restaurants</p></button>
+            ) :
+            (<button onClick={()=>this.props.createFavorite(this.state)}><p>Save this Restaurant</p></button>)
 
 
         return (

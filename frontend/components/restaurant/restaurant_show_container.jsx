@@ -18,7 +18,8 @@ const mSTP = (state, ownProps) => {
         aggregates: state.entities.aggregates,
         reviews: Object.values(state.entities.reviews),
         reviewers: state.entities.users,
-        userId: state.session.id || null
+        userId: state.session.id || null,
+        favorite: Object.keys(state.entities.favorites)[0] || null
     };
     
 };
