@@ -19,11 +19,6 @@ class FavoritesItem extends React.Component {
         const { boro, name, cuisine, neighborhood, id} = this.props.restaurant;
         const logoPic = name.substring(0,2) + "4";
 
-        // const reviewButton = (this.props.pastThirty !== 1) ? 
-        //     (<Link to={"/reviews/create"} onClick={() => this.props.pendingReview(this.state)}><p>Leave Review</p></Link>) : null
-        debugger
-        
-
         return (
                 <div className="user-item-container">
 
@@ -34,7 +29,7 @@ class FavoritesItem extends React.Component {
                     <div className="user-rest-info">
                         <p>{name} - {boro}</p>
                         <p>{cuisine} - {neighborhood}</p>
-                        {/* {reviewButton} */}
+                        <button onClick={()=>this.props.deleteFavorite(this.props.upRes.id)}><p>Remove from Saved Restaurants</p></button>
                     </div>
 
                 </div>

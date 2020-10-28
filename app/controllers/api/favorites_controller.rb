@@ -1,9 +1,9 @@
 class Api::FavoritesController < ApplicationController
 
     def index
-        user_id = params[:user_id].to_i
+        @user_id = params[:user_id].to_i
         
-        @favorites = User.find(user_id).favorited_restaurants
+        @favorites = Favorite.includes(:restaurant).where('user_id = ?', "#{@user_id}")
         
         render "api/favorites/index"
 
@@ -19,7 +19,7 @@ class Api::FavoritesController < ApplicationController
         end
     end
 
- 
+  
 
     def favorite_params
         params

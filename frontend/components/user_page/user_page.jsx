@@ -58,7 +58,7 @@ class UserPage extends React.Component {
                     <div className= "user-page-sidebar">
                         <ul>
                             <li><p>Reservations</p></li>
-                            <li><p>Saved Restaurants</p></li>
+                            <li><Link to={`/favorites/${this.props.userId}`}>Saved Restaurants</Link></li>
                         </ul>
                     </div>
 

@@ -24,7 +24,7 @@ class FavoritesPage extends React.Component {
                 <div className="user-page-container">
                     <div className= "user-page-sidebar">
                         <ul>
-                            <li><p>Reservations</p></li>
+                            <li><Link to={`/users/${this.props.userId}`}>Reservations</Link></li>
                             <li><p>Saved Restaurants</p></li>
                         </ul>
                     </div>
