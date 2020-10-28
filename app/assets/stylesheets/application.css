@@ -734,3 +734,26 @@ nav {
     color: rgb(84, 81, 81);
     margin-left: 20px;
 }
+
+.review-info {
+    margin: auto;
+    width: 50%;
+}
+
+.review-radio {
+    width: 10px;
+}
+
+.review-text-body {
+    height: 80px;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.review-text-note  {
+    height: 50px;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 20px;
+}

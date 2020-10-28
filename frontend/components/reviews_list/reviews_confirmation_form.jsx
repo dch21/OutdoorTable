@@ -1,22 +1,181 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
+
 
 class ReviewsConfirmationForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            review_body: "",
+            private_note: "",
+            overall_rating: 0,
+            food_rating: 0,
+            service_rating: 0,
+            ambience_rating: 0, 
+            noise_level: 0,
+            restaurant_id: this.props.reviewInfo.restaurantId,
+            reviewer_id: this.props.userId
         };
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    // componentDidMount() {
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.createReview(this.state);
+        this.props.history.push(`/users/${this.props.userId}`);
+    }
+
+    handleChange(e) {
+        debugger
+        const { name, value } = e.target;
+
+        this.setState({
+        [name]: parseInt(value)
+        });
+    }
+
+    update(field) {
+        return e => this.setState({ [field]: e.currentTarget.value });
+    }
+
+    // updateStar(field) {
+    //     return e => this.setState({ [field]: e.currentTarget.value });
     // }
 
-
     render() {
+
+        // const one = (<div>
+        //     <i class="fas fa-star" style={{color: "red"}} value={1}  onClick={this.updateStar("overall_rating")}></i>
+        //     <i class="far fa-star" ></i>
+        //     <i class="far fa-star"></i>
+        //     <i class="far fa-star"></i>
+        //     <i class="far fa-star"></i>
+        // </div>)
+
+        // const categories = ["overall_rating", "food_rating", "service_rating", "ambience_rating"];
+        const radio = (category) => {
+            return (
+                <div>
+                <h3>{category.split("_")[0].charAt(0).toUpperCase() + category.split("_")[0].slice(1)}</h3>
+                <p>Poor</p>
+                1
+                <input
+                className="review-radio"
+                value={1}
+                name={category}
+                type="radio"
+                onChange={this.handleChange}
+                />
+                2
+                <input
+                className="review-radio"
+                value={2}
+                name={category}
+                type="radio"
+                onChange={this.handleChange}
+                />                                
+                3
+                <input
+                className="review-radio"
+                value={3}
+                name={category}
+                type="radio"
+                onChange={this.handleChange}
+                />
+                4
+                <input
+                className="review-radio"
+                value={4}
+                name={category}
+                type="radio"
+                onChange={this.handleChange}
+                    />
+                5
+                <input
+                className="review-radio"
+                value={5}
+                name={category}
+                type="radio"
+                onChange={this.handleChange}
+                />
+                <p>Outstanding</p>
+            </div>
+            )
+        }
+
+
         return (
             <div>
-               <h3>{this.props.userFirstName}, how was your experience at {this.props.reviewInfo.name} - {this.props.reviewInfo.boro}?</h3>
-               <p>Reservation made on {this.props.reviewInfo.date}.</p>
+                <div className="review-info">
+                    <h3>{this.props.userFirstName}, how was your experience at {this.props.reviewInfo.name} - {this.props.reviewInfo.boro}?</h3>
+                    <p>Reservation made on {this.props.reviewInfo.date}.</p>
+                </div>
+
+                     <form onSubmit={this.handleSubmit}>
+
+                            {radio("overall_rating")}
+                            {radio("food_rating")}
+                            {radio("service_rating")}
+                            {radio("ambience_rating")}
+
+                            <div>
+                                <h3>Noise Level</h3>
+                                <p>Quiet</p>
+                                1
+                                <input
+                                className="review-radio"
+                                value={1}
+                                name="noise_level"
+                                type="radio"
+                                onChange={this.handleChange}
+                                />
+                                2
+                                <input
+                                className="review-radio"
+                                value={2}
+                                name="noise_level"
+                                type="radio"
+                                onChange={this.handleChange}
+                                />                                
+                                3
+                                <input
+                                className="review-radio"
+                                value={3}
+                                name="noise_level"
+                                type="radio"
+                                onChange={this.handleChange}
+                                />
+                                4
+                                <input
+                                className="review-radio"
+                                value={4}
+                                name="noise_level"
+                                type="radio"
+                                onChange={this.handleChange}
+                                    />
+                                <p>Energetic</p>
+                            </div>
+
+                            <textarea className="review-text-body"
+                                value={this.state.review_body}
+                                // onClick={this.clear("phone_number")}
+                                onChange={this.update("review_body")}
+                                placeholder="Write your review here."
+                            />
+
+                            <textarea className="review-text-note"
+                                value={this.state.private_note}
+                                // onClick={this.clear("phone_number")}
+                                onChange={this.update("private_note")}
+                                placeholder="Leave a private note for the restaurant here. (Optional)"
+                            />
+
+                        <button className="form-button" type="submit"><span>Submit Review</span></button>
+
+                    </form>
+
             </div>
             
         )
