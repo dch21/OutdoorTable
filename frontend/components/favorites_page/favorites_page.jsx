@@ -39,7 +39,7 @@ class FavoritesPage extends React.Component {
                                 <FavoritesItem restaurant={restaurant}
                                 userId={this.props.userId}
                                 key={restaurant.id}
-                                // deleteReservation={this.props.deleteReservation}
+                                deleteFavorite={this.props.deleteFavorite}
                                 />
                                 ))
                                }

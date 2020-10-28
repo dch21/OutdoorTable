@@ -5,9 +5,9 @@ export const fetchFavorites = (userId) => {
     });
 };
 
-export const deleteFavorite = (reservationId) => {
+export const deleteFavorite = (favoriteId) => {
     return $.ajax({
         method: "DELETE",
-        url: `/api/reservations/${reservationId}`,
+        url: `/api/favorites/${favoriteId}`,
     });
 };

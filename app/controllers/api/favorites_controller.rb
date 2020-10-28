@@ -9,8 +9,7 @@ class Api::FavoritesController < ApplicationController
 
     end
 
-    def create
-        
+    def create        
         @favorite = Favorite.new(favorite_params)
         if @favorite.save!
             render json: @favorite
@@ -19,7 +18,12 @@ class Api::FavoritesController < ApplicationController
         end
     end
 
-  
+    def destroy
+        @favorite = Favorite.find(params[:id])
+
+        @favorite.destroy
+        render json: @favorite
+    end
 
     def favorite_params
         params

@@ -35,7 +35,7 @@ export const requestFavorites = (userId) => dispatch => (
 //         .then(reservation => dispatch(receiveReservation(reservation)))
 // );
 
-// export const deleteReservation = (reservationId) => dispatch => (
-//     ReservationAPIUtil.deleteReservation(reservationId)
-//         .then(() => dispatch(removeReservation(reservationId)))
-// );
+export const deleteFavorite = (favoriteId) => dispatch => (
+    FavoriteAPIUtil.deleteFavorite(favoriteId)
+        .then(() => dispatch(removeFavorite(favoriteId)))
+);

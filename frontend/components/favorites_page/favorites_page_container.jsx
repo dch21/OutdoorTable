@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import FavoritesPage from "./favorites_page";
-import { requestFavorites } from "../../actions/favorites_actions";
+import { requestFavorites, deleteFavorite } from "../../actions/favorites_actions";
 
 
 const mSTP = (state) => {
@@ -14,7 +14,7 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
     return {
         requestFavorites: (userId) => dispatch(requestFavorites(userId)),
-        // deleteReservation: (reservationId) => dispatch(deleteReservation(reservationId))
+        deleteFavorite: (favoriteId) => dispatch(deleteFavorite(favoriteId))
     };
 };
 
