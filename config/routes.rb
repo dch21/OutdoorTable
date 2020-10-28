@@ -20,6 +20,8 @@ Rails.application.routes.draw do
       get :leftreview, on: :collection
     end
 
+    resources :favorites, only: [:create, :destroy, :index] 
+
     resources :hours, only: [:index, :create]
 
   end

@@ -32,8 +32,16 @@ class User < ApplicationRecord
     foreign_key: :reviewer_id,
     class_name: :Review
 
+    has_many :favorites,
+    foreign_key: :user_id,
+    class_name: :Favorite
+
     has_many :reserved_restaurants,
     through: :reservations,
+    source: :restaurant
+
+    has_many :favorited_restaurants,
+    through: :favorites,
     source: :restaurant
 
     

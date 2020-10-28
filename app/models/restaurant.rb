@@ -45,6 +45,10 @@ class Restaurant < ApplicationRecord
     through: :reservations,
     source: :user
 
+    has_many :favorites,
+    foreign_key: :user_id,
+    class_name: :Favorite
+
 end
 
    def review_aggregates(rest_id)
