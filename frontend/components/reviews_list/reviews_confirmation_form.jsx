@@ -160,14 +160,12 @@ class ReviewsConfirmationForm extends React.Component {
 
                             <textarea className="review-text-body"
                                 value={this.state.review_body}
-                                // onClick={this.clear("phone_number")}
                                 onChange={this.update("review_body")}
                                 placeholder="Write your review here."
                             />
 
                             <textarea className="review-text-note"
                                 value={this.state.private_note}
-                                // onClick={this.clear("phone_number")}
                                 onChange={this.update("private_note")}
                                 placeholder="Leave a private note for the restaurant here. (Optional)"
                             />

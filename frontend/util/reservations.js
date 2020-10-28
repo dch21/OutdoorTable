@@ -30,9 +30,9 @@ export const createReservation = (reservation) => {
 //     });
 // };
 
-// export const deleteReservation = (reservationId) => {
-//     return $.ajax({
-//         method: "DELETE",
-//         url: `/api/reservations/${reservationId}`,
-//     });
-// };
+export const deleteReservation = (reservationId) => {
+    return $.ajax({
+        method: "DELETE",
+        url: `/api/reservations/${reservationId}`,
+    });
+};

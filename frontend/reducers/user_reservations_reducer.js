@@ -13,6 +13,10 @@ const userReservationsReducer = (oldState = {}, action) => {
         //     let nextState = Object.assign({}, oldState);
         //     delete next[action.reservationId];
         //     return nextState;
+        case REMOVE_RESERVATION:
+            let nextState = Object.assign({}, oldState);
+            delete nextState[action.reservationId];
+            return nextState;
 
         // case PENDING_RESERVATION:
         //     return action.info;

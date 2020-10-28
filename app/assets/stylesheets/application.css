@@ -189,7 +189,7 @@ nav {
     display: flex;
     flex-direction: column;
     width: 174px;
-    height: 140px;
+    height: 100px;
     color: gray; 
     padding-top: 25px;
     z-index: 120;

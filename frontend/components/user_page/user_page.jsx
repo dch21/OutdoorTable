@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import PastReservationItem from "./user_past_reservations_item";
+import UpcomingReservationItem from "./user_upcoming_reservations_item";
 
 class UserPage extends React.Component {
     constructor(props) {
@@ -66,13 +67,14 @@ class UserPage extends React.Component {
                             <h2>Upcoming Reservations</h2>
                             <hr/>
                             <div className="user-page-upcoming-items">
-                               {/* {
+                               {
                                upcoming.map(upRes => (
-                                <PastReservationItem result={result}
-                                    key={upRes.id}
+                                <UpcomingReservationItem upRes={upRes}
+                                key={upRes.id}
+                                deleteReservation={this.props.deleteReservation}
                                 />
                                 ))
-                               } */}
+                               }
                             </div>
 
                         </div>

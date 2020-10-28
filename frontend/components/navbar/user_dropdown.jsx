@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
+
 
 
 class UserDropdown extends React.Component {
@@ -42,9 +44,7 @@ class UserDropdown extends React.Component {
                             onClick={e => e.stopPropagation()}
                             style={{ position: 'absolute', top: '100%'}}
                         >
-                            <span onClick={this.handleLinkUser}>My Profile</span> 
-                            <br/>
-                            <span>My Dining History</span>
+                            <span onClick={this.handleLinkUser}>My Dining History</span> 
                             <br/>
                             <span>My Saved Restaurants</span>
                             <br/>

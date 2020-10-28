@@ -3,30 +3,25 @@ import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import { withRouter } from 'react-router';
 
-class PastReservationItem extends React.Component {
+class UpcomingReservationItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: this.props.pastRes.name,
-            date: this.props.pastRes.date,
-            boro: this.props.pastRes.boro,
-            restaurantId: this.props.pastRes.restaurantId
+            name: this.props.upRes.name,
+            date: this.props.upRes.date,
+            boro: this.props.upRes.boro,
+            restaurantId: this.props.upRes.restaurantId
         };
     }
     
     componentDidMount(){
-        this.props.getThirtyDays({
-            restaurant_id: this.props.pastRes.restaurantId,
-            reviewer_id: this.props.userId
-        });
+   
     }
 
     render() {
-        const { boro, name, date, party_size, time, restaurantId} = this.props.pastRes;
+        const { boro, name, date, party_size, time, restaurantId} = this.props.upRes;
         const logoPic = name.substring(0,2) + "4";
 
-        const reviewButton = (this.props.pastThirty !== 1) ? 
-            (<Link to={"/reviews/create"} onClick={() => this.props.pendingReview(this.state)}><p>Leave Review</p></Link>) : null
         
         
 
@@ -41,7 +36,8 @@ class PastReservationItem extends React.Component {
                         <p>{name} - {boro}</p>
                         <p>{date} at {time}</p>
                         <p>Party Size: {party_size}</p>
-                        {reviewButton}
+                        <button onClick={()=>this.props.deleteReservation(this.props.upRes.id)}><p>Cancel Reservation</p></button>
+                        
                     </div>
 
                 </div>
@@ -51,16 +47,15 @@ class PastReservationItem extends React.Component {
 }
 
 
-// export default PastReservationItem;
+export default UpcomingReservationItem;
 
-const mSTP = (state) => {
-    
-    return {
-        pastThirty: parseInt(state.entities.reviews[0])
+// const mSTP = (state) => {
+//     return {
+//         pastThirty: parseInt(state.entities.reviews[0])
         // reviews: Object.values(state.entities.reviews),
         // results: state.entities.restaurants
-    };
-};
+//     };
+// };
 
 // const mDTP = (dispatch) => {
 //     return {
@@ -68,4 +63,4 @@ const mSTP = (state) => {
 //     };
 // };
 
-export default connect(mSTP, null)(PastReservationItem);
+// export default connect(mSTP, null)(UpcomingReservationItem);
