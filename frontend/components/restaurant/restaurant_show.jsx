@@ -13,6 +13,10 @@ import {  Link } from "react-router-dom";
 class RestaurantShow extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            restaurant_id: this.props.restaurantId,
+            user_id: this.props.userId
+        };
     }
 
     componentDidMount() {
@@ -64,6 +68,10 @@ class RestaurantShow extends React.Component {
 
             </div>)
                 
+        const favoriteButton = (
+            <button onClick={()=>this.props.createFavorite(this.state)}><p>Save this Restaurant</p></button>
+        )
+
 
         return (
             <div className="show-container">
@@ -132,13 +140,18 @@ class RestaurantShow extends React.Component {
                  
 
                     <div className="restaurant-sidebar">
+                        
+                        <div>
+                            {favoriteButton}
+                        </div>
+
                         <div className="reservation-form-container">
                             <CreateReservationContainer totalbookings={this.props.aggregates[11]}/>
                         </div>
 
-                        <div>
+                        {/* <div>
                             <RestaurantShowMap restaurant={this.props.restaurant}/>
-                        </div>
+                        </div> */}
 
                         <div>
                             <RestaurantDetailSidebar restaurant={this.props.restaurant}/>

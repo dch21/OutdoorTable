@@ -1,7 +1,7 @@
 class Favorite < ApplicationRecord
 
     validates :restaurant_id, :user_id, presence: true
-    validates :name, uniqueness: { scope: :garden_owner_id}
+    validates :restaurant_id, uniqueness: { scope: :user_id}
 
    
     belongs_to :restaurant,

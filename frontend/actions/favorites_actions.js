@@ -30,10 +30,10 @@ export const requestFavorites = (userId) => dispatch => (
         .then(favorites => dispatch(receiveFavorites(favorites)))
 );
 
-// export const createReservation = (reservation) => dispatch => (
-//     ReservationAPIUtil.createReservation(reservation)
-//         .then(reservation => dispatch(receiveReservation(reservation)))
-// );
+export const createFavorite = (info) => dispatch => (
+    FavoriteAPIUtil.createFavorite(info)
+        .then(favorite => dispatch(receiveFavorite(favorite)))
+);
 
 export const deleteFavorite = (favoriteId) => dispatch => (
     FavoriteAPIUtil.deleteFavorite(favoriteId)

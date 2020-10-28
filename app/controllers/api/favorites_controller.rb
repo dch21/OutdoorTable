@@ -12,7 +12,7 @@ class Api::FavoritesController < ApplicationController
     def create        
         @favorite = Favorite.new(favorite_params)
         if @favorite.save!
-            render json: @favorite
+            render "api/favorites/show"
         else
             render json: @favorite.full_messages, status: 422
         end

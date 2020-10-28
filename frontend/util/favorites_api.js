@@ -11,3 +11,11 @@ export const deleteFavorite = (favoriteId) => {
         url: `/api/favorites/${favoriteId}`,
     });
 };
+
+export const createFavorite = (favorite) => {
+    return $.ajax({
+        method: "POST",
+        url: "/api/favorites",
+        data: { favorite: favorite }
+    });
+};
