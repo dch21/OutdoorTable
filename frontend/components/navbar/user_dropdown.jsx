@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 
 
@@ -27,10 +27,13 @@ class UserDropdown extends React.Component {
     }
 
     handleLinkUser() {
-        this.props.history.push(`users/${this.props.userId}`);
+        // debugger
+        this.props.history.push(`/users/${this.props.userId}`);
+        // return <Redirect to="/" /> 
     }
+
     handleLinkFavorite() {
-        this.props.history.push(`favorites/${this.props.userId}`);
+        this.props.history.push(`/favorites/${this.props.userId}`);
     }
 
     render() {

@@ -7,6 +7,7 @@ import { requestFavorites, deleteFavorite } from "../../actions/favorites_action
 const mSTP = (state) => {
     return {
         userId: state.session.id,
+        userFirstName: state.entities.users[state.session.id].first_name,
         favorites: Object.values(state.entities.favorites)
     };
 };
