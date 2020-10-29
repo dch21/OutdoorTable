@@ -17,6 +17,7 @@ class RestaurantShow extends React.Component {
             restaurant_id: this.props.restaurantId,
             user_id: this.props.userId
         };
+        // this.scrollSection = this.scrollSection.bind(this);
     }
 
     componentDidMount() {
@@ -29,6 +30,10 @@ class RestaurantShow extends React.Component {
         if (this.props.restaurantId !== prevProps.match.params.restaurantId ) {
             this.props.getRestaurant(this.props.restaurantId);
         }
+    }
+
+    scrollSection(section) {
+        document.getElementById(section).scrollIntoView();
     }
 
     render() {
@@ -86,13 +91,13 @@ class RestaurantShow extends React.Component {
                 <div className="parent-form"> 
                     
 
-                    <div className="restaurant-info">
+                    <div id="overview" className="restaurant-info">
 
                         <div className="restaurant-nav">
-                            <p>Overview</p> 
-                            <p>Photos</p>
-                            <p>Menu</p>
-                            <p>Reviews</p>
+                            <p onClick={ () => this.scrollSection("overview") }>Overview</p> 
+                            <p onClick={ () => this.scrollSection("photos") }>Photos</p>
+                            <p onClick={ () => this.scrollSection("menu") }>Menu</p>
+                            <p onClick={ () => this.scrollSection("reviews") }>Reviews</p>
                         </div>
                 
                     
@@ -110,13 +115,13 @@ class RestaurantShow extends React.Component {
                         <br/>
                         
                         <div>
-                            <h2>Photos</h2>
+                            <h2 id="photos">Photos</h2>
                             <RestaurantPhotos name={this.props.restaurant.name} />
                         </div>
                         <br/>
 
                         <div>
-                            <h2>Menu</h2>
+                            <h2 id="menu">Menu</h2>
                             <hr/>
                             <a href={`${this.props.restaurant.website}`}>Restaurant Menu</a>
                         </div>
@@ -129,7 +134,7 @@ class RestaurantShow extends React.Component {
                         <br/>
 
                         <div>
-                            <h2>Reviews</h2>
+                            <h2 id="reviews">Reviews</h2>
                             <hr />
                             <ReviewsList getReviews={this.props.getReviews} 
                             restaurantId={this.props.restaurantId}
