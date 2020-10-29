@@ -18,13 +18,13 @@ class Api::ReservationsController < ApplicationController
         # restaurant_id = params[:reservation][:restaurant_id]
 
         # Reservation.check_availability(time, date, restaurant_id)
-        # debugger
 
         @reservation = Reservation.new(reservation_params)
-        if @reservation.save!
+        if @reservation.save
             render "api/reservations/show"
         else
-            render json: @reservation.errors.full_messages, status: 422
+            # render json: @reservation.errors.full_messages, status: 402
+            render json: ['Email and phone number must be provided.'], status: 422
         end
     end
 

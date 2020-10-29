@@ -8,7 +8,7 @@ import { fetchRestaurant, searchRestaurants} from "./util/restaurants_api";
 import { fetchReviews, checkReview } from "./util/reviews_api";
 import { fetchAggregates } from "./util/aggregates_api";
 import { searchHours } from "./util/hours_api";
-import { fetchReservations } from "./util/reservations";
+import { fetchReservations,createReservation } from "./util/reservations";
 import { fetchFavorites } from "./util/favorites_api";
 import { createFavorite, deleteFavorite } from "./util/favorites_api";
 
@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.checkReview = checkReview;
     window.fetchFavorites = fetchFavorites;
     window.createFavorite = createFavorite;
+    window.createReservation = createReservation;
     // window.deleteSession = deleteSession;
 
 

@@ -4,6 +4,10 @@ export const RECEIVE_RESERVATIONS = "RECEIVE_RESERVATIONS";
 export const RECEIVE_RESERVATION = "RECEIVE_RESERVATION";
 export const REMOVE_RESERVATION = "REMOVE_RESERVATION";
 
+export const RECEIVE_RESERVATION_ERRORS = 'RECEIVE_RESERVATION_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+
+
 
 const receiveReservations = reservations => {
     return {
@@ -24,7 +28,18 @@ const removeReservation = reservationId => {
     };
 };
 
+export const receiveReservationErrors = (errors) => {
+    return {
+        type: RECEIVE_RESERVATION_ERRORS,
+        errors
+    };
+};
 
+export const clearErrors = () => {
+    return {
+        type: CLEAR_ERRORS,
+    };
+};
 
 export const requestReservations = (userId) => dispatch => (
     ReservationAPIUtil.fetchReservations(userId)
@@ -36,8 +51,9 @@ export const requestReservations = (userId) => dispatch => (
 // );
 export const createReservation = (reservation) => dispatch => (
     ReservationAPIUtil.createReservation(reservation)
-        .then(reservation => dispatch(receiveReservation(reservation)))
-);
+        .then(reservation => dispatch(receiveReservation(reservation)),
+        errors => (dispatch(receiveReservationErrors(errors.responseJSON)))
+));
 // export const updateReservation = (reservation) => dispatch => (
 //     ReservationAPIUtil.updateReservation(reservation)
 //         .then(reservation => dispatch(receiveReservation(reservation)))

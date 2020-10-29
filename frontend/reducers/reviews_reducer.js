@@ -14,8 +14,7 @@ const reviewsReducer = (state = {}, action) => {
             
             return Object.assign({}, action.info);
 
-        case RECEIVE_THIRTY_DAYS_COUNT:
-            return [action.count];
+    
         default:
             return state;
     }

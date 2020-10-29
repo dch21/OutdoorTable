@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
-import { createReservation } from "../../actions/reservations_actions";
+import { createReservation, clearErrors } from "../../actions/reservations_actions";
 import { withRouter } from 'react-router';
 import { openModal } from "../../actions/modal_actions";
 
@@ -30,8 +30,12 @@ class ComfirmationForm extends React.Component {
             this.props.openModal("signIn");
             return;
         }
-        this.props.createReservation(this.state);
-        this.props.history.push(`/users/${this.props.user_id}`);
+        this.props.createReservation(this.state)
+        // this.props.history.push(`/users/${this.props.user_id}`)
+    }
+
+    componentWillUnmount() {
+        this.props.clearErrors();
     }
 
     update(field) {
@@ -42,8 +46,19 @@ class ComfirmationForm extends React.Component {
     clear(field) {
         return e => this.setState({ [field]: "" });
     }
-   
 
+    renderErrors() {
+        return (
+            <ul className="errors-list">
+                {this.props.errors.map( (error, idx) => (
+                    <li key={idx}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
+   
     render() {
         const logoPic = this.props.res_detail.name.substring(0,2) + "4";
 
@@ -52,6 +67,7 @@ class ComfirmationForm extends React.Component {
             
                 <div className="confirm-form"> 
                     <p>{"You're almost done!"}</p>
+                    {this.renderErrors()}
 
                     <div className="confirm-form-top-container">
                         <div className="confirm-rest-info-container">
@@ -95,14 +111,14 @@ class ComfirmationForm extends React.Component {
                                 value={this.state.occasion}
                                 onClick={this.clear("occasion")}
                                 onChange={this.update("occasion")}
-                                placeholder="Occasion"
+                                placeholder="Occasion (optional)"
                             />
 
                             <input type="text" className="confirm-input-box "
                                 value={this.state.notes}
                                 onClick={this.clear("notes")}
                                 onChange={this.update("notes")}
-                                placeholder="Special Request"
+                                placeholder="Special Request (optional)"
                             />
                         </div>
 
@@ -139,7 +155,8 @@ class ComfirmationForm extends React.Component {
 const mSTP = (state) => {
     return {
         res_detail: state.entities.reservations,
-        user_id: state.session.id
+        user_id: state.session.id,
+        errors: state.errors.reservation,
     }
 
    
@@ -148,7 +165,8 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
     return {
         createReservation: (reservation) => dispatch(createReservation(reservation)),
-        openModal: modal => dispatch(openModal(modal))
+        openModal: modal => dispatch(openModal(modal)),
+        clearErrors: () => dispatch(clearErrors())
     };
 };
 
