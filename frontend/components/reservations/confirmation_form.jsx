@@ -26,12 +26,13 @@ class ComfirmationForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-         if (!this.props.user_id) {
+        if (!this.props.user_id) {
             this.props.openModal("signIn");
             return;
         }
-        this.props.createReservation(this.state)
-        // this.props.history.push(`/users/${this.props.user_id}`)
+        this.props.createReservation(this.state).then( () =>
+        this.props.history.push(`/users/${this.props.user_id}`)
+        );
     }
 
     componentWillUnmount() {
