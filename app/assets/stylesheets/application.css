@@ -599,7 +599,16 @@ nav {
     .show-container {
         width: auto;
     }
-    
+
+.show-favorite-button {
+    background-color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: inherit;
+}
+
     .logo-banner {
         width: 100%;
     }   

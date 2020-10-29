@@ -68,11 +68,12 @@ class RestaurantShow extends React.Component {
 
             </div>)
                 
-        const favoriteButton = this.props.favorite ? (
-            <button onClick={()=>this.props.deleteFavorite(this.props.favorite)}><p>Remove from Saved Restaurants</p></button>
-            ) :
-            (<button onClick={()=>this.props.createFavorite(this.state)}><p>Save this Restaurant</p></button>)
+        const buttonToggle = this.props.favorite ? (
+            <button className= "show-favorite-button" onClick={()=>this.props.deleteFavorite(this.props.favorite)}><i class="far fa-bookmark"><span>  Restaurant Saved</span></i></button>)
+            :
+            (<button className= "show-favorite-button" onClick={()=>this.props.createFavorite(this.state)}><i class="far fa-bookmark"><span>   Save Restaurant</span></i></button>)
 
+        const favoriteButton = this.props.userId ? buttonToggle : null
 
         return (
             <div className="show-container">
@@ -101,8 +102,9 @@ class RestaurantShow extends React.Component {
                         {stars}{halfStars}
                         {this.props.aggregates[1]}
                         <i className="far fa-comments"><span> {this.props.aggregates[0]} Reviews</span></i>
-                        <i className="fas fa-money-bill-wave"></i><span>{this.props.restaurant.price_range}</span><i className="fas fa-cookie-bite"></i><span>{this.props.restaurant.cuisine}</span>
+                        <i className="fas fa-money-bill-wave"></i><span>{this.props.restaurant.price_range}</span><i className="fas fa-cookie-bite"></i><span>{this.props.restaurant.cuisine}</span><span>{favoriteButton}</span> 
                         <p>{this.props.restaurant.description}</p>
+                        
                         <br/>
                         {safety}
                         <br/>
@@ -141,10 +143,6 @@ class RestaurantShow extends React.Component {
                  
 
                     <div className="restaurant-sidebar">
-                        
-                        <div>
-                            {favoriteButton}
-                        </div>
 
                         <div className="reservation-form-container">
                             <CreateReservationContainer totalbookings={this.props.aggregates[11]}/>
