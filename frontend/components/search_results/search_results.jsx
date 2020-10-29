@@ -46,6 +46,8 @@ class SearchResults extends React.Component {
                                     getHours={this.props.getHours}
                                     // hours={this.props.hours}
                                     // review={this.props.reviews[0]}
+                                    openModal={this.props.openModal}
+                                    currentUser={this.props.currentUser}
                                     pendingReservation={this.props.pendingReservation}
                                 />
                             ))

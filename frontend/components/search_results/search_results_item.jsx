@@ -30,6 +30,10 @@ class SearchResultsItem extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        if (!this.props.currentUser) {
+            this.props.openModal("signIn");
+            return;
+        }
         this.props.pendingReservation(this.state);
         this.props.history.push('/confirmation/');
     }

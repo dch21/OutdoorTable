@@ -49,7 +49,7 @@ class UserPage extends React.Component {
             }
         });
         
-
+        
         return (
             <div>
                 <h1>{this.props.userFirstName}</h1>

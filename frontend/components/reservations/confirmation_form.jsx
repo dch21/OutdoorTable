@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import { createReservation } from "../../actions/reservations_actions";
 import { withRouter } from 'react-router';
+import { openModal } from "../../actions/modal_actions";
+
 
 
 class ComfirmationForm extends React.Component {
@@ -24,6 +26,10 @@ class ComfirmationForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+         if (!this.props.user_id) {
+            this.props.openModal("signIn");
+            return;
+        }
         this.props.createReservation(this.state);
         this.props.history.push(`/users/${this.props.user_id}`);
     }
@@ -142,6 +148,7 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
     return {
         createReservation: (reservation) => dispatch(createReservation(reservation)),
+        openModal: modal => dispatch(openModal(modal))
     };
 };
 

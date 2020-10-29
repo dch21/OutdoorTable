@@ -31,6 +31,18 @@
     height: 100px;
 }
 
+#linkedin {
+    font-size: 30px;
+    margin-right: 20px;
+    color:rgb(59, 101, 180)
+}
+
+#github {
+    font-size: 30px;
+    color: white;
+    margin-right: 10px;
+}
+
 .footer-left a{
     size: 7px;
     text-decoration: none;
