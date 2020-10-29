@@ -96,8 +96,8 @@ class SearchResultsItem extends React.Component {
                 ) 
             else
                 return (
-                <div className="reservation-times" onMouseEnter={()=>this.changeTime(hour.toString()[0] + ":30" + amPM)}>
-                    <button onClick={this.handleSubmit}>{hour.toString()[0] + ":30" + amPM}</button>
+                <div className="reservation-times" onMouseEnter={()=>this.changeTime(hour.toString().split(".")[0] + ":30" + amPM)}>
+                    <button onClick={this.handleSubmit}>{hour.toString().split(".")[0] + ":30" + amPM}</button>
                 </div>
                 ) 
         })
@@ -119,16 +119,12 @@ class SearchResultsItem extends React.Component {
                                 <span>{dollar_sign}</span> &middot; <span>{this.props.result.cuisine}</span> &middot; <span>{this.props.result.neighborhood}</span> 
                             </p>
                             <p>{this.props.result.recent_review.review_body}</p>
+                            <div className="search-time-buttons">
+                                {
+                                    (hours === 11 && amPM == "AM") ? elevenAM : (((hours === 12 && amPM == "PM") ? noon : ((hours === 1 && amPM == "PM") ? onePM : normalbutton)))
+                                }
+                            </div>
                         </div>
-
-                        <div className="">
-                            {
-                                (hours === 11 && amPM == "AM") ? elevenAM : (((hours === 12 && amPM == "PM") ? noon : ((hours === 1 && amPM == "PM") ? onePM : normalbutton)))
-                     
-        
-                            }
-                        </div>
-
                     </div>
         )
     }

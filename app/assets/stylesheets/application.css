@@ -429,55 +429,69 @@ nav {
         color: rgb(246, 55, 55);
     }
 
-    .circle-container {
-        align-items: center;
-    }
+.circle-container {
+    align-items: center;
+}
 
-    .circles {
-        height: 60px;
-        width: 60px;
-        border-radius: 50%;
-        background-color: rgb(110, 208, 172);
-    }
+.circles {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: rgb(110, 208, 172);
+}
 
-    .circles p {
-        text-align: center;
-        line-height: 60px;
-    }
+.circles p {
+    text-align: center;
+    line-height: 60px;
+}
     
-    .search-results {
+.search-results {
     margin: 60px;
- }
+}
 
-    .results-item {
-        display: flex;
-    }
+.results-item {
+    display: flex;
+}
 
-    .pic-container {
-        height: 220px;
-        width: 220px;
-        margin: 20px;
-    }
+.pic-container {
+    height: 220px;
+    width: 220px;
+    margin: 20px;
+}
 
-    .food-pic {
-        width: 220px;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 5px;
-    }
+.food-pic {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5px;
+}
 
-    .info {
-        height: 220px;
-        width: 320px;
-        margin-top: 13px;
-    }
+.info {
+    height: 220px;
+    width: 320px;
+    margin-top: 13px;
+}
 
-    .info  p:first-child {
-        padding: 5px;
-        text-decoration: none;
-        color: teal;
-        font-size: 20px;
-    }
+.info p:first-child {
+    padding: 5px;
+    text-decoration: none;
+    color: teal;
+    font-size: 20px;
+}
+
+.search-time-buttons {
+    display: flex;
+}
+
+.reservation-times button {
+    margin-left: 5px;
+    width: 80px;
+    background-color: #d43838;
+    border: 1px solid black;
+    color: white;
+    border-radius: 3px;
+    padding: 5px
+}
 
     /* .search-results-div{ */
         /* display: flex; */
