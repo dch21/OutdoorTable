@@ -52,13 +52,13 @@ class UserPage extends React.Component {
         
         return (
             <div>
-                <h1>{this.props.userFirstName}</h1>
+                <h1 className="user-name">Hi, {this.props.userFirstName}</h1>
 
                 <div className="user-page-container">
                     <div className= "user-page-sidebar">
                         <ul>
                             <li><p>Reservations</p></li>
-                            <li><Link to={`/favorites/${this.props.userId}`}>Saved Restaurants</Link></li>
+                            <li><Link className="user-page-link" to={`/favorites/${this.props.userId}`}>Saved Restaurants</Link></li>
                         </ul>
                     </div>
 

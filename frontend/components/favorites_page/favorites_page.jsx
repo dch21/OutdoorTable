@@ -19,13 +19,13 @@ class FavoritesPage extends React.Component {
 
         return (
             <div>
-                <h1>{this.props.userFirstName}</h1>
+                <h1 className="user-name">Hi, {this.props.userFirstName}</h1>
 
                 <div className="user-page-container">
                     <div className= "user-page-sidebar">
                         <ul>
-                            <li><Link to={`/users/${this.props.userId}`}>Reservations</Link></li>
                             <li><p>Saved Restaurants</p></li>
+                            <li><Link className="user-page-link" to={`/users/${this.props.userId}`}>Reservations</Link></li>
                         </ul>
                     </div>
 

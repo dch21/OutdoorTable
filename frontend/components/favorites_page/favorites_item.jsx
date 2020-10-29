@@ -29,7 +29,7 @@ class FavoritesItem extends React.Component {
                     <div className="user-rest-info">
                         <p>{name} - {boro}</p>
                         <p>{cuisine} - {neighborhood}</p>
-                        <button onClick={()=>this.props.deleteFavorite(this.props.restaurant.favoriteId)}><p>Remove from Saved Restaurants</p></button>
+                        <button className="user-favorite-removal-button" onClick={()=>this.props.deleteFavorite(this.props.restaurant.favoriteId)}><p>Remove from Saved Restaurants</p></button>
                     </div>
 
                 </div>

@@ -643,7 +643,7 @@ nav {
     } */
 
     .restaurant-info{
-       margin-left: 180px;
+       margin-left: 170px;
     }
     .restaurant-info > h1{
        font-size: 45px;
@@ -655,7 +655,7 @@ nav {
     }
 
 .restaurant-sidebar {
-      margin-right: 180px;
+      margin-right: 170px;
 }
 
 .aggregates-container {
@@ -731,10 +731,29 @@ nav {
     height: 340px
 }
 
+.user-name {
+    margin-left: 143px;
+}
+
 .user-page-container {
     display: flex;
     flex-direction: row;
     margin-left: 100px;
+}
+
+.user-page-sidebar li {
+    list-style-type: none;
+}
+
+.user-page-sidebar p {
+    font-weight: 800;
+}
+
+.user-page-link {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
 }
 
 .user-page-reservations-container {
@@ -742,8 +761,9 @@ nav {
 }
 
 .user-food-pic {
-    height: 100px;
-    width: 100px;
+    height: 135px;
+    width: 150px;
+    border-radius: 3px;
 }
 
 .user-item-container {
@@ -754,6 +774,16 @@ nav {
     padding: 0;
     color: rgb(84, 81, 81);
     margin-left: 20px;
+}
+
+.user-favorite-removal-button {
+    width: 250px;
+    background-color: #db3434;
+    border: 1px solid black;
+    color: white;
+    margin-left: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 3px;
 }
 
 .review-info {
