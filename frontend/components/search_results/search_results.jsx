@@ -1,6 +1,8 @@
 import React from "react";
 import SearchResultsItem from "./search_results_item";
 import SearchResultsFormContainer from "./search_results_form_container";
+import SearchFormContainer from "../search_form/search_form_container";
+
 
 class SearchResults extends React.Component {
     constructor(props) {
@@ -29,11 +31,20 @@ class SearchResults extends React.Component {
                         <SearchResultsFormContainer />
                     </div> */}
 
-                    <div className="form-header">
+                    {/* <div className="form-header">
                         <img className="logo-banner" src={window.border} alt="food" />
 
-                    </div>
+                    </div> */}
 
+                <div className="splash-banner"> 
+                    <div className="splash-banner-container">
+                        <img className="logo-banner" src={window.border} alt="food" />
+                        <div>
+                            <SearchFormContainer/>
+                        </div>
+                    </div>
+                    
+                </div>
                     
                     <div className="search-results">
     
