@@ -9,11 +9,11 @@ class ReviewsConfirmationForm extends React.Component {
         this.state = {
             review_body: "",
             private_note: "",
-            overall_rating: 0,
-            food_rating: 0,
-            service_rating: 0,
-            ambience_rating: 0, 
-            noise_level: 0,
+            overall_rating: "",
+            food_rating: "",
+            service_rating: "",
+            ambience_rating: "", 
+            noise_level: "",
             restaurant_id: this.props.reviewInfo.restaurantId,
             reviewer_id: this.props.userId
         };
@@ -24,8 +24,7 @@ class ReviewsConfirmationForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createReview(this.state)
-        .then(
-            this.props.history.push(`/restaurants/${this.props.reviewInfo.restaurantId}`));
+        .then( () => this.props.history.push(`/restaurants/${this.props.reviewInfo.restaurantId}`));
     }
 
     handleChange(e) {
@@ -43,6 +42,17 @@ class ReviewsConfirmationForm extends React.Component {
     // updateStar(field) {
     //     return e => this.setState({ [field]: e.currentTarget.value });
     // }
+
+    renderErrors() {
+        return (
+        <ul className="errors-list">
+            {this.props.errors.map( (error, idx) => (
+                <li key={idx}>
+                    {error}
+                </li>
+            ))}
+        </ul>)
+    }
 
     render() {
 
@@ -109,7 +119,8 @@ class ReviewsConfirmationForm extends React.Component {
         return (
             <div>
                 <div className="review-info">
-                    <h3>{this.props.userFirstName}, how was your experience at {this.props.reviewInfo.name} - {this.props.reviewInfo.boro}?</h3>
+                    {this.renderErrors()}
+                    <h3>Hi {this.props.userFirstName}, how was your experience at {this.props.reviewInfo.name} - {this.props.reviewInfo.boro}?</h3>
                     <p>Reservation made on {this.props.reviewInfo.date}.</p>
                 </div>
 

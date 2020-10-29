@@ -4,6 +4,9 @@ export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const RECEIVE_THIRTY_DAYS_COUNT = "RECEIVE_THIRTY_DAYS_COUNT";
 export const CLEAR_REVIEWS = 'CLEAR_REVIEWS';
 
+export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+
 
 const receiveReviews = payload => {
     const { reviews, reviewers } = payload;
@@ -35,6 +38,20 @@ export const clearReviews = () => {
     };
 };
 
+export const receiveReviewErrors = (errors) => {
+    return {
+        type: RECEIVE_REVIEW_ERRORS,
+        errors
+    };
+};
+
+export const clearErrors = () => {
+    return {
+        type: CLEAR_ERRORS,
+    };
+};
+
+
 export const getReviews = (restaurantId) => dispatch => (
     ReviewsAPIUtil.fetchReviews(restaurantId)
         .then(payload => dispatch(receiveReviews(payload)))
@@ -42,8 +59,9 @@ export const getReviews = (restaurantId) => dispatch => (
 
 export const createReview = (review) => dispatch => (
     ReviewsAPIUtil.createReview(review)
-        .then(review => dispatch(receiveReview(review)))
-);
+        .then(review => dispatch(receiveReview(review)),
+        errors => (dispatch(receiveReviewErrors(errors.responseJSON)))
+));
 
 export const getThirtyDays = (info) => dispatch => (
     ReviewsAPIUtil.checkReview(info)

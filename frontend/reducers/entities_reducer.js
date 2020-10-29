@@ -9,6 +9,7 @@ import searchReducer from "./search_reducer";
 import userReservations from "./user_reservations_reducer";
 import favoritesReducer from "./favorites_reducer";
 import userReviewsReducer from "./user_reviews_reducer";
+import reviewsPendingReducer from "./reviews_pending_reducer";
 
 
 
@@ -21,7 +22,8 @@ const entitiesReducer = combineReducers({
     searchResults: searchReducer,
     userReservations: userReservations,
     favorites: favoritesReducer,
-    userReviews: userReviewsReducer
+    userReviews: userReviewsReducer,
+    reviewsPending: reviewsPendingReducer
     // hours: hoursReducer
 
 });

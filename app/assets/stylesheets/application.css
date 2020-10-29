@@ -767,6 +767,20 @@ nav {
     border-radius: 3px;
 }
 
+.user-leave-review-link {
+    text-decoration: none;
+}
+
+.user-leave-review {
+    margin-left: 15px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    width: 90px;
+    background-color: #db3434;
+    color: white;
+    font-size: 14px;
+}
+
 .user-item-container {
     display: flex;
 }

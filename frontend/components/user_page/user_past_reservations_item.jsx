@@ -26,7 +26,7 @@ class PastReservationItem extends React.Component {
         const logoPic = name.substring(0,2) + "4";
 
         const reviewButton = (this.props.pastThirty !== 1) ? 
-            (<Link to={"/reviews/create"} onClick={() => this.props.pendingReview(this.state)}><p>Leave Review</p></Link>) : null
+            (<Link className="user-leave-review-link" to={"/reviews/create"} onClick={() => this.props.pendingReview(this.state)}><p className="user-leave-review">Leave Review</p></Link>) : null
         
         
 
