@@ -54,21 +54,21 @@ class RestaurantShowButtons extends React.Component {
 
         const elevenAM = ["10:00AM", "10:30AM", "11:00AM", "11:30AM", "12:00PM", "12:30PM"].map( (time) => {
                 return (
-               <div className="reservation-times" onMouseEnter={()=>this.changeTime(time)}>
+               <div className="restaurant-show-times" onMouseEnter={()=>this.changeTime(time)}>
                     <button onClick={this.handleSubmit}>{time}</button>
                 </div>
                 )
         })
         const noon = ["11:00AM", "11:30AM", "12:00PM", "12:30PM", "1:00PM", "1:30PM"].map( (time) => {
                 return (
-               <div className="reservation-times" onMouseEnter={()=>this.changeTime(time)}>
+               <div className="restaurant-show-times" onMouseEnter={()=>this.changeTime(time)}>
                     <button onClick={this.handleSubmit}>{time}</button>
                 </div>
                 )
         })
         const onePM = ["12:00PM", "12:30PM", "1:00PM", "1:30PM", "2:00PM", "2:30PM"].map( (time) => {
                 return (
-               <div className="reservation-times" onMouseEnter={()=>this.changeTime(time)}>
+               <div className="restaurant-show-times" onMouseEnter={()=>this.changeTime(time)}>
                     <button onClick={this.handleSubmit}>{time}</button>
                 </div>
                 )
@@ -79,21 +79,21 @@ class RestaurantShowButtons extends React.Component {
         const normalbutton = times.map( (hour, i) => {
             if (i % 2 === 0) 
                 return (
-                <div className="reservation-times" onMouseEnter={()=>this.changeTime(hour + ":00" + amPM)}>
+                <div className="restaurant-show-times" onMouseEnter={()=>this.changeTime(hour + ":00" + amPM)}>
                     <button onClick={this.handleSubmit}>{hour + ":00" + amPM}</button>
                 </div>
                 ) 
             else
                 return (
-                <div className="reservation-times" onMouseEnter={()=>this.changeTime(hour.toString().split(".")[0] + ":30" + amPM)}>
+                <div className="restaurant-show-times" onMouseEnter={()=>this.changeTime(hour.toString().split(".")[0] + ":30" + amPM)}>
                     <button onClick={this.handleSubmit}>{hour.toString().split(".")[0] + ":30" + amPM}</button>
                 </div>
                 ) 
         })
 
         return (
-                    <div className="results-item">
-                        <div className="search-time-buttons">
+                    <div className="rest-time">
+                        <div className="rest-time-buttons">
                             {
                                 (hours === 11 && amPM == "AM") ? elevenAM : (((hours === 12 && amPM == "PM") ? noon : ((hours === 1 && amPM == "PM") ? onePM : normalbutton)))
                             }

@@ -358,12 +358,12 @@ nav {
     /* position: sticky; */
     /* top: 0; */
     z-index: 100;
-    height: 315px;
+    /* height: 315px; */
     /* width: 350px; */
     border-style: groove;
     /* border-color: rgb(205, 199, 199); */
     border-width: 1px;
-    padding-bottom: 14px;
+    /* padding-bottom: 14px; */
     /* font-size: small; */
     /* font-size: medium; */
     background-color: white;
@@ -374,7 +374,17 @@ nav {
     margin: 8px;
     /* display: flex; */
     align-items: center;
-    justify-content: center;}
+    justify-content: center;
+}
+
+.res-form-label {
+    height: 25px;
+}
+
+.res-time-label {
+    height: 36px;
+}
+
     
     .res-form select {
         padding: 9px 9px 11px 9px;
@@ -493,6 +503,11 @@ nav {
     display: flex;
 }
 
+.rest-time {
+    display: flex;
+    /* height: 100px; */
+}
+
 .pic-container {
     height: 220px;
     width: 220px;
@@ -523,6 +538,11 @@ nav {
     display: flex;
 }
 
+.rest-time-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .reservation-times button {
     margin-left: 5px;
     width: 80px;
@@ -530,7 +550,22 @@ nav {
     border: 1px solid black;
     color: white;
     border-radius: 3px;
-    padding: 5px
+    padding: 5px;
+    cursor: pointer;
+}
+
+.restaurant-show-times {
+    margin: 0%;
+}
+
+.restaurant-show-times button {
+    margin-left: 2px;
+    background-color: #d43838;
+    border: 1px solid black;
+    color: white;
+    border-radius: 3px;
+    padding: 3px;
+    cursor: pointer;
 }
 
     /* .search-results-div{ */

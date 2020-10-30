@@ -35,9 +35,9 @@ class ReservationForm extends React.Component {
             <div> 
                 
                 <form className="res-form" onSubmit={this.handleSubmit} >
-                <h2>{this.props.formType}</h2>
+                <h3>{this.props.formType}</h3>
 
-                    <label> Party Size
+                    <label className="res-form-label"> Party Size
                         <select className="party-size" value={this.state.party_size} onChange={this.updateParty}>
                             <option value="1">1 Person</option>
                         {
@@ -57,7 +57,7 @@ class ReservationForm extends React.Component {
                     />
                     </label>
 
-                    <label>Time
+                    <label className="res-time-label">Time
                     <select value={this.state.time} onChange={this.updateTime}>
                         {
                             [9, 10, 11].map(number => (
@@ -80,8 +80,7 @@ class ReservationForm extends React.Component {
 
                     {this.state.toggleButton ? <RestaurantShowButtons currentUser={this.props.currentUser} openModal={this.props.openModal} result={this.state} pendingReservation={this.props.pendingReservation}/> : null}
 
-                    <button className="form-button" type="submit">Find a table</button>
-                    <br/>
+                    {!this.state.toggleButton ? <button className="form-button" type="submit">Find a table</button> : null}
                     <span className="fas fa-chart-line"></span>Booked {this.props.totalbookings} times today
                 </form>
             </div>

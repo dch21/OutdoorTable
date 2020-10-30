@@ -82,10 +82,10 @@ class RestaurantShow extends React.Component {
 
         return (
             <div className="show-container">
-                <div className="form-header">
+                {/* <div className="form-header">
                     <img className="logo-banner" src={window.border} alt="food" />
                     
-                </div>
+                </div> */}
 
                 
                 <div className="parent-form"> 
