@@ -20,8 +20,9 @@ class FavoritesPage extends React.Component {
         return (
             <div>
                 <h1 className="user-name">Hi, {this.props.userFirstName}</h1>
-
+                
                 <div className="user-page-container">
+
                     <div className= "user-page-sidebar">
                         <ul>
                             <li><p>Saved Restaurants</p></li>

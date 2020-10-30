@@ -36,7 +36,7 @@ class UpcomingReservationItem extends React.Component {
                         <p>{name} - {boro}</p>
                         <p>{date} at {time}</p>
                         <p>Party Size: {party_size}</p>
-                        <button onClick={()=>this.props.deleteReservation(this.props.upRes.id)}><p>Cancel Reservation</p></button>
+                        <button className="user-cancel-button" onClick={()=>this.props.deleteReservation(this.props.upRes.id)}>Cancel Reservation</button>
                         
                     </div>
 
