@@ -581,11 +581,11 @@ nav {
 
 .filter {
     display: flex;
-    height: 25px;
+    height: 30px;
 }
 
 .filter-input {
-    width: 15px;
+    width: 18px;
     margin-top: 15px;
     cursor: pointer;
 }

@@ -433,7 +433,7 @@ rv9 = Review.create!(
 )
 
 rv10 = Review.create!(
-    review_body: "Name lives up to its food! I doubt you need a reservation here because it's a quick and satisfying bite , but I'm glad they're offering outdoor seating to get people to dine in. The park across the street is great too if the seats are full. Support your local businesses!",
+    review_body: "Name lives up to its food! I doubt you need a reservation here, but I'm glad they're offering outdoor seating. The park across the street is great too if the seats are full. Support your local businesses!",
     private_note: "",
     overall_rating: 4,
     food_rating: 4,
