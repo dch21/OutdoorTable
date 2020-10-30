@@ -47,7 +47,7 @@ class Navbar extends React.Component {
                     </div>
                     <div className="right-nav">
                         {currentUser > 0 ? signedinNav() : signButtons() }
-                        <i className="fas fa-search"></i>
+                        <i className="fas fa-search" onClick={ () => openModal("search")}></i>
                     </div>
                 </nav>
             </div>

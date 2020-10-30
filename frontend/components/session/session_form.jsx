@@ -55,7 +55,7 @@ class SessionForm extends React.Component{
             <div className="login-container">
                 {this.renderErrors()}
                 <form onSubmit={this.handleSubmit}>
-                    <h3 className="modal-header">{this.props.formType === "Sign Up" ? "Welcome to OutsideTable!" : "Please sign in"}</h3>
+                    <h3 className="modal-header">{this.props.formType === "Sign Up" ? "Welcome to OutdoorTable!" : "Please sign in"}</h3>
                     <br/>
                     {this.props.formType === "Sign Up" &&
                     <div>

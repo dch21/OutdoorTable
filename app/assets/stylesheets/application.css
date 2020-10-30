@@ -81,6 +81,46 @@ input {
     height: 29px;
 }
 
+.modal-search-container {
+    display: block;
+    margin: auto
+}
+
+.modal-search-header {
+    margin-left: 10px
+}
+
+.modal-search {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
+.modal-search form {
+    display: flex
+}
+
+.modal-search-date, .modal-party-size {
+    width: 150px
+}
+
+.modal-form-button {
+    background-color: #db3434;
+    border: 1px solid black;
+    color: white;
+    border-radius: 3px;
+    height: 45px;
+    margin: auto;
+    width: 205px;
+}
+
 form * {
     font-family: 'Josefin Sans', sans-serif;
     margin: 8px;
@@ -568,51 +608,51 @@ nav {
         outline: none
     }
     
-    .splash-banner {
-        /* display: flex; */
-        margin: auto;
-    }
+.splash-banner {
+    /* display: flex; */
+    margin: auto;
+}
+
+.splash-banner-container {
+    position: relative;
+    text-align: center;
     
-    .splash-banner-container {
-        position: relative;
-        text-align: center;
-        
-    }
+}
+
+.splash-banner-container > h2 {
+    position: absolute;
+    color: ivory;
+    width: 85%;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 37px;
+    z-index: 1;
+    font-weight: 1200;
+}
     
-    .splash-banner-container > h2 {
-        position: absolute;
-        color: aliceblue;
-        width: 85%;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 37px;
-        z-index: 1;
-        font-weight: 1200;
-    }
+.splash-banner {
+    width: 100%;
+}
     
-    .splash-banner {
-        width: 100%;
-    }
+.splash-image {
+    display: block;
+    width: 100%;
+    opacity: .90;
+}
     
-    .splash-image {
-        display: block;
-        width: 100%;
-        opacity: .90;
-    }
+.search-form{
+    display: flex;
+    position: absolute;
+    width: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
     
-    .search-form{
-        display: flex;
-        position: absolute;
-        width: 85%;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    
-    .show-container {
-        width: auto;
-    }
+.show-container {
+    width: auto;
+}
 
 .show-favorite-button {
     background-color: white;

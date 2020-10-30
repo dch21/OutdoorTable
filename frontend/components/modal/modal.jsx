@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { closeModal } from "../../actions/modal_actions";
 import SignUpFormContainer from "../session/sign_up_form_container";
 import SignInFormContainer from "../session/sign_in_form_container"; 
+import ModelSearchContainer from "../search_form/model_search_container";
 
 function Modal(props) {
 
@@ -18,13 +19,16 @@ function Modal(props) {
         case "signUp":
             form = <SignUpFormContainer />
             break;
+        case "search":
+            form = <ModelSearchContainer />
+            break;
         default:
             return null;
     }
 
     return (
         <div className="modal-screen" onClick={props.closeModal}>
-            <div className="modal-form" onClick={ e => e.stopPropagation()}>
+            <div className={props.modal === "search" ? "modal-search" : "modal-form"} onClick={ e => e.stopPropagation()}>
                 {form}  
             </div>
         </div>
