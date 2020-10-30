@@ -496,7 +496,7 @@ nav {
 }
     
 .search-results {
-    margin: 60px;
+    margin: 40px;
 }
 
 .results-item {
@@ -572,8 +572,22 @@ nav {
     display: flex;
 }
 
+.filter-locations {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
+.filter {
+    display: flex;
+    height: 25px;
+}
+
 .filter-input {
-    width: 10px;
+    width: 15px;
+    margin-top: 15px;
+    cursor: pointer;
 }
 
     /* .search-results-div{ */

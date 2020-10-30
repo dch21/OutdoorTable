@@ -6,7 +6,7 @@ import { getReviews } from "../../actions/reviews_actions";
 // import { getHours } from "../../actions/hours_actions";
 import { pendingReservation } from "../../actions/reservations_actions";
 import { openModal } from "../../actions/modal_actions";
-import { addFilter, deleteFilter } from "../../actions/filter_actions";
+import { addFilter, deleteFilter, resetFilter } from "../../actions/filter_actions";
 
 
 
@@ -26,7 +26,8 @@ const mDTP = (dispatch) => {
         pendingReservation: (info) => dispatch(pendingReservation(info)),
         openModal: modal => dispatch(openModal(modal)),
         addFilter: (value) => dispatch(addFilter(value)),
-        deleteFilter: (value) => dispatch(deleteFilter(value))
+        deleteFilter: (value) => dispatch(deleteFilter(value)),
+        resetFilter: () => dispatch(resetFilter())
     };
 };
 

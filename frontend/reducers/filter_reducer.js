@@ -1,4 +1,4 @@
-import { ADD_FILTER, DELETE_FILTER } from "../actions/filter_actions";
+import { ADD_FILTER, DELETE_FILTER, RESET_FILTER } from "../actions/filter_actions";
 
 
 const filterReducer = (state = [], action) => {
@@ -14,6 +14,9 @@ const filterReducer = (state = [], action) => {
             const ind = newerState.indexOf(action.filter);
             newerState.splice(ind, 1);
             return newerState;
+
+        case RESET_FILTER:
+            return [];
 
         default:
             return state;

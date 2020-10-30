@@ -19,7 +19,7 @@ class Api::RestaurantsController < ApplicationController
     end
 
     def search
-        searchTerms = params[:searchTerms]["searchTerm"]
+        @searchTerms = params[:searchTerms]["searchTerm"]
         @time = params[:searchTerms]["time"]
         @date = params[:searchTerms]["date"]
         @party_size = params[:searchTerms]["party_size"]
@@ -30,7 +30,7 @@ class Api::RestaurantsController < ApplicationController
             return
         end
 
-        @restaurants = Restaurant.where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ? OR boro ILIKE?', "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%", "%#{searchTerms}%" )
+        @restaurants = Restaurant.where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ? OR boro ILIKE?', "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%" )
 
 
         @restaurants.each do |rest|

@@ -8,6 +8,7 @@
         json.reservation_time @time
         json.reservation_date @date
         json.party_size @party_size
+        json.searchTerm @searchTerms
     end
 end
 # end

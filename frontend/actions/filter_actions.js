@@ -1,5 +1,6 @@
 export const ADD_FILTER = "ADD_FILTER";
 export const DELETE_FILTER = "DELETE_FILTER";
+export const RESET_FILTER = "RESET_FILTER";
 
 export const addFilter = (filter) => {
     return {
@@ -14,3 +15,10 @@ export const deleteFilter = (filter) => {
         filter
     };
 };
+
+export const resetFilter = () => {
+    return {
+        type: RESET_FILTER,
+    };
+};
+
