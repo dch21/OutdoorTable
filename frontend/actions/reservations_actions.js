@@ -75,6 +75,19 @@ const pendReservation = info => {
 
 export const pendingReservation = (info) => dispatch(pendReservation(info));
 
+
+
+// export const PENDING_TIMES = "PENDING_TIMES";
+
+// const pendTime = info => {
+//     return {
+//         type: PENDING_TIMES,
+//         info
+//     };
+// };
+
+// export const pendingTimes= (info) => dispatch(pendTime(info));
+
 // export const receiveNumberBookings = (restaurantId) => dispatch => (
 //     ReservationAPIUtil.fetchNumberReservations(restaurantId)
 //         .then(numberBookings => dispatch(receiveTotalBookings(numberBookings)))

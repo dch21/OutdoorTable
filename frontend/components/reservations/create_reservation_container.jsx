@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { createReservation } from "../../actions/reservations_actions";
 import ReservationForm from "./reservation_form";
+import { pendingReservation } from "../../actions/reservations_actions";
+import { openModal } from "../../actions/modal_actions";
 
 const mSTP = (state) => {
     return {
@@ -9,21 +10,23 @@ const mSTP = (state) => {
         reservation: {
             date: new Date().toISOString().slice(0, 10), 
             time: "7:00PM",
-            notes: "Make a note or accommodations request here.",
             party_size: 2,
-            restaurant_id: parseInt(Object.keys(state.entities.restaurants)[0]),
-            user_id: state.session.id
+            id: parseInt(Object.keys(state.entities.restaurants)[0]),
+            name: Object.values(state.entities.restaurants)[0].name,
+            // currentUser: state.session.id,
+            toggleButton: false
             // user_id: state.session ? parseInt(Object.keys(state.entities.session)[0]) : ""
             //if you are logged out if will be null
-        }
+        },
+        currentUser: state.session.id,
     };
 };
  
 const mDTP = (dispatch) => {
     return {
-        action: (reservation) => dispatch(createReservation(reservation)),
+        pendingReservation: (info) => dispatch(pendingReservation(info)),
+        openModal: modal => dispatch(openModal(modal))
     };
 };
 
-//changed to null
 export default connect(mSTP, mDTP)(ReservationForm);

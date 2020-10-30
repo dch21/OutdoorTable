@@ -1,4 +1,5 @@
 import React from "react";
+import RestaurantShowButtons from "./restaurant_show_buttons";
 
 class ReservationForm extends React.Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class ReservationForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state);
+        this.setState({ "toggleButton" : true });
     }
 
     updateParty(e) {
@@ -28,7 +29,7 @@ class ReservationForm extends React.Component {
     }
 
     render() {
-        
+        // debugger
         return (
             
             <div> 
@@ -67,7 +68,7 @@ class ReservationForm extends React.Component {
                             ))
                         }
                         {
-                            [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(number => (
+                            [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(number => (
                                 <>
                                 <option value={`${number}:00PM`}>{`${number}:00`} PM</option>
                                 <option value={`${number}:30PM`}>{`${number}:30`} PM</option>
@@ -77,7 +78,9 @@ class ReservationForm extends React.Component {
                     </select>
                     </label>
 
-                    <button className="form-button" type="submit">{this.props.formType}</button>
+                    {this.state.toggleButton ? <RestaurantShowButtons currentUser={this.props.currentUser} openModal={this.props.openModal} result={this.state} pendingReservation={this.props.pendingReservation}/> : null}
+
+                    <button className="form-button" type="submit">Find a table</button>
                     <br/>
                     <span className="fas fa-chart-line"></span>Booked {this.props.totalbookings} times today
                 </form>
