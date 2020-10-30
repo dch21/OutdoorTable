@@ -8,11 +8,11 @@ class SearchResults extends React.Component {
         super(props);
     }
 
-    handleClick(e)  {
+    handleClick(e, filter)  {
         if (e.target.checked) {
-            this.props.addFilter(e.target.value);
+            this.props.addFilter({[filter]: e.target.value});
         } else {
-            this.props.deleteFilter(e.target.value);
+            this.props.deleteFilter({[filter]: e.target.value});
         }
     }
 
@@ -54,18 +54,18 @@ class SearchResults extends React.Component {
         //         }
         //     }
         // }
-        for (let i = 0; i < results.length; i++) {
-            debugger
-            for (let j = 0; j < filters.length; j++) {
-                debugger
-                if (results[i].boro !== filters[j] && results[i].cuisine !== filters[j] && results[i].price_range !== filters[j]) {
-                    debugger
-                    break;
-                }
-                filtered.push(results[i])
-                debugger
-            }
-        }
+        // for (let i = 0; i < results.length; i++) {
+        //     // debugger
+        //     for (let j = 0; j < filters.length; j++) {
+        //         // debugger
+        //         if (results[i].boro !== filters[j] && results[i].cuisine !== filters[j] && results[i].price_range !== filters[j]) {
+        //             // debugger
+        //             break;
+        //         }
+        //         filtered.push(results[i])
+        //         // debugger
+        //     }
+        // }
         
         const final = filtered.length == 0 ? results : filtered
 
@@ -99,15 +99,15 @@ class SearchResults extends React.Component {
                                 <hr/>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="Under $10"/>
+                                <input onClick={ (e) => this.handleClick(e, "price")} className="filter-input" type="checkbox" value="Under $10"/>
                                 <p>$</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="$10-$25"/>
+                                <input onClick={ (e) => this.handleClick(e), "price"} className="filter-input" type="checkbox" value="$10-$25"/>
                                 <p>$$</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="$25-50"/>
+                                <input onClick={ (e) => this.handleClick(e, "price")} className="filter-input" type="checkbox" value="$25-50"/>
                                 <p>$$$</p>
                             </div>
                             <br/>
@@ -121,23 +121,23 @@ class SearchResults extends React.Component {
                                 <hr/>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="Brooklyn"/>
+                                <input onClick={ (e) => this.handleClick(e, "boro")} className="filter-input" type="checkbox" value="Brooklyn"/>
                                 <p>Brooklyn</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="Manhattan"/>
+                                <input onClick={ (e) => this.handleClick(e, "boro")} className="filter-input" type="checkbox" value="Manhattan"/>
                                 <p>Manhattan</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="Queens"/>
+                                <input onClick={ (e) => this.handleClick(e, "boro")} className="filter-input" type="checkbox" value="Queens"/>
                                 <p>Queens</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="Staten Island"/>
+                                <input onClick={ (e) => this.handleClick(e, "boro")} className="filter-input" type="checkbox" value="Staten Island"/>
                                 <p>Staten Island</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="Bronx"/>
+                                <input onClick={ (e) => this.handleClick(e, "boro")} className="filter-input" type="checkbox" value="Bronx"/>
                                 <p>Bronx</p>
                             </div>
                             <br/>
@@ -150,27 +150,27 @@ class SearchResults extends React.Component {
                                 <hr/>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="BBQ"/>
+                                <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="BBQ"/>
                                 <p>BBQ</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="Chinese"/>
+                                <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="Chinese"/>
                                 <p>Chinese</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="Thai"/>
+                                <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="Thai"/>
                                 <p>Thai</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="Mexican"/>
+                                <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="Mexican"/>
                                 <p>Mexican</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="Cuban"/>
+                                <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="Cuban"/>
                                 <p>Cuban</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e)} className="filter-input" type="checkbox" value="Italian"/>
+                                <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="Italian"/>
                                 <p>Italian</p>
                             </div>
                         </div>
