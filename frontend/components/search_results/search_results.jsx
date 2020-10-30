@@ -3,11 +3,9 @@ import SearchResultsItem from "./search_results_item";
 import SearchResultsFormContainer from "./search_results_form_container";
 import SearchFormContainer from "../search_form/search_form_container";
 
-
 class SearchResults extends React.Component {
     constructor(props) {
         super(props);
-        // this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(e)  {
@@ -23,7 +21,6 @@ class SearchResults extends React.Component {
     }
 
     render() {
-
 
         const { results } = this.props;
         const { filters } = this.props;
@@ -49,16 +46,27 @@ class SearchResults extends React.Component {
         }
         
         let filtered = []
-
         
-        for (let i = 0; i < filters.length; i++) {
-            for (let j = 0; j < results.length; j++) {
-                if (results[j].boro === filters[i] || results[j].cuisine === filters[i] || results[j].price_range === filters[i]) {
-                    filtered.push(results[j])
+        // for (let i = 0; i < filters.length; i++) {
+        //     for (let j = 0; j < results.length; j++) {
+        //         if (results[j].boro === filters[i] || results[j].cuisine === filters[i] || results[j].price_range === filters[i]) {
+        //             filtered.push(results[j])
+        //         }
+        //     }
+        // }
+        for (let i = 0; i < results.length; i++) {
+            debugger
+            for (let j = 0; j < filters.length; j++) {
+                debugger
+                if (results[i].boro !== filters[j] && results[i].cuisine !== filters[j] && results[i].price_range !== filters[j]) {
+                    debugger
+                    break;
                 }
+                filtered.push(results[i])
+                debugger
             }
         }
-
+        
         const final = filtered.length == 0 ? results : filtered
 
         return (

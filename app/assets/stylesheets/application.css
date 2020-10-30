@@ -496,7 +496,9 @@ nav {
 }
     
 .search-results {
-    margin: 40px;
+    margin-top: 40px;
+    margin-left: 110px;
+    margin-bottom: 40px;
 }
 
 .results-item {
@@ -577,6 +579,7 @@ nav {
     flex-direction: column;
     margin-top: 80px;
     margin-left: 50px;
+    margin-bottom: 70px;
 }
 
 .filter {
