@@ -568,6 +568,14 @@ nav {
     cursor: pointer;
 }
 
+.search-results-container {
+    display: flex;
+}
+
+.filter-input {
+    width: 10px;
+}
+
     /* .search-results-div{ */
         /* display: flex; */
         /* width: 100%; */
