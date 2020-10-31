@@ -54,20 +54,27 @@ class SearchResults extends React.Component {
         //         }
         //     }
         // }
-        // for (let i = 0; i < results.length; i++) {
-        //     // debugger
-        //     for (let j = 0; j < filters.length; j++) {
-        //         // debugger
-        //         if (results[i].boro !== filters[j] && results[i].cuisine !== filters[j] && results[i].price_range !== filters[j]) {
-        //             // debugger
-        //             break;
-        //         }
-        //         filtered.push(results[i])
-        //         // debugger
-        //     }
-        // }
+        for (let i = 0; i < results.length; i++) {
+            // debugger
+            if (filters.boro.length !== 0 && !(filters.boro.includes(results[i].boro))) {
+                // debugger
+                continue;
+            }
+            if (filters.price.length !== 0 && !(filters.price.includes(results[i].price_range))) {
+                // debugger
+                continue;
+            }
+            if (filters.cuisine.length !== 0 && !(filters.cuisine.includes(results[i].cuisine))) {
+                // debugger
+                continue;
+            }
+            filtered.push(results[i])
+            // debugger
+        }
         
-        const final = filtered.length == 0 ? results : filtered
+        const final = (filters.price.length > 0 || filters.boro.length > 0 || filters.cuisine.length > 0) ? filtered : results
+
+      
 
         return (
             <div>
@@ -103,7 +110,7 @@ class SearchResults extends React.Component {
                                 <p>$</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e), "price"} className="filter-input" type="checkbox" value="$10-$25"/>
+                                <input onClick={ (e) => this.handleClick(e, "price")} className="filter-input" type="checkbox" value="$10-$25"/>
                                 <p>$$</p>
                             </div>
                             <div className="filter">
@@ -179,7 +186,8 @@ class SearchResults extends React.Component {
                         
                         <div className="search-results">
                         <h2>You searched for {results[0].searchTerm === "" ? `${'Everything'}` : `"${results[0].searchTerm}"`} in New York City</h2>
-                            {
+                            {   final.length === 0 ? <h4>No results, try expanding your filters.</h4>
+                             :
                                 final.map(result => (
                                     <SearchResultsItem result={result}
                                         key={result.id}

@@ -1,6 +1,6 @@
 import { ADD_FILTER, DELETE_FILTER, RESET_FILTER } from "../actions/filter_actions";
 
-const defaultState = {price: [], cuisine: [], boro: []}
+const defaultState = {price: [], cuisine: [], boro: []};
 
 const filterReducer = (state = defaultState, action) => {
     
@@ -11,7 +11,7 @@ const filterReducer = (state = defaultState, action) => {
         //     newState.push(action.filter);
         //     return newState;
         case ADD_FILTER:
-            let newState = state;
+            let newState = Object.assign({}, state);
             if (Object.keys(action.filter)[0] === "price") {
                 newState.price.push(action.filter.price);
             } else if (Object.keys(action.filter)[0] === "boro") {
@@ -26,7 +26,7 @@ const filterReducer = (state = defaultState, action) => {
         //     newerState.splice(ind, 1);
         //     return newerState;
         case DELETE_FILTER:
-            let newerState = state;
+            let newerState = Object.assign({}, state);
 
             if (Object.keys(action.filter)[0] === "price") {
                 const arr = newerState.price;
