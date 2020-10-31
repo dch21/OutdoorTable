@@ -344,6 +344,10 @@ nav {
     z-index: 0.5;
 }
 
+#search-map {
+    height: 600px;
+    width: 600px;
+}
 
 .reservation-form-container {
     position: -webkit-sticky;

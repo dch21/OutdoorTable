@@ -3,6 +3,8 @@ import SearchResultsItem from "./search_results_item";
 import SearchResultsFormContainer from "./search_results_form_container";
 import SearchFormContainer from "../search_form/search_form_container";
 
+import SearchMap from "../map/search_map";
+
 class SearchResults extends React.Component {
     constructor(props) {
         super(props);
@@ -185,7 +187,7 @@ class SearchResults extends React.Component {
                        
                         
                         <div className="search-results">
-                        <h2>You searched for {results[0].searchTerm === "" ? `${'Everything'}` : `"${results[0].searchTerm}"`} in New York City</h2>
+                            <h2>You searched for {results[0].searchTerm === "" ? `${'Everything'}` : `"${results[0].searchTerm}"`} in New York City</h2>
                             {   final.length === 0 ? <h4>No results, try expanding your filters.</h4>
                              :
                                 final.map(result => (
@@ -200,6 +202,10 @@ class SearchResults extends React.Component {
                                     />
                                 ))
                             }
+                        </div>
+
+                        <div>
+                            <SearchMap final={final}/>
                         </div>
                     </div>          
 
