@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { pendingReservation } from "../../actions/reservations_actions";
 import { openModal } from "../../actions/modal_actions";
 import { addFilter, deleteFilter, resetFilter } from "../../actions/filter_actions";
+import { Link } from 'react-router-dom';
+
 
 import SearchMapItem from "./search_map_item";
 import SearchFormContainer from "../search_form/search_form_container";
@@ -145,6 +147,9 @@ class SearchMap extends React.Component {
 
                     <div className="map-search-results-container">
                         <div className="map-filter-locations">
+                            <div>
+                                <button className="list-button"><Link to={"/search"}><i class="fas fa-list"> List</i></Link></button>                                                         
+                            </div>
                             <div className="filter">
                                 <i class="fas fa-dollar-sign"><span> Price</span></i>
                             </div>

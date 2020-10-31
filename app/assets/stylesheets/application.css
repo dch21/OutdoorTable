@@ -347,6 +347,7 @@ nav {
 #search-map {
     height: 522px;
     width: 522px;
+    margin-top: 40px;
 }
 
 .reservation-form-container {
@@ -549,7 +550,7 @@ nav {
     margin-right: 30px;
 }
 
-.map-info p{
+.map-info p {
     padding: 0;
     margin-left: 10px
 }
@@ -558,6 +559,14 @@ nav {
     padding: 5px;
     text-decoration: none;
     color: teal;
+}
+
+.map-list-button{
+    height: 80px;
+    margin-bottom: 30px; 
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: -10px;
 }
 
 .search-time-buttons {
@@ -616,6 +625,19 @@ nav {
     margin-top: 80px;
     margin-left: 30px;
     margin-bottom: 70px;
+}
+
+.list-button {
+    height: 35px;
+    width: 85px;
+    margin-bottom: 30px;
+    background-color: #368fad;
+    border-radius: 5px;
+    border: none;
+}
+
+.fa-list {
+    color: white
 }
 
 .filter {

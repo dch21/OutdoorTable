@@ -1,6 +1,8 @@
 import React from "react";
 import SearchResultsItem from "./search_results_item";
-import SearchResultsFormContainer from "./search_results_form_container";
+import { Link } from 'react-router-dom';
+
+// import SearchResultsFormContainer from "./search_results_form_container";
 import SearchFormContainer from "../search_form/search_form_container";
 
 // import SearchMap from "../map/search_map";
@@ -57,21 +59,16 @@ class SearchResults extends React.Component {
         //     }
         // }
         for (let i = 0; i < results.length; i++) {
-            // debugger
             if (filters.boro.length !== 0 && !(filters.boro.includes(results[i].boro))) {
-                // debugger
                 continue;
             }
             if (filters.price.length !== 0 && !(filters.price.includes(results[i].price_range))) {
-                // debugger
                 continue;
             }
             if (filters.cuisine.length !== 0 && !(filters.cuisine.includes(results[i].cuisine))) {
-                // debugger
                 continue;
             }
             filtered.push(results[i])
-            // debugger
         }
         
         const final = (filters.price.length > 0 || filters.boro.length > 0 || filters.cuisine.length > 0) ? filtered : results
@@ -101,6 +98,9 @@ class SearchResults extends React.Component {
 
                     <div className="search-results-container">
                         <div className="filter-locations">
+                            <div>
+                                <Link to={"/searchmap"}><img className="map-list-button" src={window.map} /></Link>                            
+                            </div>
                             <div className="filter">
                                 <i class="fas fa-dollar-sign"><span> Price</span></i>
                             </div>

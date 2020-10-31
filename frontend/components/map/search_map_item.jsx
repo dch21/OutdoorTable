@@ -110,7 +110,6 @@ class SearchMapItem extends React.Component {
                     
                         <div>
                           <Link to={`/restaurants/${this.props.result.id}`}><img className="map-food-pic" src={window[`${logoPic}`]} alt="food" /></Link>
-
                         </div>
 
                         <div className="map-info">
