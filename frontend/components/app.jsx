@@ -16,6 +16,7 @@ import Footer from "./footer/footer";
 import UserPageContainer from "./user_page/user_page_container";
 import ReviewsConfirmationFormContainer from "./reviews_list/reviews_confirmation_form_container";
 import FavoritesContainer from "./favorites_page/favorites_page_container";
+import SearchMap from "./map/search_map";
 
 // import CreateReservationContainer from "./reservations/create_reservation_container";
 
@@ -30,6 +31,7 @@ const App = () => (
             {/* <SearchFormContainer /> */}
         </Switch>
         <Route path="/search" component={SearchResults} />
+        <Route path="/searchmap" component={SearchMap} />
         <Route path="/confirmation" component={ConfirmationForm} />
         <Route path="/users/:userId" component={UserPageContainer} />
         <Route path="/favorites/:userId" component={FavoritesContainer} />

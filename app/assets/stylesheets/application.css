@@ -345,8 +345,8 @@ nav {
 }
 
 #search-map {
-    height: 600px;
-    width: 600px;
+    height: 500px;
+    width: 500px;
 }
 
 .reservation-form-container {
@@ -502,6 +502,12 @@ nav {
 .search-results {
     margin-top: 40px;
     margin-left: 110px;
+    margin-bottom: 40px;
+}
+
+.search-map-results { 
+    margin-top: 40px;
+    margin-left: 70px;
     margin-bottom: 40px;
 }
 

@@ -3,7 +3,7 @@ import SearchResultsItem from "./search_results_item";
 import SearchResultsFormContainer from "./search_results_form_container";
 import SearchFormContainer from "../search_form/search_form_container";
 
-import SearchMap from "../map/search_map";
+// import SearchMap from "../map/search_map";
 
 class SearchResults extends React.Component {
     constructor(props) {
@@ -204,9 +204,9 @@ class SearchResults extends React.Component {
                             }
                         </div>
 
-                        <div>
+                        {/* <div>
                             <SearchMap final={final}/>
-                        </div>
+                        </div> */}
                     </div>          
 
                 </div>
