@@ -143,8 +143,8 @@ class SearchMap extends React.Component {
                         </div>
                     </div> 
 
-                    <div className="search-results-container">
-                        <div className="filter-locations">
+                    <div className="map-search-results-container">
+                        <div className="map-filter-locations">
                             <div className="filter">
                                 <i class="fas fa-dollar-sign"><span> Price</span></i>
                             </div>

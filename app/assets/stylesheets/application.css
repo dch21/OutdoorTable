@@ -345,8 +345,8 @@ nav {
 }
 
 #search-map {
-    height: 500px;
-    width: 500px;
+    height: 522px;
+    width: 522px;
 }
 
 .reservation-form-container {
@@ -441,47 +441,45 @@ nav {
         font-size: 14px;
     }
 
-    .individual-column {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 9px;
-    }
-    
-    .review-container {
-        display: flex;
-        
-    }
+.individual-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9px;
+}
 
-    .reviewer-name {
-        padding-top: 10px;
-        text-align: center;
-        width: 50px
-    }
+.review-container {
+    display: flex;
+}
 
-    .reviewer-name p {
-        color: grey;   
-        padding: 0;
-    }
+.reviewer-name {
+    padding-top: 10px;
+    text-align: center;
+    width: 50px
+}
 
-    .review-body {
-        padding-left: 30px;
+.reviewer-name p {
+    color: grey;   
+    padding: 0;
+}
 
-    }
+.review-body {
+    padding-left: 30px;
+}
 
-    .review-body > ul {
-     padding: 0
-    }
+.review-body > ul {
+    padding: 0
+}
 
-    .review-body  li{
-        display: inline;
-        font-size: smaller;
-        font-weight: bold;
-    }
+.review-body  li{
+    display: inline;
+    font-size: smaller;
+    font-weight: bold;
+}
 
-    .review-body span {
-        color: rgb(246, 55, 55);
-    }
+.review-body span {
+    color: rgb(246, 55, 55);
+}
 
 .circle-container {
     align-items: center;
@@ -507,7 +505,7 @@ nav {
 
 .search-map-results { 
     margin-top: 40px;
-    margin-left: 70px;
+    margin-left: 40px;
     margin-bottom: 40px;
 }
 
@@ -533,17 +531,33 @@ nav {
     border-radius: 5px;
 }
 
+.map-food-pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 .info {
     height: 220px;
     width: 320px;
     margin-top: 13px;
 }
 
+.map-info {
+    height: 160px;
+    margin-right: 30px;
+}
+
+.map-info p{
+    padding: 0;
+    margin-left: 10px
+}
+
 .info p:first-child {
     padding: 5px;
     text-decoration: none;
     color: teal;
-    font-size: 20px;
 }
 
 .search-time-buttons {
@@ -584,11 +598,23 @@ nav {
     display: flex;
 }
 
+.map-search-results-container {
+    display: flex;
+}
+
 .filter-locations {
     display: flex;
     flex-direction: column;
     margin-top: 80px;
     margin-left: 50px;
+    margin-bottom: 70px;
+}
+
+.map-filter-locations {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-left: 30px;
     margin-bottom: 70px;
 }
 
@@ -768,17 +794,17 @@ nav {
         color: rgb(231, 49, 49);
     } */
 
-    .restaurant-info{
-       margin-left: 170px;
-    }
-    .restaurant-info > h1{
-       font-size: 45px;
-       font-weight: bold;
-    }
-        
-    .restaurant-info i, p {
-        padding: 5px;
-    }
+.restaurant-info{
+    margin-left: 170px;
+}
+.restaurant-info > h1{
+    font-size: 45px;
+    font-weight: bold;
+}
+    
+.restaurant-info i, p {
+    padding: 5px;
+}
 
 .restaurant-sidebar {
       margin-right: 170px;

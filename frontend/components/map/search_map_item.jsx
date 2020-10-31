@@ -108,17 +108,17 @@ class SearchMapItem extends React.Component {
         return (
                     <div className="results-item">
                     
-                        <div className="pic-container">
-                          <Link to={`/restaurants/${this.props.result.id}`}><img className="food-pic" src={window[`${logoPic}`]} alt="food" /></Link>
+                        <div>
+                          <Link to={`/restaurants/${this.props.result.id}`}><img className="map-food-pic" src={window[`${logoPic}`]} alt="food" /></Link>
 
                         </div>
 
-                        <div className="info">
+                        <div className="map-info">
                             <Link to={`/restaurants/${this.props.result.id}`}><p>{this.props.result.name}</p></Link>
                             <p>
                                 <span>{dollar_sign}</span> &middot; <span>{this.props.result.cuisine}</span> &middot; <span>{this.props.result.neighborhood}</span> 
                             </p>
-                            <p>{this.props.result.recent_review.review_body}</p>
+                            {/* <p>{this.props.result.recent_review.review_body}</p> */}
                             <div className="search-time-buttons">
                                 {
                                     (hours === 11 && amPM == "AM") ? elevenAM : (((hours === 12 && amPM == "PM") ? noon : ((hours === 1 && amPM == "PM") ? onePM : normalbutton)))
