@@ -124,7 +124,7 @@ class SearchResults extends React.Component {
 
 
                             <div className="filter">
-                                <i class="fas fa-map"><span> Location</span></i>
+                                <i className="fas fa-map"><span> Location</span></i>
                             </div>
                             <div>
                                 <hr/>
@@ -153,7 +153,7 @@ class SearchResults extends React.Component {
                             <br/>
 
                             <div className="filter">
-                                <i class="fas fa-utensils"><span> Cuisine</span></i>
+                                <i className="fas fa-utensils"><span> Cuisine</span></i>
                             </div>
                             <div>
                                 <hr/>

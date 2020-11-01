@@ -696,6 +696,10 @@ nav {
     justify-content: center;
 }
 
+.splash-feature-area {
+    margin-left: 40px
+}
+
 .splash-pic {
     height: 170px;
     width: 380px;
@@ -769,8 +773,14 @@ nav {
     opacity: .90;
 }
 
+.splash-carousel-trending-header {
+    margin-left: 40px;
+}
+
 .splash-carousel {
     display: flex;
+    margin-left: 40px;
+
 }
 
 .splash-carousel-info {
@@ -792,14 +802,14 @@ nav {
 
 .splash-carousel-food-pic {
     width: 230px;
-    height: 140px;
+    height: 120px;
     object-fit: cover;
     border-radius: 5px;
 }
 
 .splash-carousel-container {
     border: 1px rgb(174, 171, 171) solid;
-    height: 310px;
+    height: 290px;
     margin: 10px;
     border-radius: 4px;
 }
@@ -815,7 +825,8 @@ nav {
 }
 
 .splash-number-bookings {
-    margin: 10px
+    margin: 10px;
+    font-weight: 800;
 }
     
 .search-form{

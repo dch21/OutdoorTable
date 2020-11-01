@@ -158,10 +158,10 @@ class SearchMap extends React.Component {
                     <div className="map-search-results-container">
                         <div className="map-filter-locations">
                             <div>
-                                <button className="list-button"><Link to={"/search"}><i class="fas fa-list"> List</i></Link></button>                                                         
+                                <button className="list-button"><Link to={"/search"}><i className="fas fa-list"> List</i></Link></button>                                                         
                             </div>
                             <div className="filter">
-                                <i class="fas fa-dollar-sign"><span> Price</span></i>
+                                <i className="fas fa-dollar-sign"><span> Price</span></i>
                             </div>
                             <div>
                                 <hr/>
@@ -183,7 +183,7 @@ class SearchMap extends React.Component {
 
 
                             <div className="filter">
-                                <i class="fas fa-map"><span> Location</span></i>
+                                <i className="fas fa-map"><span> Location</span></i>
                             </div>
                             <div>
                                 <hr/>
@@ -212,7 +212,7 @@ class SearchMap extends React.Component {
                             <br/>
 
                             <div className="filter">
-                                <i class="fas fa-utensils"><span> Cuisine</span></i>
+                                <i className="fas fa-utensils"><span> Cuisine</span></i>
                             </div>
                             <div>
                                 <hr/>

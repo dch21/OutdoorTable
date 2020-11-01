@@ -38,8 +38,8 @@ const App = () => (
         <Route path="/favorites/:userId" component={FavoritesContainer} />
         <Route path="/reviews/create" component={ReviewsConfirmationFormContainer} />
         {/* <SearchResults/> */}
-        <Route exact path="/" component={SplashSixContainer}/>
         <Route exact path="/" component={SplashCarouselContainer}/>
+        <Route exact path="/" component={SplashSixContainer}/>
         <Footer/> 
     </div>
 )
