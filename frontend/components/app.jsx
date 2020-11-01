@@ -39,8 +39,7 @@ const App = () => (
         <Route path="/reviews/create" component={ReviewsConfirmationFormContainer} />
         {/* <SearchResults/> */}
         <Route exact path="/" component={SplashSixContainer}/>
-        {/* <Route exact path="/" component={SplashCarouselContainer}/> */}
-        {/* <Link to="/restaurants/1">Sample Show Page in Progress</Link> */}
+        <Route exact path="/" component={SplashCarouselContainer}/>
         <Footer/> 
     </div>
 )
