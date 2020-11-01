@@ -48,6 +48,18 @@ class SearchResultsItem extends React.Component {
             return null;
         }
         
+        ///
+        const ratingAsFloat = parseFloat(this.props.result.rating);
+
+        const filledStars = ratingAsFloat ?  Array(Math.floor(ratingAsFloat)).fill("star") : [];
+        const stars = filledStars.map(star => {
+            return <span className="fa fa-star checked"></span>
+        });
+
+        const halfStars = ["half"].map(star => {
+            return <span className="fa fa-star-half-full"></span>
+        });
+        ///
 
         const logoPic = this.props.result.name.substring(0,2) + "4";
         
@@ -118,6 +130,9 @@ class SearchResultsItem extends React.Component {
                             <p>
                                 <span>{dollar_sign}</span> &middot; <span>{this.props.result.cuisine}</span> &middot; <span>{this.props.result.neighborhood}</span> 
                             </p>
+                            <div>
+                                {stars}{halfStars} &middot; {`${this.props.result.number_reviews} Reviews`}
+                            </div>
                             <p>{this.props.result.recent_review.review_body}</p>
                             <div className="search-time-buttons">
                                 {

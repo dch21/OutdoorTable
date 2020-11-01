@@ -390,57 +390,55 @@ nav {
     height: 36px;
 }
 
-    
-    .res-form select {
-        padding: 9px 9px 11px 9px;
-    }
-    
-    .party-size {
-        width: 260px;
-    }
-    
-    .date {
-        width: 130px;
-    }
-    
-    .fa-star-half-full{
-        color: red
-    }
+.res-form select {
+    padding: 9px 9px 11px 9px;
+}
 
-    .checked {
-        color: red;
-    }
-    
-    .clear {
-        color:rgb(217, 213, 213);
-    }
-    
-    
-    .bar-chart-container{
-        width: 100%;
-    }
+.party-size {
+    width: 260px;
+}
 
-    .bar-chart {
-        width: 100%;
-        margin-left: 8px;
-    }
-    
-    .bar-outside {
-        border: 1px solid #b3aeae;
-        height: 15px;
-    }
-    
-    .bar-inside {
-        background-color: red;
-        height: 14.9px
-    }
+.date {
+    width: 130px;
+}
 
-    .rating-columns{
-        display: inline-flex;
-        /* flex-direction: row;
-        justify-content: space-around; */
-        font-size: 14px;
-    }
+.fa-star-half-full{
+    color: red
+}
+
+.checked {
+    color: red;
+}
+
+.clear {
+    color:rgb(217, 213, 213);
+}
+
+.bar-chart-container{
+    width: 100%;
+}
+
+.bar-chart {
+    width: 100%;
+    margin-left: 8px;
+}
+
+.bar-outside {
+    border: 1px solid #b3aeae;
+    height: 15px;
+}
+
+.bar-inside {
+    background-color: red;
+    height: 14.9px
+}
+
+.rating-columns{
+    display: inline-flex;
+    /* flex-direction: row;
+    justify-content: space-around; */
+    font-size: 14px;
+}
 
 .individual-column {
     display: flex;
@@ -512,6 +510,7 @@ nav {
 
 .results-item {
     display: flex;
+    margin-bottom: 30px;
 }
 
 .rest-time {
@@ -553,6 +552,10 @@ nav {
 .map-info p {
     padding: 0;
     margin-left: 10px
+}
+
+.map-stars {
+    margin: 10px;
 }
 
 .info p:first-child {
@@ -671,60 +674,60 @@ nav {
     margin: 60px;   
     } */
     
-    .splash-six {
-        /* position: absolute; */
-        /* display: inline-table; */
-        width: 100%;
-    }
-    
-    .splash-row {
-        display: flex;
-        flex-wrap: wrap;
-        /* width: 80%; */
-        flex-direction: row;
-        /* margin: auto; */
-        justify-content: center;
-    }
-    
-    .splash-pic {
-        height: 170px;
-        width: 380px;
-        opacity: .85;
-        padding: 8px;
-        display: table-cell;
-    }
-    
-    .splash-panel-container {
-        position: relative;
-        text-align: center;
-        color: rgb(255, 255, 255);
-    }
-    
-    .splash-panel-container > p {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: larger;
-        font-weight: bolder;
-        z-index: 3;
-    }
+.splash-six {
+    /* position: absolute; */
+    /* display: inline-table; */
+    width: 100%;
+}
 
-    .splash-panel-container > button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: larger;
-        font-weight: bolder;
-        z-index: 3;
-        border: none;
-        background: none;
-        cursor: pointer;
-        color: white;
-        font-weight: bolder;
-        outline: none
-    }
+.splash-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 80%; */
+    flex-direction: row;
+    /* margin: auto; */
+    justify-content: center;
+}
+
+.splash-pic {
+    height: 170px;
+    width: 380px;
+    opacity: .85;
+    padding: 8px;
+    display: table-cell;
+}
+
+.splash-panel-container {
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.splash-panel-container > p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    font-weight: bolder;
+    z-index: 3;
+}
+
+.splash-panel-container > button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    font-weight: bolder;
+    z-index: 3;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+    outline: none
+}
     
 .splash-banner {
     /* display: flex; */
