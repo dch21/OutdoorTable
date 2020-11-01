@@ -761,6 +761,27 @@ nav {
     width: 100%;
     opacity: .90;
 }
+
+.splash-carousel {
+    display: flex;
+}
+
+.splash-carousel-info {
+    height: 160px;
+    margin-right: 30px;
+    width: 200px;
+}
+
+.splash-carousel-info p{
+    padding: 0;
+}
+
+.splash-carousel-food-pic {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+}
     
 .search-form{
     display: flex;

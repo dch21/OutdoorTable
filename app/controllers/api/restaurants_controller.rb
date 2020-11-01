@@ -31,7 +31,7 @@ class Api::RestaurantsController < ApplicationController
         end
 
         @restaurants = Restaurant.includes(:reviews).where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ? OR boro ILIKE?', "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%" )
-
+        # debugger
 
         # @restaurants.each do |rest|
         #     # debugger
@@ -59,9 +59,10 @@ class Api::RestaurantsController < ApplicationController
     # end
 
     def restaurant_params
+        debugger
         params
         .require(:restaurant)
-        .permit(:name, :description, :lat, :lng, :address, :capacity, :neighborhood, :phone_num, :cuisine, :price_range, :payment, :dining_style, :dress_code, :public_transit, :parking_details)
+        .permit(:name, :description, :lat, :lng, :address, :capacity, :neighborhood, :phone_num, :cuisine, :price_range, :payment, :dining_style, :dress_code, :public_transit, :parking_details, :hours, :boro, :website)
     end
 
 end

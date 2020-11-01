@@ -17,6 +17,7 @@ import UserPageContainer from "./user_page/user_page_container";
 import ReviewsConfirmationFormContainer from "./reviews_list/reviews_confirmation_form_container";
 import FavoritesContainer from "./favorites_page/favorites_page_container";
 import SearchMap from "./map/search_map";
+import SplashCarouselContainer from "./splash_carousel/splash_carousel_container";
 
 // import CreateReservationContainer from "./reservations/create_reservation_container";
 
@@ -38,6 +39,7 @@ const App = () => (
         <Route path="/reviews/create" component={ReviewsConfirmationFormContainer} />
         {/* <SearchResults/> */}
         <Route exact path="/" component={SplashSixContainer}/>
+        {/* <Route exact path="/" component={SplashCarouselContainer}/> */}
         {/* <Link to="/restaurants/1">Sample Show Page in Progress</Link> */}
         <Footer/> 
     </div>

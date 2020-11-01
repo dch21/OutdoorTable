@@ -27,7 +27,7 @@
 class Restaurant < ApplicationRecord
 
     validates :name, uniqueness: true
-    validates :name, :description, :address, :capacity, :lat, :lng, :phone_num, :boro, presence: true
+    validates :name, :description, :address, :capacity, :lat, :lng, :phone_num, :boro, :website, :hours, presence: true
     
     has_many :reservations,
     foreign_key: :restaurant_id,
@@ -37,9 +37,9 @@ class Restaurant < ApplicationRecord
     foreign_key: :restaurant_id,
     class_name: :Review
 
-    has_many :hours,
-    foreign_key: :restaurant_id,
-    class_name: :Hour
+    # has_many :hours,
+    # foreign_key: :restaurant_id,
+    # class_name: :Hour
 
     has_many :guests,
     through: :reservations,
@@ -72,4 +72,6 @@ end
         aggregates << @total_bookings_for_day
         aggregates
     end
+
+
 

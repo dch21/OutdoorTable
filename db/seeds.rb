@@ -10,6 +10,8 @@
 # remove hours table
 
 #use ber db:reset to reset everything
+Favorite.destroy_all
+Reservation.destroy_all
 Review.destroy_all  #destroy in opposite order that you create
 Restaurant.destroy_all #
 User.destroy_all
@@ -157,7 +159,6 @@ u16 = User.create!(
   location: "Manhattan",
   phone_num: "555-555-1617"
 )
-
 ################################################################################
 
 r1 = Restaurant.create!(
@@ -188,7 +189,7 @@ r2 = Restaurant.create!(
     capacity: 10,
     lat: 40.715085,
     lng: -73.993378,   
-    neighborhood: "Manhattan Chinatown",
+    neighborhood: "Chinatown",
     boro: "Manhattan",
     phone_num: "646-283-0999",
     cuisine: "Chinese",
@@ -210,7 +211,7 @@ r3 = Restaurant.create!(
     capacity: 6,
     lat: 40.714928,
     lng: -73.999561,
-    neighborhood: "Manhattan Chinatown",
+    neighborhood: "Chinatown",
     boro: "Manhattan",
     phone_num: "212-349-0070",
     cuisine: "Chinese",
@@ -501,47 +502,47 @@ rv15 = Review.create!(
 #     user_id: 4
 # )
 
-hUB1 = Hour.create!(
-    day: "Thursday",
-    opening: DateTime.new(2020, 10, 8,  17,  0,  0).seconds_since_midnight,
-    closing: DateTime.new(2020, 10, 8,  22,  30, 0).seconds_since_midnight, 
-    restaurant_id: 4
-)
+# hUB1 = Hour.create!(
+#     day: "Thursday",
+#     opening: DateTime.new(2020, 10, 8,  17,  0,  0).seconds_since_midnight,
+#     closing: DateTime.new(2020, 10, 8,  22,  30, 0).seconds_since_midnight, 
+#     restaurant_id: 4
+# )
 
-hUB2 = Hour.create!(
-    day: "Friday",
-    opening: DateTime.new(2020, 10, 8,  17,  0,  0).seconds_since_midnight,
-    closing: DateTime.new(2020, 10, 8,  22,  30, 0).seconds_since_midnight, 
-    restaurant_id: 4
-)
+# hUB2 = Hour.create!(
+#     day: "Friday",
+#     opening: DateTime.new(2020, 10, 8,  17,  0,  0).seconds_since_midnight,
+#     closing: DateTime.new(2020, 10, 8,  22,  30, 0).seconds_since_midnight, 
+#     restaurant_id: 4
+# )
 
-hUB3 = Hour.create!(
-    day: "Saturday",
-    opening: DateTime.new(2020, 10, 10,  12,  0,  0).seconds_since_midnight,
-    closing: DateTime.new(2020, 10, 10,  15,  00, 0).seconds_since_midnight, 
-    restaurant_id: 4
-)
+# hUB3 = Hour.create!(
+#     day: "Saturday",
+#     opening: DateTime.new(2020, 10, 10,  12,  0,  0).seconds_since_midnight,
+#     closing: DateTime.new(2020, 10, 10,  15,  00, 0).seconds_since_midnight, 
+#     restaurant_id: 4
+# )
 
-hUB4 = Hour.create!(
-    day: "Saturday",
-    opening: DateTime.new(2020, 10, 10,  17,  0,  0).seconds_since_midnight,
-    closing: DateTime.new(2020, 10, 10,  22,  30, 0).seconds_since_midnight, 
-    restaurant_id: 4
-)
+# hUB4 = Hour.create!(
+#     day: "Saturday",
+#     opening: DateTime.new(2020, 10, 10,  17,  0,  0).seconds_since_midnight,
+#     closing: DateTime.new(2020, 10, 10,  22,  30, 0).seconds_since_midnight, 
+#     restaurant_id: 4
+# )
 
-hUB5 = Hour.create!(
-    day: "Sunday",
-    opening: DateTime.new(2020, 10, 11,  12,  0,  0).seconds_since_midnight,
-    closing: DateTime.new(2020, 10, 11,  15,  00, 0).seconds_since_midnight, 
-    restaurant_id: 4
-)
+# hUB5 = Hour.create!(
+#     day: "Sunday",
+#     opening: DateTime.new(2020, 10, 11,  12,  0,  0).seconds_since_midnight,
+#     closing: DateTime.new(2020, 10, 11,  15,  00, 0).seconds_since_midnight, 
+#     restaurant_id: 4
+# )
 
-hUB6 = Hour.create!(
-    day: "Sunday",
-    opening: DateTime.new(2020, 10, 11,  17,  0,  0).seconds_since_midnight,
-    closing: DateTime.new(2020, 10, 11,  22,  30, 0).seconds_since_midnight, 
-    restaurant_id: 4
-)
+# hUB6 = Hour.create!(
+#     day: "Sunday",
+#     opening: DateTime.new(2020, 10, 11,  17,  0,  0).seconds_since_midnight,
+#     closing: DateTime.new(2020, 10, 11,  22,  30, 0).seconds_since_midnight, 
+#     restaurant_id: 4
+# )
 
 
 

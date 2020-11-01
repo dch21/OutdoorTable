@@ -11,6 +11,9 @@
 #  updated_at    :datetime         not null
 #  time          :string           not null
 #  date          :string           not null
+#  phone_number  :string           not null
+#  email         :string           not null
+#  occasion      :string
 #
 class Reservation < ApplicationRecord
 
