@@ -559,7 +559,7 @@ nav {
 }
 
 .splash-stars {
-    /* margin: 10px; */
+    margin: 8px;
     display: inline-flex;
     /* max-width: 10px; */
     overflow: hidden;
@@ -781,13 +781,41 @@ nav {
 
 .splash-carousel-info p{
     padding: 0;
+    margin-left: 8px
+}
+
+.splash-carousel-info a{
+    text-decoration: none;
+    font-weight: 1000;
+    color: black;
 }
 
 .splash-carousel-food-pic {
-    width: 200px;
+    width: 230px;
     height: 140px;
     object-fit: cover;
     border-radius: 5px;
+}
+
+.splash-carousel-container {
+    border: 1px rgb(174, 171, 171) solid;
+    height: 310px;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+.splash-reviews {
+    display: flex;
+    flex-direction: row;
+}
+
+.splash-reviews-label {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.splash-number-bookings {
+    margin: 10px
 }
     
 .search-form{

@@ -351,7 +351,7 @@ rv3 = Review.create!(
 rv4 = Review.create!(
     review_body: "As a graduate student and aspiring writer, this is awesome value for a meal. A bowl of Mount Qi noodles is a perfect balance of spicy and sour for under $10.",
     private_note: "",
-    overall_rating: 3,
+    overall_rating: 5,
     food_rating: 4,
     service_rating: 3,
     ambience_rating: 1, 
@@ -363,7 +363,7 @@ rv4 = Review.create!(
 rv5 = Review.create!(
     review_body: "I know people rave about the noodles, but honestly the most underrated items here are the pork buns. Fatty, thick slices of pork in a soft mantou bun with peanuts and cilantro. It melts in your mouth.",
     private_note: "",
-    overall_rating: 3,
+    overall_rating: 4,
     food_rating: 2,
     service_rating: 4,
     ambience_rating: 3, 

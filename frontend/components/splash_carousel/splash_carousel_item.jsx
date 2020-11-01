@@ -42,15 +42,23 @@ class SplashCarouselItem extends React.Component {
         return (
                 <div className="results-item">
                 
-                    <div>
+                    <div className="splash-carousel-container">
                         <Link to={`/restaurants/${this.props.result.id}`}><img className="splash-carousel-food-pic" src={window[`${logoPic}`]} alt="food" /></Link>
                         <div className="splash-carousel-info">
                             <Link to={`/restaurants/${this.props.result.id}`}><p>{this.props.result.name}</p></Link>
                             <p>
                                 <span>{dollar_sign}</span> &middot; <span>{this.props.result.cuisine}</span> &middot; <span>{this.props.result.neighborhood}</span> 
                             </p>
-                            <div className="splash-stars" style={{width: `${90 *width}px`}}>
-                                {stars}
+                            <div className="splash-reviews">
+                                <div className="splash-stars" style={{width: `${90 *width}px`}}>
+                                    {stars}
+                                </div>
+                                <div className="splash-reviews-label">
+                                    &middot; {` ${this.props.result.number_reviews} Reviews`}
+                                </div>
+                            </div>
+                            <div className="splash-number-bookings">
+                                <span className="fas fa-chart-line"></span> {this.props.result.total_bookings === 1 ? (`Booked ${this.props.result.total_bookings} time today`) : (`Booked ${this.props.result.total_bookings} times today`)}
                             </div>
                             {/* <div className="map-stars">
                                 {stars}{halfStars} &middot; {`${this.props.result.number_reviews} Reviews`}

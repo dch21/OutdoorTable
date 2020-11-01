@@ -81,7 +81,8 @@ class ReservationForm extends React.Component {
                     {this.state.toggleButton ? <RestaurantShowButtons currentUser={this.props.currentUser} openModal={this.props.openModal} result={this.state} pendingReservation={this.props.pendingReservation}/> : null}
 
                     {!this.state.toggleButton ? <button className="form-button" type="submit">Find a table</button> : null}
-                    <span className="fas fa-chart-line"></span>Booked {this.props.totalbookings} times today
+                    <span className="fas fa-chart-line"></span> {this.props.totalBookings === 1 ? (`Booked ${this.props.totalBookings} time today`) : (`Booked ${this.props.totalBookings} times today`)}
+                    {/* <span className="fas fa-chart-line"></span>Booked {this.props.totalbookings} times today */}
                 </form>
             </div>
         )

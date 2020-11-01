@@ -11,6 +11,8 @@
         json.searchTerm @searchTerms
         json.rating restaurant.reviews.average(:overall_rating).round(1)
         json.number_reviews restaurant.reviews.count
+        # today = Date.today.to_s
+        json.total_bookings restaurant.reservations.where('date = ?',"#{Date.today.to_s}").count
     end
 end
 # end

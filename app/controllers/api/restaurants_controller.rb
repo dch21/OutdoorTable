@@ -30,7 +30,7 @@ class Api::RestaurantsController < ApplicationController
             return
         end
 
-        @restaurants = Restaurant.includes(:reviews).where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ? OR boro ILIKE?', "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%" )
+        @restaurants = Restaurant.includes(:reviews).includes(:reservations).where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ? OR boro ILIKE?', "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%" )
         # debugger
 
         # @restaurants.each do |rest|
