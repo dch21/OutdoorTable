@@ -16,10 +16,10 @@ import SearchFormContainer from "../search_form/search_form_container";
 class SearchMap extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {markers: []}
     }
 
     componentDidMount() {
-
         const mapCenter = { lat: 40.708081, lng: -73.933709 };
         
         const map = new google.maps.Map(
@@ -35,7 +35,22 @@ class SearchMap extends React.Component {
         this.props.results.forEach( (restaurant) => this.createMarker(restaurant, map));
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.filters !== prevProps.filters) {
+            debugger
+            this.state.markers.forEach( (marker) => {
+                marker.setMap(null);
+            });
+            this.setState({markers: []});
+            debugger
+            // const map = document.getElementById('search-map')
+            const mapCenter = { lat: 40.708081, lng: -73.933709 };
+            const map = new google.maps.Map(document.getElementById('search-map'), { zoom: 10, center: mapCenter });
 
+            this.props.results.forEach( (restaurant) => this.createMarker(restaurant, map));
+            debugger
+        }
+    }   
 
     createMarker(restaurant, map) {
         const position = new google.maps.LatLng(restaurant.lat, restaurant.lng);
@@ -46,6 +61,7 @@ class SearchMap extends React.Component {
             restaurantId: restaurant.id
         });
         marker.addListener('click', () => this.openInfo(map, marker));
+        this.state.markers.push(marker);
     }
 
     openInfo(map, marker) {
@@ -66,7 +82,6 @@ class SearchMap extends React.Component {
     componentWillUnmount() {
         this.props.resetFilter();
     }
-
 
     render() {
 
@@ -95,35 +110,34 @@ class SearchMap extends React.Component {
         
         let filtered = []
         
-        // for (let i = 0; i < filters.length; i++) {
-        //     for (let j = 0; j < results.length; j++) {
-        //         if (results[j].boro === filters[i] || results[j].cuisine === filters[i] || results[j].price_range === filters[i]) {
-        //             filtered.push(results[j])
-        //         }
-        //     }
-        // }
         for (let i = 0; i < results.length; i++) {
-            // debugger
             if (filters.boro.length !== 0 && !(filters.boro.includes(results[i].boro))) {
-                // debugger
                 continue;
             }
             if (filters.price.length !== 0 && !(filters.price.includes(results[i].price_range))) {
-                // debugger
                 continue;
             }
             if (filters.cuisine.length !== 0 && !(filters.cuisine.includes(results[i].cuisine))) {
-                // debugger
                 continue;
             }
             filtered.push(results[i])
-            // debugger
         }
         
         const final = (filters.price.length > 0 || filters.boro.length > 0 || filters.cuisine.length > 0) ? filtered : results
 
-      
-        
+        let finalNames = []
+        final.forEach( (rest) => { 
+            finalNames.push(rest.name)
+        })
+
+        this.state.markers.forEach( (marker) => {
+            if (!(finalNames.includes(marker.name))) {
+                marker.setMap(null)
+                // debugger
+                // document.getElementById('search-map').removeMarker(marker)
+            }
+        })
+
         return (
              <div>
                 <div>

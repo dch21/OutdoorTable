@@ -102,7 +102,7 @@ class SearchResults extends React.Component {
                                 <Link to={"/searchmap"}><img className="map-list-button" src={window.map} /></Link>                            
                             </div>
                             <div className="filter">
-                                <i class="fas fa-dollar-sign"><span> Price</span></i>
+                                <i className="fas fa-dollar-sign"><span> Price</span></i>
                             </div>
                             <div>
                                 <hr/>
