@@ -48,17 +48,26 @@ class SearchResultsItem extends React.Component {
             return null;
         }
         
+        if (this.props.result.reservation_date === null) {
+            return null;
+        }
+        
         ///
         const ratingAsFloat = parseFloat(this.props.result.rating);
+        const width = ratingAsFloat / 5.0;
 
-        const filledStars = ratingAsFloat ?  Array(Math.floor(ratingAsFloat)).fill("star") : [];
-        const stars = filledStars.map(star => {
+        const stars = [0,1,2,3,4].map(star => {
             return <span className="fa fa-star checked"></span>
         });
 
-        const halfStars = ["half"].map(star => {
-            return <span className="fa fa-star-half-full"></span>
-        });
+        // const filledStars = ratingAsFloat ?  Array(Math.floor(ratingAsFloat)).fill("star") : [];
+        // const stars = filledStars.map(star => {
+        //     return <span className="fa fa-star checked"></span>
+        // });
+
+        // const halfStars = ["half"].map(star => {
+        //     return <span className="fa fa-star-half-full"></span>
+        // });
         ///
 
         const logoPic = this.props.result.name.substring(0,2) + "4";
@@ -70,7 +79,8 @@ class SearchResultsItem extends React.Component {
         // // const firstReview = filteredReviews[0].review_body;
         
         const res_time = this.props.result.reservation_time;
-        
+
+        // debugger
         const hours = parseInt(res_time.split(":")[0]);
         const amPM = res_time[res_time.length - 2] + res_time[res_time.length - 1];
         const times = [hours - 1, hours - 0.5, hours, hours + 0.5, hours + 1, hours + 1.5];
@@ -130,9 +140,17 @@ class SearchResultsItem extends React.Component {
                             <p>
                                 <span>{dollar_sign}</span> &middot; <span>{this.props.result.cuisine}</span> &middot; <span>{this.props.result.neighborhood}</span> 
                             </p>
-                            <div>
-                                {stars}{halfStars} &middot; {`${this.props.result.number_reviews} Reviews`}
+                             <div className="splash-reviews">
+                                <div className="splash-stars" style={{width: `${90 *width}px`}}>
+                                    {stars}
+                                </div>
+                                <div className="splash-reviews-label">
+                                    &middot; {` ${this.props.result.number_reviews} Reviews`}
+                                </div>
                             </div>
+                            {/* <div>
+                                {stars}{halfStars} &middot; {`${this.props.result.number_reviews} Reviews`}
+                            </div> */}
                             <p>{this.props.result.recent_review.review_body}</p>
                             <div className="search-time-buttons">
                                 {
