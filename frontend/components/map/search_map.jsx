@@ -13,6 +13,8 @@ import SearchFormContainer from "../search_form/search_form_container";
 // import ReactDOM from 'react-dom';
 // import MarkerManager from "../../util/marker_manager";
 
+let map;
+
 class SearchMap extends React.Component {
     constructor(props) {
         super(props);
@@ -21,8 +23,10 @@ class SearchMap extends React.Component {
 
     componentDidMount() {
         const mapCenter = { lat: 40.708081, lng: -73.933709 };
-        
-        const map = new google.maps.Map(
+        // const map = this.refs.map;
+        // this.map = new google.maps.Map(
+        //     map, { zoom: 10, center: mapCenter });
+        map = new google.maps.Map(
             document.getElementById('search-map'), { zoom: 10, center: mapCenter });
 
         // const mapOptions = { lat: 40.708081, lng: -73.933709, zoom: 10 };
@@ -35,22 +39,22 @@ class SearchMap extends React.Component {
         this.props.results.forEach( (restaurant) => this.createMarker(restaurant, map));
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.filters !== prevProps.filters) {
-            debugger
-            this.state.markers.forEach( (marker) => {
-                marker.setMap(null);
-            });
-            this.setState({markers: []});
-            debugger
-            // const map = document.getElementById('search-map')
-            const mapCenter = { lat: 40.708081, lng: -73.933709 };
-            const map = new google.maps.Map(document.getElementById('search-map'), { zoom: 10, center: mapCenter });
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.filters !== prevProps.filters) {
+    //         debugger
+    //         this.state.markers.forEach( (marker) => {
+    //             marker.setMap(null);
+    //         });
+    //         this.setState({markers: []});
+    //         debugger
+    //         // const map = document.getElementById('search-map')
+    //         const mapCenter = { lat: 40.708081, lng: -73.933709 };
+    //         const map = new google.maps.Map(document.getElementById('search-map'), { zoom: 10, center: mapCenter });
 
-            this.props.results.forEach( (restaurant) => this.createMarker(restaurant, map));
-            debugger
-        }
-    }   
+    //         this.props.results.forEach( (restaurant) => this.createMarker(restaurant, map));
+    //         debugger
+    //     }
+    // }   
 
     createMarker(restaurant, map) {
         const position = new google.maps.LatLng(restaurant.lat, restaurant.lng);
@@ -132,24 +136,16 @@ class SearchMap extends React.Component {
 
         this.state.markers.forEach( (marker) => {
             if (!(finalNames.includes(marker.name))) {
-                marker.setMap(null)
-                // debugger
-                // document.getElementById('search-map').removeMarker(marker)
-            }
+                marker.setMap(null)} else if (finalNames.includes(marker.name) && marker.map === null) {
+                    marker.setMap(map)
+                }
+ 
         })
+
 
         return (
              <div>
                 <div>
-                    {/* <div className="search-results-form">
-                        <SearchResultsFormContainer />
-                    </div> */}
-
-                    {/* <div className="form-header">
-                        <img className="logo-banner" src={window.border} alt="food" />
-
-                    </div> */}
-
                     <div className="splash-banner"> 
                         <div className="splash-banner-container">
                             <img className="logo-banner" src={window.border} alt="food" />
