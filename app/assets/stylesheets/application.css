@@ -558,6 +558,13 @@ nav {
     margin: 10px;
 }
 
+.splash-stars {
+    /* margin: 10px; */
+    display: inline-flex;
+    /* max-width: 10px; */
+    overflow: hidden;
+}
+
 .info p:first-child {
     padding: 5px;
     text-decoration: none;
