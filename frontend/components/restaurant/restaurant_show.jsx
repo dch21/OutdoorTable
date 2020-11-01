@@ -44,15 +44,20 @@ class RestaurantShow extends React.Component {
         }
 
         const ratingAsFloat = parseFloat(this.props.aggregates[1]);
+        const width = ratingAsFloat / 5.0;
 
-        const filledStars = ratingAsFloat ?  Array(Math.floor(ratingAsFloat)).fill("star") : [];
-        const stars = filledStars.map(star => {
+        const stars = [0,1,2,3,4].map(star => {
             return <span className="fa fa-star checked"></span>
         });
 
-        const halfStars = ["half"].map(star => {
-            return <span className="fa fa-star-half-full"></span>
-        });
+        // const filledStars = ratingAsFloat ?  Array(Math.floor(ratingAsFloat)).fill("star") : [];
+        // const stars = filledStars.map(star => {
+        //     return <span className="fa fa-star checked"></span>
+        // });
+
+        // const halfStars = ["half"].map(star => {
+        //     return <span className="fa fa-star-half-full"></span>
+        // });
 
         // const unfilledStars = Array(5 - (Math.floor(ratingAsFloat)) - 1).fill("no star");
         // const noStars = unfilledStars.map(star => {
@@ -104,7 +109,15 @@ class RestaurantShow extends React.Component {
 
                         <h1>{this.props.restaurant.name}</h1>
                         <hr className="solid"></hr>
-                        {stars}{halfStars}
+                        {/* <div className="splash-reviews"> */}
+                        <div className="splash-stars" style={{width: `${90 *width}px`}}>
+                            {stars}
+                        </div>
+                            {/* <div className="splash-reviews-label">
+                                &middot; {` ${this.props.result.number_reviews} Reviews`}
+                            </div> */}
+                        {/* </div> */}
+                        {/* {stars}{halfStars} */}
                         {this.props.aggregates[1]}
                         <i className="far fa-comments"><span> {this.props.aggregates[0]} Reviews</span></i>
                         <i className="fas fa-money-bill-wave"></i><span>{this.props.restaurant.price_range}</span><i className="fas fa-cookie-bite"></i><span>{this.props.restaurant.cuisine}</span><span>{favoriteButton}</span> 

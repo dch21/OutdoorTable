@@ -536,6 +536,8 @@ nav {
     height: 100px;
     object-fit: cover;
     border-radius: 5px;
+    margin-top: 30px;
+    margin-right: 10px;
 }
 
 .info {
@@ -549,9 +551,10 @@ nav {
     margin-right: 30px;
 }
 
-.map-info p {
+.map-info a {
     padding: 0;
-    margin-left: 10px
+    margin-left: 10px;
+    color: #368fad;
 }
 
 .map-stars {

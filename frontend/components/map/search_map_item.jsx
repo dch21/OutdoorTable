@@ -49,15 +49,19 @@ class SearchMapItem extends React.Component {
         }
         
         const ratingAsFloat = parseFloat(this.props.result.rating);
+        const width = ratingAsFloat / 5.0;
 
-        const filledStars = ratingAsFloat ?  Array(Math.floor(ratingAsFloat)).fill("star") : [];
-        const stars = filledStars.map(star => {
+        const stars = [0,1,2,3,4].map(star => {
             return <span className="fa fa-star checked"></span>
         });
+        // const filledStars = ratingAsFloat ?  Array(Math.floor(ratingAsFloat)).fill("star") : [];
+        // const stars = filledStars.map(star => {
+        //     return <span className="fa fa-star checked"></span>
+        // });
 
-        const halfStars = ["half"].map(star => {
-            return <span className="fa fa-star-half-full"></span>
-        });
+        // const halfStars = ["half"].map(star => {
+        //     return <span className="fa fa-star-half-full"></span>
+        // });
 
         const logoPic = this.props.result.name.substring(0,2) + "4";
         
@@ -127,8 +131,16 @@ class SearchMapItem extends React.Component {
                             <p>
                                 <span>{dollar_sign}</span> &middot; <span>{this.props.result.cuisine}</span> &middot; <span>{this.props.result.neighborhood}</span> 
                             </p>
-                            <div className="map-stars">
+                            {/* <div className="map-stars">
                                 {stars}{halfStars} &middot; {`${this.props.result.number_reviews} Reviews`}
+                            </div> */}
+                            <div className="splash-reviews">
+                                <div className="splash-stars" style={{width: `${90 *width}px`}}>
+                                    {stars}
+                                </div>
+                                <div className="splash-reviews-label">
+                                    &middot; {` ${this.props.result.number_reviews} Reviews`}
+                                </div>
                             </div>
                             <div className="search-time-buttons">
                                 {
