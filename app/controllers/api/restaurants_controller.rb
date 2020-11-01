@@ -24,20 +24,20 @@ class Api::RestaurantsController < ApplicationController
         @date = params[:searchTerms]["date"]
         @party_size = params[:searchTerms]["party_size"]
 
-        @restaurants = Restaurant.all
+        @restaurants = Restaurant.includes(:reviews).all
         if params["searchTerms"] == ""
             render "api/restaurants/search"
             return
         end
 
-        @restaurants = Restaurant.where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ? OR boro ILIKE?', "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%" )
+        @restaurants = Restaurant.includes(:reviews).where('name ILIKE ? OR description ILIKE ? OR neighborhood ILIKE ? OR cuisine ILIKE ? OR boro ILIKE?', "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%", "%#{@searchTerms}%" )
 
 
-        @restaurants.each do |rest|
-            # debugger
-            @open = rest.hours.where('day = ? AND opening <= ? AND closing > ? AND restaurant_id = ?', "#{@date}", "#{@time}", "#{@time}", "#{rest.id}")
-            # debugger
-        end
+        # @restaurants.each do |rest|
+        #     # debugger
+        #     @open = rest.hours.where('day = ? AND opening <= ? AND closing > ? AND restaurant_id = ?', "#{@date}", "#{@time}", "#{@time}", "#{rest.id}")
+        #     # debugger
+        # end
 
         # render json: @restaurants
         render "api/restaurants/search"

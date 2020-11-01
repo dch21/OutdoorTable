@@ -9,6 +9,7 @@
         json.reservation_date @date
         json.party_size @party_size
         json.searchTerm @searchTerms
+        json.rating restaurant.reviews.average(:overall_rating).round(1)
     end
 end
 # end
