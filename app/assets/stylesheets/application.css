@@ -465,7 +465,8 @@ nav {
 }
 
 .review-body > ul {
-    padding: 0
+    padding: 0;
+    margin-left: 3px;
 }
 
 .review-body  li{
@@ -1065,6 +1066,7 @@ nav {
 
 .review-text {
     line-height: 1.4;
+    margin-left: 3px;
 }
 
 .review-info {
@@ -1088,4 +1090,8 @@ nav {
     margin: auto;
     width: 50%;
     margin-bottom: 20px;
+}
+
+.reviews-overall {
+    margin-left: 8px
 }

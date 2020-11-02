@@ -21,18 +21,24 @@ class Aggregates extends React.Component {
         const noise = noiseLevel < 2 ? "Quiet" : noiseLevel >= 2 && noiseLevel <= 4  ? "Moderate" : "Loud";
 
         const ratingAsFloat = parseFloat(overallRating);
-        
+        const width = ratingAsFloat / 5.0;
 
-        const filledStars = Array(Math.floor(ratingAsFloat)).fill("star");
-        const stars = filledStars.map(star => {
+        const stars = [0,1,2,3,4].map(star => {
             return <span className="fa fa-star checked"></span>
         });
 
-        const halfStars = ["half"].map(star => {
-            return <span className="fa fa-star-half-full"></span>
-        });
+        
 
-        const unfilledStars = Array(5 - (Math.floor(ratingAsFloat)) - 1).fill("no star");
+        // const filledStars = Array(Math.floor(ratingAsFloat)).fill("star");
+        // const stars = filledStars.map(star => {
+        //     return <span className="fa fa-star checked"></span>
+        // });
+
+        // const halfStars = ["half"].map(star => {
+        //     return <span className="fa fa-star-half-full"></span>
+        // });
+
+        // const unfilledStars = Array(5 - (Math.floor(ratingAsFloat)) - 1).fill("no star");
         // const noStars = unfilledStars.map(star => {
         //     return <span className="fa fa-star clear"></span>
         // });
@@ -47,7 +53,15 @@ class Aggregates extends React.Component {
                     <div className="reviews">
                         <span>Overall Ratings and Reviews</span>
                         <p>Reviews can only be written by those who have eaten at this restaurant using an OutdoorTable Booking.</p>
-                        <p>{stars}{halfStars}{overallRating} based on recent ratings</p>
+                        {/* <p>{stars}{halfStars}{overallRating} based on recent ratings</p> */}
+                        <div>
+                            <div className="splash-stars" style={{width: `${122 * width}px`}}>
+                                {stars}
+                            </div>
+                            <div className="reviews-overall">
+                                {overallRating} based on recent ratings
+                            </div>
+                        </div>
 
                         <div className="rating-columns">
                             <div className="individual-column">
