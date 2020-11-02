@@ -477,7 +477,7 @@ r15 = Restaurant.create!(
     hours: "Monday-Sunday: 9AM–12AM"
 )
 
-r15 = Restaurant.create!(
+r16 = Restaurant.create!(
     name: "Staten Island Ferry",
     description: "Free NYC river cruise where you can bring your own food and snacks.",
     address: "Mid Island, Staten Island, NY 10301",
@@ -496,6 +496,27 @@ r15 = Restaurant.create!(
     parking_details: "Street",
     website: "https://www.siferry.com/",
     hours: "Monday-Sunday: 12AM–12AM"
+)
+
+r17 = Restaurant.create!(
+    name: "Lee's Tavern",
+    description: "Local bar with a friendly vibe and very good pizzas.",
+    address: "60 Hancock St, Staten Island, NY 10305",
+    capacity: 10,
+    lat: 40.588752, 
+    lng: -74.095170,
+    neighborhood: "Dongan Hills",
+    boro: "Staten Island",
+    phone_num: "718-667-9749",
+    cuisine: "American, Italian",
+    price_range: "$10-$25",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "Dongan Hills Railway",
+    parking_details: "Street",
+    website: "https://leestavernnyc.com/",
+    hours: "Tuesday-Sunday: 11:30AM - 12:30AM"
 )
 
 ################################################################################
@@ -1003,6 +1024,30 @@ rv41 = Review.create!(
     noise_level: 4, 
     restaurant_id: r16.id,
     reviewer_id: u9.id
+)
+
+rv42 = Review.create!(
+    review_body: "Great neigborhood pizza joint. Even though I moved away, I still come here to get pizza and have a drink.",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 5,
+    service_rating: 4,
+    ambience_rating: 5, 
+    noise_level: 2, 
+    restaurant_id: r17.id,
+    reviewer_id: u4.id
+)
+
+rv43 = Review.create!(
+    review_body: "It's right near the railway station so get off the ferry and take a break from the river cruise. Come down and have one of their clam pies.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 5,
+    ambience_rating: 4, 
+    noise_level: 3, 
+    restaurant_id: r17.id,
+    reviewer_id: u7.id
 )
 
 # res1 = Reservation.create!(
