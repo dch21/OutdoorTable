@@ -222,6 +222,10 @@ class SearchMap extends React.Component {
                                 <p>BBQ</p>
                             </div>
                             <div className="filter">
+                                <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="American"/>
+                                <p>American</p>
+                            </div>
+                            <div className="filter">
                                 <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="Chinese"/>
                                 <p>Chinese</p>
                             </div>
@@ -248,6 +252,10 @@ class SearchMap extends React.Component {
                             <div className="filter">
                                 <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="Columbian"/>
                                 <p>Columbian</p>
+                            </div>
+                            <div className="filter">
+                                <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="Vietnamese"/>
+                                <p>Vietnamese</p>
                             </div>
                         </div>
 

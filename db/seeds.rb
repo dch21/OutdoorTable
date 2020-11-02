@@ -342,13 +342,55 @@ r9 = Restaurant.create!(
     phone_num: "718-672-7272",
     cuisine: "Columbian",
     price_range: "$10-$25",
-    payment: "Cash",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
     dining_style: "Casual",
     dress_code: "Casual",
     public_transit: "7",
     parking_details: "Street",
     website: "http://www.mistierrascolombianaswoodside.com/",
     hours: "Monday-Friday: 10:00AM - 11:00PM"
+)
+
+r10 = Restaurant.create!(
+    name: "Pho 60",
+    description: "Vietnamese pho, noodles, soups, and rice dishes in away from the bustle of 8th Avenue.",
+    address: "1001 60th St, Brooklyn, NY 11219",
+    capacity: 15,
+    lat: 40.632845, 
+    lng: -74.004910,
+    neighborhood: "Sunset Park",
+    boro: "Brooklyn",
+    phone_num: "718-885-7722",
+    cuisine: "Vietnamese",
+    price_range: "Under $10",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "N",
+    parking_details: "Street",
+    website: "http://www.pho60brooklyn.com/",
+    hours: "Tuesday-Sunday: 11AM–10PM"
+)
+
+r11 = Restaurant.create!(
+    name: "The Commodore",
+    description: "Corner dive bar with a surprisingly good Southern kitchen.",
+    address: "366 Metropolitan Ave, Brooklyn, NY 11211",
+    capacity: 20,
+    lat: 40.713967, 
+    lng: -73.955860,
+    neighborhood: "Williamsburg",
+    boro: "Brooklyn",
+    phone_num: "718-218-7632",
+    cuisine: "American",
+    price_range: "Under $10",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "G,L",
+    parking_details: "Street",
+    website: "https://www.thecommodorebrooklyn.com/",
+    hours: "Monday-Sunday: 11PM–12AM"
 )
 
 ################################################################################
@@ -477,7 +519,7 @@ rv10 = Review.create!(
 rv11 = Review.create!(
     review_body: "Name lives up to its food! I doubt you need a reservation here, but I'm glad they're offering outdoor seating. The park across the street is great too if the seats are full. Support your local businesses!",
     private_note: "",
-    overall_rating: 4,
+    overall_rating: 3,
     food_rating: 4,
     service_rating: 2,
     ambience_rating: 1, 
@@ -595,15 +637,75 @@ rv20 = Review.create!(
 )
 
 rv21 = Review.create!(
-    review_body: "You gotta get the Bandeja Paisa! It's basically the national dish of Columbia! Street can get noisy, but that's part of the experience",
+    review_body: "You gotta get the Bandeja Paisa! It's basically the national dish of Columbia! Street can get noisy, but that's part of the experience.",
     private_note: "",
     overall_rating: 4,
     food_rating: 4,
     service_rating: 4,
     ambience_rating: 3, 
     noise_level: 4, 
-    restaurant_id: 9,
-    reviewer_id: 14
+    restaurant_id: r9.id,
+    reviewer_id: u14.id
+)
+
+rv22 = Review.create!(
+    review_body: "I know everyone talks about Pho, but I'm so happy to find a place that does the Steamed Rice Crepes!",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 5,
+    service_rating: 3,
+    ambience_rating: 2, 
+    noise_level: 2, 
+    restaurant_id: r10.id,
+    reviewer_id: u13.id
+)
+
+rv23 = Review.create!(
+    review_body: "I know everyone talks about Pho, but I'm so happy to find a place that does the Steamed Rice Crepes! Or try the Bun Bo Hue!",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 5,
+    service_rating: 3,
+    ambience_rating: 2, 
+    noise_level: 2, 
+    restaurant_id: r10.id,
+    reviewer_id: u13.id
+)
+
+rv24 = Review.create!(
+    review_body: "I always get my go-to order of Pho and spring rolls. It's light and filling at the same time! They really decorated for outdoor dining!",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 4,
+    service_rating: 2,
+    ambience_rating: 3, 
+    noise_level: 3, 
+    restaurant_id: r10.id,
+    reviewer_id: u15.id
+)
+
+rv25 = Review.create!(
+    review_body: "Yeah, I know it's a bar, but the fried chicken is so crispy and crunchy. Great fish tacos as well.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 5,
+    service_rating: 3,
+    ambience_rating: 3, 
+    noise_level: 4, 
+    restaurant_id: r11.id,
+    reviewer_id: u3.id
+)
+
+rv26 = Review.create!(
+    review_body: "You gotta order food with a drink now so why don't you get the best fried chicken in NYC with your Shiner Bock?",
+    private_note: "",
+    overall_rating: 3,
+    food_rating: 4,
+    service_rating: 3,
+    ambience_rating: 4, 
+    noise_level: 4, 
+    restaurant_id: r11.id,
+    reviewer_id: u16.id
 )
 
 # res1 = Reservation.create!(
