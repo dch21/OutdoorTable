@@ -414,6 +414,27 @@ r12 = Restaurant.create!(
     hours: "Monday-Sunday: 11:30AM–9PM"
 )
 
+r13 = Restaurant.create!(
+    name: "Agnanti",
+    description: "Cozy Taverna in Astoria serving Greek and Mediterranean food.",
+    address: "19-06 Ditmars Blvd, Queens, NY 11105",
+    capacity: 10,
+    lat: 40.780982,
+    lng: -73.917855,
+    neighborhood: "Astoria",
+    boro: "Queens",
+    phone_num: "718-545-4554",
+    cuisine: "Greek",
+    price_range: "$10-$25",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "N,W",
+    parking_details: "Street",
+    website: "https://agnantimeze.com/",
+    hours: "Monday-Sunday: 12:00PM–11PM"
+)
+
 ################################################################################
 
 
@@ -777,9 +798,45 @@ rv30 = Review.create!(
     reviewer_id: u12.id
 )
 
+rv31 = Review.create!(
+    review_body: "Great spot for a nice homecooked style meal after a walk in Astoria Park.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 4,
+    ambience_rating: 3, 
+    noise_level: 4, 
+    restaurant_id: r13.id,
+    reviewer_id: u14.id
+)
+
+rv32 = Review.create!(
+    review_body: "Really enjoyed the octopus and the fish here. Service was great and the wait staff make sure we were taken care of.",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 5,
+    service_rating: 5,
+    ambience_rating: 3, 
+    noise_level: 2, 
+    restaurant_id: r13.id,
+    reviewer_id: u4.id
+)
+
+rv33 = Review.create!(
+    review_body: "The outdoor seating provides a nice view of the East River. They also got a patio in the back. Good selection of family style Greek food.",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 4,
+    service_rating: 3,
+    ambience_rating: 5, 
+    noise_level: 3, 
+    restaurant_id: r13.id,
+    reviewer_id: u6.id
+)
+
 # res1 = Reservation.create!(
 #     date: "2020-10-01",
-#     time: "6:30PM",
+#     time: "6:30PM",q
 #     notes: "None",
 #     party_size: 10, 
 #     restaurant_id: 1,

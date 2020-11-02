@@ -45,7 +45,9 @@ const ReviewListItem = props => {
                             <li key="service">&middot; Service <span>{props.review.service_rating}</span> </li>
                             <li key="ambience">&middot; Ambience <span>{props.review.ambience_rating}</span> </li>
                         </ul>
-                        {props.review.review_body}
+                        <div className="review-text">
+                            {props.review.review_body}
+                        </div>
                     </div>
 
                 </div>
