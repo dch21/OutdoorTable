@@ -435,6 +435,27 @@ r13 = Restaurant.create!(
     hours: "Monday-Sunday: 12:00PM–11PM"
 )
 
+r14 = Restaurant.create!(
+    name: "Jerk House",
+    description: "Restaurant known for its namesake, jerk chicken. Also features other Caribbean specialities.",
+    address: "4246 White Plains Rd, The Bronx, NY 10466",
+    capacity: 10,
+    lat: 40.894664, 
+    lng: -73.856394,
+    neighborhood: "Wakefield",
+    boro: "Bronx",
+    phone_num: "718-515-5375",
+    cuisine: "Caribbean",
+    price_range: "$10-$25",
+    payment: "Cash",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "2,5",
+    parking_details: "Street",
+    website: "None",
+    hours: "Monday-Saturday: 11:00AM–9PM"
+)
+
 ################################################################################
 
 
@@ -832,6 +853,30 @@ rv33 = Review.create!(
     noise_level: 3, 
     restaurant_id: r13.id,
     reviewer_id: u6.id
+)
+
+rv33 = Review.create!(
+    review_body: "With a name like Jerk House, its jerk chicken does not disappoint!",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 5,
+    service_rating: 3,
+    ambience_rating: 2, 
+    noise_level: 2, 
+    restaurant_id: r14.id,
+    reviewer_id: u13.id
+)
+
+rv34 = Review.create!(
+    review_body: "I know everyone gets the Jerk Chicken here, but I loved the oxtail as well.",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 4,
+    service_rating: 4,
+    ambience_rating: 3, 
+    noise_level: 1, 
+    restaurant_id: r14.id,
+    reviewer_id: u14.id
 )
 
 # res1 = Reservation.create!(

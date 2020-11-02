@@ -55,7 +55,7 @@ class Aggregates extends React.Component {
                         <p>Reviews can only be written by those who have eaten at this restaurant using an OutdoorTable Booking.</p>
                         {/* <p>{stars}{halfStars}{overallRating} based on recent ratings</p> */}
                         <div>
-                            <div className="splash-stars" style={{width: `${122 * width}px`}}>
+                            <div className="splash-stars" style={{width: `${123 * width}px`}}>
                                 {stars}
                             </div>
                             <div className="reviews-overall">
