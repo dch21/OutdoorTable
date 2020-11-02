@@ -393,6 +393,27 @@ r11 = Restaurant.create!(
     hours: "Monday-Sunday: 11PM–12AM"
 )
 
+r12 = Restaurant.create!(
+    name: "Guan Fu",
+    description: "Well-presented Sichuan food in the heart of Flushing's new development boon.",
+    address: "39-16 Prince St G01, Queens, NY 11354",
+    capacity: 20,
+    lat: 40.759110, 
+    lng: -73.832247,
+    neighborhood: "Flushing",
+    boro: "Queens",
+    phone_num: "347-610-6999",
+    cuisine: "Chinese",
+    price_range: "$10-$25",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "7",
+    parking_details: "Street",
+    website: "http://www.guanfuszechuan.com/",
+    hours: "Monday-Sunday: 11:30AM–9PM"
+)
+
 ################################################################################
 
 
@@ -706,6 +727,54 @@ rv26 = Review.create!(
     noise_level: 4, 
     restaurant_id: r11.id,
     reviewer_id: u16.id
+)
+
+rv27 = Review.create!(
+    review_body: "They moved the restaurant out into the mall area for outdoor seating. I miss the decor inside! Food is still good as usual.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 4,
+    ambience_rating: 1, 
+    noise_level: 2, 
+    restaurant_id: r12.id,
+    reviewer_id: u15.id
+)
+
+rv28 = Review.create!(
+    review_body: "The Sichuan peppercorns leave this tingly feeling in your mouth. It's bit strange and will take some time getting used to.",
+    private_note: "",
+    overall_rating: 3,
+    food_rating: 3,
+    service_rating: 5,
+    ambience_rating: 2, 
+    noise_level: 3, 
+    restaurant_id: r12.id,
+    reviewer_id: u6.id
+)
+
+rv29 = Review.create!(
+    review_body: "Perfect food for the cold. Winter is Sichuan season. This is the food that will have you breaking a sweat when it's 40F outside.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 5,
+    service_rating: 4,
+    ambience_rating: 3, 
+    noise_level: 3, 
+    restaurant_id: r12.id,
+    reviewer_id: u8.id
+)
+
+rv30 = Review.create!(
+    review_body: "A good judge of a Sichuan place is its Mapo Tofu. How a restaurant makes this dish will tell you all you need to know. This place makes a good one.",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 4,
+    service_rating: 3,
+    ambience_rating: 1, 
+    noise_level: 3, 
+    restaurant_id: r12.id,
+    reviewer_id: u12.id
 )
 
 # res1 = Reservation.create!(
