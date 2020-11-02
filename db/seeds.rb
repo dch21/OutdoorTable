@@ -456,6 +456,48 @@ r14 = Restaurant.create!(
     hours: "Monday-Saturday: 11:00AM–9PM"
 )
 
+r15 = Restaurant.create!(
+    name: "Malecon",
+    description: "Known for its large portions of Dominican comfort food and rotating rotisserie chickens in the storefront.",
+    address: "4141 Broadway, New York, NY 10033",
+    capacity: 15,
+    lat: 40.846401,
+    lng: -73.938615,
+    neighborhood: "Washington Heights",
+    boro: "Manhattan",
+    phone_num: "212-927-3812",
+    cuisine: "Dominican",
+    price_range: "$10-$25",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "2,5",
+    parking_details: "Street",
+    website: "http://maleconrestaurants.com/",
+    hours: "Monday-Sunday: 9AM–12AM"
+)
+
+r15 = Restaurant.create!(
+    name: "Staten Island Ferry",
+    description: "Free NYC river cruise where you can bring your own food and snacks.",
+    address: "Mid Island, Staten Island, NY 10301",
+    capacity: 100,
+    lat: 40.644080, 
+    lng: -74.073371,
+    neighborhood: "St. George",
+    boro: "Staten Island",
+    phone_num: "None",
+    cuisine: "American",
+    price_range: "Under $10",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "Ferry",
+    parking_details: "Street",
+    website: "https://www.siferry.com/",
+    hours: "Monday-Sunday: 12AM–12AM"
+)
+
 ################################################################################
 
 
@@ -877,6 +919,90 @@ rv34 = Review.create!(
     noise_level: 1, 
     restaurant_id: r14.id,
     reviewer_id: u14.id
+)
+
+rv35 = Review.create!(
+    review_body: "The juicy rotisserie chickens are calling your name as they rotate around the oven...",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 5,
+    ambience_rating: 2, 
+    noise_level: 2, 
+    restaurant_id: r15.id,
+    reviewer_id: u7.id
+)
+
+rv36 = Review.create!(
+    review_body: "The mofongo with beans is my comfort food of choice. Good outdoor seating options.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 5,
+    service_rating: 4,
+    ambience_rating: 3, 
+    noise_level: 3, 
+    restaurant_id: r15.id,
+    reviewer_id: u11.id
+)
+
+rv37 = Review.create!(
+    review_body: "Good to see nothing has changed. They put up plexiglass to protect the rotating chickens, but it still smells great. Vey safe, everyone is wearing a mask.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 5,
+    service_rating: 5,
+    ambience_rating: 2, 
+    noise_level: 2, 
+    restaurant_id: r15.id,
+    reviewer_id: u1.id
+)
+
+rv38 = Review.create!(
+    review_body: "Bring a drink and some small bites. Enjoy the view. Be careful, it gets windy!",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 2,
+    service_rating: 2,
+    ambience_rating: 5, 
+    noise_level: 4, 
+    restaurant_id: r16.id,
+    reviewer_id: u3.id
+)
+
+rv39 = Review.create!(
+    review_body: "I can tell everyone that on my ride home, I sip wine on a river cruise that passes the Statue of Liberty.",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 1,
+    service_rating: 1,
+    ambience_rating: 5, 
+    noise_level: 4, 
+    restaurant_id: r16.id,
+    reviewer_id: u4.id
+)
+
+rv40 = Review.create!(
+    review_body: "It can be a bit noisy, but if you prep for it, it's a great (and free!) experience. You can also actually check out Staten Island for actual outdoor dining locations.",
+    private_note: "",
+    overall_rating: 3,
+    food_rating: 1,
+    service_rating: 1,
+    ambience_rating: 5, 
+    noise_level: 4, 
+    restaurant_id: r16.id,
+    reviewer_id: u8.id
+)
+
+rv41 = Review.create!(
+    review_body: "I've been telling everyone for years that the ferry is the original outdoor dining spot. I think I've finally been proven correct.",
+    private_note: "",
+    overall_rating: 3,
+    food_rating: 3,
+    service_rating: 2,
+    ambience_rating: 5, 
+    noise_level: 4, 
+    restaurant_id: r16.id,
+    reviewer_id: u9.id
 )
 
 # res1 = Reservation.create!(
