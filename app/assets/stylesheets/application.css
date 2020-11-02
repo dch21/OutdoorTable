@@ -49,7 +49,6 @@
     color: grey;
 }
 
-
 .footer-right > i {
     font-size: 30px;
     padding: 10px
@@ -262,7 +261,6 @@ nav {
     vertical-align: bottom;
     padding: 9px 9px 11px 9px;
 } */
-    
 
 .fa-search:before {
     /* display: inline-block; */
@@ -525,10 +523,11 @@ nav {
 }
 
 .food-pic {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 5px;
+    margin: 1px;
 }
 
 .map-food-pic {
@@ -700,7 +699,8 @@ nav {
 }
 
 .splash-feature-area {
-    margin-left: 40px
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .splash-pic {
@@ -751,7 +751,6 @@ nav {
 .splash-banner-container {
     position: relative;
     text-align: center;
-    
 }
 
 .splash-banner-container > h2 {
@@ -778,12 +777,15 @@ nav {
 
 .splash-carousel-trending-header {
     margin-left: 40px;
+    margin-right: 40px;
 }
 
 .splash-carousel {
     display: flex;
     margin-left: 40px;
-
+    margin-right: 40px;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .splash-carousel-info {
@@ -804,7 +806,7 @@ nav {
 }
 
 .splash-carousel-food-pic {
-    width: 230px;
+    width: 238px;
     height: 120px;
     object-fit: cover;
     border-radius: 5px;
@@ -815,6 +817,7 @@ nav {
     height: 290px;
     margin: 10px;
     border-radius: 4px;
+    width: 238px;
 }
 
 .splash-reviews {
@@ -902,7 +905,7 @@ nav {
 }
 
 .restaurant-sidebar {
-      margin-right: 170px;
+    margin-right: 170px;
 }
 
 .aggregates-container {

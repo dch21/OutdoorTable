@@ -136,7 +136,7 @@ u13 = User.create!(
 u14 = User.create!(
   email: "cj@test.com",
   password: "testingcj",
-  first_name: "Chris",
+  first_name: "Christina",
   last_name: "Jones",
   location: "Staten Island",
   phone_num: "555-555-1415"
@@ -197,7 +197,7 @@ r2 = Restaurant.create!(
     payment: "Cash, AMEX, VISA, MASTERCARD",
     dining_style: "Casual",
     dress_code: "Casual",
-    public_transit: "DFM",
+    public_transit: "D,F,M",
     parking_details: "Street",
     website: "http://www.supertasteny.com/",
     hours: "Mon: 10:00pm - 11:00 pm, Tue: 10:00pm - 11:00 pm, Wed: 10:00pm - 11:00 pm, Thu: 10:00pm - 11:00 pm, Fri: 10:00pm - 11:00 pm, Sat: 10:00pm - 11:00 pm, Sun: 10:00pm - 11:00 pm"
@@ -219,7 +219,7 @@ r3 = Restaurant.create!(
     payment: "Cash, VISA, MASTERCARD",
     dining_style: "Casual",
     dress_code: "Casual",
-    public_transit: "NR",
+    public_transit: "N,R",
     parking_details: "Street",
     website: "https://www.yelp.com/biz/tasty-dumpling-new-york",
     hours: "Mon: 9:00 am - 8:30 pm, Tue: 9:00 am - 8:30 pm, Wed: 9:00 am - 8:30 pm, Thu: 9:00 am - 8:30 pm, Fri: 9:00 am - 8:30 pm, Sat: 9:00 am - 8:30 pm, Sun: 9:00 am - 8:30 pm"
@@ -240,7 +240,7 @@ r4 = Restaurant.create!(
     payment: "Cash, AMEX, VISA, MASTERCARD",
     dining_style: "Casual",
     dress_code: "Casual",
-    public_transit: "FG, R",
+    public_transit: "F,G, R",
     parking_details: "Street",
     website: "https://www.instagram.com/uglybabynyc/",
     hours: "Mon: Closed, Tue: Closed, Wed: Closed, Thu: 5:00 pm - 10:30 pm, Fri: 5:00 pm - 10:30 pm, Sat: 12:00 pm - 3:00 pm, 5:00 pm - 10:30 pm, Sun: 12:00 pm - 3:00 pm, 5:00 pm - 10:30 pm"
@@ -261,7 +261,7 @@ r5 = Restaurant.create!(
     payment: "Cash, AMEX, VISA, MASTERCARD",
     dining_style: "Casual",
     dress_code: "Casual",
-    public_transit: "456",
+    public_transit: "4,5,6",
     parking_details: "Street",
     website: "https://lamoradanyc.com/",
     hours: "Mon: Closed, Tue: Closed, Wed: Closed, Thu: 11:00 am - 6:30 pm, Fri: 11:00 am - 6:30 pm, Sat: 11:00 am - 6:30 pm, Sun: Closed"
@@ -307,6 +307,48 @@ r7 = Restaurant.create!(
     parking_details: "Street",
     website: "https://www.joeandpatsny.com/",
     hours: "Mon: 11:00 am - 10:00 pm, Tue: 11:00 am - 10:00 pm, Wed: 11:00 am - 10:00 pm, Thu: 11:00 am - 10:00 pm, Fri: 11:00 am - 11:00 pm, Sat: 11:00 am - 11:00 pm, Sun: 11:00 am - 10:00 pm"
+)
+
+r8 = Restaurant.create!(
+    name: "Totto Ramen",
+    description: "One of the best ramens bowls in NYC known for a rich and fatty chicken broth in a very cozy setting.",
+    address: "464 W 51st St New York, NY 10019",
+    capacity: 10,
+    lat: 40.764451,
+    lng: -73.987592,
+    neighborhood: "Hell's Kitchen",
+    boro: "Manhattan",
+    phone_num: "646-596-9056",
+    cuisine: "Japanese",
+    price_range: "$10-$25",
+    payment: "Cash",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "C,B,D",
+    parking_details: "Street",
+    website: "https://www.tottoramen.com/",
+    hours: "Monday-Friday: 12:00PM - 10:00PM"
+)
+
+r9 = Restaurant.create!(
+    name: "Mis Tierras Colombianas",
+    description: "Traditional, home-style Columbian food under the rumbling tracks of the 7 train.",
+    address: "54-08 Roosevelt Ave, Woodside, NY 11377",
+    capacity: 20,
+    lat: 40.744699,
+    lng: -73.910256,
+    neighborhood: "Woodside",
+    boro: "Queens",
+    phone_num: "718-672-7272",
+    cuisine: "Columbian",
+    price_range: "$10-$25",
+    payment: "Cash",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "7",
+    parking_details: "Street",
+    website: "http://www.mistierrascolombianaswoodside.com/",
+    hours: "Monday-Friday: 10:00AM - 11:00PM"
 )
 
 ################################################################################
@@ -384,8 +426,7 @@ rv6 = Review.create!(
     reviewer_id: u3.id
 )
 
-
-rv6 = Review.create!(
+rv7 = Review.create!(
     review_body: "With Uncle Boons(RIP) gone, Ugly Baby hits the spot for funky, creative Thai food. They got their mainstay dishes, but make sure to try the weekly specials to spice things up.",
     private_note: "",
     overall_rating: 4,
@@ -397,7 +438,7 @@ rv6 = Review.create!(
     reviewer_id: u5.id
 )
 
-rv7 = Review.create!(
+rv8 = Review.create!(
     review_body: "Simple, counter service that gets the job done. Great for walking through and having a snack.",
     private_note: "",
     overall_rating: 4,
@@ -409,7 +450,7 @@ rv7 = Review.create!(
     reviewer_id: u1.id
 )
 
-rv8 = Review.create!(
+rv9 = Review.create!(
     review_body: "I was walking my dog Frank around and stumbled onto this cozy restaurant. They even got a poetry library in the back! I'm glad they expanded outdoors. One of the few places you can get Oaxacan food in NYC. I get the mole every time.",
     private_note: "",
     overall_rating: 4,
@@ -421,7 +462,7 @@ rv8 = Review.create!(
     reviewer_id: u4.id
 )
 
-rv9 = Review.create!(
+rv10 = Review.create!(
     review_body: "They kept up their festive atmopshere even though it's outside. Generous portions, home-cooked style...no wonder they have been around for over 30 years.",
     private_note: "",
     overall_rating: 4,
@@ -433,7 +474,7 @@ rv9 = Review.create!(
     reviewer_id: u10.id
 )
 
-rv10 = Review.create!(
+rv11 = Review.create!(
     review_body: "Name lives up to its food! I doubt you need a reservation here, but I'm glad they're offering outdoor seating. The park across the street is great too if the seats are full. Support your local businesses!",
     private_note: "",
     overall_rating: 4,
@@ -445,7 +486,7 @@ rv10 = Review.create!(
     reviewer_id: u12.id
 )
 
-rv11 = Review.create!(
+rv12 = Review.create!(
     review_body: "I've been coming here the last few years ever since I've moved to Queens. Love the plantains with the rice and beans. Their pork dishes are great. My friend let it slip that it was my birthday and the staff came out and sang to me on the sidewalk!",
     private_note: "",
     overall_rating: 4,
@@ -457,7 +498,7 @@ rv11 = Review.create!(
     reviewer_id: u13.id
 )
 
-rv12 = Review.create!(
+rv13 = Review.create!(
     review_body: "Got the tlayuda and the horchata and was not disappointed! The staff is welcoming and very active in bettering their community. There are also vegan options for those who are interested!",
     private_note: "",
     overall_rating: 4,
@@ -491,6 +532,78 @@ rv15 = Review.create!(
     noise_level: 3,
     restaurant_id: r7.id,
     reviewer_id: u1.id
+)
+
+rv16 = Review.create!(
+    review_body: "Sometimes, I just want a bowl of chicken fat with a side of noodles on a brisk, fall day. Outdoor seating is less cramped than their cozy indoor space.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 5,
+    ambience_rating: 3, 
+    noise_level: 2,
+    restaurant_id: r8.id,
+    reviewer_id: u7.id
+)
+
+rv17 = Review.create!(
+    review_body: "Hearty and filling. CASH ONLY, so bring some bills. Quick service.",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 5,
+    service_rating: 4,
+    ambience_rating: 4, 
+    noise_level: 3,
+    restaurant_id: r8.id,
+    reviewer_id: u8.id
+)
+
+rv18 = Review.create!(
+    review_body: "In terms of the NYC Ramen wars, I think the best ramen comes down to your personal preference. I like chicken soup so I like Totto.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 3,
+    service_rating: 3,
+    ambience_rating: 3, 
+    noise_level: 2,
+    restaurant_id: r8.id,
+    reviewer_id: u11.id
+)
+
+rv19 = Review.create!(
+    review_body: "Portions are huge. If you're into grilled meats, one order can easily be dinner, breakfast, and lunch. Good for filling up post-workout for gains.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 5,
+    service_rating: 4,
+    ambience_rating: 2, 
+    noise_level: 4,
+    restaurant_id: r9.id,
+    reviewer_id: u2.id
+)
+
+rv20 = Review.create!(
+    review_body: "I lived in Columbia for a few years. When I want to be taken back to that beautiful country, I come here.",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 5,
+    service_rating: 5,
+    ambience_rating: 2, 
+    noise_level: 3,
+    restaurant_id: r9.id,
+    reviewer_id: u10.id
+)
+
+rv21 = Review.create!(
+    review_body: "You gotta get the Bandeja Paisa! It's basically the national dish of Columbia! Street can get noisy, but that's part of the experience",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 4,
+    ambience_rating: 3, 
+    noise_level: 4, 
+    restaurant_id: 9,
+    reviewer_id: 14
 )
 
 # res1 = Reservation.create!(
