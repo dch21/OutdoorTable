@@ -166,9 +166,9 @@ class RestaurantShow extends React.Component {
                             <CreateReservationContainer totalbookings={this.props.aggregates[11]}/>
                         </div>
 
-                        {/* <div>
+                        <div>
                             <RestaurantShowMap restaurant={this.props.restaurant}/>
-                        </div> */}
+                        </div>
 
                         <div>
                             <RestaurantDetailSidebar restaurant={this.props.restaurant}/>
