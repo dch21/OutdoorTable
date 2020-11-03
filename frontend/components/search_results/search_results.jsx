@@ -206,6 +206,14 @@ class SearchResults extends React.Component {
                                 <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="Caribbean"/>
                                 <p>Caribbean</p>
                             </div>
+                            <div className="filter">
+                                <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="Yemeni"/>
+                                <p>Yemeni</p>
+                            </div>
+                            <div className="filter">
+                                <input onClick={ (e) => this.handleClick(e, "cuisine")} className="filter-input" type="checkbox" value="Cajun"/>
+                                <p>Cajun</p>
+                            </div>
                         </div>
 
                        

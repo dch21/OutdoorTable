@@ -508,7 +508,7 @@ r17 = Restaurant.create!(
     neighborhood: "Dongan Hills",
     boro: "Staten Island",
     phone_num: "718-667-9749",
-    cuisine: "American, Italian",
+    cuisine: "Italian",
     price_range: "$10-$25",
     payment: "Cash, AMEX, VISA, MASTERCARD",
     dining_style: "Casual",
@@ -517,6 +517,48 @@ r17 = Restaurant.create!(
     parking_details: "Street",
     website: "https://leestavernnyc.com/",
     hours: "Tuesday-Sunday: 11:30AM - 12:30AM"
+)
+
+r18 = Restaurant.create!(
+    name: "Arth Aljanatain",
+    description: "Local spot in the Little Yemen section of the Bronx, serving up large portions of food.",
+    address: "700 Rhinelander Ave, The Bronx, NY 10462",
+    capacity: 10,
+    lat: 40.847431, 
+    lng: -73.866643,
+    neighborhood: "Little Yemen",
+    boro: "Bronx",
+    phone_num: "718-918-9191",
+    cuisine: "Yemeni",
+    price_range: "$10-$25",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "2,5",
+    parking_details: "Street",
+    website: "None",
+    hours: "Sunday-Saturday: 9:00AM - 1:00AM"
+)
+
+r19 = Restaurant.create!(
+    name: "Bayou",
+    description: "New Orleans style cooking on the coast Staten Island",
+    address: "1072 Bay St, Staten Island, NY 10305",
+    capacity: 15,
+    lat: 40.616813,  
+    lng: -74.068358,
+    neighborhood: "Clifton",
+    boro: "Staten Island",
+    phone_num: "718-273-4383",
+    cuisine: "Cajun",
+    price_range: "$10-$25",
+    payment: "Cash, AMEX, VISA, MASTERCARD",
+    dining_style: "Casual",
+    dress_code: "Casual",
+    public_transit: "Ferry",
+    parking_details: "Street",
+    website: "http://www.bayounyc.com/",
+    hours: "Sunday-Saturday: 12:00PM - 11:00PM"
 )
 
 ################################################################################
@@ -1048,6 +1090,54 @@ rv43 = Review.create!(
     noise_level: 3, 
     restaurant_id: r17.id,
     reviewer_id: u7.id
+)
+
+rv44 = Review.create!(
+    review_body: "Good Yemeni food in the area. The portion of the Lamb mandi was huge!",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 3,
+    ambience_rating: 2, 
+    noise_level: 2, 
+    restaurant_id: r18.id,
+    reviewer_id: u11.id
+)
+
+rv45 = Review.create!(
+    review_body: "We wandered here after some socially distant animal watching at the Bronx zoo. Enjoyed the fish ogda and the bread.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 3,
+    ambience_rating: 3, 
+    noise_level: 2, 
+    restaurant_id: r18.id,
+    reviewer_id: u12.id
+)
+
+rv46 = Review.create!(
+    review_body: "I like how they redid the outdoor dining experience. It makes me feel like I'm back in the French Quarter. Food is good as usual.",
+    private_note: "",
+    overall_rating: 4,
+    food_rating: 4,
+    service_rating: 5,
+    ambience_rating: 4, 
+    noise_level: 3, 
+    restaurant_id: r18.id,
+    reviewer_id: u5.id
+)
+
+rv47 = Review.create!(
+    review_body: "I've set up some businesses on I10 back in my day, so I found myself in Louisiana quite a bit. This place certainly meets my expecations. Get the jambalaya!",
+    private_note: "",
+    overall_rating: 5,
+    food_rating: 5,
+    service_rating: 4,
+    ambience_rating: 3, 
+    noise_level: 2, 
+    restaurant_id: r18.id,
+    reviewer_id: u16.id
 )
 
 # res1 = Reservation.create!(
