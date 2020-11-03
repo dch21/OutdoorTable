@@ -1124,7 +1124,7 @@ rv46 = Review.create!(
     service_rating: 5,
     ambience_rating: 4, 
     noise_level: 3, 
-    restaurant_id: r18.id,
+    restaurant_id: r19.id,
     reviewer_id: u5.id
 )
 
@@ -1136,7 +1136,7 @@ rv47 = Review.create!(
     service_rating: 4,
     ambience_rating: 3, 
     noise_level: 2, 
-    restaurant_id: r18.id,
+    restaurant_id: r19.id,
     reviewer_id: u16.id
 )
 
