@@ -23,7 +23,7 @@ Outdoor Table is a web application built with a Ruby on Rails/PostgreSQL backend
 * Look up restaurants by keyword, cuisine, area, date and time. 
   * Each search result contain basic info along with the most recent review to give users quick and relevant information for choosing a restaurant.
 
-![Search](/readme_files/search_demo_480.gif)
+![Search](/readme_files/search_demo_high.gif)
 
   
 * Restaurant show page features restaurant information such as hours, location, price range, and cuisine type. The show page also intergrates Google Maps API in providing a map of the location of the restaurant. 
