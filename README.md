@@ -67,7 +67,7 @@ Filter
   const final = (filters.price.length > 0 || filters.boro.length > 0 || filters.cuisine.length > 0) ? filtered : results
 ```
 
-![Search](/readme_files/search_demo_640.gif)
+![Search](/readme_files/search.gif)
 
 ### Restaurant Show Page
   
