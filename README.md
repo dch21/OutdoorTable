@@ -77,6 +77,8 @@ Filter
   * Google Maps API: restaurant is shown on map, while the address link opens a new Google Maps window so users can search how far they are from the restaurant.
   * Aggregate Data: review data for Food, Service, Ambience, Noise Level and Overall Value are averaged on the Rails backend to give users aggregated information on how past diners enjoyed their dining experience. The backend also calculates the age of the review based on days from today to quickly give users a sense of which reviews are most relevant and timely.
 
+![Show](/readme_files/rest_show.gif)
+
 ### Reservations and User Page
 
 * Making a Reservation 
