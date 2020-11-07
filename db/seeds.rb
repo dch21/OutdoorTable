@@ -463,7 +463,7 @@ r15 = Restaurant.create!(
     capacity: 15,
     lat: 40.846401,
     lng: -73.938615,
-    neighborhood: "Washington Heights",
+    neighborhood: "Wash Heights",
     boro: "Manhattan",
     phone_num: "212-927-3812",
     cuisine: "Dominican",
