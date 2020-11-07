@@ -11,7 +11,6 @@ Rails.application.routes.draw do
     resources :restaurants, only: [:index, :show] do 
       get :search, on: :collection
       get :aggregates, on: :member
-      # get :bookings, on: :member
       resources :reviews, only: [:index]
     end
 

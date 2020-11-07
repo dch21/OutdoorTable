@@ -67,7 +67,7 @@ Filter
   const final = (filters.price.length > 0 || filters.boro.length > 0 || filters.cuisine.length > 0) ? filtered : results
 ```
 
-![Search](/readme_files/search_demo_320.gif)
+![Search](/readme_files/search_demo_640.gif)
 
 ### Restaurant Show Page
   
@@ -98,3 +98,9 @@ Filter
 * [Sample State](https://github.com/dch21/OutdoorTable/wiki/Sample-State)
 * [Backend Routes](https://github.com/dch21/OutdoorTable/wiki/Backend-Routes)
 * [Frontend Routes](https://github.com/dch21/OutdoorTable/wiki/Frontend-Routes)
+
+### Features to be added
+
+* Restaurant owners have their own show page to see reservation data.
+* Responsive mobile design. 
+* Users and restaurant owners can leave comments on existing reviews. 
