@@ -51,13 +51,6 @@ class SearchResults extends React.Component {
         
         let filtered = []
         
-        // for (let i = 0; i < filters.length; i++) {
-        //     for (let j = 0; j < results.length; j++) {
-        //         if (results[j].boro === filters[i] || results[j].cuisine === filters[i] || results[j].price_range === filters[i]) {
-        //             filtered.push(results[j])
-        //         }
-        //     }
-        // }
         for (let i = 0; i < results.length; i++) {
             if (filters.boro.length !== 0 && !(filters.boro.includes(results[i].boro))) {
                 continue;
@@ -74,7 +67,6 @@ class SearchResults extends React.Component {
         const final = (filters.price.length > 0 || filters.boro.length > 0 || filters.cuisine.length > 0) ? filtered : results
 
       
-
         return (
             <div>
                 <div>
