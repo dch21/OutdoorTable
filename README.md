@@ -21,7 +21,7 @@ Outdoor Table is a web application built with a Ruby on Rails/PostgreSQL backend
 ## Features
 
 ### Search
-* Look up restaurants by keyword, cuisine, area, date and time. A search bar is integrated onto every page--just click on the magnyging glass and a search modal will pop up.
+* Look up restaurants by keyword, cuisine, area, date and time. A search bar is integrated onto every page--just click on the magnifying glass and a search modal will pop up.
   * Through the Redux state, each search result contains basic restaurant info along with the most recent review to give users quick and relevant information for choosing a place to dine. 
   * Search makes use of the .includes method which solves the N + 1 query problem through eager loading. 
   * A basic filter is set up on the React frontend so search results can be sorted by price, location, and cuisine. Toggling a filter will add or remove restaurants seen on the Google Maps API.
@@ -76,12 +76,11 @@ Filter
   * Favorites: through React/Redux, users can instantly save or unsave restaurants by clicking the save/unsave in the restaurant overview.
   * Integrated Google Maps API: restaurant is shown on map, while clicking the address opens up new Google Maps window so users can search how far they are from the restaurant.
   * Aggregate Data: review data for Food, Service, Ambience, Noise Level and Overall Value are aggregated and averaged on the Rails backend to give users information on how past diners liked their dining experience. In addition to showing reviewer name and location, the backend also calculates the age of the review based on days from today to quickly give users a sense of which reviews are most relevant and timely.
-add past reservatin seed data for demo
 
 ### Reservations and User Page
 
 * Making a Reservation 
-  * To make a reservation, fill out the "Make a reservation form" on the restuarant. Through React/Redux, picking a new time will result in a new list of avaibable times without a page refresh. Clicking the time redirects the user to a reservation confirmation page. 
+  * To make a reservation, fill out the "Make a reservation form" on the restuarant show page. Through React/Redux, picking a new time will result in a new list of available times without a page refresh. Clicking the time redirects the user to a reservation confirmation page. 
   * Error handling: users cannot make a reservation unless they fill out the email and phone number fields. Users also have to be logged in to make a reservation. 
   * Upon confirming their reservation, the user is redirected to their account page where they can see the current and past reservations as well as saved restaurants.
 

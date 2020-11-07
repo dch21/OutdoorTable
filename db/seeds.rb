@@ -1176,6 +1176,21 @@ res3 = Reservation.create!(
     user_id: 1
 )
 
+fav1 = Favorite.create!(
+    user_id: 1,
+    restaurant_id: 1,
+)
+
+fav2 = Favorite.create!(
+    user_id: 1,
+    restaurant_id: 4,
+)
+
+fav3 = Favorite.create!(
+    user_id: 1,
+    restaurant_id: 3,
+)
+
 # hUB1 = Hour.create!(
 #     day: "Thursday",
 #     opening: DateTime.new(2020, 10, 8,  17,  0,  0).seconds_since_midnight,
