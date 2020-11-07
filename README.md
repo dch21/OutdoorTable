@@ -84,3 +84,11 @@ Filter
   * Error handling: users cannot make a reservation unless they fill out the email and phone number fields. Users also have to be logged in to make a reservation. 
   * Upon confirming their reservation, the user is redirected to their account page where they can see the current and past reservations as well as saved restaurants.
 
+
+### Resources/ Links
+
+* [MVP List](https://github.com/dch21/OutdoorTable/wiki/MVP-List)
+* [Schema](https://github.com/dch21/OutdoorTable/wiki/Schema)
+* [Sample State](https://github.com/dch21/OutdoorTable/wiki/Sample-State)
+* [Backend Routes](https://github.com/dch21/OutdoorTable/wiki/Backend-Routes)
+* [Frontend Routes](https://github.com/dch21/OutdoorTable/wiki/Frontend-Routes)
