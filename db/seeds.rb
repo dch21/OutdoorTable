@@ -1140,14 +1140,41 @@ rv47 = Review.create!(
     reviewer_id: u16.id
 )
 
-# res1 = Reservation.create!(
-#     date: "2020-10-01",
-#     time: "6:30PM",q
-#     notes: "None",
-#     party_size: 10, 
-#     restaurant_id: 1,
-#     user_id: 4
-# )
+res1 = Reservation.create!(
+    date: "2020-10-01",
+    time: "6:30PM",
+    phone_number: "555-555-555",
+    email: "test@aol.com",
+    occasion: "",
+    notes: "None",
+    party_size: 4, 
+    restaurant_id: 1,
+    user_id: 1
+)
+
+res2 = Reservation.create!(
+    date: "2020-10-02",
+    time: "6:30PM",
+    phone_number: "555-555-555",
+    email: "test@aol.com",
+    occasion: "",
+    notes: "None",
+    party_size: 2, 
+    restaurant_id: 2,
+    user_id: 1
+)
+
+res3 = Reservation.create!(
+    date: "2020-10-03",
+    time: "7:30PM",
+    phone_number: "555-555-555",
+    email: "test@aol.com",
+    occasion: "",
+    notes: "None",
+    party_size: 3, 
+    restaurant_id: 6,
+    user_id: 1
+)
 
 # hUB1 = Hour.create!(
 #     day: "Thursday",

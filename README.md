@@ -76,7 +76,7 @@ Filter
   * Favorites: through React/Redux, users can instantly save or unsave restaurants by clicking the save/unsave in the restaurant overview.
   * Integrated Google Maps API: restaurant is shown on map, while clicking the address opens up new Google Maps window so users can search how far they are from the restaurant.
   * Aggregate Data: review data for Food, Service, Ambience, Noise Level and Overall Value are aggregated and averaged on the Rails backend to give users information on how past diners liked their dining experience. In addition to showing reviewer name and location, the backend also calculates the age of the review based on days from today to quickly give users a sense of which reviews are most relevant and timely.
-
+add past reservatin seed data for demo
 
 ### Reservations and User Page
 
