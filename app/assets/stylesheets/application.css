@@ -664,12 +664,21 @@ nav {
     height: 30px;
 }
 
+.filter-room {
+    display: flex;
+    height: 30px;
+    margin-top: 25px;
+}
+
 .filter-input {
     width: 18px;
     margin-top: 15px;
     cursor: pointer;
 }
 
+/* #location {
+    margin-top: 25px;
+} */
     /* .search-results-div{ */
         /* display: flex; */
         /* width: 100%; */

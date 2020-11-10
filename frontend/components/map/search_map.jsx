@@ -179,10 +179,10 @@ class SearchMap extends React.Component {
                                 <p>$$$</p>
                             </div>
                             <br/>
-                            <br/>
+                            <br className="filter-break"/>
 
 
-                            <div className="filter">
+                            <div className="filter-room">
                                 <i className="fas fa-map"><span> Location</span></i>
                             </div>
                             <div>
@@ -211,7 +211,7 @@ class SearchMap extends React.Component {
                             <br/>
                             <br/>
 
-                            <div className="filter">
+                            <div className="filter-room">
                                 <i className="fas fa-utensils"><span> Cuisine</span></i>
                             </div>
                             <div>
