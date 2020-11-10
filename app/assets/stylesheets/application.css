@@ -33,13 +33,19 @@
 
 #linkedin {
     font-size: 30px;
-    margin-right: 20px;
+    margin-right: 12px;
     color:rgb(59, 101, 180)
 }
 
 #github {
     font-size: 30px;
     color: white;
+    margin-right: 10px;
+}
+
+#angellist {
+    font-size: 30px;
+    color: black;
     margin-right: 10px;
 }
 
