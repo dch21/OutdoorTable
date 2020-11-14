@@ -51,7 +51,6 @@ class Api::RestaurantsController < ApplicationController
     # end
 
     def restaurant_params
-        debugger
         params
         .require(:restaurant)
         .permit(:name, :description, :lat, :lng, :address, :capacity, :neighborhood, :phone_num, :cuisine, :price_range, :payment, :dining_style, :dress_code, :public_transit, :parking_details, :hours, :boro, :website)

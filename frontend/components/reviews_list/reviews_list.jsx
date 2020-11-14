@@ -8,12 +8,10 @@ class ReviewsList extends React.Component {
 
     componentDidMount(){
         this.props.clearReviews();
-        // debugger
         this.props.getReviews(this.props.restaurantId);
     }
 
     componentDidUpdate(prevProps) {
-        // debugger
         
         if (this.props.restaurantId !== prevProps.restaurantId) {
             this.props.clearReviews();
@@ -22,7 +20,6 @@ class ReviewsList extends React.Component {
     }
 
     // componentWillUnmount() {
-    //     debugger
     //     this.props.clearReviews();
     // } 
 

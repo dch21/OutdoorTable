@@ -75,12 +75,10 @@ class SearchResultsItem extends React.Component {
         const dollar_sign = this.props.result.price_range === "Under $10" ? "$" : (this.props.result.price_range === "$10-$25" ? "$$" : "$$$");
 
         // const filteredReviews = Object.values(this.props.reviews).filter(object => object.restaurant_id === this.props.result.id);
-        // debugger
         // // const firstReview = filteredReviews[0].review_body;
         
         const res_time = this.props.result.reservation_time;
 
-        // debugger
         const hours = parseInt(res_time.split(":")[0]);
         const amPM = res_time[res_time.length - 2] + res_time[res_time.length - 1];
         const times = [hours - 1, hours - 0.5, hours, hours + 0.5, hours + 1, hours + 1.5];

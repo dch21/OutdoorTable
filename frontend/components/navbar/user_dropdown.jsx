@@ -27,7 +27,6 @@ class UserDropdown extends React.Component {
     }
 
     handleLinkUser() {
-        // debugger
         this.props.history.push(`/users/${this.props.userId}`);
         // return <Redirect to="/" /> 
     }

@@ -11,7 +11,6 @@ import { getReviews, clearReviews } from "../../actions/reviews_actions";
 
 const mSTP = (state, ownProps) => {
     const restaurantId = ownProps.match.params.restaurantId;
-    // debugger
     return {
         restaurant: state.entities.restaurants[restaurantId],
         restaurantId: restaurantId,

@@ -41,18 +41,15 @@ class SearchMap extends React.Component {
 
     // componentDidUpdate(prevProps) {
     //     if (this.props.filters !== prevProps.filters) {
-    //         debugger
     //         this.state.markers.forEach( (marker) => {
     //             marker.setMap(null);
     //         });
     //         this.setState({markers: []});
-    //         debugger
     //         // const map = document.getElementById('search-map')
     //         const mapCenter = { lat: 40.708081, lng: -73.933709 };
     //         const map = new google.maps.Map(document.getElementById('search-map'), { zoom: 10, center: mapCenter });
 
     //         this.props.results.forEach( (restaurant) => this.createMarker(restaurant, map));
-    //         debugger
     //     }
     // }   
 

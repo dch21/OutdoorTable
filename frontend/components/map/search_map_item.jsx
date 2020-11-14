@@ -68,7 +68,6 @@ class SearchMapItem extends React.Component {
         const dollar_sign = this.props.result.price_range === "Under $10" ? "$" : (this.props.result.price_range === "$10-$25" ? "$$" : "$$$");
 
         // const filteredReviews = Object.values(this.props.reviews).filter(object => object.restaurant_id === this.props.result.id);
-        // debugger
         // // const firstReview = filteredReviews[0].review_body;
         
         const res_time = this.props.result.reservation_time;
