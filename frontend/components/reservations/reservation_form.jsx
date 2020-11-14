@@ -29,7 +29,6 @@ class ReservationForm extends React.Component {
     }
 
     render() {
-        // debugger
         return (
             
             <div> 
