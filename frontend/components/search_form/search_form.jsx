@@ -47,7 +47,7 @@ class SearchForm extends React.Component {
             <div className={this.props.type === "homepage" ? "" : "search-results-div"}> 
                 <form className={this.props.type === "homepage" ? "search-form" : "search-page-form"} onSubmit={this.handleSubmit }>
 
-                            <select value={this.state.time} onChange={this.updateTime}>
+                            <select className="time" value={this.state.time} onChange={this.updateTime}>
                                 {
                                     [9, 10, 11].map(number => (
                                         <>

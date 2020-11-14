@@ -201,18 +201,18 @@ class SearchMap extends React.Component {
                                 <p>Queens</p>
                             </div>
                             <div className="filter">
-                                <input onClick={ (e) => this.handleClick(e, "boro")} className="filter-input" type="checkbox" value="Staten Island"/>
-                                <p>Staten Island</p>
-                            </div>
-                            <div className="filter">
                                 <input onClick={ (e) => this.handleClick(e, "boro")} className="filter-input" type="checkbox" value="Bronx"/>
                                 <p>Bronx</p>
+                            </div>
+                            <div className="filter">
+                                <input onClick={ (e) => this.handleClick(e, "boro")} className="filter-input" type="checkbox" value="Staten Island"/>
+                                <p>Staten Island</p>
                             </div>
                             <br/>
                             <br/>
 
                             <div className="filter-room">
-                                <i className="fas fa-utensils"><span> Cuisine</span></i>
+                                <i className="fas fa-utensils"><span> Cußisine</span></i>
                             </div>
                             <div>
                                 <hr/>

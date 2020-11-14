@@ -50,7 +50,7 @@ class ModelSearch extends React.Component {
                 </div>
                 <form onSubmit={this.handleSubmit }>
 
-                            <select value={this.state.time} onChange={this.updateTime}>
+                            <select className="time" value={this.state.time} onChange={this.updateTime}>
                                 {
                                     [9, 10, 11].map(number => (
                                         <>
