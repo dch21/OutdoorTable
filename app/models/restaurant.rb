@@ -37,10 +37,6 @@ class Restaurant < ApplicationRecord
     foreign_key: :restaurant_id,
     class_name: :Review
 
-    # has_many :hours,
-    # foreign_key: :restaurant_id,
-    # class_name: :Hour
-
     has_many :guests,
     through: :reservations,
     source: :user

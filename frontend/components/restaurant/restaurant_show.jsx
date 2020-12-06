@@ -17,11 +17,9 @@ class RestaurantShow extends React.Component {
             restaurant_id: this.props.restaurantId,
             user_id: this.props.userId
         };
-        // this.scrollSection = this.scrollSection.bind(this);
     }
 
     componentDidMount() {
-        // fix stars here
         this.props.getAggregates(this.props.restaurantId);
         this.props.getRestaurant(this.props.restaurantId);
     }
@@ -50,20 +48,6 @@ class RestaurantShow extends React.Component {
             return <span className="fa fa-star checked"></span>
         });
 
-        // const filledStars = ratingAsFloat ?  Array(Math.floor(ratingAsFloat)).fill("star") : [];
-        // const stars = filledStars.map(star => {
-        //     return <span className="fa fa-star checked"></span>
-        // });
-
-        // const halfStars = ["half"].map(star => {
-        //     return <span className="fa fa-star-half-full"></span>
-        // });
-
-        // const unfilledStars = Array(5 - (Math.floor(ratingAsFloat)) - 1).fill("no star");
-        // const noStars = unfilledStars.map(star => {
-        //     return <span className="fa fa-star clear"></span>
-        // });
-
 
         const safety = 
             (<div>
@@ -87,11 +71,6 @@ class RestaurantShow extends React.Component {
 
         return (
             <div className="show-container">
-                {/* <div className="form-header">
-                    <img className="logo-banner" src={window.border} alt="food" />
-                    
-                </div> */}
-
                 
                 <div className="parent-form"> 
                     
@@ -109,15 +88,10 @@ class RestaurantShow extends React.Component {
 
                         <h1>{this.props.restaurant.name}</h1>
                         <hr className="solid"></hr>
-                        {/* <div className="splash-reviews"> */}
                         <div className="splash-stars" style={{width: `${90 *width}px`}}>
                             {stars}
                         </div>
-                            {/* <div className="splash-reviews-label">
-                                &middot; {` ${this.props.result.number_reviews} Reviews`}
-                            </div> */}
-                        {/* </div> */}
-                        {/* {stars}{halfStars} */}
+                   
                         {this.props.aggregates[1]}
                         <i className="far fa-comments"><span> {this.props.aggregates[0]} Reviews</span></i>
                         <i className="fas fa-money-bill-wave"></i><span>{this.props.restaurant.price_range}</span><i className="fas fa-cookie-bite"></i><span>{this.props.restaurant.cuisine}</span><span>{favoriteButton}</span> 

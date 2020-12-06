@@ -6,8 +6,6 @@ import Aggregates from "./aggregates";
 const mSTP = (state) => {
     return {
         aggregates: state.entities.aggregates,
-        // restaurantId: parseInt(Object.keys(state.entities.restaurants)[0])
-        // passed through by line 106 in rest show
     };
 };
 

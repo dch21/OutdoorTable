@@ -10,8 +10,7 @@ import { Link } from 'react-router-dom';
 import SearchMapItem from "./search_map_item";
 import SearchFormContainer from "../search_form/search_form_container";
 
-// import ReactDOM from 'react-dom';
-// import MarkerManager from "../../util/marker_manager";
+
 
 let map;
 
@@ -23,35 +22,14 @@ class SearchMap extends React.Component {
 
     componentDidMount() {
         const mapCenter = { lat: 40.708081, lng: -73.933709 };
-        // const map = this.refs.map;
-        // this.map = new google.maps.Map(
-        //     map, { zoom: 10, center: mapCenter });
+    
         map = new google.maps.Map(
             document.getElementById('search-map'), { zoom: 10, center: mapCenter });
 
-        // const mapOptions = { lat: 40.708081, lng: -73.933709, zoom: 10 };
-        
-        // const map = new google.maps.Map(
-        //     document.getElementById('map'), { zoom: 10, center: mapCenter });
-        
-        // this.map = new google.maps.Map(map, mapOptions);
-        // this.MarkerManager = new MarkerManager(this.map)
         this.props.results.forEach( (restaurant) => this.createMarker(restaurant, map));
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.filters !== prevProps.filters) {
-    //         this.state.markers.forEach( (marker) => {
-    //             marker.setMap(null);
-    //         });
-    //         this.setState({markers: []});
-    //         // const map = document.getElementById('search-map')
-    //         const mapCenter = { lat: 40.708081, lng: -73.933709 };
-    //         const map = new google.maps.Map(document.getElementById('search-map'), { zoom: 10, center: mapCenter });
 
-    //         this.props.results.forEach( (restaurant) => this.createMarker(restaurant, map));
-    //     }
-    // }   
 
     createMarker(restaurant, map) {
         const position = new google.maps.LatLng(restaurant.lat, restaurant.lng);
@@ -282,8 +260,6 @@ class SearchMap extends React.Component {
                                     <SearchMapItem result={result}
                                         key={result.id}
                                         getHours={this.props.getHours}
-                                        // hours={this.props.hours}
-                                        // review={this.props.reviews[0]}
                                         openModal={this.props.openModal}
                                         currentUser={this.props.currentUser}
                                         pendingReservation={this.props.pendingReservation}
@@ -306,7 +282,7 @@ class SearchMap extends React.Component {
 
 }
 
-// export default SearchMap;
+
 
 const mSTP = (state) => {
     return {

@@ -81,7 +81,6 @@ class ReservationForm extends React.Component {
 
                     {!this.state.toggleButton ? <button className="form-button" type="submit">Find a table</button> : null}
                     <span className="fas fa-chart-line"></span> {this.props.totalbookings === 1 ? (`Booked ${this.props.totalbookings} time today`) : (`Booked ${this.props.totalbookings} times today`)}
-                    {/* <span className="fas fa-chart-line"></span>Booked {this.props.totalbookings} times today */}
                 </form>
             </div>
         )

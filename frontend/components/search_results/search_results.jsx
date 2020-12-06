@@ -2,10 +2,8 @@ import React from "react";
 import SearchResultsItem from "./search_results_item";
 import { Link } from 'react-router-dom';
 
-// import SearchResultsFormContainer from "./search_results_form_container";
 import SearchFormContainer from "../search_form/search_form_container";
 
-// import SearchMap from "../map/search_map";
 
 class SearchResults extends React.Component {
     constructor(props) {
@@ -70,14 +68,7 @@ class SearchResults extends React.Component {
         return (
             <div>
                 <div>
-                    {/* <div className="search-results-form">
-                        <SearchResultsFormContainer />
-                    </div> */}
-
-                    {/* <div className="form-header">
-                        <img className="logo-banner" src={window.border} alt="food" />
-
-                    </div> */}
+               
 
                     <div className="splash-banner"> 
                         <div className="splash-banner-container">
@@ -218,8 +209,6 @@ class SearchResults extends React.Component {
                                     <SearchResultsItem result={result}
                                         key={result.id}
                                         getHours={this.props.getHours}
-                                        // hours={this.props.hours}
-                                        // review={this.props.reviews[0]}
                                         openModal={this.props.openModal}
                                         currentUser={this.props.currentUser}
                                         pendingReservation={this.props.pendingReservation}
@@ -228,9 +217,7 @@ class SearchResults extends React.Component {
                             }
                         </div>
 
-                        {/* <div>
-                            <SearchMap final={final}/>
-                        </div> */}
+                       
                     </div>          
 
                 </div>

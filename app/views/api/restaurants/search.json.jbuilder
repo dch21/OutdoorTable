@@ -1,6 +1,5 @@
 
 
-# json.searchResults do
 @restaurants.each do |restaurant|
     json.set! restaurant.id do 
         json.extract! restaurant, :id, :name, :description, :address, :capacity, :lat, :lng, :neighborhood, :phone_num, :cuisine, :price_range, :payment, :dining_style, :dress_code, :public_transit, :parking_details, :website, :boro
@@ -11,9 +10,8 @@
         json.searchTerm @searchTerms
         json.rating restaurant.reviews.average(:overall_rating).round(1)
         json.number_reviews restaurant.reviews.count
-        # today = Date.today.to_s
         json.total_bookings restaurant.reservations.where('date = ?',"#{Date.today.to_s}").count
     end
 end
-# end
+
 

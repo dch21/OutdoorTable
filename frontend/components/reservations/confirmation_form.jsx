@@ -146,12 +146,7 @@ class ComfirmationForm extends React.Component {
     }
 
 }
-// date: "2020-10-23"
-// name: "Hometown Bar-B-Que"
-// party_size: "2"
-// restaurant_id: 1
-// time: "7.5PM"
-// export default ComfirmationForm;
+
 
 const mSTP = (state) => {
     return {

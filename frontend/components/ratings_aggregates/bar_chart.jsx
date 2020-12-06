@@ -9,7 +9,6 @@ class BarChart extends React.Component {
     render() {
         
             
-        // TO_DO: use iternation here
         return (
             <div>
                 <div className="bar-chart">

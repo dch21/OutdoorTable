@@ -20,7 +20,6 @@ class RestaurantShowMap extends React.Component {
         return (
                 <div id="map" ref="map"> 
                 Map
-                {/* <a href="">{this.restaurant.address}</a> */}
                 </div>
         )
     }

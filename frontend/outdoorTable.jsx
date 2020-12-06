@@ -12,10 +12,6 @@ import { fetchReservations,createReservation } from "./util/reservations";
 import { fetchFavorites } from "./util/favorites_api";
 import { createFavorite, deleteFavorite } from "./util/favorites_api";
 
-// import { fetchNumberReservations } from "./util/reservations";
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -43,23 +39,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     // Testing
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
-
-    window.fetchReviews = fetchReviews;
-    window.fetchAggregates = fetchAggregates;
-    window.searchRestaurants = searchRestaurants;
+    // window.getState = store.getState;
+    // window.dispatch = store.dispatch;
+    // window.fetchReviews = fetchReviews;
+    // window.fetchAggregates = fetchAggregates;
+    // window.searchRestaurants = searchRestaurants;
     // window.fetchRestaurant = fetchRestaurant;
     // window.fetchNumberReservations = fetchNumberReservations;
-    window.postSession = postSession;
+    // window.postSession = postSession;
     // window.postUser = postUser;
-    window.searchHours = searchHours;
-    window.fetchReservations = fetchReservations;
-    window.checkReview = checkReview;
-    window.fetchFavorites = fetchFavorites;
-    window.createFavorite = createFavorite;
-    window.createReservation = createReservation;
-    window.createReview = createReview;
+    // window.searchHours = searchHours;
+    // window.fetchReservations = fetchReservations;
+    // window.checkReview = checkReview;
+    // window.fetchFavorites = fetchFavorites;
+    // window.createFavorite = createFavorite;
+    // window.createReservation = createReservation;
+    // window.createReview = createReview;
     // window.deleteSession = deleteSession;
 
 

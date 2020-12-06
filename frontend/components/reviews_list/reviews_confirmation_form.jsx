@@ -39,9 +39,6 @@ class ReviewsConfirmationForm extends React.Component {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
 
-    // updateStar(field) {
-    //     return e => this.setState({ [field]: e.currentTarget.value });
-    // }
 
     renderErrors() {
         return (
@@ -56,15 +53,6 @@ class ReviewsConfirmationForm extends React.Component {
 
     render() {
 
-        // const one = (<div>
-        //     <i class="fas fa-star" style={{color: "red"}} value={1}  onClick={this.updateStar("overall_rating")}></i>
-        //     <i class="far fa-star" ></i>
-        //     <i class="far fa-star"></i>
-        //     <i class="far fa-star"></i>
-        //     <i class="far fa-star"></i>
-        // </div>)
-
-        // const categories = ["overall_rating", "food_rating", "service_rating", "ambience_rating"];
         const radio = (category) => {
             return (
                 <div>

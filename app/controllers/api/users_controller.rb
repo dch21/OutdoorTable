@@ -16,7 +16,6 @@
 
 class Api::UsersController < ApplicationController
 
-    #need update and destroy
 
     def create
         @user = User.new(user_params)

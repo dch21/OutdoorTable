@@ -19,15 +19,10 @@ class ReviewsList extends React.Component {
         }
     }
 
-    // componentWillUnmount() {
-    //     this.props.clearReviews();
-    // } 
+
 
     render() {
 
-        // if (!this.props.restaurantId) {
-        //     return null;
-        // }
 
         const { reviews } = this.props;
         
@@ -38,7 +33,6 @@ class ReviewsList extends React.Component {
                         reviews.map(review => (
                             <ReviewListItem review={review}
                             reviewers={this.props.reviewers}
-                                // key={reviews.id}
                             />
                         ))
                     }

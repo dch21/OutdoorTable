@@ -13,10 +13,7 @@ const mSTP = (state) => {
             party_size: 2,
             id: parseInt(Object.keys(state.entities.restaurants)[0]),
             name: Object.values(state.entities.restaurants)[0].name,
-            // currentUser: state.session.id,
             toggleButton: false
-            // user_id: state.session ? parseInt(Object.keys(state.entities.session)[0]) : ""
-            //if you are logged out if will be null
         },
         currentUser: state.session.id,
     };

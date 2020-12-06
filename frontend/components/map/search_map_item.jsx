@@ -19,14 +19,6 @@ class SearchMapItem extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     
-    // componentDidMount () {
-    
-    //   const id = this.props.result.id;
-    //   const party_size = this.props.result.party_size;
-    //   const date = this.props.result.date;
-    //   const time = this.props.result.time;
-    //   this.props.getHours([id, party_size, date, time]);
-    // }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -54,21 +46,11 @@ class SearchMapItem extends React.Component {
         const stars = [0,1,2,3,4].map(star => {
             return <span className="fa fa-star checked"></span>
         });
-        // const filledStars = ratingAsFloat ?  Array(Math.floor(ratingAsFloat)).fill("star") : [];
-        // const stars = filledStars.map(star => {
-        //     return <span className="fa fa-star checked"></span>
-        // });
-
-        // const halfStars = ["half"].map(star => {
-        //     return <span className="fa fa-star-half-full"></span>
-        // });
+     
 
         const logoPic = this.props.result.name.substring(0,2) + "4";
         
         const dollar_sign = this.props.result.price_range === "Under $10" ? "$" : (this.props.result.price_range === "$10-$25" ? "$$" : "$$$");
-
-        // const filteredReviews = Object.values(this.props.reviews).filter(object => object.restaurant_id === this.props.result.id);
-        // // const firstReview = filteredReviews[0].review_body;
         
         const res_time = this.props.result.reservation_time;
 
@@ -130,9 +112,7 @@ class SearchMapItem extends React.Component {
                             <p>
                                 <span>{dollar_sign}</span> &middot; <span>{this.props.result.cuisine}</span> &middot; <span>{this.props.result.neighborhood}</span> 
                             </p>
-                            {/* <div className="map-stars">
-                                {stars}{halfStars} &middot; {`${this.props.result.number_reviews} Reviews`}
-                            </div> */}
+                          
                             <div className="splash-reviews">
                                 <div className="splash-stars" style={{width: `${90 *width}px`}}>
                                     {stars}
@@ -153,27 +133,7 @@ class SearchMapItem extends React.Component {
 
 }
 
-// {/* <h3>{Object.values(this.props.reviews)[0].review_body}</h3> */ }
-// {/* <h3>{firstReview}</h3> */ }
+
 export default withRouter(SearchMapItem);
 
 
-// import { getReviews } from "../../actions/reviews_actions";
-
-// const mSTP = (state) => {
-    
-//     return {
-//         hours: state.entities.hours
-
-//         // reviews: Object.values(state.entities.reviews),
-//         // results: state.entities.restaurants
-//     };
-// };
-
-// // const mDTP = (dispatch) => {
-// //     return {
-// //         getReviews: (restaurantId) => dispatch(getReviews(restaurantId)),
-// //     };
-// // };
-
-// export default connect(mSTP, null)(SearchResultsItem);

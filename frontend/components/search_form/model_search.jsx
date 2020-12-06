@@ -103,4 +103,3 @@ class ModelSearch extends React.Component {
 
 export default withRouter(ModelSearch);
 
-// .then(this.props.closeModal)

@@ -9,11 +9,6 @@ const reviewsReducer = (state = {}, action) => {
             return Object.assign({}, state, action.reviews);
         case CLEAR_REVIEWS:
             return {};
-
-        // case PENDING_REVIEW:
-            
-        //     return Object.assign({}, action.info);
-
     
         default:
             return state;

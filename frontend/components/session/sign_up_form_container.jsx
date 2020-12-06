@@ -14,9 +14,6 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
     return {
         action: (formUser) => dispatch(signUp(formUser)),
-        // otherForm: (
-        //     <button onClick={() => dispatch(openModal("signUp"))}>Sign Up</button>
-        // ),
         closeModal: () => dispatch(closeModal()),
         clearErrors: () => dispatch(clearErrors())
     };

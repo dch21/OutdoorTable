@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { connect } from "react-redux";
-// import { withRouter } from 'react-router';
+
 
 
 class SplashCarouselItem extends React.Component {
@@ -17,23 +16,12 @@ class SplashCarouselItem extends React.Component {
         
         const ratingAsFloat = parseFloat(this.props.result.rating);
 
-        // const filledStars = ratingAsFloat ?  Array(Math.floor(ratingAsFloat)).fill("star") : [];
         const width = ratingAsFloat / 5.0;
 
         const stars = [0,1,2,3,4].map(star => {
             return <span className="fa fa-star checked"></span>
         });
 
-        // const halfStars = [0.4].map(star => {
-        //     return <span className="fa fa-star checked"></span>
-        // });
-        // const stars = filledStars.map(star => {
-        //     return <span className="fa fa-star checked"></span>
-        // });
-
-        // const halfStars = ["half"].map(star => {
-        //     return <span className="fa fa-star-half-full"></span>
-        // });
 
         const logoPic = this.props.result.name.substring(0,2) + "4";
         
@@ -60,9 +48,7 @@ class SplashCarouselItem extends React.Component {
                             <div className="splash-number-bookings">
                                 <span className="fas fa-chart-line"></span> {this.props.result.total_bookings === 1 ? (`Booked ${this.props.result.total_bookings} time today`) : (`Booked ${this.props.result.total_bookings} times today`)}
                             </div>
-                            {/* <div className="map-stars">
-                                {stars}{halfStars} &middot; {`${this.props.result.number_reviews} Reviews`}
-                            </div> */}
+                           
                         </div>
                     </div>
 

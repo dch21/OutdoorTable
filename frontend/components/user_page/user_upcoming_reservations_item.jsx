@@ -49,18 +49,3 @@ class UpcomingReservationItem extends React.Component {
 
 export default UpcomingReservationItem;
 
-// const mSTP = (state) => {
-//     return {
-//         pastThirty: parseInt(state.entities.reviews[0])
-        // reviews: Object.values(state.entities.reviews),
-        // results: state.entities.restaurants
-//     };
-// };
-
-// const mDTP = (dispatch) => {
-//     return {
-//         getReviews: (restaurantId) => dispatch(getReviews(restaurantId)),
-//     };
-// };
-
-// export default connect(mSTP, null)(UpcomingReservationItem);

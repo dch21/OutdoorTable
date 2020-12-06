@@ -6,10 +6,7 @@ const filterReducer = (state = defaultState, action) => {
     
     Object.freeze(state);
     switch (action.type) {
-        // case ADD_FILTER:
-        //     let newState = state.slice();
-        //     newState.push(action.filter);
-        //     return newState;
+       
         case ADD_FILTER:
             let newState = Object.assign({}, state);
             if (Object.keys(action.filter)[0] === "price") {
@@ -20,11 +17,7 @@ const filterReducer = (state = defaultState, action) => {
                 newState.cuisine.push(action.filter.cuisine);
             }
             return newState;
-        // case DELETE_FILTER:
-        //     let newerState = state.slice();
-        //     const ind = newerState.indexOf(action.filter);
-        //     newerState.splice(ind, 1);
-        //     return newerState;
+     
         case DELETE_FILTER:
             let newerState = Object.assign({}, state);
 

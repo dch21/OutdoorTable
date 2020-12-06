@@ -5,11 +5,7 @@ import SplashCarousel from "./splash_carousel";
 
 const mSTP = (state) => {
     return {
-        // reviews: Object.values(state.entities.reviews),
         results: Object.values(state.entities.searchResults),
-        // currentUser: state.session.id,
-        // filters: state.ui.filters
-        // hours: state.hours
     };
 };
 

@@ -23,7 +23,6 @@ class SplashCarousel extends React.Component {
 
         return (
             <div>
-                {/* <div className="map-search-results-container"> */}
                     <div className="splash-carousel-trending-header">
                         <br/>
                         <h2>Trending Now in NYC</h2>
@@ -38,7 +37,6 @@ class SplashCarousel extends React.Component {
                             ))
                         }
                     </div>
-                {/* </div>           */}
             </div>          
         );
     } 

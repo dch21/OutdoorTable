@@ -13,7 +13,6 @@ const mSTP = (state) => {
             party_size: 2,
             searchTerm: "",
         },
-        // type: "homepage"
     };
 };
 

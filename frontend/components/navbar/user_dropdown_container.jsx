@@ -8,10 +8,5 @@ const mSTP = (state) => {
     };
 };
  
-// const mDTP = (dispatch) => {
-//     return {
-//         // action: (reservation) => dispatch(createReservation(reservation)),
-//     };
-// };
 
 export default connect(mSTP, null)(UserDropdown);

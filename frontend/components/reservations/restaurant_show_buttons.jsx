@@ -17,15 +17,6 @@ class RestaurantShowButtons extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     
-    // componentDidMount () {
-    
-    //   const id = this.props.result.id;
-    //   const party_size = this.props.result.party_size;
-    //   const date = this.props.result.date;
-    //   const time = this.props.result.time;
-    //   this.props.getHours([id, party_size, date, time]);
-    // }
-
     handleSubmit(e) {
         e.preventDefault();
         if (!this.props.currentUser) {
@@ -104,27 +95,7 @@ class RestaurantShowButtons extends React.Component {
 
 }
 
-// {/* <h3>{Object.values(this.props.reviews)[0].review_body}</h3> */ }
-// {/* <h3>{firstReview}</h3> */ }
+
 export default withRouter(RestaurantShowButtons);
 
 
-// import { getReviews } from "../../actions/reviews_actions";
-
-// const mSTP = (state) => {
-    
-//     return {
-//         hours: state.entities.hours
-
-//         // reviews: Object.values(state.entities.reviews),
-//         // results: state.entities.restaurants
-//     };
-// };
-
-// // const mDTP = (dispatch) => {
-// //     return {
-// //         getReviews: (restaurantId) => dispatch(getReviews(restaurantId)),
-// //     };
-// // };
-
-// export default connect(mSTP, null)(SearchResultsItem);

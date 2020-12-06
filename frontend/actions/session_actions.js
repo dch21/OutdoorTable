@@ -53,32 +53,3 @@ export const logout = () => dispatch => (
     deleteSession()
         .then(() => dispatch(logoutCurrentUser()))
 );
-//wrong () delete
-// export const signUp = (formUser) => dispatch => (
-//     postUser(formUser)
-//         .then(user => dispatch(receiveCurrentUser(user))),
-//             errors => (dispatch(receiveSessionErrors(errors)))
-// );
-
-
-// Wrong partheesis-delete?
-// export const signIn = (formUser) => dispatch => (
-//     postSession(formUser)
-//         .then(user => dispatch(receiveCurrentUser(user))),
-//             errors => (dispatch(receiveSessionErrors(errors.responseJSON)))
-// );
-
-
-// export const signIn = (formUser) => {
-//     return dispatch => {
-//         return postSession(formUser).then( (user) => {
-//             return dispatch(receiveCurrentUser(user));
-//         },
-    
-//         (errorObj) => {
-//             console.log(errorObj.responseJSON);
-//         });
-//     };   
-// };
-
-

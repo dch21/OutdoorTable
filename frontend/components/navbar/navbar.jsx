@@ -25,7 +25,6 @@ class Navbar extends React.Component {
             return (
                 <div>
                     <UserDropdown firstName={this.props.firstName} logout={logout}/>
-                    {/* <button onClick={logout}>Hi, {this.props.firstName}</button> */}
                 </div>
             )
         }
@@ -39,11 +38,9 @@ class Navbar extends React.Component {
                             <Link className="home-page" to="/"><img className="logo" src={window.logo} alt="logo" /></Link>
 
                         </div>
-                        {/* <img className="logo" src={window.logo} alt="logo" /> */}
                         <div className="logo-name">
                             <Link className="home-page" to="/"><span >OutdoorTable</span></Link>
                         </div>
-                        {/* <i className="fas fa-map-marker-alt"></i>   */}
                     </div>
                     <div className="right-nav">
                         {currentUser > 0 ? signedinNav() : signButtons() }
@@ -59,37 +56,3 @@ class Navbar extends React.Component {
 
 export default Navbar;
 
-// PreModal
-// import { Link } from "react-router-dom";
-// render() {
-
-//     const { currentUser, logout } = this.props;
-//     const signButtons = () => {
-//         return (
-//             <div>
-//                 <Link to="/signup">Sign Up</Link>
-//                 <Link to="/signin">Sign In</Link>
-//             </div>
-//         )
-//     };
-
-//     const signedinNav = () => {
-//         return (
-//             <div>
-//                 <button onClick={logout}>Log Out</button>
-//             </div>
-//         )
-//     }
-
-//     return (
-
-//         <div>
-//             <nav>
-//                 <div>Logo
-//                         <i class="fas fa-map-marker-alt"></i>
-//                 </div>
-//                 {currentUser > 0 ? signedinNav() : signButtons()}
-//                 <i class="fas fa-search"></i>
-//             </nav>
-//         </div>
-//     )

@@ -11,9 +11,6 @@ class FavoritesItem extends React.Component {
             restaurantId: this.props.restaurant.restaurantId
         };
     }
-    
-    // componentDidMount(){
-    // }
 
     render() {
         const { boro, name, cuisine, neighborhood, id} = this.props.restaurant;
@@ -41,19 +38,3 @@ class FavoritesItem extends React.Component {
 
 export default FavoritesItem;
 
-// const mSTP = (state) => {
-    
-//     return {
-//         pastThirty: parseInt(state.entities.reviews[0])
-//         // reviews: Object.values(state.entities.reviews),
-//         // results: state.entities.restaurants
-//     };
-// };
-
-// // const mDTP = (dispatch) => {
-// //     return {
-// //         getReviews: (restaurantId) => dispatch(getReviews(restaurantId)),
-// //     };
-// // };
-
-// export default connect(mSTP, null)(PastReservationItem);
