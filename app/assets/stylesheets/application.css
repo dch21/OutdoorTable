@@ -158,10 +158,7 @@ nav {
 }
 
 .left-nav {
-     display: flex;
-    /* flex-direction: row; */
-    /* font-family: 'Josefin Sans', sans-serif; */
-    /* padding: 9px 9px 11px 9px; */
+    display: flex;
     font-size: 22px;
     align-items: flex-end;
     padding-bottom: 5px;
@@ -175,7 +172,6 @@ nav {
 
 .home-page {
     color: black;
-    /* padding: 9px 9px 11px 9px; */
     text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -215,7 +211,6 @@ nav {
     border: 1px #c1b1b1 solid;
     color: white;
     border-radius: 3px;
-    /* height: 35px; */
     font-family: 'Josefin Sans', sans-serif;    
     padding: 9px 9px 11px 9px;
     margin: 5px;
@@ -227,7 +222,6 @@ nav {
     border: 1px solid grey;
     color: grey;
     border-radius: 3px;
-    /* height: 35px; */
     font-family: 'Josefin Sans', sans-serif;    
     padding: 9px 9px 11px 9px;
     margin: 5px;
@@ -263,25 +257,10 @@ nav {
     transform: scale(1.05);
 }
 
-/* mag glass */
-/* .fa-map-marker-alt:before {
-    display: inline-block;
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    vertical-align: bottom;
-    padding: 9px 9px 11px 9px;
-} */
 
 .fa-search:before {
-    /* display: inline-block; */
-       /* display: inline-block; */
     font-size: 20px;
     width: 50px;
-    /* height: 50px; */
-    /* text-align: center; */
-    /* vertical-align: bottom; */
     padding: 9px 9px 11px 9px;
 }
 
@@ -302,7 +281,6 @@ nav {
     margin-left: -230px;
     background: white;
     width: 450px;
-    /* height: 500px; */
     padding-bottom: 10px;
     border-radius: 5px;
 }
@@ -318,11 +296,10 @@ nav {
 
 .restaurant-detail-sidebar {
     width: 250px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  list-style-type: none;
-    /* font-size: larger; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style-type: none;
 }
 
 .restaurant-detail-sidebar a {
@@ -369,25 +346,16 @@ nav {
 }
 
 .res-form {
-     position: -webkit-sticky;
-    /* position: sticky; */
-    /* top: 0; */
+    position: -webkit-sticky;
     z-index: 100;
-    /* height: 315px; */
-    /* width: 350px; */
     border-style: groove;
-    /* border-color: rgb(205, 199, 199); */
     border-width: 1px;
-    /* padding-bottom: 14px; */
-    /* font-size: small; */
-    /* font-size: medium; */
     background-color: white;
 }
 
 .res-form * {
     font-family: 'Josefin Sans', sans-serif;
     margin: 8px;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
 }
@@ -452,8 +420,6 @@ nav {
 
 .rating-columns{
     display: inline-flex;
-    /* flex-direction: row;
-    justify-content: space-around; */
     font-size: 14px;
 }
 
@@ -533,7 +499,6 @@ nav {
 
 .rest-time {
     display: flex;
-    /* height: 100px; */
 }
 
 .pic-container {
@@ -583,7 +548,6 @@ nav {
 .splash-stars {
     margin: 8px;
     display: inline-flex;
-    /* max-width: 10px; */
     overflow: hidden;
 }
 
@@ -689,41 +653,15 @@ nav {
     cursor: pointer;
 }
 
-/* #location {
-    margin-top: 25px;
-} */
-    /* .search-results-div{ */
-        /* display: flex; */
-        /* width: 100%; */
-    
-/* 
-    .search-results-form, form {
-        display: flex;
-        width: 60%;
-    } */
-
-    /* .search-results-form.party-size {
-        width: 120px;
-    } */
-
-    /* #item {
-          display: flex;
-    flex-direction: column;
-    margin: 60px;   
-    } */
     
 .splash-six {
-    /* position: absolute; */
-    /* display: inline-table; */
     width: 100%;
 }
 
 .splash-row {
     display: flex;
     flex-wrap: wrap;
-    /* width: 80%; */
     flex-direction: row;
-    /* margin: auto; */
     justify-content: center;
 }
 
@@ -773,7 +711,6 @@ nav {
 }
     
 .splash-banner {
-    /* display: flex; */
     margin: auto;
 }
 
@@ -919,9 +856,6 @@ nav {
     cursor: pointer;
 }
 
-    /* .restaurant-nav > p:first-child {
-        color: rgb(231, 49, 49);
-    } */
 
 .restaurant-info{
     margin-left: 170px;
@@ -1083,7 +1017,6 @@ nav {
 }
 
 .user-favorite-removal-button {
-    /* width: 250px; */
     height: 40px;
     background-color: #db3434;
     border: 1px solid black;
