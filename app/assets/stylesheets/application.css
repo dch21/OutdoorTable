@@ -494,7 +494,7 @@ nav {
 
 .results-item {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .rest-time {
@@ -567,7 +567,18 @@ nav {
 
 .search-time-buttons {
     display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
 }
+
+@media only screen and (min-width: 1222 px) {
+  .search-time-buttons {
+    display: flex;
+  }
+
+  
+}
+
 
 .rest-time-buttons {
     display: flex;
@@ -583,6 +594,7 @@ nav {
     border-radius: 3px;
     padding: 5px;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .restaurant-show-times {
@@ -740,6 +752,11 @@ nav {
     width: 100%;
     opacity: .90;
     margin-top: 8px;
+}
+
+.splash-item {
+    display: flex;
+    margin-bottom: 20px;
 }
 
 .splash-carousel-trending-header {

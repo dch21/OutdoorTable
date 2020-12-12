@@ -7,7 +7,6 @@ import { postUser, postSession, deleteSession } from "./util/session_api";
 import { fetchRestaurant, searchRestaurants} from "./util/restaurants_api";
 import { fetchReviews, checkReview, createReview} from "./util/reviews_api";
 import { fetchAggregates } from "./util/aggregates_api";
-import { searchHours } from "./util/hours_api";
 import { fetchReservations,createReservation } from "./util/reservations";
 import { fetchFavorites } from "./util/favorites_api";
 import { createFavorite, deleteFavorite } from "./util/favorites_api";

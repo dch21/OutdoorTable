@@ -28,7 +28,7 @@ class SplashCarouselItem extends React.Component {
         const dollar_sign = this.props.result.price_range === "Under $10" ? "$" : (this.props.result.price_range === "$10-$25" ? "$$" : "$$$");
 
         return (
-                <div className="results-item">
+                <div className="splash-item">
                 
                     <div className="splash-carousel-container">
                         <Link to={`/restaurants/${this.props.result.id}`}><img className="splash-carousel-food-pic" src={window[`${logoPic}`]} alt="food" /></Link>
