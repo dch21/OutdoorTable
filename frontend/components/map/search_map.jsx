@@ -187,7 +187,7 @@ class SearchMap extends React.Component {
                             <br/>
 
                             <div className="filter-room">
-                                <i className="fas fa-utensils"><span> Cußisine</span></i>
+                                <i className="fas fa-utensils"><span> Cuisine</span></i>
                             </div>
                             <div>
                                 <hr/>

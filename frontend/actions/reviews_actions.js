@@ -78,4 +78,4 @@ const pendReview = info => {
     };
 };
 
-export const pendingReview = (info) => dispatch(pendReview(info));
+export const pendingReview = (info) => dispatch => dispatch(pendReview(info));

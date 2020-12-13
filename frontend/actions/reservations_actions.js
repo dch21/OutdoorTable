@@ -67,10 +67,11 @@ export const PENDING_RESERVATION = "PENDING_RESERVATION";
 
 
 const pendReservation = info => {
+    
     return {
         type: PENDING_RESERVATION,
         info
     };
 };
 
-export const pendingReservation = (info) => dispatch(pendReservation(info));
+export const pendingReservation = (info) => dispatch => dispatch(pendReservation(info));
