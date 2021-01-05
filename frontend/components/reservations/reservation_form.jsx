@@ -51,7 +51,7 @@ class ReservationForm extends React.Component {
                     <label>Date
                     <input className="date" type="date" value={this.state.date} 
                         min={new Date().toISOString().slice(0, 10)}
-                        max="2020-12-31"
+                        max="2021-12-31"
                         onChange={this.updateDate}
                     />
                     </label>
