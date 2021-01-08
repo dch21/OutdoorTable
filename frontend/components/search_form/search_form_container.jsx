@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { getRestaurant, searchRestaurant } from "../../actions/restaurant_actions";
 import SearchForm from "./search_form";
+//
+import { pendingReservation } from "../../actions/reservations_actions";
 
 const mSTP = (state) => {
     return {
@@ -18,6 +20,8 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
     return {
         searchRestaurant: (searchTerms) => dispatch(searchRestaurant(searchTerms)),
+        //
+        pendingReservation: (info) => dispatch(pendingReservation(info))
     };
 };
 

@@ -14,7 +14,18 @@ class SearchForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        
+        //
+        this.props.pendingReservation(
+            {
+            restaurant_id: "",
+            time: this.state.time,
+            date: this.state.date,
+            party_size: this.state.party_size,
+            name: "",
+            }
+        );
+        //
+
         this.props.searchRestaurant(this.state);
         
         this.props.history.push('/search');

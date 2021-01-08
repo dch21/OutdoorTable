@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { getRestaurant, searchRestaurant } from "../../actions/restaurant_actions";
 import SearchForm from "../search_form/search_form";
 
+
 const mSTP = (state) => {
     return {
         searchBar: {
@@ -18,6 +19,7 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
     return {
         searchRestaurant: (searchTerms) => dispatch(searchRestaurant(searchTerms))
+        
     };
 };
 

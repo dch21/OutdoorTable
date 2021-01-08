@@ -23,7 +23,7 @@ class Api::RestaurantsController < ApplicationController
         @time = params[:searchTerms]["time"]
         @date = params[:searchTerms]["date"]
         @party_size = params[:searchTerms]["party_size"]
-
+        
         @restaurants = Restaurant.includes(:reviews).all
         if params["searchTerms"] == ""
             render "api/restaurants/search"

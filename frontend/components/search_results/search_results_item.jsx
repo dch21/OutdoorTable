@@ -11,8 +11,9 @@ class SearchResultsItem extends React.Component {
         this.state = {
             restaurant_id: this.props.result.id,
             time: "",
-            date: this.props.result.reservation_date,
-            party_size: this.props.result.party_size,
+            // date: this.props.result.reservation_date,
+            date: this.props.reservationParams.date,
+            party_size: this.props.reservationParams.party_size,
             name: this.props.result.name,
         };
         this.changeTime = this.changeTime.bind(this);

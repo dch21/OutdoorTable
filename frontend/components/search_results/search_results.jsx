@@ -62,9 +62,8 @@ class SearchResults extends React.Component {
             filtered.push(results[i])
         }
         
-        const final = (filters.price.length > 0 || filters.boro.length > 0 || filters.cuisine.length > 0) ? filtered : results
-
-      
+        let final1 = (filters.price.length > 0 || filters.boro.length > 0 || filters.cuisine.length > 0) ? filtered : results
+        
         return (
             <div>
                 <div>
@@ -203,10 +202,13 @@ class SearchResults extends React.Component {
                         
                         <div className="search-results">
                             <h2>You searched for {results[0].searchTerm === "" ? `${'Everything'}` : `"${results[0].searchTerm}"`} in New York City</h2>
-                            {   final.length === 0 ? <h4>No results, try expanding your filters.</h4>
+                            {   final1.length === 0 ? <h4>No results, try expanding your filters.</h4>
                              :
-                                final.map(result => (
+                                final1.map(result => (
                                     <SearchResultsItem result={result}
+                                        //
+                                        reservationParams={this.props.reservationParams}
+                                        //
                                         key={result.id}
                                         getHours={this.props.getHours}
                                         openModal={this.props.openModal}

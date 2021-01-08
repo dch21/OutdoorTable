@@ -12,7 +12,9 @@ const mSTP = (state) => {
     return {
         results: Object.values(state.entities.searchResults),
         currentUser: state.session.id,
-        filters: state.ui.filters
+        filters: state.ui.filters,
+        //
+        reservationParams: state.entities.reservations
     };
 };
 
