@@ -76,7 +76,7 @@ class RestaurantShow extends React.Component {
                 
         // const buttonToggle = this.props.favorite ? (
         const buttonToggle = filteredFav.length === 1 ? (
-            <button className= "show-favorite-button" onClick={()=>this.props.deleteFavorite(this.props.favorite)}><i class="far fa-bookmark"><span>  Restaurant Saved</span></i></button>)
+            <button className= "show-favorite-button" onClick={()=>this.props.deleteFavorite(filteredFav[0].favoriteId)}><i class="far fa-bookmark"><span>  Restaurant Saved</span></i></button>)
             :
             (<button className= "show-favorite-button" onClick={()=>this.props.createFavorite(this.state)}><i class="far fa-bookmark"><span>   Save Restaurant</span></i></button>)
 

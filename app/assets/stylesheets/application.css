@@ -249,6 +249,8 @@ nav {
     height: 100px;
     color: gray; 
     padding-top: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
     z-index: 120;
     cursor: pointer;
 }
