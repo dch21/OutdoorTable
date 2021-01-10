@@ -16,13 +16,14 @@ class ModelSearch extends React.Component {
         e.preventDefault();
         //
         this.props.pendingReservation(
-            {
-            restaurant_id: "",
-            date: new Date().toISOString().slice(0, 10),
-            time: "7:00PM",
-            party_size: 2,
-            name: "",
-            }
+            // {
+            // restaurant_id: "",
+            // date: new Date().toISOString().slice(0, 10),
+            // time: "7:00PM",
+            // party_size: 2,
+            // name: "",
+            // }
+            this.state
         );
         //
         

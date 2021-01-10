@@ -24,7 +24,15 @@ class RestaurantShowButtons extends React.Component {
             this.props.openModal("signIn");
             return;
         }
-        this.props.pendingReservation(this.state);
+        // debugger
+        // this.props.pendingReservation(this.state);
+        this.props.pendingReservation({
+            restaurant_id: this.props.result.id,
+            time: e.target.innerText,
+            date: this.props.result.date,
+            party_size: this.props.result.party_size,
+            name: this.props.result.name,
+        });
         this.props.history.push('/confirmation/');
     }
     

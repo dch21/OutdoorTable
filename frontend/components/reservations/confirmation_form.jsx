@@ -179,13 +179,12 @@ class ComfirmationForm extends React.Component {
                 <div className="confirm-disclaimers">
                     <div>
                         <h4>What to Know Before You Go</h4>
-                        <p>We have a 15 minute grace period. Please call us if you are running 15 minutes later than your reservation time.</p>
-                        <p>Your table will be reserved for two hours.</p>
+                        <p>We have a 15 minute grace period. Please call us if you are running 15 minutes later than your reservation time. Your table will be reserved for two hours.</p>
                     </div>
 
                     <div>
                         <h4>A Note from this Restaurant</h4>
-                        <p>Please wear a mask upon arrival. All guest will be screened for temperature before they are seated.</p>
+                        <p>Please wear a mask upon arrival. All guests will be screened for temperature before they are seated.</p>
                     </div>
                 </div>
 

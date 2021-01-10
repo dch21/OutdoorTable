@@ -606,7 +606,7 @@ nav {
     border: 1px solid black;
     color: white;
     border-radius: 3px;
-    padding: 3px;
+    padding: 4.5px;
     cursor: pointer;
 }
 
@@ -954,12 +954,13 @@ nav {
 }
 
 .confirm-form form button {
-    width: 750px
+    width: 750px;
 }
 
 .confirm-disclaimers {
     width: 250px;
-    height: 340px
+    height: 340px;
+    margin-bottom: 150px;
 }
 
 .user-name {
