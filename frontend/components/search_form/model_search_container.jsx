@@ -3,6 +3,9 @@ import { connect } from "react-redux";
 import { getRestaurant, searchRestaurant } from "../../actions/restaurant_actions";
 import ModelSearch from "./model_search";
 import { closeModal } from "../../actions/modal_actions";
+//
+import { pendingReservation } from "../../actions/reservations_actions";
+
 
 
 const mSTP = (state) => {
@@ -20,6 +23,8 @@ const mDTP = (dispatch) => {
     return {
         searchRestaurant: (searchTerms) => dispatch(searchRestaurant(searchTerms)),
         closeModal: () => dispatch(closeModal()),
+         //
+        pendingReservation: (info) => dispatch(pendingReservation(info))
     };
 };
 
