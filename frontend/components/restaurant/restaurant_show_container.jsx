@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getRestaurant } from "../../actions/restaurant_actions";
+import { getRestaurant, resetRestaurants } from "../../actions/restaurant_actions";
 import { getAggregates } from "../../actions/aggregates_actions";
 import { createFavorite, deleteFavorite } from "../../actions/favorites_actions";
 import RestaurantShow from "./restaurant_show";
@@ -31,6 +31,7 @@ const mDTP = (dispatch) => {
         clearReviews: () => dispatch(clearReviews()),
         createFavorite: (favorite) => dispatch(createFavorite(favorite)),
         deleteFavorite: (favoriteId) => dispatch(deleteFavorite(favoriteId)),
+        resetRestaurants: () =>dispatch(resetRestaurants())
     };
 };
 

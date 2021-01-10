@@ -30,6 +30,12 @@ class RestaurantShow extends React.Component {
         }
     }
 
+    //
+     componentWillUnmount() {
+        this.props.resetRestaurants();
+    }
+    //
+
     scrollSection(section) {
         document.getElementById(section).scrollIntoView();
     }

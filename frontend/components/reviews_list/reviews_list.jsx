@@ -26,11 +26,13 @@ class ReviewsList extends React.Component {
 
         const { reviews } = this.props;
         
+        
+        
         return (
             <div>
                     
                     {
-                        reviews.map(review => (
+                        reviews.reverse().map(review => (
                             <ReviewListItem review={review}
                             reviewers={this.props.reviewers}
                             />

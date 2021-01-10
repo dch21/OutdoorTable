@@ -12,6 +12,15 @@
       window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
     </script>
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1XEPPZ4R2H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1XEPPZ4R2H');
+    </script>
+
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}"%>
 
     <%= favicon_link_tag asset_path('favicon.png') %>

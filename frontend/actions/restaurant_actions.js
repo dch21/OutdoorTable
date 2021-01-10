@@ -2,6 +2,7 @@ import * as RestaurantAPIUtil from "../util/restaurants_api";
 
 export const RECEIVE_RESTAURANT = "RECEIVE_RESTAURANT";
 export const RECEIVE_SEARCH = "RECEIVE_SEARCH";
+export const RESET_RESTAURANT = "RESET_RESTAURANT";
 
 const receiveRestaurant = restaurant => {
     return {
@@ -16,6 +17,11 @@ const receiveSearch = restaurants => {
     };
 };
 
+export const resetRestaurants = () => {
+    return {
+        type: RESET_RESTAURANT,
+    };
+};
 
 
 
