@@ -47,7 +47,7 @@ class RestaurantShowButtons extends React.Component {
         const elevenAM = ["10:00AM", "10:30AM", "11:00AM", "11:30AM", "12:00PM", "12:30PM"].map( (time) => {
                 return (
                <div className="restaurant-show-times" onMouseEnter={()=>this.changeTime(time)}>
-                    <button onClick={this.handleSubmit}>{time}</button>
+                    <button onMouseEnter={()=>this.changeTime(time)} onClick={this.handleSubmit}>{time}</button>
                 </div>
                 )
         })
