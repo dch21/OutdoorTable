@@ -18,9 +18,9 @@ class ModelSearch extends React.Component {
         this.props.pendingReservation(
             {
             restaurant_id: "",
-            time: this.state.time,
-            date: this.state.date,
-            party_size: this.state.party_size,
+            date: new Date().toISOString().slice(0, 10),
+            time: "7:00PM",
+            party_size: 2,
             name: "",
             }
         );
