@@ -21,6 +21,7 @@ class PastReservationItem extends React.Component {
         });
     }
 
+
     render() {
         const { boro, name, date, party_size, time, restaurantId} = this.props.pastRes;
         const logoPic = name.substring(0,2) + "4";
