@@ -22,6 +22,9 @@ class RestaurantShow extends React.Component {
     componentDidMount() {
         this.props.getAggregates(this.props.restaurantId);
         this.props.getRestaurant(this.props.restaurantId);
+        //
+        this.props.requestFavorites(this.props.userId);
+        //
     }
 
     componentDidUpdate(prevProps) {
@@ -67,8 +70,12 @@ class RestaurantShow extends React.Component {
                 </ul>
 
             </div>)
+
+        const filteredFav = this.props.favorite.filter(rest => rest.id === parseInt(this.props.restaurantId));
+        
                 
-        const buttonToggle = this.props.favorite ? (
+        // const buttonToggle = this.props.favorite ? (
+        const buttonToggle = filteredFav.length === 1 ? (
             <button className= "show-favorite-button" onClick={()=>this.props.deleteFavorite(this.props.favorite)}><i class="far fa-bookmark"><span>  Restaurant Saved</span></i></button>)
             :
             (<button className= "show-favorite-button" onClick={()=>this.props.createFavorite(this.state)}><i class="far fa-bookmark"><span>   Save Restaurant</span></i></button>)

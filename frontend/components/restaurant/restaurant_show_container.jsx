@@ -2,9 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { getRestaurant, resetRestaurants } from "../../actions/restaurant_actions";
 import { getAggregates } from "../../actions/aggregates_actions";
-import { createFavorite, deleteFavorite } from "../../actions/favorites_actions";
+import { createFavorite, deleteFavorite, requestFavorites } from "../../actions/favorites_actions";
 import RestaurantShow from "./restaurant_show";
-
 //
 import { getReviews, clearReviews } from "../../actions/reviews_actions";
 //
@@ -18,7 +17,8 @@ const mSTP = (state, ownProps) => {
         reviews: Object.values(state.entities.reviews),
         reviewers: state.entities.users,
         userId: state.session.id || null,
-        favorite: Object.keys(state.entities.favorites)[0] || null
+        // favorite: Object.keys(state.entities.favorites)[0] || null
+        favorite: Object.values(state.entities.favorites)|| null
     };
     
 };
@@ -31,7 +31,8 @@ const mDTP = (dispatch) => {
         clearReviews: () => dispatch(clearReviews()),
         createFavorite: (favorite) => dispatch(createFavorite(favorite)),
         deleteFavorite: (favoriteId) => dispatch(deleteFavorite(favoriteId)),
-        resetRestaurants: () =>dispatch(resetRestaurants())
+        requestFavorites: (userId) => dispatch(requestFavorites(userId)),
+        resetRestaurants: () =>dispatch(resetRestaurants()),
     };
 };
 
