@@ -5,7 +5,6 @@ import { pendingReservation } from "../../actions/reservations_actions";
 import { openModal } from "../../actions/modal_actions";
 
 const mSTP = (state) => {
-    debugger
     return {
         formType: "Make a reservation",
         reservation: {

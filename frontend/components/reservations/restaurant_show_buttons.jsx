@@ -17,12 +17,8 @@ class RestaurantShowButtons extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentDidMount() {
-        debugger
-    }
     
     handleSubmit(e) {
-        debugger
         e.preventDefault();
         if (!this.props.currentUser) {
             this.props.openModal("signIn");

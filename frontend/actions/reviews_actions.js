@@ -3,7 +3,7 @@ export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const RECEIVE_THIRTY_DAYS_COUNT = "RECEIVE_THIRTY_DAYS_COUNT";
 export const CLEAR_REVIEWS = 'CLEAR_REVIEWS';
-
+export const RESET_THIRTY_COUNT = 'RESET_THIRTY_COUNT';
 export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
@@ -51,6 +51,11 @@ export const clearErrors = () => {
     };
 };
 
+export const resetThirtyCount = () => {
+    return {
+        type: RESET_THIRTY_COUNT,
+    };
+};
 
 export const getReviews = (restaurantId) => dispatch => (
     ReviewsAPIUtil.fetchReviews(restaurantId)

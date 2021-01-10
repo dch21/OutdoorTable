@@ -15,6 +15,10 @@ class UserPage extends React.Component {
     }
 
 
+    componentWillUnmount() {
+        this.props.resetThirtyCount();
+    }
+
     render() {
 
         if (!this.props.reservations) {
@@ -85,12 +89,13 @@ class UserPage extends React.Component {
                             <hr/>
                             <div className="user-page-past-items">
                             {
-                                past.map(pastRes => (
+                                past.map( (pastRes,idx) => (
                                 <PastReservationItem pastRes={pastRes}
                                 key={pastRes.id}
                                 getThirtyDays={this.props.getThirtyDays}
                                 pendingReview={this.props.pendingReview}
                                 userId={this.props.userId}
+                                idx={idx}
                                 />
                                 ))
                             }

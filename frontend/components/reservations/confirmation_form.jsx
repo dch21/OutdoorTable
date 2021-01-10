@@ -20,6 +20,9 @@ class ComfirmationForm extends React.Component {
             phone_number: "",
             email: "",
             occasion: "",
+            //
+            errorPhone: "",
+            errorEmail: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -30,10 +33,35 @@ class ComfirmationForm extends React.Component {
             this.props.openModal("signIn");
             return;
         }
+        if (this.checkPhone(this.state.phone_number)) {
+            this.setState({errorPhone: "Phone number must be in XXX-XXX-XXXX format."});
+            return;
+        }
+        if (this.checkEmail(this.state.email)) {
+            this.setState({errorEmail: "Valid email needs to have '@'."});
+            return;
+        }
         this.props.createReservation(this.state).then( () =>
         this.props.history.push(`/users/${this.props.user_id}`)
         );
     }
+
+    //
+    checkPhone(string) {
+        let parts = string.split("-");
+        if (parts.length !== 3) return true;
+        if (parts[0].length !== 3 || !(/^\d+$/.test(parts[0])) ) return true;
+        if (parts[1].length !== 3 || !(/^\d+$/.test(parts[1])) ) return true;
+        if (parts[2].length !== 4 || !(/^\d+$/.test(parts[2])) ) return true;
+        return false;
+    }
+
+    checkEmail(string) {
+        let parts = string.split("@");
+        if (parts.length !== 2) return true;
+        return false;
+    }
+    //
 
     componentWillUnmount() {
         this.props.clearErrors();
@@ -59,6 +87,24 @@ class ComfirmationForm extends React.Component {
             </ul>
         )
     }
+
+    renderPhoneErrors() {
+        if (this.state.errorPhone === "") return;
+        return (
+            <ul className="errors-list">
+                <li>{this.state.errorPhone}</li>
+            </ul>
+        )
+    }
+
+    renderEmailErrors() {
+        if (this.state.errorEmail === "") return;
+        return (
+            <ul className="errors-list">
+                <li>{this.state.errorEmail}</li>
+            </ul>
+        )
+    }
    
     render() {
         const logoPic = this.props.res_detail.name.substring(0,2) + "4";
@@ -69,7 +115,9 @@ class ComfirmationForm extends React.Component {
                 <div className="confirm-form"> 
                     <p>{"You're almost done!"}</p>
                     {this.renderErrors()}
-
+                    {this.renderPhoneErrors()}
+                    {this.renderEmailErrors()}
+                  
                     <div className="confirm-form-top-container">
                         <div className="confirm-rest-info-container">
                             <Link to={`/restaurants/${this.props.res_detail.restaurant_id}`}><img className="confirm-food-pic" src={window[`${logoPic}`]} alt="food" /></Link>
@@ -98,7 +146,7 @@ class ComfirmationForm extends React.Component {
                                 onChange={this.update("phone_number")}
                                 placeholder="Phone Number"
                             />
-
+                            
                             <input type="text" className="confirm-input-box "
                                 value={this.state.email}
                                 onClick={this.clear("email")}
