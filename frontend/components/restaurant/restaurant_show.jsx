@@ -154,7 +154,7 @@ class RestaurantShow extends React.Component {
                         </div>
 
                         <div>
-                            {/* <RestaurantShowMap restaurant={this.props.restaurant}/> */}
+                            <RestaurantShowMap restaurant={this.props.restaurant}/>
                         </div>
 
                         <div>
