@@ -24,8 +24,10 @@ class Api::ReviewsController < ApplicationController
         reviewer_id = params[:info]["reviewer_id"].to_i
         @reviews = Review.where('restaurant_id = ? AND reviewer_id = ?', "#{rest_num}", "#{reviewer_id}")
         @review = @reviews.where('created_at > ?', 30.days.ago).count
-        
-        render json: @review
+        # 
+        @count = @review == 1 ? rest_num : 0
+        # 
+        render json: @count
     end
 
     def review_params
