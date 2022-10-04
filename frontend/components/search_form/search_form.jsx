@@ -78,7 +78,7 @@ class SearchForm extends React.Component {
                         
                             <input className="search-date" type="date" value={this.state.date}
                                 min={new Date().toISOString().slice(0, 10)}
-                                max="2021-12-31"
+                                max="2023-12-31"
                                 onChange={this.updateDate}
                             />
 
